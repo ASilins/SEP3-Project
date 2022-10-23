@@ -13,7 +13,7 @@ Open cmd and go to the directories location using this command
 cd directoryName
 ```
 
-To speed up the process you can also use forward slash '/' to go threw multiple directories
+To speed up the process you can also use forward slash '/' to go through multiple directories
 
 ```shell
 cd directoryName/anotherDirecoryName

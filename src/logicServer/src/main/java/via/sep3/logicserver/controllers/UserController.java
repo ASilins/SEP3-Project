@@ -1,9 +1,8 @@
 package via.sep3.logicserver.controllers;
 
 import org.lognet.springboot.grpc.GRpcService;
-
-import io.grpc.netty.shaded.io.netty.handler.ssl.SupportedCipherSuiteFilter;
 import io.grpc.stub.StreamObserver;
+import via.sep3.logicserver.model.CreateMemberImpl;
 import via.sep3.logicserver.model.CreateMemberLogic;
 import via.sep3.logicserver.protobuf.CreatedMember;
 import via.sep3.logicserver.protobuf.ResponseMember;
@@ -16,7 +15,7 @@ public class UserController extends LogicServerImplBase {
 
     private CreateMemberLogic logic;
 
-    public UserController(CreateMemberLogic logic) {
+    public UserController(CreateMemberImpl logic) {
         this.logic = logic;
     }
 

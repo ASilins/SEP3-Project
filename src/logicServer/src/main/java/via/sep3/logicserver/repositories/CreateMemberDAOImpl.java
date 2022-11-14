@@ -1,11 +1,13 @@
 package via.sep3.logicserver.repositories;
 
 import org.apache.catalina.User;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 
 import via.sep3.logicserver.shared.Member;
 import via.sep3.logicserver.shared.Response;
 
+@Repository
 public class CreateMemberDAOImpl implements CreateMemberDAO {
 
     private final String URI = "http://localhost:4567/create-member/member";

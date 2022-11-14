@@ -1,9 +1,12 @@
 package via.sep3.logicserver.model;
 
+import org.springframework.stereotype.Service;
+
 import via.sep3.logicserver.repositories.CreateMemberDAO;
 import via.sep3.logicserver.shared.Member;
 import via.sep3.logicserver.shared.Response;
 
+@Service
 public class CreateMemberImpl implements CreateMemberLogic {
 
     private CreateMemberDAO dao;

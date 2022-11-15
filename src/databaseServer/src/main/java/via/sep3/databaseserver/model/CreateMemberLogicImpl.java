@@ -6,11 +6,11 @@ import via.sep3.databaseserver.shared.Member;
 import via.sep3.databaseserver.shared.Response;
 
 @Service
-public class CreateMemberLogicImpl implements CreateMemberLogic{
+public class CreateMemberLogicImpl implements CreateMemberLogic {
 
     private CreateMemberDAO dao;
 
-    public CreateMemberLogicImpl(CreateMemberDAO dao){
+    public CreateMemberLogicImpl(CreateMemberDAO dao) {
         this.dao = dao;
     }
 
@@ -21,8 +21,7 @@ public class CreateMemberLogicImpl implements CreateMemberLogic{
 
         try {
             response = dao.createMember(member);
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

@@ -8,7 +8,6 @@ import via.sep3.logicserver.protobuf.CreatedMember;
 import via.sep3.logicserver.protobuf.ResponseMember;
 import via.sep3.logicserver.protobuf.LogicServerGrpc.LogicServerImplBase;
 import via.sep3.logicserver.shared.Member;
-import via.sep3.logicserver.shared.Response;
 
 @GRpcService
 public class UserController extends LogicServerImplBase {
@@ -24,11 +23,13 @@ public class UserController extends LogicServerImplBase {
 
         try {
             Member memberToCreate = new Member();
-            memberToCreate.setUserName(member.getUsername());
+            memberToCreate.setUsername(member.getUsername());
             memberToCreate.setPassword(member.getPassword());
-            Response createdMember = logic.createMember(memberToCreate);
+            Member createdMember = ((Member) logic.createMember(memberToCreate).getObject());
             ResponseMember response = ResponseMember.newBuilder()
-                    .setUsername(((Member) createdMember.getObject()).getUserName()).build();
+                    .setUsername((createdMember).getUsername()).build();
+            // ResponseMember response = ResponseMember.newBuilder()
+            // .setUsername("Username").build();
             responseObserver.onNext(response);
             responseObserver.onCompleted();
         } catch (Exception e) {

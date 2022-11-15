@@ -1,6 +1,7 @@
 package via.sep3.logicserver.repositories;
 
-import org.apache.catalina.User;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 
@@ -21,7 +22,13 @@ public class CreateMemberDAOImpl implements CreateMemberDAO {
     public Response createMember(Member member) throws Exception {
         Response response = new Response();
 
-        response.setObject(restTemplate.postForObject(URI, member, User.class));
+        ResponseEntity<Member> responseEntity = restTemplate.postForEntity(URI, member, Member.class);
+
+        if (responseEntity.getStatusCode() != HttpStatus.CREATED) {
+            throw new Exception("Data access server error with code: " + responseEntity.getStatusCode());
+        }
+
+        response.setObject(responseEntity.getBody());
 
         return response;
     }

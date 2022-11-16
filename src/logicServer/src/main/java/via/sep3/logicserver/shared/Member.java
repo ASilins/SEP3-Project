@@ -8,6 +8,6 @@ import lombok.Data;
 @Component
 public class Member {
 
-    private String userName;
+    private String username;
     private String password;
 }

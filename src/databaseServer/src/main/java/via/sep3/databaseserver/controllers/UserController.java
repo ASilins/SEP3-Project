@@ -16,20 +16,19 @@ public class UserController {
 
     private CreateMemberLogic logic;
 
-    public UserController(CreateMemberLogic logic){
+    public UserController(CreateMemberLogic logic) {
         this.logic = logic;
     }
 
     @PostMapping("/member")
-    public ResponseEntity<Object> createMember(@RequestBody Member member){
+    public ResponseEntity<Object> createMember(@RequestBody Member member) {
 
         Response response = new Response();
 
         try {
             response = logic.createMember(member);
-            return new ResponseEntity<>(member, HttpStatus.CREATED);
-        }
-        catch (Exception e){
+            return new ResponseEntity<>(response.getObject(), HttpStatus.CREATED);
+        } catch (Exception e) {
             return new ResponseEntity<Object>(HttpStatus.BAD_REQUEST);
         }
 

@@ -88,6 +88,29 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Repositories/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Repositories.dll": {}
+        }
+      },
+      "Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shared.dll": {}
+        }
       }
     }
   },
@@ -216,10 +239,22 @@
         "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Repositories/1.0.0": {
+      "type": "project",
+      "path": "../Repositories/Repositories.csproj",
+      "msbuildProject": "../Repositories/Repositories.csproj"
+    },
+    "Shared/1.0.0": {
+      "type": "project",
+      "path": "../Shared/Shared.csproj",
+      "msbuildProject": "../Shared/Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Repositories >= 1.0.0",
+      "Shared >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -247,7 +282,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\dataAccessServer\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\dataAccessServer\\Repositories\\Repositories.csproj"
+            },
+            "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\dataAccessServer\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\dataAccessServer\\Shared\\Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

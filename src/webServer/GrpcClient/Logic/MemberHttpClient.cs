@@ -18,8 +18,6 @@ public class MemberHttpClient : IMemberService
             Password = member.Password
         });
 
-        channel.Dispose();
-
         if (reply == null)
         {
             throw new Exception("Something went wrong");

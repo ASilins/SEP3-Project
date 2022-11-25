@@ -18,10 +18,12 @@ public class MemberController : ControllerBase
     [HttpPost]
     public async Task<ActionResult<Member>> CreateMember([FromBody] Member member)
     {
+        Console.WriteLine("<<Request came in>>");
         try
         {
             Response response = await dao.CreateMember(member);
             Member created = (Member)response.ResponseObject;
+            Console.WriteLine("<<<Success>>>");
             return Created("Member created", created);
         }
         catch (Exception e)

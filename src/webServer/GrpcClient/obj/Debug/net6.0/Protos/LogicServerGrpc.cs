@@ -7,7 +7,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace GrpcClient.Protos {
+namespace GrpcClient {
   public static partial class LogicServer
   {
     static readonly string __ServiceName = "LogicServer";
@@ -46,12 +46,12 @@ namespace GrpcClient.Protos {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::GrpcClient.Protos.CreatedMember> __Marshaller_CreatedMember = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.Protos.CreatedMember.Parser));
+    static readonly grpc::Marshaller<global::GrpcClient.CreatedMember> __Marshaller_CreatedMember = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.CreatedMember.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::GrpcClient.Protos.ResponseMember> __Marshaller_ResponseMember = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.Protos.ResponseMember.Parser));
+    static readonly grpc::Marshaller<global::GrpcClient.ResponseMember> __Marshaller_ResponseMember = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.ResponseMember.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::GrpcClient.Protos.CreatedMember, global::GrpcClient.Protos.ResponseMember> __Method_createMember = new grpc::Method<global::GrpcClient.Protos.CreatedMember, global::GrpcClient.Protos.ResponseMember>(
+    static readonly grpc::Method<global::GrpcClient.CreatedMember, global::GrpcClient.ResponseMember> __Method_createMember = new grpc::Method<global::GrpcClient.CreatedMember, global::GrpcClient.ResponseMember>(
         grpc::MethodType.Unary,
         __ServiceName,
         "createMember",
@@ -61,7 +61,7 @@ namespace GrpcClient.Protos {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::GrpcClient.Protos.LogicServerReflection.Descriptor.Services[0]; }
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Client for LogicServer</summary>
@@ -92,22 +92,22 @@ namespace GrpcClient.Protos {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::GrpcClient.Protos.ResponseMember createMember(global::GrpcClient.Protos.CreatedMember request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcClient.ResponseMember createMember(global::GrpcClient.CreatedMember request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return createMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::GrpcClient.Protos.ResponseMember createMember(global::GrpcClient.Protos.CreatedMember request, grpc::CallOptions options)
+      public virtual global::GrpcClient.ResponseMember createMember(global::GrpcClient.CreatedMember request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_createMember, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::GrpcClient.Protos.ResponseMember> createMemberAsync(global::GrpcClient.Protos.CreatedMember request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.ResponseMember> createMemberAsync(global::GrpcClient.CreatedMember request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return createMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::GrpcClient.Protos.ResponseMember> createMemberAsync(global::GrpcClient.Protos.CreatedMember request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.ResponseMember> createMemberAsync(global::GrpcClient.CreatedMember request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_createMember, null, options, request);
       }

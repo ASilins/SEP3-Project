@@ -1,7 +1,7 @@
 @page "/create-member"
-@using GrpcClient.Interfaces;
 @using Model.DTOs;
-@inject IMemberService service;
+@using Blazor.Services;
+@inject MemberService memberService;
 
 <div>
     <h3>Login</h3>
@@ -40,7 +40,7 @@
                 Username = username,
                 Password = password
             };
-            await service.CreateMember(member);
+            await memberService.CreateMember(member);
             username = "";
             password = "";
         }

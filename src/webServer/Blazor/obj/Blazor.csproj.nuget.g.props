@@ -17,6 +17,5 @@
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_AspNetCore_Components_WebAssembly_DevServer Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_DevServer)' == '' ">C:\Users\Silin\.nuget\packages\microsoft.aspnetcore.components.webassembly.devserver\6.0.8</PkgMicrosoft_AspNetCore_Components_WebAssembly_DevServer>
-    <PkgGrpc_Tools Condition=" '$(PkgGrpc_Tools)' == '' ">C:\Users\Silin\.nuget\packages\grpc.tools\2.50.0</PkgGrpc_Tools>
   </PropertyGroup>
 </Project>

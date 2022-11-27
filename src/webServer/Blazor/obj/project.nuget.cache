@@ -1,14 +1,9 @@
 {
   "version": 2,
-  "dgSpecHash": "YRnfN5W6D5OnusjIdUvB+d3CljgjVosx3Tfboj6Kd8Ferp7MVsi1DnEig2W1+xJReQyjAq/v0KE4aJq+ynalBA==",
+  "dgSpecHash": "GQVglxYshc+a5s0vdhxngx705AogfIiYAVddWsPtES9D72S/Y71LbEO0xhXHjLEbcY2Vt3OhX1RxjJv3YdeBaw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Blazor.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Silin\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
-    "C:\\Users\\Silin\\.nuget\\packages\\grpc.core.api\\2.50.0\\grpc.core.api.2.50.0.nupkg.sha512",
-    "C:\\Users\\Silin\\.nuget\\packages\\grpc.net.client\\2.50.0\\grpc.net.client.2.50.0.nupkg.sha512",
-    "C:\\Users\\Silin\\.nuget\\packages\\grpc.net.common\\2.50.0\\grpc.net.common.2.50.0.nupkg.sha512",
-    "C:\\Users\\Silin\\.nuget\\packages\\grpc.tools\\2.50.0\\grpc.tools.2.50.0.nupkg.sha512",
     "C:\\Users\\Silin\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.8\\microsoft.aspnetcore.authorization.6.0.8.nupkg.sha512",
     "C:\\Users\\Silin\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.8\\microsoft.aspnetcore.components.6.0.8.nupkg.sha512",
     "C:\\Users\\Silin\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.8\\microsoft.aspnetcore.components.analyzers.6.0.8.nupkg.sha512",
@@ -35,7 +30,6 @@
     "C:\\Users\\Silin\\.nuget\\packages\\microsoft.jsinterop.webassembly\\6.0.8\\microsoft.jsinterop.webassembly.6.0.8.nupkg.sha512",
     "C:\\Users\\Silin\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\Silin\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
-    "C:\\Users\\Silin\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Silin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\Silin\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\Silin\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512",

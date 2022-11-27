@@ -1,11 +1,23 @@
 {
   "Version": 1,
-  "Hash": "lAVsf4/XP8OL4a3UKcpKodesbBfBaGYqErDYy8hI7Xs=",
+  "Hash": "Bvx4JxfjtzunubDHLoRnCk7eZXahRqwIvWZnNmz1X6M=",
   "Source": "WebApi",
   "BasePath": "_content/WebApi",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\GrpcClient\\GrpcClient.csproj",
+      "Version": 2,
+      "Source": "GrpcClient",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
   "DiscoveryPatterns": [],
   "Assets": []
 }

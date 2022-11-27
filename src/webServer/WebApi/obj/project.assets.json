@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Google.Protobuf/3.21.5": {
+      "Google.Protobuf/3.21.9": {
         "type": "package",
         "compile": {
           "lib/net5.0/Google.Protobuf.dll": {
@@ -393,18 +393,47 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "GrpcClient/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Google.Protobuf": "3.21.9",
+          "Grpc.AspNetCore": "2.50.0",
+          "Grpc.Net.Client": "2.50.0",
+          "Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/GrpcClient.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/GrpcClient.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Model.dll": {}
+        }
       }
     }
   },
   "libraries": {
-    "Google.Protobuf/3.21.5": {
-      "sha512": "d7zwRm0edg2cxqRynMD31F8HUUyicBT0l5M74EIsU6GAaq3dxxaZ/PpSPlso010W9nIXoVVKUYZSsiOspAOO/A==",
+    "Google.Protobuf/3.21.9": {
+      "sha512": "OTpFujTgkmqMLbg3KT7F/iuKi1rg6s5FCS2M9XcVLDn40zL8wgXm37CY/F6MeOEXKjdcnXGCN/h7oyMkVydVsg==",
       "type": "package",
-      "path": "google.protobuf/3.21.5",
+      "path": "google.protobuf/3.21.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "google.protobuf.3.21.5.nupkg.sha512",
+        "google.protobuf.3.21.9.nupkg.sha512",
         "google.protobuf.nuspec",
         "lib/net45/Google.Protobuf.dll",
         "lib/net45/Google.Protobuf.pdb",
@@ -946,11 +975,23 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "GrpcClient/1.0.0": {
+      "type": "project",
+      "path": "../GrpcClient/GrpcClient.csproj",
+      "msbuildProject": "../GrpcClient/GrpcClient.csproj"
+    },
+    "Model/1.0.0": {
+      "type": "project",
+      "path": "../Model/Model.csproj",
+      "msbuildProject": "../Model/Model.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Grpc.AspNetCore >= 2.50.0",
+      "GrpcClient >= 1.0.0",
+      "Model >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -978,7 +1019,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\GrpcClient\\GrpcClient.csproj": {
+              "projectPath": "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\GrpcClient\\GrpcClient.csproj"
+            },
+            "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

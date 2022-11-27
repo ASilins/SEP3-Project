@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace GrpcClient.Protos {
+namespace GrpcClient {
 
   /// <summary>Holder for reflection information generated from Protos/LogicServer.proto</summary>
   public static partial class LogicServerReflection {
@@ -28,12 +28,12 @@ namespace GrpcClient.Protos {
             "Cgh1c2VybmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSIiCg5SZXNwb25z",
             "ZU1lbWJlchIQCgh1c2VybmFtZRgCIAEoCTI+CgtMb2dpY1NlcnZlchIvCgxj",
             "cmVhdGVNZW1iZXISDi5DcmVhdGVkTWVtYmVyGg8uUmVzcG9uc2VNZW1iZXJC",
-            "FKoCEUdycGNDbGllbnQuUHJvdG9zYgZwcm90bzM="));
+            "DaoCCkdycGNDbGllbnRiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.Protos.CreatedMember), global::GrpcClient.Protos.CreatedMember.Parser, new[]{ "Username", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.Protos.ResponseMember), global::GrpcClient.Protos.ResponseMember.Parser, new[]{ "Username" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.CreatedMember), global::GrpcClient.CreatedMember.Parser, new[]{ "Username", "Password" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.ResponseMember), global::GrpcClient.ResponseMember.Parser, new[]{ "Username" }, null, null, null, null)
           }));
     }
     #endregion
@@ -54,7 +54,7 @@ namespace GrpcClient.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcClient.Protos.LogicServerReflection.Descriptor.MessageTypes[0]; }
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -280,7 +280,7 @@ namespace GrpcClient.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcClient.Protos.LogicServerReflection.Descriptor.MessageTypes[1]; }
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

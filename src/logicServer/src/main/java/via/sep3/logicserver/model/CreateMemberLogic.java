@@ -1,8 +1,10 @@
 package via.sep3.logicserver.model;
 
-import via.sep3.logicserver.shared.Member;
-import via.sep3.logicserver.shared.Response;
+import via.sep3.logicserver.shared.MemberDTO;
 
 public interface CreateMemberLogic {
-    Response createMember(Member member) throws Exception;
+
+    MemberDTO createMember(MemberDTO member) throws Exception;
+
+    MemberDTO loginMember(MemberDTO member) throws Exception;
 }

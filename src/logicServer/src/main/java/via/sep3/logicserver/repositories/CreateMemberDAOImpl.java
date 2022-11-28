@@ -5,8 +5,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 
-import via.sep3.logicserver.shared.Member;
-import via.sep3.logicserver.shared.Response;
+import via.sep3.logicserver.shared.MemberDTO;
 
 @Repository
 public class CreateMemberDAOImpl implements CreateMemberDAO {
@@ -19,18 +18,25 @@ public class CreateMemberDAOImpl implements CreateMemberDAO {
     }
 
     @Override
-    public Response createMember(Member member) throws Exception {
-        Response response = new Response();
-
-        ResponseEntity<Member> responseEntity = restTemplate.postForEntity(URI, member, Member.class);
+    public MemberDTO createMember(MemberDTO member) throws Exception {
+        ResponseEntity<MemberDTO> responseEntity = restTemplate.postForEntity(URI + "/create", member, MemberDTO.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.CREATED) {
             throw new Exception("Data access server error with code: " + responseEntity.getStatusCode());
         }
 
-        response.setObject(responseEntity.getBody());
+        return responseEntity.getBody();
+    }
 
-        return response;
+    @Override
+    public MemberDTO loginMember(MemberDTO member) throws Exception {
+        ResponseEntity<MemberDTO> responseEntity = restTemplate.postForEntity(URI + "/login", member, MemberDTO.class);
+
+        if (responseEntity.getStatusCode() != HttpStatus.OK) {
+            throw new Exception("Data access server error with code: " + responseEntity.getStatusCode());
+        }
+
+        return responseEntity.getBody();
     }
 
 }

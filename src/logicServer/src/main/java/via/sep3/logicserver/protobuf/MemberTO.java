@@ -4,18 +4,18 @@
 package via.sep3.logicserver.protobuf;
 
 /**
- * Protobuf type {@code CreatedMember}
+ * Protobuf type {@code MemberTO}
  */
-public final class CreatedMember extends
+public final class MemberTO extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:CreatedMember)
-    CreatedMemberOrBuilder {
+    // @@protoc_insertion_point(message_implements:MemberTO)
+    MemberTOOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use CreatedMember.newBuilder() to construct.
-  private CreatedMember(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use MemberTO.newBuilder() to construct.
+  private MemberTO(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private CreatedMember() {
+  private MemberTO() {
     username_ = "";
     password_ = "";
   }
@@ -24,7 +24,7 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new CreatedMember();
+    return new MemberTO();
   }
 
   @java.lang.Override
@@ -32,7 +32,7 @@ private static final long serialVersionUID = 0L;
   getUnknownFields() {
     return this.unknownFields;
   }
-  private CreatedMember(
+  private MemberTO(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
@@ -85,15 +85,15 @@ private static final long serialVersionUID = 0L;
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return via.sep3.logicserver.protobuf.LogicServerOuterClass.internal_static_CreatedMember_descriptor;
+    return via.sep3.logicserver.protobuf.LogicServerOuterClass.internal_static_MemberTO_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return via.sep3.logicserver.protobuf.LogicServerOuterClass.internal_static_CreatedMember_fieldAccessorTable
+    return via.sep3.logicserver.protobuf.LogicServerOuterClass.internal_static_MemberTO_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            via.sep3.logicserver.protobuf.CreatedMember.class, via.sep3.logicserver.protobuf.CreatedMember.Builder.class);
+            via.sep3.logicserver.protobuf.MemberTO.class, via.sep3.logicserver.protobuf.MemberTO.Builder.class);
   }
 
   public static final int USERNAME_FIELD_NUMBER = 1;
@@ -217,10 +217,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof via.sep3.logicserver.protobuf.CreatedMember)) {
+    if (!(obj instanceof via.sep3.logicserver.protobuf.MemberTO)) {
       return super.equals(obj);
     }
-    via.sep3.logicserver.protobuf.CreatedMember other = (via.sep3.logicserver.protobuf.CreatedMember) obj;
+    via.sep3.logicserver.protobuf.MemberTO other = (via.sep3.logicserver.protobuf.MemberTO) obj;
 
     if (!getUsername()
         .equals(other.getUsername())) return false;
@@ -246,69 +246,69 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static via.sep3.logicserver.protobuf.CreatedMember parseFrom(
+  public static via.sep3.logicserver.protobuf.MemberTO parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.sep3.logicserver.protobuf.CreatedMember parseFrom(
+  public static via.sep3.logicserver.protobuf.MemberTO parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.sep3.logicserver.protobuf.CreatedMember parseFrom(
+  public static via.sep3.logicserver.protobuf.MemberTO parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.sep3.logicserver.protobuf.CreatedMember parseFrom(
+  public static via.sep3.logicserver.protobuf.MemberTO parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.sep3.logicserver.protobuf.CreatedMember parseFrom(byte[] data)
+  public static via.sep3.logicserver.protobuf.MemberTO parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static via.sep3.logicserver.protobuf.CreatedMember parseFrom(
+  public static via.sep3.logicserver.protobuf.MemberTO parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static via.sep3.logicserver.protobuf.CreatedMember parseFrom(java.io.InputStream input)
+  public static via.sep3.logicserver.protobuf.MemberTO parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static via.sep3.logicserver.protobuf.CreatedMember parseFrom(
+  public static via.sep3.logicserver.protobuf.MemberTO parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static via.sep3.logicserver.protobuf.CreatedMember parseDelimitedFrom(java.io.InputStream input)
+  public static via.sep3.logicserver.protobuf.MemberTO parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static via.sep3.logicserver.protobuf.CreatedMember parseDelimitedFrom(
+  public static via.sep3.logicserver.protobuf.MemberTO parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static via.sep3.logicserver.protobuf.CreatedMember parseFrom(
+  public static via.sep3.logicserver.protobuf.MemberTO parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static via.sep3.logicserver.protobuf.CreatedMember parseFrom(
+  public static via.sep3.logicserver.protobuf.MemberTO parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -321,7 +321,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(via.sep3.logicserver.protobuf.CreatedMember prototype) {
+  public static Builder newBuilder(via.sep3.logicserver.protobuf.MemberTO prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -337,26 +337,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code CreatedMember}
+   * Protobuf type {@code MemberTO}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:CreatedMember)
-      via.sep3.logicserver.protobuf.CreatedMemberOrBuilder {
+      // @@protoc_insertion_point(builder_implements:MemberTO)
+      via.sep3.logicserver.protobuf.MemberTOOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return via.sep3.logicserver.protobuf.LogicServerOuterClass.internal_static_CreatedMember_descriptor;
+      return via.sep3.logicserver.protobuf.LogicServerOuterClass.internal_static_MemberTO_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return via.sep3.logicserver.protobuf.LogicServerOuterClass.internal_static_CreatedMember_fieldAccessorTable
+      return via.sep3.logicserver.protobuf.LogicServerOuterClass.internal_static_MemberTO_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              via.sep3.logicserver.protobuf.CreatedMember.class, via.sep3.logicserver.protobuf.CreatedMember.Builder.class);
+              via.sep3.logicserver.protobuf.MemberTO.class, via.sep3.logicserver.protobuf.MemberTO.Builder.class);
     }
 
-    // Construct using via.sep3.logicserver.protobuf.CreatedMember.newBuilder()
+    // Construct using via.sep3.logicserver.protobuf.MemberTO.newBuilder()
     private Builder() {
       maybeForceBuilderInitialization();
     }
@@ -384,17 +384,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return via.sep3.logicserver.protobuf.LogicServerOuterClass.internal_static_CreatedMember_descriptor;
+      return via.sep3.logicserver.protobuf.LogicServerOuterClass.internal_static_MemberTO_descriptor;
     }
 
     @java.lang.Override
-    public via.sep3.logicserver.protobuf.CreatedMember getDefaultInstanceForType() {
-      return via.sep3.logicserver.protobuf.CreatedMember.getDefaultInstance();
+    public via.sep3.logicserver.protobuf.MemberTO getDefaultInstanceForType() {
+      return via.sep3.logicserver.protobuf.MemberTO.getDefaultInstance();
     }
 
     @java.lang.Override
-    public via.sep3.logicserver.protobuf.CreatedMember build() {
-      via.sep3.logicserver.protobuf.CreatedMember result = buildPartial();
+    public via.sep3.logicserver.protobuf.MemberTO build() {
+      via.sep3.logicserver.protobuf.MemberTO result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -402,8 +402,8 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public via.sep3.logicserver.protobuf.CreatedMember buildPartial() {
-      via.sep3.logicserver.protobuf.CreatedMember result = new via.sep3.logicserver.protobuf.CreatedMember(this);
+    public via.sep3.logicserver.protobuf.MemberTO buildPartial() {
+      via.sep3.logicserver.protobuf.MemberTO result = new via.sep3.logicserver.protobuf.MemberTO(this);
       result.username_ = username_;
       result.password_ = password_;
       onBuilt();
@@ -444,16 +444,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof via.sep3.logicserver.protobuf.CreatedMember) {
-        return mergeFrom((via.sep3.logicserver.protobuf.CreatedMember)other);
+      if (other instanceof via.sep3.logicserver.protobuf.MemberTO) {
+        return mergeFrom((via.sep3.logicserver.protobuf.MemberTO)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(via.sep3.logicserver.protobuf.CreatedMember other) {
-      if (other == via.sep3.logicserver.protobuf.CreatedMember.getDefaultInstance()) return this;
+    public Builder mergeFrom(via.sep3.logicserver.protobuf.MemberTO other) {
+      if (other == via.sep3.logicserver.protobuf.MemberTO.getDefaultInstance()) return this;
       if (!other.getUsername().isEmpty()) {
         username_ = other.username_;
         onChanged();
@@ -477,11 +477,11 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      via.sep3.logicserver.protobuf.CreatedMember parsedMessage = null;
+      via.sep3.logicserver.protobuf.MemberTO parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (via.sep3.logicserver.protobuf.CreatedMember) e.getUnfinishedMessage();
+        parsedMessage = (via.sep3.logicserver.protobuf.MemberTO) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -655,41 +655,41 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:CreatedMember)
+    // @@protoc_insertion_point(builder_scope:MemberTO)
   }
 
-  // @@protoc_insertion_point(class_scope:CreatedMember)
-  private static final via.sep3.logicserver.protobuf.CreatedMember DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:MemberTO)
+  private static final via.sep3.logicserver.protobuf.MemberTO DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new via.sep3.logicserver.protobuf.CreatedMember();
+    DEFAULT_INSTANCE = new via.sep3.logicserver.protobuf.MemberTO();
   }
 
-  public static via.sep3.logicserver.protobuf.CreatedMember getDefaultInstance() {
+  public static via.sep3.logicserver.protobuf.MemberTO getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<CreatedMember>
-      PARSER = new com.google.protobuf.AbstractParser<CreatedMember>() {
+  private static final com.google.protobuf.Parser<MemberTO>
+      PARSER = new com.google.protobuf.AbstractParser<MemberTO>() {
     @java.lang.Override
-    public CreatedMember parsePartialFrom(
+    public MemberTO parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
-      return new CreatedMember(input, extensionRegistry);
+      return new MemberTO(input, extensionRegistry);
     }
   };
 
-  public static com.google.protobuf.Parser<CreatedMember> parser() {
+  public static com.google.protobuf.Parser<MemberTO> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<CreatedMember> getParserForType() {
+  public com.google.protobuf.Parser<MemberTO> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public via.sep3.logicserver.protobuf.CreatedMember getDefaultInstanceForType() {
+  public via.sep3.logicserver.protobuf.MemberTO getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

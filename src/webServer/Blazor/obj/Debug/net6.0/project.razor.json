@@ -223,6 +223,39 @@
         }
       },
       {
+        "HashCode": -1644633557,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.LoginMember.LoginMember",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "LoginMember"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.LoginMember.LoginMember"
+        }
+      },
+      {
+        "HashCode": 273862670,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.LoginMember.LoginMember",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor.Pages.LoginMember.LoginMember"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.LoginMember.LoginMember",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": -1455295228,
         "Kind": "Components.Component",
         "Name": "Blazor.Pages.CreateMember.CreateMember",
@@ -13572,6 +13605,11 @@
   },
   "RootNamespace": "Blazor",
   "Documents": [
+    {
+      "FilePath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Pages\\LoginMember\\LoginMember.razor",
+      "TargetPath": "Pages\\LoginMember\\LoginMember.razor",
+      "FileKind": "component"
+    },
     {
       "FilePath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\_Imports.razor",
       "TargetPath": "_Imports.razor",

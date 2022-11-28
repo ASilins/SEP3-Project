@@ -21,6 +21,8 @@ public class UserController extends LogicServerImplBase {
     @Override
     public void createMember(CreatedMember member, StreamObserver<ResponseMember> responseObserver) {
 
+        System.out.println("<<Request came in>>");
+
         try {
             Member memberToCreate = new Member();
             memberToCreate.setUsername(member.getUsername());
@@ -30,6 +32,7 @@ public class UserController extends LogicServerImplBase {
                     .setUsername((createdMember).getUsername()).build();
             // ResponseMember response = ResponseMember.newBuilder()
             // .setUsername("Username").build();
+            System.out.println("<<<Success>>>");
             responseObserver.onNext(response);
             responseObserver.onCompleted();
         } catch (Exception e) {

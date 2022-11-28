@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcClient";
+
+// Definition
+
+service LogicServer {
+    rpc createMember(CreatedMember) returns(ResponseMember);
+}
+
+message CreatedMember {
+    string username = 1;
+    string password = 2;
+}
+
+message ResponseMember {
+    string username = 2;
+}

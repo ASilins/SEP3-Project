@@ -1,10 +1,10 @@
-@page "/register"
+@page "/login"
 @using Model.DTOs;
 @using Blazor.Services;
 @inject MemberService memberService;
 
 <div>
-    <h3>Create member</h3>
+    <h3>Login</h3>
     <div class="form-group field">
         <label>User Name:</label>
         <input type="text" @bind="username" @bind:event="oninput" />
@@ -17,9 +17,9 @@
         }
     </div>
     <div class="button-row">
-        <button @onclick="CreateMemberAsync"
+        <button @onclick="LoginMemberAsync"
             disabled="@(string.IsNullOrEmpty(username) && string.IsNullOrEmpty(password))"
-            class="acceptbtn">Register</button>
+            class="acceptbtn">Login</button>
     </div>
 </div>
 
@@ -29,7 +29,7 @@
     private string resultmsg = "";
     private string colour = "";
 
-    private async Task CreateMemberAsync()
+    private async Task LoginMemberAsync()
     {
         resultmsg = "";
 
@@ -40,7 +40,7 @@
                 Username = username,
                 Password = password
             };
-            await memberService.CreateMember(member);
+            await memberService.LoginMember(member);
             username = "";
             password = "";
         }

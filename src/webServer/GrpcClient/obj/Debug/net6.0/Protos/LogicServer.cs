@@ -24,15 +24,16 @@ namespace GrpcClient {
     static LogicServerReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhQcm90b3MvTG9naWNTZXJ2ZXIucHJvdG8iMwoNQ3JlYXRlZE1lbWJlchIQ",
-            "Cgh1c2VybmFtZRgBIAEoCRIQCghwYXNzd29yZBgCIAEoCSIiCg5SZXNwb25z",
-            "ZU1lbWJlchIQCgh1c2VybmFtZRgCIAEoCTI+CgtMb2dpY1NlcnZlchIvCgxj",
-            "cmVhdGVNZW1iZXISDi5DcmVhdGVkTWVtYmVyGg8uUmVzcG9uc2VNZW1iZXJC",
-            "DaoCCkdycGNDbGllbnRiBnByb3RvMw=="));
+            "ChhQcm90b3MvTG9naWNTZXJ2ZXIucHJvdG8iLgoITWVtYmVyVE8SEAoIdXNl",
+            "cm5hbWUYASABKAkSEAoIcGFzc3dvcmQYAiABKAkiIgoOUmVzcG9uc2VNZW1i",
+            "ZXISEAoIdXNlcm5hbWUYAiABKAkyZAoLTG9naWNTZXJ2ZXISKgoMY3JlYXRl",
+            "TWVtYmVyEgkuTWVtYmVyVE8aDy5SZXNwb25zZU1lbWJlchIpCgtsb2dpbk1l",
+            "bWJlchIJLk1lbWJlclRPGg8uUmVzcG9uc2VNZW1iZXJCDaoCCkdycGNDbGll",
+            "bnRiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.CreatedMember), global::GrpcClient.CreatedMember.Parser, new[]{ "Username", "Password" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.MemberTO), global::GrpcClient.MemberTO.Parser, new[]{ "Username", "Password" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.ResponseMember), global::GrpcClient.ResponseMember.Parser, new[]{ "Username" }, null, null, null, null)
           }));
     }
@@ -40,16 +41,16 @@ namespace GrpcClient {
 
   }
   #region Messages
-  public sealed partial class CreatedMember : pb::IMessage<CreatedMember>
+  public sealed partial class MemberTO : pb::IMessage<MemberTO>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CreatedMember> _parser = new pb::MessageParser<CreatedMember>(() => new CreatedMember());
+    private static readonly pb::MessageParser<MemberTO> _parser = new pb::MessageParser<MemberTO>(() => new MemberTO());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<CreatedMember> Parser { get { return _parser; } }
+    public static pb::MessageParser<MemberTO> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -65,7 +66,7 @@ namespace GrpcClient {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreatedMember() {
+    public MemberTO() {
       OnConstruction();
     }
 
@@ -73,7 +74,7 @@ namespace GrpcClient {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreatedMember(CreatedMember other) : this() {
+    public MemberTO(MemberTO other) : this() {
       username_ = other.username_;
       password_ = other.password_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -81,8 +82,8 @@ namespace GrpcClient {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreatedMember Clone() {
-      return new CreatedMember(this);
+    public MemberTO Clone() {
+      return new MemberTO(this);
     }
 
     /// <summary>Field number for the "username" field.</summary>
@@ -112,12 +113,12 @@ namespace GrpcClient {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as CreatedMember);
+      return Equals(other as MemberTO);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(CreatedMember other) {
+    public bool Equals(MemberTO other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -203,7 +204,7 @@ namespace GrpcClient {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(CreatedMember other) {
+    public void MergeFrom(MemberTO other) {
       if (other == null) {
         return;
       }

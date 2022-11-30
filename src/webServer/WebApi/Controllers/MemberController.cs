@@ -5,7 +5,7 @@ using Model.DTOs;
 namespace WebApi.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("/[controller]")]
 public class MemberController : ControllerBase
 {
     private readonly IMemberClient _client;
@@ -16,12 +16,29 @@ public class MemberController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<Member>> CreateMember([FromBody] Member member)
+    [Route("/[controller]/create")]
+    public async Task<ActionResult<MemberDTO>> CreateMember([FromBody] MemberDTO member)
     {
         try
         {
-            Member created = await _client.CreateMember(member);
+            MemberDTO created = await _client.CreateMember(member);
             return Created("Member created", created);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpPost]
+    [Route("/[controller]/login")]
+    public async Task<ActionResult<MemberDTO>> LoginMember([FromBody] MemberDTO member)
+    {
+        try
+        {
+            MemberDTO loggedIn = await _client.LoginMember(member);
+            return Created("Member logged in", loggedIn);
         }
         catch (Exception e)
         {

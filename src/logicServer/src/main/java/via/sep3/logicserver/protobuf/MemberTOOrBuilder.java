@@ -3,8 +3,8 @@
 
 package via.sep3.logicserver.protobuf;
 
-public interface CreatedMemberOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:CreatedMember)
+public interface MemberTOOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:MemberTO)
     com.google.protobuf.MessageOrBuilder {
 
   /**

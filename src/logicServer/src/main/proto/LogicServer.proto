@@ -6,10 +6,11 @@ option java_package = "via.sep3.logicserver.protobuf";
 // Definition
 
 service LogicServer {
-    rpc createMember(CreatedMember) returns(ResponseMember);
+    rpc createMember(MemberTO) returns(ResponseMember);
+    rpc loginMember(MemberTO) returns(ResponseMember);
 }
 
-message CreatedMember {
+message MemberTO {
     string username = 1;
     string password = 2;
 }

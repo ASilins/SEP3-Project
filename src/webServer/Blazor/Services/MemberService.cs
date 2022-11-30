@@ -13,19 +13,23 @@ public class MemberService
         this.client = client;
     }
 
-    public async Task CreateMember(Member member)
+    public async Task CreateMember(MemberDTO member)
     {
-        HttpResponseMessage response = await client.PostAsJsonAsync("/Member", member);
+        HttpResponseMessage response = await client.PostAsJsonAsync("/member/create", member);
         string result = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
             throw new Exception(result);
         }
+    }
 
-        // Member c = JsonSerializer.Deserialize<Member>(result, new JsonSerializerOptions
-        // {
-        //     PropertyNameCaseInsensitive = true
-        // })!;
-        // return ;
+    public async Task LoginMember(MemberDTO member)
+    {
+        HttpResponseMessage response = await client.PostAsJsonAsync("/member/login", member);
+        string result = await response.Content.ReadAsStringAsync();
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(result);
+        }
     }
 }

@@ -49,6 +49,8 @@ namespace GrpcClient {
     static readonly grpc::Marshaller<global::GrpcClient.MemberTO> __Marshaller_MemberTO = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.MemberTO.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcClient.ResponseMember> __Marshaller_ResponseMember = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.ResponseMember.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GrpcClient.ExerciseTO> __Marshaller_ExerciseTO = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.ExerciseTO.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GrpcClient.MemberTO, global::GrpcClient.ResponseMember> __Method_createMember = new grpc::Method<global::GrpcClient.MemberTO, global::GrpcClient.ResponseMember>(
@@ -65,6 +67,14 @@ namespace GrpcClient {
         "loginMember",
         __Marshaller_MemberTO,
         __Marshaller_ResponseMember);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcClient.ExerciseTO, global::GrpcClient.ExerciseTO> __Method_createExercise = new grpc::Method<global::GrpcClient.ExerciseTO, global::GrpcClient.ExerciseTO>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "createExercise",
+        __Marshaller_ExerciseTO,
+        __Marshaller_ExerciseTO);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -138,6 +148,26 @@ namespace GrpcClient {
       public virtual grpc::AsyncUnaryCall<global::GrpcClient.ResponseMember> loginMemberAsync(global::GrpcClient.MemberTO request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_loginMember, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.ExerciseTO createExercise(global::GrpcClient.ExerciseTO request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return createExercise(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.ExerciseTO createExercise(global::GrpcClient.ExerciseTO request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_createExercise, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.ExerciseTO> createExerciseAsync(global::GrpcClient.ExerciseTO request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return createExerciseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.ExerciseTO> createExerciseAsync(global::GrpcClient.ExerciseTO request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_createExercise, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

@@ -2,8 +2,8 @@ package via.sep3.logicserver.controllers;
 
 import org.lognet.springboot.grpc.GRpcService;
 import io.grpc.stub.StreamObserver;
-import via.sep3.logicserver.model.CreateMemberImpl;
-import via.sep3.logicserver.model.CreateMemberLogic;
+import via.sep3.logicserver.model.interfaces.MemberLogic;
+import via.sep3.logicserver.model.logic.MemberImpl;
 import via.sep3.logicserver.protobuf.MemberTO;
 import via.sep3.logicserver.protobuf.ResponseMember;
 import via.sep3.logicserver.protobuf.LogicServerGrpc.LogicServerImplBase;
@@ -12,9 +12,9 @@ import via.sep3.logicserver.shared.MemberDTO;
 @GRpcService
 public class MemberController extends LogicServerImplBase {
 
-    private CreateMemberLogic logic;
+    private MemberLogic logic;
 
-    public MemberController(CreateMemberImpl logic) {
+    public MemberController(MemberImpl logic) {
         this.logic = logic;
     }
 

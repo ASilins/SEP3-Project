@@ -1,8 +1,8 @@
-package via.sep3.logicserver.repositories;
+package via.sep3.logicserver.model.interfaces;
 
 import via.sep3.logicserver.shared.MemberDTO;
 
-public interface CreateMemberDAO {
+public interface MemberLogic {
 
     MemberDTO createMember(MemberDTO member) throws Exception;
 

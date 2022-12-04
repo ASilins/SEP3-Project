@@ -1,19 +1,20 @@
-package via.sep3.logicserver.repositories;
+package via.sep3.logicserver.repositories.logic;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 
+import via.sep3.logicserver.repositories.interfaces.MemberDAO;
 import via.sep3.logicserver.shared.MemberDTO;
 
 @Repository
-public class CreateMemberDAOImpl implements CreateMemberDAO {
+public class MemberDAOImpl implements MemberDAO {
 
     private final String URI = "https://localhost:7057/member";
     private RestTemplate restTemplate;
 
-    public CreateMemberDAOImpl(RestTemplate restTemplate) {
+    public MemberDAOImpl(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 

@@ -11,37 +11,37 @@ build_property.EnableTrimAnalyzer = true
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = Blazor
 build_property.RootNamespace = Blazor
-build_property.ProjectDir = C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\
+build_property.ProjectDir = c:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor
+build_property.MSBuildProjectDirectory = c:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/App.razor]
+[c:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Pages/CreateMember/CreateMember.razor]
+[c:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Pages/CreateMember/CreateMember.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlTWVtYmVyXENyZWF0ZU1lbWJlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Pages/LoginMember/LoginMember.razor]
+[c:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Pages/LoginMember/LoginMember.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5NZW1iZXJcTG9naW5NZW1iZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Shared/SurveyPrompt.razor]
+[c:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/_Imports.razor]
+[c:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Shared/MainLayout.razor]
+[c:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-r0yqwuvdyg
 
-[C:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Shared/NavMenu.razor]
+[c:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-6hj6azdo60

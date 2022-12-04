@@ -1,21 +1,50 @@
 package via.sep3.logicserver.controllers;
 
 import org.lognet.springboot.grpc.GRpcService;
+
 import io.grpc.stub.StreamObserver;
+import via.sep3.logicserver.model.interfaces.ExerciseLogic;
 import via.sep3.logicserver.model.interfaces.MemberLogic;
+import via.sep3.logicserver.model.logic.ExerciseImpl;
 import via.sep3.logicserver.model.logic.MemberImpl;
+import via.sep3.logicserver.protobuf.ExerciseTO;
 import via.sep3.logicserver.protobuf.MemberTO;
 import via.sep3.logicserver.protobuf.ResponseMember;
 import via.sep3.logicserver.protobuf.LogicServerGrpc.LogicServerImplBase;
+import via.sep3.logicserver.shared.ExerciseDTO;
 import via.sep3.logicserver.shared.MemberDTO;
 
 @GRpcService
-public class MemberController extends LogicServerImplBase {
+public class GrpcController extends LogicServerImplBase {
 
-    private MemberLogic logic;
+    private MemberLogic memberLogic;
+    private ExerciseLogic exerciseLogic;
 
-    public MemberController(MemberImpl logic) {
-        this.logic = logic;
+    public GrpcController(MemberImpl memberLogic, ExerciseImpl exerciseLogic) {
+        this.memberLogic = memberLogic;
+        this.exerciseLogic = exerciseLogic;
+    }
+
+    @Override
+    public void createExercise(ExerciseTO exercise, StreamObserver<ExerciseTO> responseObserver) {
+        try {
+            ExerciseDTO dto = new ExerciseDTO();
+            dto.setName(exercise.getName());
+            dto.setDescription(exercise.getDescription());
+            dto.setDuration(exercise.getDuration());
+
+            ExerciseDTO created = exerciseLogic.createExercise(dto);
+
+            ExerciseTO response = ExerciseTO.newBuilder().setName(created.getName())
+                    .setDescription(created.getDescription()).setDuration(created.getDuration()).build();
+
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            responseObserver.onError(e);
+        }
     }
 
     @Override
@@ -27,7 +56,7 @@ public class MemberController extends LogicServerImplBase {
             memberToCreate.setPassword(member.getPassword());
 
             // Call to logic
-            MemberDTO createdMember = logic.createMember(memberToCreate);
+            MemberDTO createdMember = memberLogic.createMember(memberToCreate);
 
             // Response setup
             ResponseMember response = ResponseMember.newBuilder()
@@ -49,7 +78,7 @@ public class MemberController extends LogicServerImplBase {
             memberToLogin.setUsername(member.getUsername());
             memberToLogin.setPassword(member.getPassword());
 
-            MemberDTO loggedInMember = logic.loginMember(memberToLogin);
+            MemberDTO loggedInMember = memberLogic.loginMember(memberToLogin);
 
             ResponseMember response = ResponseMember.newBuilder()
                     .setUsername((loggedInMember).getUsername()).build();

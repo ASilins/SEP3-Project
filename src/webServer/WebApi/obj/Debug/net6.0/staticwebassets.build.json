@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TJD4wYeIVc2pYC2MDD7AzMd0/7tCcEsivVWwAgv3iCE=",
+  "Hash": "Bvx4JxfjtzunubDHLoRnCk7eZXahRqwIvWZnNmz1X6M=",
   "Source": "WebApi",
   "BasePath": "_content/WebApi",
   "Mode": "Default",
@@ -11,10 +11,10 @@
       "Version": 2,
       "Source": "GrpcClient",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishProperties": "",
       "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildProperties": "",
       "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
     }
   ],

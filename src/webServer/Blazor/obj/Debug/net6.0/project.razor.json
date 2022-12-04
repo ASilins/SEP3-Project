@@ -41,39 +41,6 @@
         }
       },
       {
-        "HashCode": -1030628609,
-        "Kind": "Components.Component",
-        "Name": "Blazor.Pages.CreateMember.CreateMember",
-        "AssemblyName": "Blazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "CreateMember"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.CreateMember.CreateMember"
-        }
-      },
-      {
-        "HashCode": -1669833362,
-        "Kind": "Components.Component",
-        "Name": "Blazor.Pages.CreateMember.CreateMember",
-        "AssemblyName": "Blazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Blazor.Pages.CreateMember.CreateMember"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.CreateMember.CreateMember",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1310250383,
         "Kind": "Components.Component",
         "Name": "Blazor.Pages.LoginMember.LoginMember",
@@ -103,6 +70,72 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Blazor.Pages.LoginMember.LoginMember",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1752262261,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.CreateExercise.CreateExercise",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "CreateExercise"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.CreateExercise.CreateExercise"
+        }
+      },
+      {
+        "HashCode": 1896900100,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.CreateExercise.CreateExercise",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor.Pages.CreateExercise.CreateExercise"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.CreateExercise.CreateExercise",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -1030628609,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.CreateMember.CreateMember",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "CreateMember"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.CreateMember.CreateMember"
+        }
+      },
+      {
+        "HashCode": -1669833362,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.CreateMember.CreateMember",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor.Pages.CreateMember.CreateMember"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.CreateMember.CreateMember",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -13605,6 +13638,11 @@
   },
   "RootNamespace": "Blazor",
   "Documents": [
+    {
+      "FilePath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Pages\\CreateExercise\\CreateExercise.razor",
+      "TargetPath": "Pages\\CreateExercise\\CreateExercise.razor",
+      "FileKind": "component"
+    },
     {
       "FilePath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Shared\\SurveyPrompt.razor",
       "TargetPath": "Shared\\SurveyPrompt.razor",

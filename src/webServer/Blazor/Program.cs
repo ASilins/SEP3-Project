@@ -14,5 +14,6 @@ builder.Services.AddScoped(sp =>
                 });
 
 builder.Services.AddScoped<MemberService>();
+builder.Services.AddScoped<ExerciseService>();
 
 await builder.Build().RunAsync();

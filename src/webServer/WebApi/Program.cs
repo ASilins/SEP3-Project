@@ -10,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IMemberClient, MemberClient>();
+builder.Services.AddScoped<IExerciseClient, ExerciseClient>();
 
 var app = builder.Build();
 

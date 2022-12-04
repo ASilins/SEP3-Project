@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Repositories.Interfaces;
-using Shared;
+using Shared.DTOs;
 
 namespace WebAPI.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("/[controller]")]
 public class MemberController : ControllerBase
 {
     private readonly ICreateMemberDAO dao;
@@ -16,13 +16,29 @@ public class MemberController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult<Member>> CreateMember([FromBody] Member member)
+    [Route("/[controller]/create")]
+    public async Task<ActionResult<MemberDTO>> CreateMember([FromBody] MemberDTO member)
     {
         try
         {
-            Response response = await dao.CreateMember(member);
-            Member created = (Member)response.ResponseObject;
+            MemberDTO created = await dao.CreateMember(member);
             return Created("Member created", created);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpGet]
+    [Route("/[controller]/login")]
+    public async Task<ActionResult<MemberDTO>> LoginMember([FromBody] MemberDTO member)
+    {
+        try
+        {
+            MemberDTO loggedIn = await dao.LoginMember(member);
+            return Ok(loggedIn);
         }
         catch (Exception e)
         {

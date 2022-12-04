@@ -1,8 +1,9 @@
-using Shared;
+using Shared.DTOs;
 
 namespace Repositories.Interfaces;
 
 public interface ICreateMemberDAO
 {
-    Task<Response> CreateMember(Member member);
+    Task<MemberDTO> CreateMember(MemberDTO member);
+    Task<MemberDTO> LoginMember(MemberDTO member);
 }

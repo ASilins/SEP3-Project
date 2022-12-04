@@ -14,27 +14,27 @@ public final class LogicServerGrpc {
   public static final String SERVICE_NAME = "LogicServer";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.CreatedMember,
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberTO,
       via.sep3.logicserver.protobuf.ResponseMember> getCreateMemberMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "createMember",
-      requestType = via.sep3.logicserver.protobuf.CreatedMember.class,
+      requestType = via.sep3.logicserver.protobuf.MemberTO.class,
       responseType = via.sep3.logicserver.protobuf.ResponseMember.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.CreatedMember,
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberTO,
       via.sep3.logicserver.protobuf.ResponseMember> getCreateMemberMethod() {
-    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.CreatedMember, via.sep3.logicserver.protobuf.ResponseMember> getCreateMemberMethod;
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberTO, via.sep3.logicserver.protobuf.ResponseMember> getCreateMemberMethod;
     if ((getCreateMemberMethod = LogicServerGrpc.getCreateMemberMethod) == null) {
       synchronized (LogicServerGrpc.class) {
         if ((getCreateMemberMethod = LogicServerGrpc.getCreateMemberMethod) == null) {
           LogicServerGrpc.getCreateMemberMethod = getCreateMemberMethod =
-              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.CreatedMember, via.sep3.logicserver.protobuf.ResponseMember>newBuilder()
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.MemberTO, via.sep3.logicserver.protobuf.ResponseMember>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createMember"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.sep3.logicserver.protobuf.CreatedMember.getDefaultInstance()))
+                  via.sep3.logicserver.protobuf.MemberTO.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   via.sep3.logicserver.protobuf.ResponseMember.getDefaultInstance()))
               .setSchemaDescriptor(new LogicServerMethodDescriptorSupplier("createMember"))
@@ -43,6 +43,37 @@ public final class LogicServerGrpc {
       }
     }
     return getCreateMemberMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberTO,
+      via.sep3.logicserver.protobuf.ResponseMember> getLoginMemberMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "loginMember",
+      requestType = via.sep3.logicserver.protobuf.MemberTO.class,
+      responseType = via.sep3.logicserver.protobuf.ResponseMember.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberTO,
+      via.sep3.logicserver.protobuf.ResponseMember> getLoginMemberMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberTO, via.sep3.logicserver.protobuf.ResponseMember> getLoginMemberMethod;
+    if ((getLoginMemberMethod = LogicServerGrpc.getLoginMemberMethod) == null) {
+      synchronized (LogicServerGrpc.class) {
+        if ((getLoginMemberMethod = LogicServerGrpc.getLoginMemberMethod) == null) {
+          LogicServerGrpc.getLoginMemberMethod = getLoginMemberMethod =
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.MemberTO, via.sep3.logicserver.protobuf.ResponseMember>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "loginMember"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.MemberTO.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.ResponseMember.getDefaultInstance()))
+              .setSchemaDescriptor(new LogicServerMethodDescriptorSupplier("loginMember"))
+              .build();
+        }
+      }
+    }
+    return getLoginMemberMethod;
   }
 
   /**
@@ -95,9 +126,16 @@ public final class LogicServerGrpc {
 
     /**
      */
-    public void createMember(via.sep3.logicserver.protobuf.CreatedMember request,
+    public void createMember(via.sep3.logicserver.protobuf.MemberTO request,
         io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ResponseMember> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateMemberMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void loginMember(via.sep3.logicserver.protobuf.MemberTO request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ResponseMember> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLoginMemberMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -106,9 +144,16 @@ public final class LogicServerGrpc {
             getCreateMemberMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                via.sep3.logicserver.protobuf.CreatedMember,
+                via.sep3.logicserver.protobuf.MemberTO,
                 via.sep3.logicserver.protobuf.ResponseMember>(
                   this, METHODID_CREATE_MEMBER)))
+          .addMethod(
+            getLoginMemberMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.sep3.logicserver.protobuf.MemberTO,
+                via.sep3.logicserver.protobuf.ResponseMember>(
+                  this, METHODID_LOGIN_MEMBER)))
           .build();
     }
   }
@@ -129,10 +174,18 @@ public final class LogicServerGrpc {
 
     /**
      */
-    public void createMember(via.sep3.logicserver.protobuf.CreatedMember request,
+    public void createMember(via.sep3.logicserver.protobuf.MemberTO request,
         io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ResponseMember> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateMemberMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void loginMember(via.sep3.logicserver.protobuf.MemberTO request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ResponseMember> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getLoginMemberMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -152,9 +205,16 @@ public final class LogicServerGrpc {
 
     /**
      */
-    public via.sep3.logicserver.protobuf.ResponseMember createMember(via.sep3.logicserver.protobuf.CreatedMember request) {
+    public via.sep3.logicserver.protobuf.ResponseMember createMember(via.sep3.logicserver.protobuf.MemberTO request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateMemberMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.sep3.logicserver.protobuf.ResponseMember loginMember(via.sep3.logicserver.protobuf.MemberTO request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getLoginMemberMethod(), getCallOptions(), request);
     }
   }
 
@@ -175,13 +235,22 @@ public final class LogicServerGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.ResponseMember> createMember(
-        via.sep3.logicserver.protobuf.CreatedMember request) {
+        via.sep3.logicserver.protobuf.MemberTO request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateMemberMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.ResponseMember> loginMember(
+        via.sep3.logicserver.protobuf.MemberTO request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getLoginMemberMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_CREATE_MEMBER = 0;
+  private static final int METHODID_LOGIN_MEMBER = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -201,7 +270,11 @@ public final class LogicServerGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE_MEMBER:
-          serviceImpl.createMember((via.sep3.logicserver.protobuf.CreatedMember) request,
+          serviceImpl.createMember((via.sep3.logicserver.protobuf.MemberTO) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ResponseMember>) responseObserver);
+          break;
+        case METHODID_LOGIN_MEMBER:
+          serviceImpl.loginMember((via.sep3.logicserver.protobuf.MemberTO) request,
               (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ResponseMember>) responseObserver);
           break;
         default:
@@ -266,6 +339,7 @@ public final class LogicServerGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new LogicServerFileDescriptorSupplier())
               .addMethod(getCreateMemberMethod())
+              .addMethod(getLoginMemberMethod())
               .build();
         }
       }

@@ -9,6 +9,15 @@ service LogicServer {
     rpc createMember(MemberTO) returns(ResponseMember);
     rpc loginMember(MemberTO) returns(ResponseMember);
     rpc createExercise(ExerciseTO) returns(ExerciseTO);
+    rpc getExercises(EmptyPar) returns(ExercisesTO);
+}
+
+message EmptyPar {
+    string empty = 1;
+}
+
+message ExercisesTO {
+    repeated ExerciseTO exercises = 1;
 }
 
 message MemberTO {

@@ -15,6 +15,16 @@ public final class LogicServerOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_EmptyPar_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_EmptyPar_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ExercisesTO_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ExercisesTO_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_MemberTO_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -38,34 +48,49 @@ public final class LogicServerOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021LogicServer.proto\".\n\010MemberTO\022\020\n\010usern" +
-      "ame\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\"A\n\nExerciseT" +
-      "O\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\020\n\010" +
-      "duration\030\003 \001(\005\"\"\n\016ResponseMember\022\020\n\010user" +
-      "name\030\002 \001(\t2\220\001\n\013LogicServer\022*\n\014createMemb" +
-      "er\022\t.MemberTO\032\017.ResponseMember\022)\n\013loginM" +
-      "ember\022\t.MemberTO\032\017.ResponseMember\022*\n\016cre" +
-      "ateExercise\022\013.ExerciseTO\032\013.ExerciseTOB!\n" +
-      "\035via.sep3.logicserver.protobufP\001b\006proto3"
+      "\n\021LogicServer.proto\"\031\n\010EmptyPar\022\r\n\005empty" +
+      "\030\001 \001(\t\"-\n\013ExercisesTO\022\036\n\texercises\030\001 \003(\013" +
+      "2\013.ExerciseTO\".\n\010MemberTO\022\020\n\010username\030\001 " +
+      "\001(\t\022\020\n\010password\030\002 \001(\t\"A\n\nExerciseTO\022\014\n\004n" +
+      "ame\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\020\n\010durati" +
+      "on\030\003 \001(\005\"\"\n\016ResponseMember\022\020\n\010username\030\002" +
+      " \001(\t2\271\001\n\013LogicServer\022*\n\014createMember\022\t.M" +
+      "emberTO\032\017.ResponseMember\022)\n\013loginMember\022" +
+      "\t.MemberTO\032\017.ResponseMember\022*\n\016createExe" +
+      "rcise\022\013.ExerciseTO\032\013.ExerciseTO\022\'\n\014getEx" +
+      "ercises\022\t.EmptyPar\032\014.ExercisesTOB!\n\035via." +
+      "sep3.logicserver.protobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_MemberTO_descriptor =
+    internal_static_EmptyPar_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_EmptyPar_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_EmptyPar_descriptor,
+        new java.lang.String[] { "Empty", });
+    internal_static_ExercisesTO_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_ExercisesTO_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ExercisesTO_descriptor,
+        new java.lang.String[] { "Exercises", });
+    internal_static_MemberTO_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_MemberTO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MemberTO_descriptor,
         new java.lang.String[] { "Username", "Password", });
     internal_static_ExerciseTO_descriptor =
-      getDescriptor().getMessageTypes().get(1);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_ExerciseTO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ExerciseTO_descriptor,
         new java.lang.String[] { "Name", "Description", "Duration", });
     internal_static_ResponseMember_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_ResponseMember_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ResponseMember_descriptor,

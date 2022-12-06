@@ -27,4 +27,29 @@ public class ExerciseClient : IExerciseClient
             Duration = reply.Duration
         };
     }
+
+    public async Task<IEnumerable<ExerciseDTO>> GetExercises()
+    {
+        using var channel = GrpcChannel.ForAddress(_url);
+        client = new LogicServer.LogicServerClient(channel);
+
+        var reply = await client.getExercisesAsync(new EmptyPar
+        {
+            Empty = ""
+        });
+
+        List<ExerciseDTO> exercises = new();
+
+        foreach (var item in reply.Exercises)
+        {
+            exercises.Add(new ExerciseDTO()
+            {
+                Name = item.Name,
+                Description = item.Description,
+                Duration = item.Duration
+            });
+        }
+
+        return exercises;
+    }
 }

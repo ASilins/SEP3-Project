@@ -11,4 +11,9 @@ public class ExerciseDAO : IExerciseDAO
 
         return Task.FromResult(exercise);
     }
+
+    public Task<IEnumerable<ExerciseDTO>> GetExercises()
+    {
+        throw new NotImplementedException();
+    }
 }

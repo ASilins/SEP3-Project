@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IMemberClient, MemberClient>();
 builder.Services.AddScoped<IExerciseClient, ExerciseClient>();
+builder.Services.AddScoped<IWorkoutClient, WorkoutClient>();
 
 var app = builder.Build();
 

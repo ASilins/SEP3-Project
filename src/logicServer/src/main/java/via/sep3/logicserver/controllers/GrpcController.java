@@ -7,13 +7,17 @@ import org.lognet.springboot.grpc.GRpcService;
 import io.grpc.stub.StreamObserver;
 import via.sep3.logicserver.model.interfaces.ExerciseLogic;
 import via.sep3.logicserver.model.interfaces.MemberLogic;
-import via.sep3.logicserver.model.logic.ExerciseImpl;
-import via.sep3.logicserver.model.logic.MemberImpl;
+import via.sep3.logicserver.model.interfaces.WorkoutLogic;
+import via.sep3.logicserver.model.logic.ExerciseLogicImpl;
+import via.sep3.logicserver.model.logic.MemberLogicImpl;
+import via.sep3.logicserver.model.logic.WorkoutLogicImpl;
 import via.sep3.logicserver.protobuf.EmptyPar;
 import via.sep3.logicserver.protobuf.ExerciseTO;
 import via.sep3.logicserver.protobuf.ExercisesTO;
 import via.sep3.logicserver.protobuf.MemberTO;
 import via.sep3.logicserver.protobuf.ResponseMember;
+import via.sep3.logicserver.protobuf.WorkoutO;
+import via.sep3.logicserver.protobuf.WorkoutsTO;
 import via.sep3.logicserver.protobuf.LogicServerGrpc.LogicServerImplBase;
 import via.sep3.logicserver.shared.ExerciseDTO;
 import via.sep3.logicserver.shared.MemberDTO;
@@ -21,12 +25,35 @@ import via.sep3.logicserver.shared.MemberDTO;
 @GRpcService
 public class GrpcController extends LogicServerImplBase {
 
+    // This class won't be in the final production. It will be changed into multiple
+    // services
+
     private MemberLogic memberLogic;
     private ExerciseLogic exerciseLogic;
+    private WorkoutLogic workoutLogic;
 
-    public GrpcController(MemberImpl memberLogic, ExerciseImpl exerciseLogic) {
+    public GrpcController(MemberLogicImpl memberLogic, ExerciseLogicImpl exerciseLogic, WorkoutLogicImpl workoutLogic) {
         this.memberLogic = memberLogic;
         this.exerciseLogic = exerciseLogic;
+        this.workoutLogic = workoutLogic;
+    }
+
+    // Workout
+
+    @Override
+    public void getWorkouts(EmptyPar par, StreamObserver<WorkoutsTO> responseObserver) {
+        try {
+            List<WorkoutO> workouts = workoutLogic.GetWorkouts();
+
+            WorkoutsTO response = WorkoutsTO.newBuilder()
+                    .addAllWorkouts(workouts).build();
+
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+        } catch (Exception e) {
+            e.printStackTrace();
+            responseObserver.onError(e);
+        }
     }
 
     // Exercise

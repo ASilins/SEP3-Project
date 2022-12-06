@@ -8,11 +8,18 @@ option java_package = "via.sep3.logicserver.protobuf";
 service LogicServer {
     rpc createMember(MemberTO) returns(ResponseMember);
     rpc loginMember(MemberTO) returns(ResponseMember);
+    rpc createExercise(ExerciseTO) returns(ExerciseTO);
 }
 
 message MemberTO {
     string username = 1;
     string password = 2;
+}
+
+message ExerciseTO {
+    string name = 1;
+    string description = 2;
+    int32 duration = 3;
 }
 
 message ResponseMember {

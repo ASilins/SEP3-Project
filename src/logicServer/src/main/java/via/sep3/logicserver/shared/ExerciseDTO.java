@@ -6,8 +6,8 @@ import lombok.Data;
 
 @Data
 @Component
-public class Member {
-
-    private String username;
-    private String password;
+public class ExerciseDTO {
+    private String name;
+    private String description;
+    private int duration;
 }

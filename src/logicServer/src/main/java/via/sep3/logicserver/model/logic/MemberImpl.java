@@ -1,16 +1,17 @@
-package via.sep3.logicserver.model;
+package via.sep3.logicserver.model.logic;
 
 import org.springframework.stereotype.Service;
 
-import via.sep3.logicserver.repositories.CreateMemberDAO;
+import via.sep3.logicserver.model.interfaces.MemberLogic;
+import via.sep3.logicserver.repositories.interfaces.MemberDAO;
 import via.sep3.logicserver.shared.MemberDTO;
 
 @Service
-public class CreateMemberImpl implements CreateMemberLogic {
+public class MemberImpl implements MemberLogic {
 
-    private CreateMemberDAO dao;
+    private MemberDAO dao;
 
-    public CreateMemberImpl(CreateMemberDAO dao) {
+    public MemberImpl(MemberDAO dao) {
         this.dao = dao;
     }
 

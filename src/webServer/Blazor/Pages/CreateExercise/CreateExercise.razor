@@ -1,0 +1,57 @@
+@page "/exercises/create"
+@using Model.DTOs;
+@using Blazor.Services;
+@inject ExerciseService exerciseService;
+
+<div>
+    <h3>Create member</h3>
+    <div class="form-group field">
+        <label>Name:</label>
+        <input type="text" @bind="name" @bind:event="oninput" />
+
+        <label>Description:</label>
+        <input type="text" @bind="description" @bind:event="oninput">
+        <label>Duration:</label>
+        <input type="number" @bind="duration" @bind:event="oninput">
+        @if (!string.IsNullOrEmpty(resultmsg))
+        {
+            <label style="color: @colour">@resultmsg</label>
+        }
+    </div>
+    <div class="button-row">
+        <button @onclick="CreateExerciseAsync" class="acceptbtn">Create exercise</button>
+    </div>
+</div>
+
+@code {
+    private string name = "";
+    private string description = "";
+    private int duration = 0;
+    private string resultmsg = "";
+    private string colour = "";
+
+    private async Task CreateExerciseAsync()
+    {
+        resultmsg = "";
+
+        try
+        {
+            var exercise = new ExerciseDTO
+            {
+                Name = name,
+                Description = description,
+                Duration = duration
+            };
+            await exerciseService.CreateExercise(exercise);
+            name = "";
+            description = "";
+            duration = 0;
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            resultmsg = e.Message;
+            colour = "red";
+        }
+    }
+}

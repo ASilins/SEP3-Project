@@ -76,6 +76,37 @@ public final class LogicServerGrpc {
     return getLoginMemberMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.ExerciseTO,
+      via.sep3.logicserver.protobuf.ExerciseTO> getCreateExerciseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "createExercise",
+      requestType = via.sep3.logicserver.protobuf.ExerciseTO.class,
+      responseType = via.sep3.logicserver.protobuf.ExerciseTO.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.ExerciseTO,
+      via.sep3.logicserver.protobuf.ExerciseTO> getCreateExerciseMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.ExerciseTO, via.sep3.logicserver.protobuf.ExerciseTO> getCreateExerciseMethod;
+    if ((getCreateExerciseMethod = LogicServerGrpc.getCreateExerciseMethod) == null) {
+      synchronized (LogicServerGrpc.class) {
+        if ((getCreateExerciseMethod = LogicServerGrpc.getCreateExerciseMethod) == null) {
+          LogicServerGrpc.getCreateExerciseMethod = getCreateExerciseMethod =
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.ExerciseTO, via.sep3.logicserver.protobuf.ExerciseTO>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createExercise"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.ExerciseTO.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.ExerciseTO.getDefaultInstance()))
+              .setSchemaDescriptor(new LogicServerMethodDescriptorSupplier("createExercise"))
+              .build();
+        }
+      }
+    }
+    return getCreateExerciseMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -138,6 +169,13 @@ public final class LogicServerGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLoginMemberMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void createExercise(via.sep3.logicserver.protobuf.ExerciseTO request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExerciseTO> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateExerciseMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -154,6 +192,13 @@ public final class LogicServerGrpc {
                 via.sep3.logicserver.protobuf.MemberTO,
                 via.sep3.logicserver.protobuf.ResponseMember>(
                   this, METHODID_LOGIN_MEMBER)))
+          .addMethod(
+            getCreateExerciseMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.sep3.logicserver.protobuf.ExerciseTO,
+                via.sep3.logicserver.protobuf.ExerciseTO>(
+                  this, METHODID_CREATE_EXERCISE)))
           .build();
     }
   }
@@ -187,6 +232,14 @@ public final class LogicServerGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getLoginMemberMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void createExercise(via.sep3.logicserver.protobuf.ExerciseTO request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExerciseTO> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateExerciseMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -215,6 +268,13 @@ public final class LogicServerGrpc {
     public via.sep3.logicserver.protobuf.ResponseMember loginMember(via.sep3.logicserver.protobuf.MemberTO request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLoginMemberMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.sep3.logicserver.protobuf.ExerciseTO createExercise(via.sep3.logicserver.protobuf.ExerciseTO request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateExerciseMethod(), getCallOptions(), request);
     }
   }
 
@@ -247,10 +307,19 @@ public final class LogicServerGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getLoginMemberMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.ExerciseTO> createExercise(
+        via.sep3.logicserver.protobuf.ExerciseTO request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateExerciseMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_MEMBER = 0;
   private static final int METHODID_LOGIN_MEMBER = 1;
+  private static final int METHODID_CREATE_EXERCISE = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -276,6 +345,10 @@ public final class LogicServerGrpc {
         case METHODID_LOGIN_MEMBER:
           serviceImpl.loginMember((via.sep3.logicserver.protobuf.MemberTO) request,
               (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ResponseMember>) responseObserver);
+          break;
+        case METHODID_CREATE_EXERCISE:
+          serviceImpl.createExercise((via.sep3.logicserver.protobuf.ExerciseTO) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExerciseTO>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -340,6 +413,7 @@ public final class LogicServerGrpc {
               .setSchemaDescriptor(new LogicServerFileDescriptorSupplier())
               .addMethod(getCreateMemberMethod())
               .addMethod(getLoginMemberMethod())
+              .addMethod(getCreateExerciseMethod())
               .build();
         }
       }

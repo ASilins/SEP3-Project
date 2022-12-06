@@ -15,6 +15,20 @@ public class WorkoutController : ControllerBase
         _dao = dao;
     }
 
+    [HttpGet]
+    public async Task<ActionResult<Workout>> GetWorkout([FromQuery] int id)
+    {
+        try
+        {
+            return await _dao.GetWorkout(id);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
     [HttpGet, Route("/[controller]s")]
     public async Task<ActionResult<IEnumerable<Workout>>> GetWorkouts()
     {

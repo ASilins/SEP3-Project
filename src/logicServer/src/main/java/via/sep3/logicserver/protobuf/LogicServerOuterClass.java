@@ -20,6 +20,11 @@ public final class LogicServerOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_EmptyPar_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_WorkoutId_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_WorkoutId_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ExercisesTO_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -64,26 +69,27 @@ public final class LogicServerOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\021LogicServer.proto\"\031\n\010EmptyPar\022\r\n\005empty" +
-      "\030\001 \001(\t\"-\n\013ExercisesTO\022\036\n\texercises\030\001 \003(\013" +
-      "2\013.ExerciseTO\".\n\010MemberTO\022\020\n\010username\030\001 " +
-      "\001(\t\022\020\n\010password\030\002 \001(\t\"A\n\nExerciseTO\022\014\n\004n" +
-      "ame\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\020\n\010durati" +
-      "on\030\003 \001(\005\"L\n\tExerciseO\022\n\n\002id\030\001 \001(\005\022\014\n\004nam" +
-      "e\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\020\n\010duration" +
-      "\030\004 \001(\005\"\250\001\n\010WorkoutO\022\n\n\002id\030\002 \001(\005\022\014\n\004name\030" +
-      "\003 \001(\t\022\023\n\013description\030\004 \001(\t\022\025\n\rdurationIn" +
-      "Min\030\005 \001(\005\022\021\n\tcreatedBy\030\006 \001(\005\022\022\n\nfollowed" +
-      "By\030\007 \001(\005\022\020\n\010isPublic\030\010 \001(\010\022\035\n\texercises\030" +
-      "\t \003(\0132\n.ExerciseO\")\n\nWorkoutsTO\022\033\n\010worko" +
-      "uts\030\001 \003(\0132\t.WorkoutO\"\"\n\016ResponseMember\022\020" +
-      "\n\010username\030\002 \001(\t2\340\001\n\013LogicServer\022*\n\014crea" +
-      "teMember\022\t.MemberTO\032\017.ResponseMember\022)\n\013" +
-      "loginMember\022\t.MemberTO\032\017.ResponseMember\022" +
-      "*\n\016createExercise\022\013.ExerciseTO\032\013.Exercis" +
-      "eTO\022\'\n\014getExercises\022\t.EmptyPar\032\014.Exercis" +
-      "esTO\022%\n\013getWorkouts\022\t.EmptyPar\032\013.Workout" +
-      "sTOB!\n\035via.sep3.logicserver.protobufP\001b\006" +
-      "proto3"
+      "\030\001 \001(\t\"\027\n\tWorkoutId\022\n\n\002id\030\003 \001(\005\"-\n\013Exerc" +
+      "isesTO\022\036\n\texercises\030\001 \003(\0132\013.ExerciseTO\"." +
+      "\n\010MemberTO\022\020\n\010username\030\001 \001(\t\022\020\n\010password" +
+      "\030\002 \001(\t\"A\n\nExerciseTO\022\014\n\004name\030\001 \001(\t\022\023\n\013de" +
+      "scription\030\002 \001(\t\022\020\n\010duration\030\003 \001(\005\"L\n\tExe" +
+      "rciseO\022\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\023\n\013desc" +
+      "ription\030\003 \001(\t\022\020\n\010duration\030\004 \001(\005\"\250\001\n\010Work" +
+      "outO\022\n\n\002id\030\002 \001(\005\022\014\n\004name\030\003 \001(\t\022\023\n\013descri" +
+      "ption\030\004 \001(\t\022\025\n\rdurationInMin\030\005 \001(\005\022\021\n\tcr" +
+      "eatedBy\030\006 \001(\005\022\022\n\nfollowedBy\030\007 \001(\005\022\020\n\010isP" +
+      "ublic\030\010 \001(\010\022\035\n\texercises\030\t \003(\0132\n.Exercis" +
+      "eO\")\n\nWorkoutsTO\022\033\n\010workouts\030\001 \003(\0132\t.Wor" +
+      "koutO\"\"\n\016ResponseMember\022\020\n\010username\030\002 \001(" +
+      "\t2\205\002\n\013LogicServer\022*\n\014createMember\022\t.Memb" +
+      "erTO\032\017.ResponseMember\022)\n\013loginMember\022\t.M" +
+      "emberTO\032\017.ResponseMember\022*\n\016createExerci" +
+      "se\022\013.ExerciseTO\032\013.ExerciseTO\022\'\n\014getExerc" +
+      "ises\022\t.EmptyPar\032\014.ExercisesTO\022%\n\013getWork" +
+      "outs\022\t.EmptyPar\032\013.WorkoutsTO\022#\n\ngetWorko" +
+      "ut\022\n.WorkoutId\032\t.WorkoutOB!\n\035via.sep3.lo" +
+      "gicserver.protobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -95,44 +101,50 @@ public final class LogicServerOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_EmptyPar_descriptor,
         new java.lang.String[] { "Empty", });
-    internal_static_ExercisesTO_descriptor =
+    internal_static_WorkoutId_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_WorkoutId_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_WorkoutId_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_ExercisesTO_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_ExercisesTO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ExercisesTO_descriptor,
         new java.lang.String[] { "Exercises", });
     internal_static_MemberTO_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_MemberTO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MemberTO_descriptor,
         new java.lang.String[] { "Username", "Password", });
     internal_static_ExerciseTO_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_ExerciseTO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ExerciseTO_descriptor,
         new java.lang.String[] { "Name", "Description", "Duration", });
     internal_static_ExerciseO_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_ExerciseO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ExerciseO_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "Duration", });
     internal_static_WorkoutO_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_WorkoutO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WorkoutO_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "DurationInMin", "CreatedBy", "FollowedBy", "IsPublic", "Exercises", });
     internal_static_WorkoutsTO_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_WorkoutsTO_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WorkoutsTO_descriptor,
         new java.lang.String[] { "Workouts", });
     internal_static_ResponseMember_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_ResponseMember_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ResponseMember_descriptor,

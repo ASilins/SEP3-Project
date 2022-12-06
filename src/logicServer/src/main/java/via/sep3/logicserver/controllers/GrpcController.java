@@ -16,6 +16,7 @@ import via.sep3.logicserver.protobuf.ExerciseTO;
 import via.sep3.logicserver.protobuf.ExercisesTO;
 import via.sep3.logicserver.protobuf.MemberTO;
 import via.sep3.logicserver.protobuf.ResponseMember;
+import via.sep3.logicserver.protobuf.WorkoutId;
 import via.sep3.logicserver.protobuf.WorkoutO;
 import via.sep3.logicserver.protobuf.WorkoutsTO;
 import via.sep3.logicserver.protobuf.LogicServerGrpc.LogicServerImplBase;
@@ -39,6 +40,19 @@ public class GrpcController extends LogicServerImplBase {
     }
 
     // Workout
+
+    @Override
+    public void getWorkout(WorkoutId id, StreamObserver<WorkoutO> responseObserver) {
+        try {
+            WorkoutO response = workoutLogic.getWorkout(id.getId());
+
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+        } catch (Exception e) {
+            e.printStackTrace();
+            responseObserver.onError(e);
+        }
+    }
 
     @Override
     public void getWorkouts(EmptyPar par, StreamObserver<WorkoutsTO> responseObserver) {

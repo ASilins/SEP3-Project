@@ -14,6 +14,20 @@ public class WorkoutController : ControllerBase
         _client = client;
     }
 
+    [HttpGet]
+    public async Task<ActionResult<Workout>> GetWorkout([FromQuery] int id)
+    {
+        try
+        {
+            return Ok(await _client.GetWorkout(id));
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
     [HttpGet, Route("/[controller]s")]
     public async Task<ActionResult<IEnumerable<Workout>>> GetWorkouts()
     {

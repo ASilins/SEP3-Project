@@ -24,6 +24,11 @@ public class WorkoutLogicImpl implements WorkoutLogic {
     }
 
     @Override
+    public WorkoutO getWorkout(int id) throws Exception {
+        return fromWorkoutToWorkoutO(dao.getWorkout(id));
+    }
+
+    @Override
     public List<WorkoutO> GetWorkouts() throws Exception {
         return convertListWorkoutsToWorkoutOs(dao.GetWorkouts());
     }

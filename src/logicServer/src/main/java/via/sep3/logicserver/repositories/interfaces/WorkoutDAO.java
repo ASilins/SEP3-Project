@@ -5,5 +5,8 @@ import java.util.List;
 import via.sep3.logicserver.shared.Workout;
 
 public interface WorkoutDAO {
+
+    Workout getWorkout(int id) throws Exception;
+
     List<Workout> GetWorkouts() throws Exception;
 }

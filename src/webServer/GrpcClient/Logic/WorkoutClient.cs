@@ -15,6 +15,19 @@ public class WorkoutClient : IWorkoutClient
         _exerciseClient = exerciseClient;
     }
 
+    public async Task<Workout> GetWorkout(int id)
+    {
+        using var channel = GrpcChannel.ForAddress(_url);
+        client = new LogicServer.LogicServerClient(channel);
+
+        var reply = await client.getWorkoutAsync(new WorkoutId
+        {
+            Id = id
+        });
+
+        return FromWorkoutOToWorkout(reply);
+    }
+
     public async Task<IEnumerable<Workout>> GetWorkouts()
     {
         using var channel = GrpcChannel.ForAddress(_url);

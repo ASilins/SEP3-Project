@@ -52,4 +52,27 @@ public class ExerciseClient : IExerciseClient
 
         return exercises;
     }
+
+    public List<Exercise> ConvertListExerciseOtoExercise(ICollection<ExerciseO> exercises)
+    {
+        List<Exercise> response = new();
+
+        foreach (var item in exercises)
+        {
+            response.Add(FromExerciseToExerciseO(item));
+        }
+
+        return response;
+    }
+
+    private static Exercise FromExerciseToExerciseO(ExerciseO exercise)
+    {
+        return new Exercise
+        {
+            Id = exercise.Id,
+            Name = exercise.Name,
+            Description = exercise.Description,
+            Duration = exercise.Duration
+        };
+    }
 }

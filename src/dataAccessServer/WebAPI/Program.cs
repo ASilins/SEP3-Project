@@ -12,6 +12,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ICreateMemberDAO, CreateMemberDAO>();
 builder.Services.AddScoped<IExerciseDAO, ExerciseDAO>();
+builder.Services.AddScoped<IWorkoutDAO, WorkoutDAO>();
 
 var app = builder.Build();
 

@@ -55,6 +55,8 @@ namespace GrpcClient {
     static readonly grpc::Marshaller<global::GrpcClient.EmptyPar> __Marshaller_EmptyPar = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.EmptyPar.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcClient.ExercisesTO> __Marshaller_ExercisesTO = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.ExercisesTO.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GrpcClient.WorkoutsTO> __Marshaller_WorkoutsTO = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.WorkoutsTO.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GrpcClient.MemberTO, global::GrpcClient.ResponseMember> __Method_createMember = new grpc::Method<global::GrpcClient.MemberTO, global::GrpcClient.ResponseMember>(
@@ -87,6 +89,14 @@ namespace GrpcClient {
         "getExercises",
         __Marshaller_EmptyPar,
         __Marshaller_ExercisesTO);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcClient.EmptyPar, global::GrpcClient.WorkoutsTO> __Method_getWorkouts = new grpc::Method<global::GrpcClient.EmptyPar, global::GrpcClient.WorkoutsTO>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "getWorkouts",
+        __Marshaller_EmptyPar,
+        __Marshaller_WorkoutsTO);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -200,6 +210,26 @@ namespace GrpcClient {
       public virtual grpc::AsyncUnaryCall<global::GrpcClient.ExercisesTO> getExercisesAsync(global::GrpcClient.EmptyPar request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_getExercises, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.WorkoutsTO getWorkouts(global::GrpcClient.EmptyPar request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getWorkouts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.WorkoutsTO getWorkouts(global::GrpcClient.EmptyPar request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_getWorkouts, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.WorkoutsTO> getWorkoutsAsync(global::GrpcClient.EmptyPar request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return getWorkoutsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.WorkoutsTO> getWorkoutsAsync(global::GrpcClient.EmptyPar request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_getWorkouts, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

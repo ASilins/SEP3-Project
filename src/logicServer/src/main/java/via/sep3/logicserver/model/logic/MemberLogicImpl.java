@@ -8,11 +8,11 @@ import via.sep3.logicserver.repositories.logic.MemberDAOImpl;
 import via.sep3.logicserver.shared.MemberDTO;
 
 @Service
-public class MemberImpl implements MemberLogic {
+public class MemberLogicImpl implements MemberLogic {
 
     private MemberDAO dao;
 
-    public MemberImpl(MemberDAOImpl dao) {
+    public MemberLogicImpl(MemberDAOImpl dao) {
         this.dao = dao;
     }
 

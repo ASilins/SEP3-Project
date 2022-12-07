@@ -29,4 +29,18 @@ public class ExerciseController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+
+    [HttpGet, Route("/[controller]s")]
+    public async Task<ActionResult<IEnumerable<ExerciseDTO>>> GetExercises()
+    {
+        try
+        {
+            return Ok(await _dao.GetExercises());
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
 }

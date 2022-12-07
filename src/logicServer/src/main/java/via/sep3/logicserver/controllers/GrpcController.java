@@ -1,5 +1,7 @@
 package via.sep3.logicserver.controllers;
 
+import java.util.List;
+
 import org.lognet.springboot.grpc.GRpcService;
 
 import io.grpc.stub.StreamObserver;
@@ -7,7 +9,9 @@ import via.sep3.logicserver.model.interfaces.ExerciseLogic;
 import via.sep3.logicserver.model.interfaces.MemberLogic;
 import via.sep3.logicserver.model.logic.ExerciseImpl;
 import via.sep3.logicserver.model.logic.MemberImpl;
+import via.sep3.logicserver.protobuf.EmptyPar;
 import via.sep3.logicserver.protobuf.ExerciseTO;
+import via.sep3.logicserver.protobuf.ExercisesTO;
 import via.sep3.logicserver.protobuf.MemberTO;
 import via.sep3.logicserver.protobuf.ResponseMember;
 import via.sep3.logicserver.protobuf.LogicServerGrpc.LogicServerImplBase;
@@ -24,6 +28,8 @@ public class GrpcController extends LogicServerImplBase {
         this.memberLogic = memberLogic;
         this.exerciseLogic = exerciseLogic;
     }
+
+    // Exercise
 
     @Override
     public void createExercise(ExerciseTO exercise, StreamObserver<ExerciseTO> responseObserver) {
@@ -46,6 +52,25 @@ public class GrpcController extends LogicServerImplBase {
             responseObserver.onError(e);
         }
     }
+
+    @Override
+    public void getExercises(EmptyPar par, StreamObserver<ExercisesTO> responseObserver) {
+        try {
+            List<ExerciseTO> exercises = exerciseLogic.getExercises();
+
+            ExercisesTO response = ExercisesTO.newBuilder()
+                    .addAllExercises(exercises)
+                    .build();
+
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+        } catch (Exception e) {
+            e.printStackTrace();
+            responseObserver.onError(e);
+        }
+    }
+
+    // Member
 
     @Override
     public void createMember(MemberTO member, StreamObserver<ResponseMember> responseObserver) {

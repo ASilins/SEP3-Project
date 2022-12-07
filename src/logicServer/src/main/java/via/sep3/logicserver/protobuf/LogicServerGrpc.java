@@ -107,6 +107,37 @@ public final class LogicServerGrpc {
     return getCreateExerciseMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.EmptyPar,
+      via.sep3.logicserver.protobuf.ExercisesTO> getGetExercisesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getExercises",
+      requestType = via.sep3.logicserver.protobuf.EmptyPar.class,
+      responseType = via.sep3.logicserver.protobuf.ExercisesTO.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.EmptyPar,
+      via.sep3.logicserver.protobuf.ExercisesTO> getGetExercisesMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.EmptyPar, via.sep3.logicserver.protobuf.ExercisesTO> getGetExercisesMethod;
+    if ((getGetExercisesMethod = LogicServerGrpc.getGetExercisesMethod) == null) {
+      synchronized (LogicServerGrpc.class) {
+        if ((getGetExercisesMethod = LogicServerGrpc.getGetExercisesMethod) == null) {
+          LogicServerGrpc.getGetExercisesMethod = getGetExercisesMethod =
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.EmptyPar, via.sep3.logicserver.protobuf.ExercisesTO>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getExercises"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.EmptyPar.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.ExercisesTO.getDefaultInstance()))
+              .setSchemaDescriptor(new LogicServerMethodDescriptorSupplier("getExercises"))
+              .build();
+        }
+      }
+    }
+    return getGetExercisesMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -176,6 +207,13 @@ public final class LogicServerGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateExerciseMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void getExercises(via.sep3.logicserver.protobuf.EmptyPar request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExercisesTO> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetExercisesMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -199,6 +237,13 @@ public final class LogicServerGrpc {
                 via.sep3.logicserver.protobuf.ExerciseTO,
                 via.sep3.logicserver.protobuf.ExerciseTO>(
                   this, METHODID_CREATE_EXERCISE)))
+          .addMethod(
+            getGetExercisesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.sep3.logicserver.protobuf.EmptyPar,
+                via.sep3.logicserver.protobuf.ExercisesTO>(
+                  this, METHODID_GET_EXERCISES)))
           .build();
     }
   }
@@ -240,6 +285,14 @@ public final class LogicServerGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateExerciseMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getExercises(via.sep3.logicserver.protobuf.EmptyPar request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExercisesTO> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetExercisesMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -275,6 +328,13 @@ public final class LogicServerGrpc {
     public via.sep3.logicserver.protobuf.ExerciseTO createExercise(via.sep3.logicserver.protobuf.ExerciseTO request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateExerciseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.sep3.logicserver.protobuf.ExercisesTO getExercises(via.sep3.logicserver.protobuf.EmptyPar request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetExercisesMethod(), getCallOptions(), request);
     }
   }
 
@@ -315,11 +375,20 @@ public final class LogicServerGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateExerciseMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.ExercisesTO> getExercises(
+        via.sep3.logicserver.protobuf.EmptyPar request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetExercisesMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_MEMBER = 0;
   private static final int METHODID_LOGIN_MEMBER = 1;
   private static final int METHODID_CREATE_EXERCISE = 2;
+  private static final int METHODID_GET_EXERCISES = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -349,6 +418,10 @@ public final class LogicServerGrpc {
         case METHODID_CREATE_EXERCISE:
           serviceImpl.createExercise((via.sep3.logicserver.protobuf.ExerciseTO) request,
               (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExerciseTO>) responseObserver);
+          break;
+        case METHODID_GET_EXERCISES:
+          serviceImpl.getExercises((via.sep3.logicserver.protobuf.EmptyPar) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExercisesTO>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -414,6 +487,7 @@ public final class LogicServerGrpc {
               .addMethod(getCreateMemberMethod())
               .addMethod(getLoginMemberMethod())
               .addMethod(getCreateExerciseMethod())
+              .addMethod(getGetExercisesMethod())
               .build();
         }
       }

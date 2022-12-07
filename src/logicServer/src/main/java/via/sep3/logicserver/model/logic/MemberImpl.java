@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import via.sep3.logicserver.model.interfaces.MemberLogic;
 import via.sep3.logicserver.repositories.interfaces.MemberDAO;
+import via.sep3.logicserver.repositories.logic.MemberDAOImpl;
 import via.sep3.logicserver.shared.MemberDTO;
 
 @Service
@@ -11,7 +12,7 @@ public class MemberImpl implements MemberLogic {
 
     private MemberDAO dao;
 
-    public MemberImpl(MemberDAO dao) {
+    public MemberImpl(MemberDAOImpl dao) {
         this.dao = dao;
     }
 

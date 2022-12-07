@@ -28,7 +28,7 @@ public class ExerciseDAOImpl implements ExerciseDAO {
                 ExerciseDTO.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.CREATED) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCode());
+            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();
@@ -41,7 +41,7 @@ public class ExerciseDAOImpl implements ExerciseDAO {
                         new ParameterizedTypeReference<List<ExerciseDTO>>() {
                         });
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCode());
+            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();

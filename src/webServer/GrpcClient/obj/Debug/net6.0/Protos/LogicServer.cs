@@ -24,28 +24,32 @@ namespace GrpcClient {
     static LogicServerReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChhQcm90b3MvTG9naWNTZXJ2ZXIucHJvdG8iGQoIRW1wdHlQYXISDQoFZW1w",
-            "dHkYASABKAkiFwoJV29ya291dElkEgoKAmlkGAMgASgFIi0KC0V4ZXJjaXNl",
-            "c1RPEh4KCWV4ZXJjaXNlcxgBIAMoCzILLkV4ZXJjaXNlVE8iLgoITWVtYmVy",
-            "VE8SEAoIdXNlcm5hbWUYASABKAkSEAoIcGFzc3dvcmQYAiABKAkiQQoKRXhl",
-            "cmNpc2VUTxIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9uGAIgASgJEhAK",
-            "CGR1cmF0aW9uGAMgASgFIkwKCUV4ZXJjaXNlTxIKCgJpZBgBIAEoBRIMCgRu",
-            "YW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEhAKCGR1cmF0aW9uGAQg",
-            "ASgFIqgBCghXb3Jrb3V0TxIKCgJpZBgCIAEoBRIMCgRuYW1lGAMgASgJEhMK",
-            "C2Rlc2NyaXB0aW9uGAQgASgJEhUKDWR1cmF0aW9uSW5NaW4YBSABKAUSEQoJ",
-            "Y3JlYXRlZEJ5GAYgASgFEhIKCmZvbGxvd2VkQnkYByABKAUSEAoIaXNQdWJs",
-            "aWMYCCABKAgSHQoJZXhlcmNpc2VzGAkgAygLMgouRXhlcmNpc2VPIikKCldv",
-            "cmtvdXRzVE8SGwoId29ya291dHMYASADKAsyCS5Xb3Jrb3V0TyIiCg5SZXNw",
-            "b25zZU1lbWJlchIQCgh1c2VybmFtZRgCIAEoCTKFAgoLTG9naWNTZXJ2ZXIS",
-            "KgoMY3JlYXRlTWVtYmVyEgkuTWVtYmVyVE8aDy5SZXNwb25zZU1lbWJlchIp",
-            "Cgtsb2dpbk1lbWJlchIJLk1lbWJlclRPGg8uUmVzcG9uc2VNZW1iZXISKgoO",
-            "Y3JlYXRlRXhlcmNpc2USCy5FeGVyY2lzZVRPGgsuRXhlcmNpc2VUTxInCgxn",
-            "ZXRFeGVyY2lzZXMSCS5FbXB0eVBhchoMLkV4ZXJjaXNlc1RPEiUKC2dldFdv",
-            "cmtvdXRzEgkuRW1wdHlQYXIaCy5Xb3Jrb3V0c1RPEiMKCmdldFdvcmtvdXQS",
-            "Ci5Xb3Jrb3V0SWQaCS5Xb3Jrb3V0T0INqgIKR3JwY0NsaWVudGIGcHJvdG8z"));
+            "ChhQcm90b3MvTG9naWNTZXJ2ZXIucHJvdG8iNAoPRm9sbG93V29ya291dFRP",
+            "Eg4KBnVzZXJJRBgBIAEoBRIRCgl3b3Jrb3V0SUQYAiABKAUiGQoIRW1wdHlQ",
+            "YXISDQoFZW1wdHkYASABKAkiFwoJV29ya291dElkEgoKAmlkGAMgASgFIi0K",
+            "C0V4ZXJjaXNlc1RPEh4KCWV4ZXJjaXNlcxgBIAMoCzILLkV4ZXJjaXNlVE8i",
+            "LgoITWVtYmVyVE8SEAoIdXNlcm5hbWUYASABKAkSEAoIcGFzc3dvcmQYAiAB",
+            "KAkiQQoKRXhlcmNpc2VUTxIMCgRuYW1lGAEgASgJEhMKC2Rlc2NyaXB0aW9u",
+            "GAIgASgJEhAKCGR1cmF0aW9uGAMgASgFIkwKCUV4ZXJjaXNlTxIKCgJpZBgB",
+            "IAEoBRIMCgRuYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEhAKCGR1",
+            "cmF0aW9uGAQgASgFIqgBCghXb3Jrb3V0TxIKCgJpZBgCIAEoBRIMCgRuYW1l",
+            "GAMgASgJEhMKC2Rlc2NyaXB0aW9uGAQgASgJEhUKDWR1cmF0aW9uSW5NaW4Y",
+            "BSABKAUSEQoJY3JlYXRlZEJ5GAYgASgFEhIKCmZvbGxvd2VkQnkYByABKAUS",
+            "EAoIaXNQdWJsaWMYCCABKAgSHQoJZXhlcmNpc2VzGAkgAygLMgouRXhlcmNp",
+            "c2VPIikKCldvcmtvdXRzVE8SGwoId29ya291dHMYASADKAsyCS5Xb3Jrb3V0",
+            "TyIiCg5SZXNwb25zZU1lbWJlchIQCgh1c2VybmFtZRgCIAEoCTK6AgoLTG9n",
+            "aWNTZXJ2ZXISKgoMY3JlYXRlTWVtYmVyEgkuTWVtYmVyVE8aDy5SZXNwb25z",
+            "ZU1lbWJlchIpCgtsb2dpbk1lbWJlchIJLk1lbWJlclRPGg8uUmVzcG9uc2VN",
+            "ZW1iZXISKgoOY3JlYXRlRXhlcmNpc2USCy5FeGVyY2lzZVRPGgsuRXhlcmNp",
+            "c2VUTxInCgxnZXRFeGVyY2lzZXMSCS5FbXB0eVBhchoMLkV4ZXJjaXNlc1RP",
+            "EiUKC2dldFdvcmtvdXRzEgkuRW1wdHlQYXIaCy5Xb3Jrb3V0c1RPEiMKCmdl",
+            "dFdvcmtvdXQSCi5Xb3Jrb3V0SWQaCS5Xb3Jrb3V0TxIzCg1hc3NpZ25Xb3Jr",
+            "b3V0EhAuRm9sbG93V29ya291dFRPGhAuRm9sbG93V29ya291dFRPQg2qAgpH",
+            "cnBjQ2xpZW50YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.FollowWorkoutTO), global::GrpcClient.FollowWorkoutTO.Parser, new[]{ "UserID", "WorkoutID" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.EmptyPar), global::GrpcClient.EmptyPar.Parser, new[]{ "Empty" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.WorkoutId), global::GrpcClient.WorkoutId.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.ExercisesTO), global::GrpcClient.ExercisesTO.Parser, new[]{ "Exercises" }, null, null, null, null),
@@ -61,6 +65,232 @@ namespace GrpcClient {
 
   }
   #region Messages
+  public sealed partial class FollowWorkoutTO : pb::IMessage<FollowWorkoutTO>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FollowWorkoutTO> _parser = new pb::MessageParser<FollowWorkoutTO>(() => new FollowWorkoutTO());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FollowWorkoutTO> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FollowWorkoutTO() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FollowWorkoutTO(FollowWorkoutTO other) : this() {
+      userID_ = other.userID_;
+      workoutID_ = other.workoutID_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FollowWorkoutTO Clone() {
+      return new FollowWorkoutTO(this);
+    }
+
+    /// <summary>Field number for the "userID" field.</summary>
+    public const int UserIDFieldNumber = 1;
+    private int userID_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int UserID {
+      get { return userID_; }
+      set {
+        userID_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "workoutID" field.</summary>
+    public const int WorkoutIDFieldNumber = 2;
+    private int workoutID_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int WorkoutID {
+      get { return workoutID_; }
+      set {
+        workoutID_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FollowWorkoutTO);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FollowWorkoutTO other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (UserID != other.UserID) return false;
+      if (WorkoutID != other.WorkoutID) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (UserID != 0) hash ^= UserID.GetHashCode();
+      if (WorkoutID != 0) hash ^= WorkoutID.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (UserID != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(UserID);
+      }
+      if (WorkoutID != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(WorkoutID);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (UserID != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(UserID);
+      }
+      if (WorkoutID != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(WorkoutID);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (UserID != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(UserID);
+      }
+      if (WorkoutID != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(WorkoutID);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FollowWorkoutTO other) {
+      if (other == null) {
+        return;
+      }
+      if (other.UserID != 0) {
+        UserID = other.UserID;
+      }
+      if (other.WorkoutID != 0) {
+        WorkoutID = other.WorkoutID;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            UserID = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            WorkoutID = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            UserID = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            WorkoutID = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class EmptyPar : pb::IMessage<EmptyPar>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -75,7 +305,7 @@ namespace GrpcClient {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[0]; }
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -264,7 +494,7 @@ namespace GrpcClient {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[1]; }
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -453,7 +683,7 @@ namespace GrpcClient {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[2]; }
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -631,7 +861,7 @@ namespace GrpcClient {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[3]; }
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -857,7 +1087,7 @@ namespace GrpcClient {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[4]; }
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1120,7 +1350,7 @@ namespace GrpcClient {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[5]; }
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1420,7 +1650,7 @@ namespace GrpcClient {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[6]; }
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1857,7 +2087,7 @@ namespace GrpcClient {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[7]; }
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2035,7 +2265,7 @@ namespace GrpcClient {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[8]; }
+      get { return global::GrpcClient.LogicServerReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -11,10 +11,16 @@ service LogicServer {
     rpc getExercises(EmptyPar) returns(ExercisesTO);
     rpc getWorkouts(EmptyPar) returns(WorkoutsTO);
     rpc getWorkout(WorkoutId) returns(WorkoutO);
+    rpc assignWorkout(FollowWorkoutTO) returns(FollowWorkoutTO);
 }
 
 // TO stands for Transfer Object while O stands for Object. O is used for domain model entities
 // but TO for transfer object that dont have all of the information that is in domain model.
+
+message FollowWorkoutTO {
+    int32 userID = 1;
+    int32 workoutID = 2;
+}
 
 message EmptyPar {
     string empty = 1;

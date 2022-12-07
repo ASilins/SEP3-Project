@@ -1,6 +1,7 @@
 using Grpc.Net.Client;
 using GrpcClient.Interfaces;
 using Model.DTOs;
+using Shared.DTOs;
 
 namespace GrpcClient.Logic;
 
@@ -46,6 +47,24 @@ public class WorkoutClient : IWorkoutClient
         }
 
         return workouts;
+    }
+
+    public async Task<FollowWorkoutDTO> AssignWorkout(FollowWorkoutDTO dto)
+    {
+        using var channel = GrpcChannel.ForAddress(_url);
+        client = new LogicServer.LogicServerClient(channel);
+
+        var reply = await client.assignWorkoutAsync(new FollowWorkoutTO
+        {
+            UserID = dto.UserID,
+            WorkoutID = dto.WorkoutID
+        });
+
+        return new FollowWorkoutDTO()
+        {
+            UserID = reply.UserID,
+            WorkoutID = reply.WorkoutID
+        };
     }
 
     private Workout FromWorkoutOToWorkout(WorkoutO workout)

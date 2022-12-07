@@ -61,6 +61,8 @@ namespace GrpcClient {
     static readonly grpc::Marshaller<global::GrpcClient.WorkoutId> __Marshaller_WorkoutId = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.WorkoutId.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcClient.WorkoutO> __Marshaller_WorkoutO = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.WorkoutO.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GrpcClient.FollowWorkoutTO> __Marshaller_FollowWorkoutTO = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.FollowWorkoutTO.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GrpcClient.MemberTO, global::GrpcClient.ResponseMember> __Method_createMember = new grpc::Method<global::GrpcClient.MemberTO, global::GrpcClient.ResponseMember>(
@@ -109,6 +111,14 @@ namespace GrpcClient {
         "getWorkout",
         __Marshaller_WorkoutId,
         __Marshaller_WorkoutO);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcClient.FollowWorkoutTO, global::GrpcClient.FollowWorkoutTO> __Method_assignWorkout = new grpc::Method<global::GrpcClient.FollowWorkoutTO, global::GrpcClient.FollowWorkoutTO>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "assignWorkout",
+        __Marshaller_FollowWorkoutTO,
+        __Marshaller_FollowWorkoutTO);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -262,6 +272,26 @@ namespace GrpcClient {
       public virtual grpc::AsyncUnaryCall<global::GrpcClient.WorkoutO> getWorkoutAsync(global::GrpcClient.WorkoutId request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_getWorkout, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.FollowWorkoutTO assignWorkout(global::GrpcClient.FollowWorkoutTO request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return assignWorkout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.FollowWorkoutTO assignWorkout(global::GrpcClient.FollowWorkoutTO request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_assignWorkout, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.FollowWorkoutTO> assignWorkoutAsync(global::GrpcClient.FollowWorkoutTO request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return assignWorkoutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.FollowWorkoutTO> assignWorkoutAsync(global::GrpcClient.FollowWorkoutTO request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_assignWorkout, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

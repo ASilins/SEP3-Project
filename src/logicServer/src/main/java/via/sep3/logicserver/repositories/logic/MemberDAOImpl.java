@@ -23,7 +23,7 @@ public class MemberDAOImpl implements MemberDAO {
         ResponseEntity<MemberDTO> responseEntity = restTemplate.postForEntity(URI + "/create", member, MemberDTO.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.CREATED) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCode());
+            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();
@@ -34,7 +34,7 @@ public class MemberDAOImpl implements MemberDAO {
         ResponseEntity<MemberDTO> responseEntity = restTemplate.postForEntity(URI + "/login", member, MemberDTO.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCode());
+            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();

@@ -42,4 +42,18 @@ public class WorkoutController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+
+    [HttpPost, Route("/[controller]/assign")]
+    public async Task<ActionResult<FollowWorkoutDTO>> AssignWorkout([FromBody] FollowWorkoutDTO dto)
+    {
+        try
+        {
+            return Ok(await _dao.AssignWorkout(dto));
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
 }

@@ -200,6 +200,37 @@ public final class LogicServerGrpc {
     return getGetWorkoutMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.FollowWorkoutTO,
+      via.sep3.logicserver.protobuf.FollowWorkoutTO> getAssignWorkoutMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "assignWorkout",
+      requestType = via.sep3.logicserver.protobuf.FollowWorkoutTO.class,
+      responseType = via.sep3.logicserver.protobuf.FollowWorkoutTO.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.FollowWorkoutTO,
+      via.sep3.logicserver.protobuf.FollowWorkoutTO> getAssignWorkoutMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.FollowWorkoutTO, via.sep3.logicserver.protobuf.FollowWorkoutTO> getAssignWorkoutMethod;
+    if ((getAssignWorkoutMethod = LogicServerGrpc.getAssignWorkoutMethod) == null) {
+      synchronized (LogicServerGrpc.class) {
+        if ((getAssignWorkoutMethod = LogicServerGrpc.getAssignWorkoutMethod) == null) {
+          LogicServerGrpc.getAssignWorkoutMethod = getAssignWorkoutMethod =
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.FollowWorkoutTO, via.sep3.logicserver.protobuf.FollowWorkoutTO>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "assignWorkout"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.FollowWorkoutTO.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.FollowWorkoutTO.getDefaultInstance()))
+              .setSchemaDescriptor(new LogicServerMethodDescriptorSupplier("assignWorkout"))
+              .build();
+        }
+      }
+    }
+    return getAssignWorkoutMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -290,6 +321,13 @@ public final class LogicServerGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetWorkoutMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void assignWorkout(via.sep3.logicserver.protobuf.FollowWorkoutTO request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.FollowWorkoutTO> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignWorkoutMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -334,6 +372,13 @@ public final class LogicServerGrpc {
                 via.sep3.logicserver.protobuf.WorkoutId,
                 via.sep3.logicserver.protobuf.WorkoutO>(
                   this, METHODID_GET_WORKOUT)))
+          .addMethod(
+            getAssignWorkoutMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.sep3.logicserver.protobuf.FollowWorkoutTO,
+                via.sep3.logicserver.protobuf.FollowWorkoutTO>(
+                  this, METHODID_ASSIGN_WORKOUT)))
           .build();
     }
   }
@@ -399,6 +444,14 @@ public final class LogicServerGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetWorkoutMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void assignWorkout(via.sep3.logicserver.protobuf.FollowWorkoutTO request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.FollowWorkoutTO> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAssignWorkoutMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -455,6 +508,13 @@ public final class LogicServerGrpc {
     public via.sep3.logicserver.protobuf.WorkoutO getWorkout(via.sep3.logicserver.protobuf.WorkoutId request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetWorkoutMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.sep3.logicserver.protobuf.FollowWorkoutTO assignWorkout(via.sep3.logicserver.protobuf.FollowWorkoutTO request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAssignWorkoutMethod(), getCallOptions(), request);
     }
   }
 
@@ -519,6 +579,14 @@ public final class LogicServerGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetWorkoutMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.FollowWorkoutTO> assignWorkout(
+        via.sep3.logicserver.protobuf.FollowWorkoutTO request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAssignWorkoutMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_MEMBER = 0;
@@ -527,6 +595,7 @@ public final class LogicServerGrpc {
   private static final int METHODID_GET_EXERCISES = 3;
   private static final int METHODID_GET_WORKOUTS = 4;
   private static final int METHODID_GET_WORKOUT = 5;
+  private static final int METHODID_ASSIGN_WORKOUT = 6;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -568,6 +637,10 @@ public final class LogicServerGrpc {
         case METHODID_GET_WORKOUT:
           serviceImpl.getWorkout((via.sep3.logicserver.protobuf.WorkoutId) request,
               (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.WorkoutO>) responseObserver);
+          break;
+        case METHODID_ASSIGN_WORKOUT:
+          serviceImpl.assignWorkout((via.sep3.logicserver.protobuf.FollowWorkoutTO) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.FollowWorkoutTO>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -636,6 +709,7 @@ public final class LogicServerGrpc {
               .addMethod(getGetExercisesMethod())
               .addMethod(getGetWorkoutsMethod())
               .addMethod(getGetWorkoutMethod())
+              .addMethod(getAssignWorkoutMethod())
               .build();
         }
       }

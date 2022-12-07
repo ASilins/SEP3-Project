@@ -7,9 +7,11 @@ import org.springframework.stereotype.Service;
 
 import via.sep3.logicserver.model.interfaces.ExerciseLogic;
 import via.sep3.logicserver.model.interfaces.WorkoutLogic;
+import via.sep3.logicserver.protobuf.FollowWorkoutTO;
 import via.sep3.logicserver.protobuf.WorkoutO;
 import via.sep3.logicserver.repositories.interfaces.WorkoutDAO;
 import via.sep3.logicserver.repositories.logic.WorkoutDAOImpl;
+import via.sep3.logicserver.shared.FollowWorkoutDTO;
 import via.sep3.logicserver.shared.Workout;
 
 @Service
@@ -29,8 +31,28 @@ public class WorkoutLogicImpl implements WorkoutLogic {
     }
 
     @Override
-    public List<WorkoutO> GetWorkouts() throws Exception {
+    public List<WorkoutO> getWorkouts() throws Exception {
         return convertListWorkoutsToWorkoutOs(dao.GetWorkouts());
+    }
+
+    @Override
+    public FollowWorkoutTO assignWorkout(FollowWorkoutTO dto) throws Exception {
+        return convertFollWorkDTOToFollWorkTO(
+                dao.assignWorkout(convertFollWorkTOToFollWorkDTO(dto)));
+    }
+
+    private FollowWorkoutDTO convertFollWorkTOToFollWorkDTO(FollowWorkoutTO to) {
+        FollowWorkoutDTO dto = new FollowWorkoutDTO();
+        dto.setUserID(to.getUserID());
+        dto.setWorkoutID(to.getWorkoutID());
+        return dto;
+    }
+
+    private FollowWorkoutTO convertFollWorkDTOToFollWorkTO(FollowWorkoutDTO dto) {
+        return FollowWorkoutTO.newBuilder()
+                .setUserID(dto.getUserID())
+                .setWorkoutID(dto.getWorkoutID())
+                .build();
     }
 
     private List<WorkoutO> convertListWorkoutsToWorkoutOs(List<Workout> workouts) {

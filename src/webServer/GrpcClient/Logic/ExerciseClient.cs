@@ -59,15 +59,38 @@ public class ExerciseClient : IExerciseClient
 
         foreach (var item in exercises)
         {
+            response.Add(FromExerciseOToExercise(item));
+        }
+
+        return response;
+    }
+
+    private static Exercise FromExerciseOToExercise(ExerciseO exercise)
+    {
+        return new Exercise
+        {
+            Id = exercise.Id,
+            Name = exercise.Name,
+            Description = exercise.Description,
+            Duration = exercise.Duration
+        };
+    }
+
+    public ICollection<ExerciseO> ConvertListExercisetoExerciseO(List<Exercise> exercises)
+    {
+        List<ExerciseO> response = new();
+
+        foreach (var item in exercises)
+        {
             response.Add(FromExerciseToExerciseO(item));
         }
 
         return response;
     }
 
-    private static Exercise FromExerciseToExerciseO(ExerciseO exercise)
+    private static ExerciseO FromExerciseToExerciseO(Exercise exercise)
     {
-        return new Exercise
+        return new ExerciseO
         {
             Id = exercise.Id,
             Name = exercise.Name,

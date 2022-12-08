@@ -50,6 +50,16 @@ public class ExerciseLogicImpl implements ExerciseLogic {
         return exerciseOs;
     }
 
+    @Override
+    public List<Exercise> convertListFromExerciseOsToExercises(List<ExerciseO> exerciseOs) {
+        List<Exercise> exercises = new ArrayList<Exercise>();
+
+        for (ExerciseO exerciseO : exerciseOs) {
+            exercises.add(fromExerciseOToExercise(exerciseO));
+        }
+        return exercises;
+    }
+
     private ExerciseTO fromExerciseDtoToExerciseTo(ExerciseDTO exercise) {
         return ExerciseTO.newBuilder()
                 .setName(exercise.getName())
@@ -67,4 +77,14 @@ public class ExerciseLogicImpl implements ExerciseLogic {
                 .build();
     }
 
+    private Exercise fromExerciseOToExercise(ExerciseO exercise) {
+        Exercise output = new Exercise();
+
+        output.setId(exercise.getId());
+        output.setName(exercise.getName());
+        output.setDescription(exercise.getDescription());
+        output.setDuration(exercise.getDuration());
+
+        return output;
+    }
 }

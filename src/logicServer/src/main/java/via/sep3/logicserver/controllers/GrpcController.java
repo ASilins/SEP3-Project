@@ -84,6 +84,32 @@ public class GrpcController extends LogicServerImplBase {
         }
     }
 
+    @Override
+    public void editWorkout(WorkoutO workoutO, StreamObserver<WorkoutO> responseObserver) {
+        try {
+            WorkoutO response = workoutLogic.editWorkout(workoutO);
+
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+        } catch (Exception e) {
+            e.printStackTrace();
+            responseObserver.onError(e);
+        }
+    }
+
+    @Override
+    public void deleteWorkout(WorkoutId id, StreamObserver<EmptyPar> responseObserver) {
+        try {
+            workoutLogic.deleteWorkout(id.getId());
+
+            responseObserver.onNext(EmptyPar.newBuilder().setEmpty("").build());
+            responseObserver.onCompleted();
+        } catch (Exception e) {
+            e.printStackTrace();
+            responseObserver.onError(e);
+        }
+    }
+
     // Exercise
 
     @Override

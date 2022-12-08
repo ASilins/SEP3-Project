@@ -88,7 +88,7 @@ public final class LogicServerOuterClass {
       "y\030\007 \001(\005\022\020\n\010isPublic\030\010 \001(\010\022\035\n\texercises\030\t" +
       " \003(\0132\n.ExerciseO\")\n\nWorkoutsTO\022\033\n\010workou" +
       "ts\030\001 \003(\0132\t.WorkoutO\"\"\n\016ResponseMember\022\020\n" +
-      "\010username\030\002 \001(\t2\272\002\n\013LogicServer\022*\n\014creat" +
+      "\010username\030\002 \001(\t2\207\003\n\013LogicServer\022*\n\014creat" +
       "eMember\022\t.MemberTO\032\017.ResponseMember\022)\n\013l" +
       "oginMember\022\t.MemberTO\032\017.ResponseMember\022*" +
       "\n\016createExercise\022\013.ExerciseTO\032\013.Exercise" +
@@ -96,8 +96,10 @@ public final class LogicServerOuterClass {
       "sTO\022%\n\013getWorkouts\022\t.EmptyPar\032\013.Workouts" +
       "TO\022#\n\ngetWorkout\022\n.WorkoutId\032\t.WorkoutO\022" +
       "3\n\rassignWorkout\022\020.FollowWorkoutTO\032\020.Fol" +
-      "lowWorkoutTOB!\n\035via.sep3.logicserver.pro" +
-      "tobufP\001b\006proto3"
+      "lowWorkoutTO\022#\n\013editWorkout\022\t.WorkoutO\032\t" +
+      ".WorkoutO\022&\n\rdeleteWorkout\022\n.WorkoutId\032\t" +
+      ".EmptyParB!\n\035via.sep3.logicserver.protob" +
+      "ufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

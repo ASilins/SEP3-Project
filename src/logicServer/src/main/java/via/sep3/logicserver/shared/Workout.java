@@ -10,15 +10,15 @@ import lombok.Data;
 @Component
 public class Workout {
     private int id;
-    private String name;
-    private String description;
-    private int durationInMin;
-    private int createdBy;
-    private int followedBy;
+    private String Name;
+    private String Description;
+    private int DurationInMin;
+    private int CreatedBy;
+    private int FollowedBy;
     private boolean isPublic;
-    private List<Exercise> exercises;
+    private List<Exercise> Exercises;
 
     public int numberOfExercises() {
-        return exercises.size();
+        return Exercises.size();
     }
 }

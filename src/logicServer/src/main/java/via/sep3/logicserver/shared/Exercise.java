@@ -8,7 +8,7 @@ import lombok.Data;
 @Component
 public class Exercise {
     private int id;
-    private String name;
-    private String description;
-    private int duration;
+    private String Name;
+    private String Description;
+    private int Duration;
 }

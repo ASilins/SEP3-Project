@@ -25,4 +25,18 @@ public class WorkoutDAO : IWorkoutDAO
 
         return Task.FromResult(dto);
     }
+
+    public Task<Workout> EditWorkout(Workout workout)
+    {
+        // Write impl
+
+        return Task.FromResult(workout);
+    }
+
+    public Task<bool> DeleteWorkout(int id)
+    {
+        // Write impl
+
+        return Task.FromResult(true);
+    }
 }

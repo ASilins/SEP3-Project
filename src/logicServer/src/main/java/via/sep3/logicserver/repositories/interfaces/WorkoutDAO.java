@@ -12,4 +12,8 @@ public interface WorkoutDAO {
     List<Workout> GetWorkouts() throws Exception;
 
     FollowWorkoutDTO assignWorkout(FollowWorkoutDTO dto) throws Exception;
+
+    Workout editWorkout(Workout workout) throws Exception;
+
+    void deleteWorkout(int id) throws Exception;
 }

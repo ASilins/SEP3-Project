@@ -37,15 +37,17 @@ namespace GrpcClient {
             "BSABKAUSEQoJY3JlYXRlZEJ5GAYgASgFEhIKCmZvbGxvd2VkQnkYByABKAUS",
             "EAoIaXNQdWJsaWMYCCABKAgSHQoJZXhlcmNpc2VzGAkgAygLMgouRXhlcmNp",
             "c2VPIikKCldvcmtvdXRzVE8SGwoId29ya291dHMYASADKAsyCS5Xb3Jrb3V0",
-            "TyIiCg5SZXNwb25zZU1lbWJlchIQCgh1c2VybmFtZRgCIAEoCTK6AgoLTG9n",
+            "TyIiCg5SZXNwb25zZU1lbWJlchIQCgh1c2VybmFtZRgCIAEoCTKHAwoLTG9n",
             "aWNTZXJ2ZXISKgoMY3JlYXRlTWVtYmVyEgkuTWVtYmVyVE8aDy5SZXNwb25z",
             "ZU1lbWJlchIpCgtsb2dpbk1lbWJlchIJLk1lbWJlclRPGg8uUmVzcG9uc2VN",
             "ZW1iZXISKgoOY3JlYXRlRXhlcmNpc2USCy5FeGVyY2lzZVRPGgsuRXhlcmNp",
             "c2VUTxInCgxnZXRFeGVyY2lzZXMSCS5FbXB0eVBhchoMLkV4ZXJjaXNlc1RP",
             "EiUKC2dldFdvcmtvdXRzEgkuRW1wdHlQYXIaCy5Xb3Jrb3V0c1RPEiMKCmdl",
             "dFdvcmtvdXQSCi5Xb3Jrb3V0SWQaCS5Xb3Jrb3V0TxIzCg1hc3NpZ25Xb3Jr",
-            "b3V0EhAuRm9sbG93V29ya291dFRPGhAuRm9sbG93V29ya291dFRPQg2qAgpH",
-            "cnBjQ2xpZW50YgZwcm90bzM="));
+            "b3V0EhAuRm9sbG93V29ya291dFRPGhAuRm9sbG93V29ya291dFRPEiMKC2Vk",
+            "aXRXb3Jrb3V0EgkuV29ya291dE8aCS5Xb3Jrb3V0TxImCg1kZWxldGVXb3Jr",
+            "b3V0EgouV29ya291dElkGgkuRW1wdHlQYXJCDaoCCkdycGNDbGllbnRiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -67,6 +67,27 @@ public class WorkoutClient : IWorkoutClient
         };
     }
 
+    public async Task<Workout> EditWorkout(Workout workout)
+    {
+        using var channel = GrpcChannel.ForAddress(_url);
+        client = new LogicServer.LogicServerClient(channel);
+
+        var reply = await client.editWorkoutAsync(FromWorkoutToWorkoutO(workout));
+
+        return FromWorkoutOToWorkout(reply);
+    }
+
+    public async Task DeleteWorkout(int id)
+    {
+        using var channel = GrpcChannel.ForAddress(_url);
+        client = new LogicServer.LogicServerClient(channel);
+
+        await client.deleteWorkoutAsync(new WorkoutId
+        {
+            Id = id
+        });
+    }
+
     private Workout FromWorkoutOToWorkout(WorkoutO workout)
     {
         return new Workout
@@ -80,5 +101,23 @@ public class WorkoutClient : IWorkoutClient
             IsPublic = workout.IsPublic,
             Exercises = _exerciseClient.ConvertListExerciseOtoExercise(workout.Exercises)
         };
+    }
+
+    private WorkoutO FromWorkoutToWorkoutO(Workout workout)
+    {
+        var o = new WorkoutO()
+        {
+            Id = workout.Id,
+            Name = workout.Name,
+            Description = workout.Description,
+            DurationInMin = workout.DurationInMin,
+            CreatedBy = workout.CreatedBy,
+            FollowedBy = workout.FollowedBy,
+            IsPublic = workout.IsPublic
+        };
+
+        o.Exercises.AddRange(_exerciseClient.ConvertListExercisetoExerciseO(workout.Exercises));
+
+        return o;
     }
 }

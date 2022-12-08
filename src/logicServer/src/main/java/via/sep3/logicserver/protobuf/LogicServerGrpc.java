@@ -231,6 +231,68 @@ public final class LogicServerGrpc {
     return getAssignWorkoutMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.WorkoutO,
+      via.sep3.logicserver.protobuf.WorkoutO> getEditWorkoutMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "editWorkout",
+      requestType = via.sep3.logicserver.protobuf.WorkoutO.class,
+      responseType = via.sep3.logicserver.protobuf.WorkoutO.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.WorkoutO,
+      via.sep3.logicserver.protobuf.WorkoutO> getEditWorkoutMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.WorkoutO, via.sep3.logicserver.protobuf.WorkoutO> getEditWorkoutMethod;
+    if ((getEditWorkoutMethod = LogicServerGrpc.getEditWorkoutMethod) == null) {
+      synchronized (LogicServerGrpc.class) {
+        if ((getEditWorkoutMethod = LogicServerGrpc.getEditWorkoutMethod) == null) {
+          LogicServerGrpc.getEditWorkoutMethod = getEditWorkoutMethod =
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.WorkoutO, via.sep3.logicserver.protobuf.WorkoutO>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "editWorkout"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.WorkoutO.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.WorkoutO.getDefaultInstance()))
+              .setSchemaDescriptor(new LogicServerMethodDescriptorSupplier("editWorkout"))
+              .build();
+        }
+      }
+    }
+    return getEditWorkoutMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.WorkoutId,
+      via.sep3.logicserver.protobuf.EmptyPar> getDeleteWorkoutMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "deleteWorkout",
+      requestType = via.sep3.logicserver.protobuf.WorkoutId.class,
+      responseType = via.sep3.logicserver.protobuf.EmptyPar.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.WorkoutId,
+      via.sep3.logicserver.protobuf.EmptyPar> getDeleteWorkoutMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.WorkoutId, via.sep3.logicserver.protobuf.EmptyPar> getDeleteWorkoutMethod;
+    if ((getDeleteWorkoutMethod = LogicServerGrpc.getDeleteWorkoutMethod) == null) {
+      synchronized (LogicServerGrpc.class) {
+        if ((getDeleteWorkoutMethod = LogicServerGrpc.getDeleteWorkoutMethod) == null) {
+          LogicServerGrpc.getDeleteWorkoutMethod = getDeleteWorkoutMethod =
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.WorkoutId, via.sep3.logicserver.protobuf.EmptyPar>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteWorkout"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.WorkoutId.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.EmptyPar.getDefaultInstance()))
+              .setSchemaDescriptor(new LogicServerMethodDescriptorSupplier("deleteWorkout"))
+              .build();
+        }
+      }
+    }
+    return getDeleteWorkoutMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -328,6 +390,20 @@ public final class LogicServerGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAssignWorkoutMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void editWorkout(via.sep3.logicserver.protobuf.WorkoutO request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.WorkoutO> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditWorkoutMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void deleteWorkout(via.sep3.logicserver.protobuf.WorkoutId request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.EmptyPar> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteWorkoutMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -379,6 +455,20 @@ public final class LogicServerGrpc {
                 via.sep3.logicserver.protobuf.FollowWorkoutTO,
                 via.sep3.logicserver.protobuf.FollowWorkoutTO>(
                   this, METHODID_ASSIGN_WORKOUT)))
+          .addMethod(
+            getEditWorkoutMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.sep3.logicserver.protobuf.WorkoutO,
+                via.sep3.logicserver.protobuf.WorkoutO>(
+                  this, METHODID_EDIT_WORKOUT)))
+          .addMethod(
+            getDeleteWorkoutMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.sep3.logicserver.protobuf.WorkoutId,
+                via.sep3.logicserver.protobuf.EmptyPar>(
+                  this, METHODID_DELETE_WORKOUT)))
           .build();
     }
   }
@@ -452,6 +542,22 @@ public final class LogicServerGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAssignWorkoutMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void editWorkout(via.sep3.logicserver.protobuf.WorkoutO request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.WorkoutO> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEditWorkoutMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteWorkout(via.sep3.logicserver.protobuf.WorkoutId request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.EmptyPar> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteWorkoutMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -515,6 +621,20 @@ public final class LogicServerGrpc {
     public via.sep3.logicserver.protobuf.FollowWorkoutTO assignWorkout(via.sep3.logicserver.protobuf.FollowWorkoutTO request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAssignWorkoutMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.sep3.logicserver.protobuf.WorkoutO editWorkout(via.sep3.logicserver.protobuf.WorkoutO request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEditWorkoutMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.sep3.logicserver.protobuf.EmptyPar deleteWorkout(via.sep3.logicserver.protobuf.WorkoutId request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteWorkoutMethod(), getCallOptions(), request);
     }
   }
 
@@ -587,6 +707,22 @@ public final class LogicServerGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAssignWorkoutMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.WorkoutO> editWorkout(
+        via.sep3.logicserver.protobuf.WorkoutO request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEditWorkoutMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.EmptyPar> deleteWorkout(
+        via.sep3.logicserver.protobuf.WorkoutId request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteWorkoutMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_MEMBER = 0;
@@ -596,6 +732,8 @@ public final class LogicServerGrpc {
   private static final int METHODID_GET_WORKOUTS = 4;
   private static final int METHODID_GET_WORKOUT = 5;
   private static final int METHODID_ASSIGN_WORKOUT = 6;
+  private static final int METHODID_EDIT_WORKOUT = 7;
+  private static final int METHODID_DELETE_WORKOUT = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -641,6 +779,14 @@ public final class LogicServerGrpc {
         case METHODID_ASSIGN_WORKOUT:
           serviceImpl.assignWorkout((via.sep3.logicserver.protobuf.FollowWorkoutTO) request,
               (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.FollowWorkoutTO>) responseObserver);
+          break;
+        case METHODID_EDIT_WORKOUT:
+          serviceImpl.editWorkout((via.sep3.logicserver.protobuf.WorkoutO) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.WorkoutO>) responseObserver);
+          break;
+        case METHODID_DELETE_WORKOUT:
+          serviceImpl.deleteWorkout((via.sep3.logicserver.protobuf.WorkoutId) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.EmptyPar>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -710,6 +856,8 @@ public final class LogicServerGrpc {
               .addMethod(getGetWorkoutsMethod())
               .addMethod(getGetWorkoutMethod())
               .addMethod(getAssignWorkoutMethod())
+              .addMethod(getEditWorkoutMethod())
+              .addMethod(getDeleteWorkoutMethod())
               .build();
         }
       }

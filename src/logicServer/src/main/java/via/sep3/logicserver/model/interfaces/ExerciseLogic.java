@@ -13,4 +13,6 @@ public interface ExerciseLogic {
     List<ExerciseTO> getExercises() throws Exception;
 
     List<ExerciseO> convertListFromExercisesToExerciseOs(List<Exercise> exercises);
+
+    List<Exercise> convertListFromExerciseOsToExercises(List<ExerciseO> exerciseOs);
 }

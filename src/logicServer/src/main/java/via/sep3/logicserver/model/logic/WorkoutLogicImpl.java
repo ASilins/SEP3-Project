@@ -41,6 +41,18 @@ public class WorkoutLogicImpl implements WorkoutLogic {
                 dao.assignWorkout(convertFollWorkTOToFollWorkDTO(dto)));
     }
 
+    @Override
+    public WorkoutO editWorkout(WorkoutO workout) throws Exception {
+        return fromWorkoutToWorkoutO(dao.editWorkout(fromWorkoutOToworkout(workout)));
+    }
+
+    @Override
+    public void deleteWorkout(int id) throws Exception {
+        dao.deleteWorkout(id);
+    }
+
+    // On to converter class
+
     private FollowWorkoutDTO convertFollWorkTOToFollWorkDTO(FollowWorkoutTO to) {
         FollowWorkoutDTO dto = new FollowWorkoutDTO();
         dto.setUserID(to.getUserID());
@@ -76,5 +88,20 @@ public class WorkoutLogicImpl implements WorkoutLogic {
                 .setIsPublic(workout.isPublic())
                 .addAllExercises(exerciseLogic.convertListFromExercisesToExerciseOs(workout.getExercises()))
                 .build();
+    }
+
+    private Workout fromWorkoutOToworkout(WorkoutO workout) {
+        Workout response = new Workout();
+
+        response.setId(workout.getId());
+        response.setName(workout.getName());
+        response.setDescription(workout.getDescription());
+        response.setDurationInMin(workout.getDurationInMin());
+        response.setCreatedBy(workout.getCreatedBy());
+        response.setFollowedBy(workout.getFollowedBy());
+        response.setPublic(workout.getIsPublic());
+        response.setExercises(exerciseLogic.convertListFromExerciseOsToExercises(workout.getExercisesList()));
+
+        return response;
     }
 }

@@ -56,4 +56,33 @@ public class WorkoutController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+
+    [HttpPut]
+    public async Task<ActionResult<Workout>> EditWorkout([FromBody] Workout workout)
+    {
+        try
+        {
+            return Ok(await _client.EditWorkout(workout));
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpDelete]
+    public async Task<ActionResult<Workout>> DeleteWorkout([FromQuery] int id)
+    {
+        try
+        {
+            await _client.DeleteWorkout(id);
+            return NoContent();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
 }

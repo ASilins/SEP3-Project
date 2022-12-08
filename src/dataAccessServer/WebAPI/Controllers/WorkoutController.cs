@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Repositories.Interfaces;
-using Repositories.Logic;
+using Database.Interfaces;
+using Database.Logic;
 using Shared.DTOs;
 
 namespace WebAPI.Controllers;

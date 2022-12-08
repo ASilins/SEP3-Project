@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import via.sep3.logicserver.repositories.interfaces.WorkoutDAO;
+import via.sep3.logicserver.shared.FollowWorkoutDTO;
 import via.sep3.logicserver.shared.Workout;
 
 @Repository
@@ -29,7 +30,7 @@ public class WorkoutDAOImpl implements WorkoutDAO {
         ResponseEntity<Workout> responseEntity = restTemplate.getForEntity(uri, Workout.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCode());
+            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();
@@ -42,7 +43,19 @@ public class WorkoutDAOImpl implements WorkoutDAO {
                         new ParameterizedTypeReference<List<Workout>>() {
                         });
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCode());
+            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
+        }
+
+        return responseEntity.getBody();
+    }
+
+    @Override
+    public FollowWorkoutDTO assignWorkout(FollowWorkoutDTO dto) throws Exception {
+        ResponseEntity<FollowWorkoutDTO> responseEntity = restTemplate
+                .postForEntity(URI + "/assign", dto, FollowWorkoutDTO.class);
+
+        if (responseEntity.getStatusCode() != HttpStatus.OK) {
+            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();

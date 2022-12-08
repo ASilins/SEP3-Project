@@ -5,6 +5,7 @@ namespace Repositories.Logic;
 
 public class WorkoutDAO : IWorkoutDAO
 {
+
     public Task<Workout> GetWorkout(int id)
     {
         return Task.FromResult(new Workout
@@ -16,5 +17,12 @@ public class WorkoutDAO : IWorkoutDAO
     public Task<IEnumerable<Workout>> GetWorkouts()
     {
         throw new NotImplementedException();
+    }
+
+    public Task<FollowWorkoutDTO> AssignWorkout(FollowWorkoutDTO dto)
+    {
+        // Write impl
+
+        return Task.FromResult(dto);
     }
 }

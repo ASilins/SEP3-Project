@@ -1,6 +1,7 @@
 using GrpcClient.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Model.DTOs;
+using Shared.DTOs;
 
 namespace WebApi.Controllers;
 
@@ -34,6 +35,20 @@ public class WorkoutController : ControllerBase
         try
         {
             return Ok(await _client.GetWorkouts());
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpPost, Route("/[controller]/assign")]
+    public async Task<ActionResult<FollowWorkoutDTO>> AssignWorkout([FromBody] FollowWorkoutDTO dto)
+    {
+        try
+        {
+            return Ok(await _client.AssignWorkout(dto));
         }
         catch (Exception e)
         {

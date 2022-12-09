@@ -41,39 +41,6 @@
         }
       },
       {
-        "HashCode": -336873355,
-        "Kind": "Components.Component",
-        "Name": "Blazor.Pages.CreateExercise.CreateExercise",
-        "AssemblyName": "Blazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "CreateExercise"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.CreateExercise.CreateExercise"
-        }
-      },
-      {
-        "HashCode": -1121546745,
-        "Kind": "Components.Component",
-        "Name": "Blazor.Pages.CreateExercise.CreateExercise",
-        "AssemblyName": "Blazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Blazor.Pages.CreateExercise.CreateExercise"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.CreateExercise.CreateExercise",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1124105250,
         "Kind": "Components.Component",
         "Name": "Blazor.Pages.CreateMember.CreateMember",
@@ -136,6 +103,72 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Blazor.Pages.LoginMember.LoginMember",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -336873355,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.CreateExercise.CreateExercise",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "CreateExercise"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.CreateExercise.CreateExercise"
+        }
+      },
+      {
+        "HashCode": -1121546745,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.CreateExercise.CreateExercise",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor.Pages.CreateExercise.CreateExercise"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.CreateExercise.CreateExercise",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 1735925574,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.SeeExercises.ViewExercises",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "ViewExercises"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.SeeExercises.ViewExercises"
+        }
+      },
+      {
+        "HashCode": -238553981,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.SeeExercises.ViewExercises",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor.Pages.SeeExercises.ViewExercises"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.SeeExercises.ViewExercises",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -13672,6 +13705,11 @@
       "FilePath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\_Imports.razor",
       "TargetPath": "_Imports.razor",
       "FileKind": "componentImport"
+    },
+    {
+      "FilePath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Pages\\SeeExercises\\ViewExercises.razor",
+      "TargetPath": "Pages\\SeeExercises\\ViewExercises.razor",
+      "FileKind": "component"
     },
     {
       "FilePath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Pages\\LoginMember\\LoginMember.razor",

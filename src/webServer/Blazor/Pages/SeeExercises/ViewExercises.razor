@@ -1,0 +1,58 @@
+@page "/exercises"
+@using Model.DTOs;
+@using Blazor.Services;
+@inject ExerciseService service;
+
+<h1>Exercises</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Duration</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var exercise in exercises)
+        {
+            <tr>
+                <td>@exercise.Id</td>
+                <td>@exercise.Name</td>
+                <td>@exercise.Description</td>
+                <td>@exercise.Duration</td>
+                <td>
+                    <input type="radio" name="selectedExercise" @onclick="@(() => SelectExercise(exercise))" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button @onclick="@EditSelectedExercise">Edit</button>
+<button @onclick="@RemoveSelectedExercise">Remove</button>
+
+@code {
+    private List<ExerciseDTO> exercises;
+    private ExerciseDTO selectedExercise;
+
+    protected async override void OnInitialized()
+    {
+        exercises = await service.GetExercises();
+    }
+
+    private void SelectExercise(ExerciseDTO exercise)
+    {
+        selectedExercise = exercise;
+    }
+
+    private void EditSelectedExercise()
+    {
+        // Navigate to edit page for selected exercise
+    }
+
+    private void RemoveSelectedExercise()
+    {
+        // Remove selected exercise from list and update database
+    }
+}

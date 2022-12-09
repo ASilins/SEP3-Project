@@ -1,11 +1,13 @@
 @page "/workouts"
-@using Blazor.Pages.StartWorkout
 @using Model.DTOs
 @using Blazor.Services;
 @inject WorkoutService service;
 @inject NavigationManager navManager;
 
 <h1>Workouts</h1>
+
+<button @onclick="@CreateWorkout">Create</button>
+
 <table>
     <thead>
         <tr>
@@ -31,35 +33,48 @@
                 <td>@workout.FollowedBy</td>
                 <td>@workout.IsPublic</td>
                 <td>
-                    <button @onclick="@(() => EditWorkout(workout))">Edit</button>
-                    <button @onclick="@(() => RemoveWorkout(workout))">Remove</button>
-                    <button @onclick="@(() => <StartWorkout id=workout.Id />)">Start</button>
+                    <input type="radio" name="selectedWorkout" @onclick="@(() => SelectWorkout(workout))" />
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+<button @onclick="@EditSelectedWorkout">Edit</button>
+<button @onclick="@RemoveSelectedWorkout">Remove</button>
+<button @onclick="@StartSelectedWorkout">Start</button>
+
 @code {
     List<WorkoutDTO> workouts = new List<WorkoutDTO>();
-    StartWorkout start;
+    WorkoutDTO selectedWorkout;
 
     protected async override void OnInitialized()
     {
         workouts = await service.GetWorkouts();
     }
 
-    void EditWorkout(WorkoutDTO workout)
+    void SelectWorkout(WorkoutDTO workout)
+    {
+        selectedWorkout = workout;
+    }
+
+    void CreateWorkout()
+    {
+        // Implement create
+    }
+
+    void EditSelectedWorkout()
     {
         // Implement edit functionality here
     }
 
-    void RemoveWorkout(WorkoutDTO workout)
+    void RemoveSelectedWorkout()
     {
         // Implement remove functionality here
     }
 
-    void StartWorkout(WorkoutDTO workout)
+    void StartSelectedWorkout()
     {
-        navManager.NavigateTo($"/start-workout?w={workout.Id}");
+        navManager.NavigateTo($"/start-workout?w={selectedWorkout.Id}");
     }
 }

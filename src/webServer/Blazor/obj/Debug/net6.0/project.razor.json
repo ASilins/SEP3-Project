@@ -41,39 +41,6 @@
         }
       },
       {
-        "HashCode": 946424602,
-        "Kind": "Components.Component",
-        "Name": "Blazor.Pages.SeeExercises.Exercises",
-        "AssemblyName": "Blazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Exercises"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.SeeExercises.Exercises"
-        }
-      },
-      {
-        "HashCode": -949504192,
-        "Kind": "Components.Component",
-        "Name": "Blazor.Pages.SeeExercises.Exercises",
-        "AssemblyName": "Blazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Blazor.Pages.SeeExercises.Exercises"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.SeeExercises.Exercises",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 1124105250,
         "Kind": "Components.Component",
         "Name": "Blazor.Pages.CreateMember.CreateMember",
@@ -140,39 +107,6 @@
         }
       },
       {
-        "HashCode": -466097205,
-        "Kind": "Components.Component",
-        "Name": "Blazor.Pages.SeeWorkouts.Workouts",
-        "AssemblyName": "Blazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Workouts"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.SeeWorkouts.Workouts"
-        }
-      },
-      {
-        "HashCode": -1529878054,
-        "Kind": "Components.Component",
-        "Name": "Blazor.Pages.SeeWorkouts.Workouts",
-        "AssemblyName": "Blazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Blazor.Pages.SeeWorkouts.Workouts"
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.SeeWorkouts.Workouts",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": 757190786,
         "Kind": "Components.Component",
         "Name": "Blazor.Pages.StartWorkout.StartWorkout",
@@ -222,6 +156,72 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Blazor.Pages.StartWorkout.StartWorkout",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 946424602,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.SeeExercises.Exercises",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Exercises"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.SeeExercises.Exercises"
+        }
+      },
+      {
+        "HashCode": -949504192,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.SeeExercises.Exercises",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor.Pages.SeeExercises.Exercises"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.SeeExercises.Exercises",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -466097205,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.SeeWorkouts.Workouts",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Workouts"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.SeeWorkouts.Workouts"
+        }
+      },
+      {
+        "HashCode": -1529878054,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.SeeWorkouts.Workouts",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor.Pages.SeeWorkouts.Workouts"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.SeeWorkouts.Workouts",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

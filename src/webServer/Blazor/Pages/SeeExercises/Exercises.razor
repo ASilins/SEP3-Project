@@ -4,6 +4,9 @@
 @inject ExerciseService service;
 
 <h1>Exercises</h1>
+
+<button @onclick="@CreateExercise">Create</button>
+
 <table>
     <thead>
         <tr>
@@ -33,25 +36,30 @@
 <button @onclick="@RemoveSelectedExercise">Remove</button>
 
 @code {
-    private List<ExerciseDTO> exercises = new List<ExerciseDTO>();
-    private ExerciseDTO selectedExercise;
+    List<ExerciseDTO> exercises = new List<ExerciseDTO>();
+    ExerciseDTO selectedExercise;
 
     protected async override void OnInitialized()
     {
         exercises = await service.GetExercises();
     }
 
-    private void SelectExercise(ExerciseDTO exercise)
+    void SelectExercise(ExerciseDTO exercise)
     {
         selectedExercise = exercise;
     }
 
-    private void EditSelectedExercise()
+    void CreateExercise()
+    {
+        // Implement create
+    }
+
+    void EditSelectedExercise()
     {
         // Navigate to edit page for selected exercise
     }
 
-    private void RemoveSelectedExercise()
+    void RemoveSelectedExercise()
     {
         // Remove selected exercise from list and update database
     }

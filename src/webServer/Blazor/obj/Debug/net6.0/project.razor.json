@@ -140,35 +140,68 @@
         }
       },
       {
-        "HashCode": 1735925574,
+        "HashCode": -466097205,
         "Kind": "Components.Component",
-        "Name": "Blazor.Pages.SeeExercises.ViewExercises",
+        "Name": "Blazor.Pages.SeeWorkouts.Workouts",
         "AssemblyName": "Blazor",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "ViewExercises"
+            "TagName": "Workouts"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.SeeExercises.ViewExercises"
+          "Common.TypeName": "Blazor.Pages.SeeWorkouts.Workouts"
         }
       },
       {
-        "HashCode": -238553981,
+        "HashCode": -1529878054,
         "Kind": "Components.Component",
-        "Name": "Blazor.Pages.SeeExercises.ViewExercises",
+        "Name": "Blazor.Pages.SeeWorkouts.Workouts",
         "AssemblyName": "Blazor",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "Blazor.Pages.SeeExercises.ViewExercises"
+            "TagName": "Blazor.Pages.SeeWorkouts.Workouts"
           }
         ],
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.SeeExercises.ViewExercises",
+          "Common.TypeName": "Blazor.Pages.SeeWorkouts.Workouts",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": 946424602,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.SeeExercises.Exercises",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Exercises"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.SeeExercises.Exercises"
+        }
+      },
+      {
+        "HashCode": -949504192,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.SeeExercises.Exercises",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor.Pages.SeeExercises.Exercises"
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.SeeExercises.Exercises",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },
@@ -13687,6 +13720,11 @@
       "FileKind": "component"
     },
     {
+      "FilePath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Pages\\SeeWorkouts\\Workouts.razor",
+      "TargetPath": "Pages\\SeeWorkouts\\Workouts.razor",
+      "FileKind": "component"
+    },
+    {
       "FilePath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Shared\\SurveyPrompt.razor",
       "TargetPath": "Shared\\SurveyPrompt.razor",
       "FileKind": "component"
@@ -13707,8 +13745,8 @@
       "FileKind": "componentImport"
     },
     {
-      "FilePath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Pages\\SeeExercises\\ViewExercises.razor",
-      "TargetPath": "Pages\\SeeExercises\\ViewExercises.razor",
+      "FilePath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Pages\\SeeExercises\\Exercises.razor",
+      "TargetPath": "Pages\\SeeExercises\\Exercises.razor",
       "FileKind": "component"
     },
     {

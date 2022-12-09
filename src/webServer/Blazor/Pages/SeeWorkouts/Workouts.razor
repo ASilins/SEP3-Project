@@ -1,0 +1,62 @@
+@page "/workouts"
+@using Model.DTOs
+@using Blazor.Services;
+@inject WorkoutService service;
+
+<h1>Workouts</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Duration</th>
+            <th>Exercises</th>
+            <th>Followers</th>
+            <th>Public</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var workout in workouts)
+        {
+            <tr>
+                <td>@workout.Id</td>
+                <td>@workout.Name</td>
+                <td>@workout.Description</td>
+                <td>@workout.DurationInMin</td>
+                <td>@workout.NumberOfExercises()</td>
+                <td>@workout.FollowedBy</td>
+                <td>@workout.IsPublic</td>
+                <td>
+                    <button @onclick="@(() => EditWorkout(workout))">Edit</button>
+                    <button @onclick="@(() => RemoveWorkout(workout))">Remove</button>
+                    <button @onclick="@(() => StartWorkout(workout))">Start</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@code {
+    List<WorkoutDTO> workouts = new List<WorkoutDTO>();
+
+    protected async override void OnInitialized()
+    {
+        workouts = await service.GetWorkouts();
+    }
+
+    void EditWorkout(WorkoutDTO workout)
+    {
+        // Implement edit functionality here
+    }
+
+    void RemoveWorkout(WorkoutDTO workout)
+    {
+        // Implement remove functionality here
+    }
+
+    void StartWorkout(WorkoutDTO workout)
+    {
+        // Implement start functionality here
+    }
+}

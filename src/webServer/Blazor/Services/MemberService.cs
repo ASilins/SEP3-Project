@@ -19,7 +19,7 @@ public class MemberService
         string result = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
-            throw new Exception(result);
+            throw new Exception(result + ">>>" + response.StatusCode);
         }
     }
 
@@ -29,7 +29,7 @@ public class MemberService
         string result = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
-            throw new Exception(result);
+            throw new Exception(result + ">>>" + response.StatusCode);
         }
     }
 }

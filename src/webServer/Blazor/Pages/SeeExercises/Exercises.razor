@@ -33,7 +33,7 @@
 <button @onclick="@RemoveSelectedExercise">Remove</button>
 
 @code {
-    private List<ExerciseDTO> exercises;
+    private List<ExerciseDTO> exercises = new List<ExerciseDTO>();
     private ExerciseDTO selectedExercise;
 
     protected async override void OnInitialized()

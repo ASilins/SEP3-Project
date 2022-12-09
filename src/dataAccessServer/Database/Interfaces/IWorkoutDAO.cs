@@ -1,12 +1,13 @@
 using Shared.DTOs;
+using Shared.Model;
 
 namespace Database.Interfaces;
 
 public interface IWorkoutDAO
 {
-    Task<WorkoutDTO> GetWorkout(int id);
-    Task<IEnumerable<WorkoutDTO>> GetWorkouts();
+    Task<Workout?> GetWorkout(int id);
+    Task<List<WorkoutDTO>> GetWorkouts();
     Task<FollowWorkoutDTO> AssignWorkout(FollowWorkoutDTO dto);
-    Task<WorkoutDTO> EditWorkout(WorkoutDTO workout);
-    Task<bool> DeleteWorkout(int id);
+    Task EditWorkout(WorkoutDTO workout);
+    Task DeleteWorkout(int id);
 }

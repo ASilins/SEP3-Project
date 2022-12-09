@@ -22,7 +22,7 @@ public class ExerciseDAO : IExerciseDAO
         {
             Name = exercise.Name ?? "empty",
             Description = exercise.Description ?? "empty",
-            DurationInMin = exercise.Duration ?? 0
+            DurationInMin = exercise.Duration
         };
 
         EntityEntry<Exercise> added = await _db.Exercises.AddAsync(ex);
@@ -39,8 +39,22 @@ public class ExerciseDAO : IExerciseDAO
         };
     }
 
-    public Task<IEnumerable<ExerciseDTO>> GetExercises()
+    public Task<List<ExerciseDTO>> GetExercises()
     {
-        throw new NotImplementedException();
+        List<ExerciseDTO> dtos = new();
+
+        foreach (var item in _db.Exercises.ToList())
+        {
+            dtos.Add(new ExerciseDTO()
+            {
+                Id = item.Id,
+                Name = item.Name,
+                Description = item.Description,
+                Duration = item.DurationInMin,
+                CreatedBy = (int?)_db.Entry(item).Property("AddedBy").CurrentValue
+            });
+        }
+
+        return Task.FromResult(dtos);
     }
 }

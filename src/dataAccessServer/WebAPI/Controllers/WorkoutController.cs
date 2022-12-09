@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Database.Interfaces;
 using Database.Logic;
 using Shared.DTOs;
+using Shared.Model;
 
 namespace WebAPI.Controllers;
 
@@ -20,7 +21,39 @@ public class WorkoutController : ControllerBase
     {
         try
         {
-            return await _dao.GetWorkout(id);
+            Workout? w = await _dao.GetWorkout(id);
+
+            if (w == null)
+            {
+                return StatusCode(404);
+            }
+
+            var dto = new WorkoutDTO()
+            {
+                Id = w.Id,
+                Name = w.Name,
+                Description = w.Description,
+                DurationInMin = w.DurationInMin,
+                FollowedBy = w.FollowedBy,
+                IsPublic = w.IsPublic
+            };
+
+            var exercises = new List<ExerciseDTO>();
+
+            foreach (var item in (List<Exercise>)w.Exercises)
+            {
+                exercises.Add(new ExerciseDTO()
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Description = item.Description,
+                    Duration = item.DurationInMin
+                });
+            }
+
+            dto.Exercises = exercises;
+
+            return dto;
         }
         catch (Exception e)
         {
@@ -62,7 +95,9 @@ public class WorkoutController : ControllerBase
     {
         try
         {
-            return Ok(await _dao.EditWorkout(workout));
+            await _dao.EditWorkout(workout);
+
+            return Ok();
         }
         catch (Exception e)
         {
@@ -72,16 +107,13 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<ActionResult<WorkoutDTO>> DeleteWorkout([FromQuery] int id)
+    public async Task<ActionResult<int>> DeleteWorkout([FromQuery] int id)
     {
         try
         {
-            if (await _dao.DeleteWorkout(id))
-            {
-                return NoContent();
-            }
+            await _dao.DeleteWorkout(id);
 
-            return StatusCode(400, $"Workout with id:{id} does not exist");
+            return Ok();
         }
         catch (Exception e)
         {

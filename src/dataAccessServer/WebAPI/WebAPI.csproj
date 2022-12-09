@@ -9,6 +9,7 @@
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <ProjectReference Include="../Shared/Shared.csproj" />
+    <ProjectReference Include="../Database/Database.csproj" />
   </ItemGroup>
 
 </Project>

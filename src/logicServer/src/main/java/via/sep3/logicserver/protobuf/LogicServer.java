@@ -15,20 +15,20 @@ public final class LogicServer {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_MemberTO_descriptor;
+    internal_static_StringObj_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_MemberTO_fieldAccessorTable;
+      internal_static_StringObj_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ExerciseTO_descriptor;
+    internal_static_IntObj_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ExerciseTO_fieldAccessorTable;
+      internal_static_IntObj_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ResponseMember_descriptor;
+    internal_static_ExercisesInWorkoutsObj_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ResponseMember_fieldAccessorTable;
+      internal_static_ExercisesInWorkoutsObj_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,39 +38,34 @@ public final class LogicServer {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021LogicServer.proto\".\n\010MemberTO\022\020\n\010usern" +
-      "ame\030\001 \001(\t\022\020\n\010password\030\002 \001(\t\"A\n\nExerciseT" +
-      "O\022\014\n\004name\030\001 \001(\t\022\023\n\013description\030\002 \001(\t\022\020\n\010" +
-      "duration\030\003 \001(\005\"\"\n\016ResponseMember\022\020\n\010user" +
-      "name\030\002 \001(\t2f\n\rMemberService\022*\n\014createMem" +
-      "ber\022\t.MemberTO\032\017.ResponseMember\022)\n\013login" +
-      "Member\022\t.MemberTO\032\017.ResponseMember2=\n\017Ex" +
-      "erciseService\022*\n\016createExercise\022\013.Exerci" +
-      "seTO\032\013.ExerciseTOB!\n\035via.sep3.logicserve" +
+      "\n\021LogicServer.proto\"\031\n\tStringObj\022\014\n\004name" +
+      "\030\001 \001(\t\"\030\n\006IntObj\022\016\n\006number\030\001 \001(\005\"?\n\026Exer" +
+      "cisesInWorkoutsObj\022\022\n\nExerciseId\030\001 \001(\005\022\021" +
+      "\n\tWorkoutId\030\002 \001(\005B!\n\035via.sep3.logicserve" +
       "r.protobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_MemberTO_descriptor =
+    internal_static_StringObj_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_MemberTO_fieldAccessorTable = new
+    internal_static_StringObj_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_MemberTO_descriptor,
-        new java.lang.String[] { "Username", "Password", });
-    internal_static_ExerciseTO_descriptor =
+        internal_static_StringObj_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_IntObj_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_ExerciseTO_fieldAccessorTable = new
+    internal_static_IntObj_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ExerciseTO_descriptor,
-        new java.lang.String[] { "Name", "Description", "Duration", });
-    internal_static_ResponseMember_descriptor =
+        internal_static_IntObj_descriptor,
+        new java.lang.String[] { "Number", });
+    internal_static_ExercisesInWorkoutsObj_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_ResponseMember_fieldAccessorTable = new
+    internal_static_ExercisesInWorkoutsObj_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ResponseMember_descriptor,
-        new java.lang.String[] { "Username", });
+        internal_static_ExercisesInWorkoutsObj_descriptor,
+        new java.lang.String[] { "ExerciseId", "WorkoutId", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

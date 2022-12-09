@@ -5,9 +5,9 @@ namespace GrpcClient.Interfaces;
 
 public interface IWorkoutClient
 {
-    Task<Workout> GetWorkout(int id);
-    Task<IEnumerable<Workout>> GetWorkouts();
+    Task<WorkoutDTO> GetWorkout(int id);
+    Task<IEnumerable<WorkoutDTO>> GetWorkouts();
     Task<FollowWorkoutDTO> AssignWorkout(FollowWorkoutDTO dto);
-    Task<Workout> EditWorkout(Workout workout);
+    Task EditWorkout(WorkoutDTO workout);
     Task DeleteWorkout(int id);
 }

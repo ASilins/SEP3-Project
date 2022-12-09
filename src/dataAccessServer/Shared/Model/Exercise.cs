@@ -9,7 +9,7 @@ public class Exercise
     //[Required, MinLength(3), MaxLength(30)]
     public string Name { get; set; }
     //[Required, MaxLength(500)]
-    public string Descritpion { get; set; }
+    public string Description { get; set; }
     //[Range(0, 600)]
     public int DurationInMin { get; set; }
     public ICollection<ExercisesInWorkouts> InWorkouts { get; set; }

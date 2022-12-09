@@ -25,7 +25,7 @@ namespace Database.Migrations
                     b.Property<int>("AddedBy")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Descritpion")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

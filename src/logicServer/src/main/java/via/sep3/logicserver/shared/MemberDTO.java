@@ -6,8 +6,10 @@ import lombok.Data;
 
 @Data
 @Component
+// In new build
 public class MemberDTO {
-
+    private int id;
     private String username;
     private String password;
+    private String position;
 }

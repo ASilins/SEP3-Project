@@ -11,7 +11,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<ICreateMemberDAO, CreateMemberDAO>();
+builder.Services.AddScoped<IMemberDAO, MemberDAO>();
 builder.Services.AddScoped<IExerciseDAO, ExerciseDAO>();
 builder.Services.AddScoped<IWorkoutDAO, WorkoutDAO>();
 

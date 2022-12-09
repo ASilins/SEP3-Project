@@ -13,7 +13,6 @@ message MemberObj {
     string Username = 2;
     string Password = 3;
     string Position = 4;
-
 }
 
 service MemberService {

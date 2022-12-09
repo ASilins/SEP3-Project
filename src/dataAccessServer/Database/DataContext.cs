@@ -19,10 +19,10 @@ public class DataContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Workout>()
-            .Property<int>("CreatedBy");
+            .Property<int>("CreatedBy").HasDefaultValue(0);
 
         modelBuilder.Entity<Exercise>()
-            .Property<int>("AddedBy");
+            .Property<int>("AddedBy").HasDefaultValue(0);
 
         modelBuilder.Entity<ExercisesInWorkouts>().HasKey(e => new { e.ExerciseId, e.WorkoutId });
         modelBuilder.Entity<FollowsWorkouts>().HasKey(f => new { f.UserId, f.WorkoutId });

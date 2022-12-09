@@ -1,6 +1,7 @@
 using Database.Interfaces;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Shared.DTOs;
+using Shared.Model;
 
 namespace Database.Logic;
 
@@ -17,18 +18,21 @@ public class ExerciseDAO : IExerciseDAO
     //Change return to exercise object
     public async Task<ExerciseDTO> CreateExercise(ExerciseDTO exercise)
     {
-        var ex = new Shared.Model.Exercise()
+        var ex = new Exercise()
         {
-            Name = exercise.Name,
-            Description = exercise.Description,
-            DurationInMin = exercise.Duration
+            Name = exercise.Name ?? "empty",
+            Description = exercise.Description ?? "empty",
+            DurationInMin = exercise.Duration ?? 0
         };
 
-        EntityEntry<Shared.Model.Exercise> added = await _db.Exercises.AddAsync(ex);
+        EntityEntry<Exercise> added = await _db.Exercises.AddAsync(ex);
         await _db.SaveChangesAsync();
+
+        _db.Entry(ex).Property("AddedBy").CurrentValue = exercise.CreatedBy;
 
         return new ExerciseDTO()
         {
+            Id = added.Entity.Id,
             Name = added.Entity.Name,
             Description = added.Entity.Description,
             Duration = added.Entity.DurationInMin

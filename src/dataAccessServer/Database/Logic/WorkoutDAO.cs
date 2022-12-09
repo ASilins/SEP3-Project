@@ -6,15 +6,15 @@ namespace Database.Logic;
 public class WorkoutDAO : IWorkoutDAO
 {
 
-    public Task<Workout> GetWorkout(int id)
+    public Task<WorkoutDTO> GetWorkout(int id)
     {
-        return Task.FromResult(new Workout
+        return Task.FromResult(new WorkoutDTO
         {
             Id = 1
         });
     }
 
-    public Task<IEnumerable<Workout>> GetWorkouts()
+    public Task<IEnumerable<WorkoutDTO>> GetWorkouts()
     {
         throw new NotImplementedException();
     }
@@ -26,7 +26,7 @@ public class WorkoutDAO : IWorkoutDAO
         return Task.FromResult(dto);
     }
 
-    public Task<Workout> EditWorkout(Workout workout)
+    public Task<WorkoutDTO> EditWorkout(WorkoutDTO workout)
     {
         // Write impl
 

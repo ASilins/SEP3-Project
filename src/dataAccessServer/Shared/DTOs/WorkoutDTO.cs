@@ -1,6 +1,6 @@
 namespace Shared.DTOs;
 
-public class Workout
+public class WorkoutDTO
 {
     public int Id { get; set; }
     public string Name { get; set; }
@@ -13,5 +13,5 @@ public class Workout
     public int CreatedBy { get; set; }
     public int FollowedBy { get; set; }
     public bool IsPublic { get; set; }
-    public List<Exercise> Exercises { get; set; }
+    public List<ExerciseDTO> Exercises { get; set; }
 }

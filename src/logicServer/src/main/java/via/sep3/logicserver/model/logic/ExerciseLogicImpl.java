@@ -15,7 +15,6 @@ public class ExerciseLogicImpl implements ExerciseLogic {
 
     private final ExerciseDAO DAO;
 
-    @Autowired
     public ExerciseLogicImpl(ExerciseDAOImpl dao) {
         DAO = dao;
     }

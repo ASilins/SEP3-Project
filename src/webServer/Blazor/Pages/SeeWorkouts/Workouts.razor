@@ -1,7 +1,9 @@
 @page "/workouts"
+@using Blazor.Pages.StartWorkout
 @using Model.DTOs
 @using Blazor.Services;
 @inject WorkoutService service;
+@inject NavigationManager navManager;
 
 <h1>Workouts</h1>
 <table>
@@ -31,7 +33,7 @@
                 <td>
                     <button @onclick="@(() => EditWorkout(workout))">Edit</button>
                     <button @onclick="@(() => RemoveWorkout(workout))">Remove</button>
-                    <button @onclick="@(() => StartWorkout(workout))">Start</button>
+                    <button @onclick="@(() => <StartWorkout id=workout.Id />)">Start</button>
                 </td>
             </tr>
         }
@@ -39,6 +41,7 @@
 </table>
 @code {
     List<WorkoutDTO> workouts = new List<WorkoutDTO>();
+    StartWorkout start;
 
     protected async override void OnInitialized()
     {
@@ -57,6 +60,6 @@
 
     void StartWorkout(WorkoutDTO workout)
     {
-        // Implement start functionality here
+        navManager.NavigateTo($"/start-workout?w={workout.Id}");
     }
 }

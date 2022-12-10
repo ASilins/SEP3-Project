@@ -30,6 +30,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlTWVtYmVyXENyZWF0ZU1lbWJlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Pages/EditWorkout/AddExercise.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFdvcmtvdXRcQWRkRXhlcmNpc2UucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Pages/EditWorkout/EditWorkout.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFdvcmtvdXRcRWRpdFdvcmtvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Silin/Documents/School/Semester 3/SEP3/SEP3-Project/src/webServer/Blazor/Pages/LoginMember/LoginMember.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW5NZW1iZXJcTG9naW5NZW1iZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

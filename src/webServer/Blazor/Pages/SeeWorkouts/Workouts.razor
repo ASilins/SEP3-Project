@@ -1,6 +1,4 @@
 @page "/workouts"
-@using Model.DTOs
-@using Blazor.Services;
 @inject WorkoutService service;
 @inject NavigationManager navManager;
 
@@ -40,13 +38,14 @@
     </tbody>
 </table>
 
-<button @onclick="@EditSelectedWorkout">Edit</button>
-<button @onclick="@RemoveSelectedWorkout">Remove</button>
-<button @onclick="@StartSelectedWorkout">Start</button>
+<button @onclick="@EditSelectedWorkout" disabled="@AreButtonsDisabled">Edit</button>
+<button @onclick="@RemoveSelectedWorkout" disabled="@AreButtonsDisabled">Remove</button>
+<button @onclick="@StartSelectedWorkout" disabled="@AreButtonsDisabled">Start</button>
 
 @code {
     List<WorkoutDTO> workouts = new List<WorkoutDTO>();
-    WorkoutDTO selectedWorkout;
+    WorkoutDTO? selectedWorkout;
+    bool AreButtonsDisabled => selectedWorkout == null;
 
     protected async override void OnInitialized()
     {
@@ -65,16 +64,17 @@
 
     void EditSelectedWorkout()
     {
-        // Implement edit functionality here
+        navManager.NavigateTo($"/edit-workout/{selectedWorkout.Id}");
     }
 
-    void RemoveSelectedWorkout()
+    async void RemoveSelectedWorkout()
     {
-        // Implement remove functionality here
+        await service.DeleteWorkout(selectedWorkout.Id);
+        workouts = await service.GetWorkouts();
     }
 
     void StartSelectedWorkout()
     {
-        navManager.NavigateTo($"/start-workout?w={selectedWorkout.Id}");
+        navManager.NavigateTo($"/start-workout/{selectedWorkout.Id}");
     }
 }

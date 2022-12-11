@@ -14,7 +14,7 @@ import com.google.rpc.context.AttributeContext.Response;
 
 import via.sep3.logicserver.repositories.interfaces.WorkoutDAO;
 import via.sep3.logicserver.shared.FollowWorkoutDTO;
-import via.sep3.logicserver.shared.Workout;
+import via.sep3.logicserver.shared.WorkoutDTO;
 
 @Repository
 public class WorkoutDAOImpl implements WorkoutDAO {
@@ -27,9 +27,9 @@ public class WorkoutDAOImpl implements WorkoutDAO {
     }
 
     @Override
-    public Workout getWorkout(int id) throws Exception {
+    public WorkoutDTO getWorkout(int id) throws Exception {
         String uri = UriComponentsBuilder.fromHttpUrl(URI).queryParam("w", id).encode().toUriString();
-        ResponseEntity<Workout> responseEntity = restTemplate.getForEntity(uri, Workout.class);
+        ResponseEntity<WorkoutDTO> responseEntity = restTemplate.getForEntity(uri, WorkoutDTO.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
             throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
@@ -39,10 +39,10 @@ public class WorkoutDAOImpl implements WorkoutDAO {
     }
 
     @Override
-    public List<Workout> GetWorkouts() throws Exception {
-        ResponseEntity<List<Workout>> responseEntity = restTemplate
+    public List<WorkoutDTO> GetWorkouts() throws Exception {
+        ResponseEntity<List<WorkoutDTO>> responseEntity = restTemplate
                 .exchange(URI + "s", HttpMethod.GET, null,
-                        new ParameterizedTypeReference<List<Workout>>() {
+                        new ParameterizedTypeReference<List<WorkoutDTO>>() {
                         });
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
             throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
@@ -64,14 +64,14 @@ public class WorkoutDAOImpl implements WorkoutDAO {
     }
 
     @Override
-    public Workout editWorkout(Workout workout) throws Exception {
+    public WorkoutDTO editWorkout(WorkoutDTO workout) throws Exception {
         // return restTemplate
         // .patchForObject(URI, workout, Workout.class);
 
-        final HttpEntity<Workout> requestEntity = new HttpEntity<>(workout);
+        final HttpEntity<WorkoutDTO> requestEntity = new HttpEntity<>(workout);
 
-        ResponseEntity<Workout> responseEntity = restTemplate
-                .exchange(URI, HttpMethod.PUT, requestEntity, new ParameterizedTypeReference<Workout>() {
+        ResponseEntity<WorkoutDTO> responseEntity = restTemplate
+                .exchange(URI, HttpMethod.PUT, requestEntity, new ParameterizedTypeReference<WorkoutDTO>() {
                 });
 
         if (responseEntity.getStatusCode() != HttpStatus.OK) {

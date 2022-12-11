@@ -1,74 +1,18 @@
 syntax = "proto3";
 
+option java_multiple_files = true;
+option java_package = "via.sep3.logicserver.protobuf";
 option csharp_namespace = "GrpcClient";
 
-// Definition
-
-service LogicServer {
-    rpc createMember(MemberTO) returns(ResponseMember);
-    rpc loginMember(MemberTO) returns(ResponseMember);
-    rpc createExercise(ExerciseTO) returns(ExerciseTO);
-    rpc getExercises(EmptyPar) returns(ExercisesTO);
-    rpc getWorkouts(EmptyPar) returns(WorkoutsTO);
-    rpc getWorkout(WorkoutId) returns(WorkoutO);
-    rpc assignWorkout(FollowWorkoutTO) returns(FollowWorkoutTO);
-    rpc editWorkout(WorkoutO) returns(WorkoutO);
-    rpc deleteWorkout(WorkoutId) returns(EmptyPar);
-}
-
-// TO stands for Transfer Object while O stands for Object. O is used for domain model entities
-// but TO for transfer object that dont have all of the information that is in domain model.
-
-message FollowWorkoutTO {
-    int32 userID = 1;
-    int32 workoutID = 2;
-}
-
-message EmptyPar {
-    string empty = 1;
-}
-
-message WorkoutId {
-    int32 id = 3;
-}
-
-message ExercisesTO {
-    repeated ExerciseTO exercises = 1;
-}
-
-message MemberTO {
-    string username = 1;
-    string password = 2;
-}
-
-message ExerciseTO {
+message StringObj {
     string name = 1;
-    string description = 2;
-    int32 duration = 3;
 }
 
-message ExerciseO {
-    int32 id = 1;
-    string name = 2;
-    string description = 3;
-    int32 duration = 4;
+message IntObj {
+    int32 number = 1;
 }
 
-message WorkoutO {
-    int32 id = 2;
-    string name = 3;
-    string description = 4;
-    int32 durationInMin = 5;
-    int32 createdBy = 6;
-    int32 followedBy = 7;
-    bool isPublic = 8;
-    repeated ExerciseO exercises = 9;
-}
-
-message WorkoutsTO {
-    repeated WorkoutO workouts = 1;
-}
-
-message ResponseMember {
-    string username = 2;
+message ExercisesInWorkoutsObj {
+    int32 ExerciseId = 1;
+    int32 WorkoutId = 2;
 }

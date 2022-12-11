@@ -1,5 +1,6 @@
 using Grpc.Net.Client;
 using GrpcClient.Interfaces;
+using GrpcClient.Logic.Converters;
 using Model.DTOs;
 
 namespace GrpcClient.Logic;
@@ -7,39 +8,29 @@ namespace GrpcClient.Logic;
 public class MemberClient : IMemberClient
 {
     private readonly string _url = "http://localhost:6565";
-    private LogicServer.LogicServerClient client;
+    private MemberService.MemberServiceClient client;
 
-    public async Task<MemberDTO> CreateMember(MemberDTO member)
+    public async Task<MemberDTO> CreateMember(LoginCreateDTO dto)
     {
         using var channel = GrpcChannel.ForAddress(_url);
-        client = new LogicServer.LogicServerClient(channel);
+        client = new MemberService.MemberServiceClient(channel);
 
-        var reply = await client.createMemberAsync(new MemberTO
-        {
-            Username = member.Username,
-            Password = member.Password
-        });
+        var reply = await client.createMemberAsync(
+            MemberConverter.ConvertToLoginCreateObj(dto)
+        );
 
-        return new MemberDTO
-        {
-            Username = reply.Username
-        };
+        return MemberConverter.ConvertToMemberDTO(reply);
     }
 
-    public async Task<MemberDTO> LoginMember(MemberDTO member)
+    public async Task<MemberDTO> LoginMember(LoginCreateDTO dto)
     {
         using var channel = GrpcChannel.ForAddress(_url);
-        client = new LogicServer.LogicServerClient(channel);
+        client = new MemberService.MemberServiceClient(channel);
 
-        var reply = await client.createMemberAsync(new MemberTO
-        {
-            Username = member.Username,
-            Password = member.Password
-        });
+        var reply = await client.loginMemberAsync(
+            MemberConverter.ConvertToLoginCreateObj(dto)
+        );
 
-        return new MemberDTO
-        {
-            Username = reply.Username
-        };
+        return MemberConverter.ConvertToMemberDTO(reply);
     }
 }

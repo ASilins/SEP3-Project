@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Repositories.Interfaces;
+using Database.Interfaces;
 using Shared.DTOs;
 
 namespace WebAPI.Controllers;
@@ -8,16 +8,16 @@ namespace WebAPI.Controllers;
 [Route("/[controller]")]
 public class MemberController : ControllerBase
 {
-    private readonly ICreateMemberDAO dao;
+    private readonly IMemberDAO dao;
 
-    public MemberController(ICreateMemberDAO dao)
+    public MemberController(IMemberDAO dao)
     {
         this.dao = dao;
     }
 
     [HttpPost]
     [Route("/[controller]/create")]
-    public async Task<ActionResult<MemberDTO>> CreateMember([FromBody] MemberDTO member)
+    public async Task<ActionResult<MemberDTO>> CreateMember([FromBody] LoginCreateDTO member)
     {
         try
         {
@@ -31,13 +31,19 @@ public class MemberController : ControllerBase
         }
     }
 
-    [HttpGet]
+    [HttpPost]
     [Route("/[controller]/login")]
-    public async Task<ActionResult<MemberDTO>> LoginMember([FromBody] MemberDTO member)
+    public async Task<ActionResult<MemberDTO>> GetByUsername([FromBody] LoginCreateDTO member)
     {
         try
         {
-            MemberDTO loggedIn = await dao.LoginMember(member);
+            MemberDTO? loggedIn = await dao.GetByUsername(member);
+
+            if (loggedIn == null)
+            {
+                return StatusCode(404);
+            }
+
             return Ok(loggedIn);
         }
         catch (Exception e)

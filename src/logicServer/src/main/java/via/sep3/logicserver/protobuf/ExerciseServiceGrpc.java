@@ -6,7 +6,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.39.0)",
-    comments = "Source: LogicServer.proto")
+    comments = "Source: ExerciseService.proto")
 public final class ExerciseServiceGrpc {
 
   private ExerciseServiceGrpc() {}
@@ -14,35 +14,66 @@ public final class ExerciseServiceGrpc {
   public static final String SERVICE_NAME = "ExerciseService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.ExerciseTO,
-      via.sep3.logicserver.protobuf.ExerciseTO> getCreateExerciseMethod;
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.ExerciseObj,
+      via.sep3.logicserver.protobuf.ExerciseObj> getCreateExerciseMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "createExercise",
-      requestType = via.sep3.logicserver.protobuf.ExerciseTO.class,
-      responseType = via.sep3.logicserver.protobuf.ExerciseTO.class,
+      fullMethodName = SERVICE_NAME + '/' + "CreateExercise",
+      requestType = via.sep3.logicserver.protobuf.ExerciseObj.class,
+      responseType = via.sep3.logicserver.protobuf.ExerciseObj.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.ExerciseTO,
-      via.sep3.logicserver.protobuf.ExerciseTO> getCreateExerciseMethod() {
-    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.ExerciseTO, via.sep3.logicserver.protobuf.ExerciseTO> getCreateExerciseMethod;
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.ExerciseObj,
+      via.sep3.logicserver.protobuf.ExerciseObj> getCreateExerciseMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.ExerciseObj, via.sep3.logicserver.protobuf.ExerciseObj> getCreateExerciseMethod;
     if ((getCreateExerciseMethod = ExerciseServiceGrpc.getCreateExerciseMethod) == null) {
       synchronized (ExerciseServiceGrpc.class) {
         if ((getCreateExerciseMethod = ExerciseServiceGrpc.getCreateExerciseMethod) == null) {
           ExerciseServiceGrpc.getCreateExerciseMethod = getCreateExerciseMethod =
-              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.ExerciseTO, via.sep3.logicserver.protobuf.ExerciseTO>newBuilder()
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.ExerciseObj, via.sep3.logicserver.protobuf.ExerciseObj>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "createExercise"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateExercise"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.sep3.logicserver.protobuf.ExerciseTO.getDefaultInstance()))
+                  via.sep3.logicserver.protobuf.ExerciseObj.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.sep3.logicserver.protobuf.ExerciseTO.getDefaultInstance()))
-              .setSchemaDescriptor(new ExerciseServiceMethodDescriptorSupplier("createExercise"))
+                  via.sep3.logicserver.protobuf.ExerciseObj.getDefaultInstance()))
+              .setSchemaDescriptor(new ExerciseServiceMethodDescriptorSupplier("CreateExercise"))
               .build();
         }
       }
     }
     return getCreateExerciseMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.StringObj,
+      via.sep3.logicserver.protobuf.Exercises> getGetExercisesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetExercises",
+      requestType = via.sep3.logicserver.protobuf.StringObj.class,
+      responseType = via.sep3.logicserver.protobuf.Exercises.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.StringObj,
+      via.sep3.logicserver.protobuf.Exercises> getGetExercisesMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.StringObj, via.sep3.logicserver.protobuf.Exercises> getGetExercisesMethod;
+    if ((getGetExercisesMethod = ExerciseServiceGrpc.getGetExercisesMethod) == null) {
+      synchronized (ExerciseServiceGrpc.class) {
+        if ((getGetExercisesMethod = ExerciseServiceGrpc.getGetExercisesMethod) == null) {
+          ExerciseServiceGrpc.getGetExercisesMethod = getGetExercisesMethod =
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.StringObj, via.sep3.logicserver.protobuf.Exercises>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetExercises"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.StringObj.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.Exercises.getDefaultInstance()))
+              .setSchemaDescriptor(new ExerciseServiceMethodDescriptorSupplier("GetExercises"))
+              .build();
+        }
+      }
+    }
+    return getGetExercisesMethod;
   }
 
   /**
@@ -95,9 +126,16 @@ public final class ExerciseServiceGrpc {
 
     /**
      */
-    public void createExercise(via.sep3.logicserver.protobuf.ExerciseTO request,
-        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExerciseTO> responseObserver) {
+    public void createExercise(via.sep3.logicserver.protobuf.ExerciseObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExerciseObj> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateExerciseMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getExercises(via.sep3.logicserver.protobuf.StringObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.Exercises> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetExercisesMethod(), responseObserver);
     }
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
@@ -106,9 +144,16 @@ public final class ExerciseServiceGrpc {
             getCreateExerciseMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                via.sep3.logicserver.protobuf.ExerciseTO,
-                via.sep3.logicserver.protobuf.ExerciseTO>(
+                via.sep3.logicserver.protobuf.ExerciseObj,
+                via.sep3.logicserver.protobuf.ExerciseObj>(
                   this, METHODID_CREATE_EXERCISE)))
+          .addMethod(
+            getGetExercisesMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.sep3.logicserver.protobuf.StringObj,
+                via.sep3.logicserver.protobuf.Exercises>(
+                  this, METHODID_GET_EXERCISES)))
           .build();
     }
   }
@@ -129,10 +174,18 @@ public final class ExerciseServiceGrpc {
 
     /**
      */
-    public void createExercise(via.sep3.logicserver.protobuf.ExerciseTO request,
-        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExerciseTO> responseObserver) {
+    public void createExercise(via.sep3.logicserver.protobuf.ExerciseObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExerciseObj> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateExerciseMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getExercises(via.sep3.logicserver.protobuf.StringObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.Exercises> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetExercisesMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -152,9 +205,16 @@ public final class ExerciseServiceGrpc {
 
     /**
      */
-    public via.sep3.logicserver.protobuf.ExerciseTO createExercise(via.sep3.logicserver.protobuf.ExerciseTO request) {
+    public via.sep3.logicserver.protobuf.ExerciseObj createExercise(via.sep3.logicserver.protobuf.ExerciseObj request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateExerciseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.sep3.logicserver.protobuf.Exercises getExercises(via.sep3.logicserver.protobuf.StringObj request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetExercisesMethod(), getCallOptions(), request);
     }
   }
 
@@ -174,14 +234,23 @@ public final class ExerciseServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.ExerciseTO> createExercise(
-        via.sep3.logicserver.protobuf.ExerciseTO request) {
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.ExerciseObj> createExercise(
+        via.sep3.logicserver.protobuf.ExerciseObj request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateExerciseMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.Exercises> getExercises(
+        via.sep3.logicserver.protobuf.StringObj request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetExercisesMethod(), getCallOptions()), request);
     }
   }
 
   private static final int METHODID_CREATE_EXERCISE = 0;
+  private static final int METHODID_GET_EXERCISES = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -201,8 +270,12 @@ public final class ExerciseServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_CREATE_EXERCISE:
-          serviceImpl.createExercise((via.sep3.logicserver.protobuf.ExerciseTO) request,
-              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExerciseTO>) responseObserver);
+          serviceImpl.createExercise((via.sep3.logicserver.protobuf.ExerciseObj) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.ExerciseObj>) responseObserver);
+          break;
+        case METHODID_GET_EXERCISES:
+          serviceImpl.getExercises((via.sep3.logicserver.protobuf.StringObj) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.Exercises>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -226,7 +299,7 @@ public final class ExerciseServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return via.sep3.logicserver.protobuf.LogicServer.getDescriptor();
+      return via.sep3.logicserver.protobuf.ExerciseServiceOuterClass.getDescriptor();
     }
 
     @java.lang.Override
@@ -266,6 +339,7 @@ public final class ExerciseServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ExerciseServiceFileDescriptorSupplier())
               .addMethod(getCreateExerciseMethod())
+              .addMethod(getGetExercisesMethod())
               .build();
         }
       }

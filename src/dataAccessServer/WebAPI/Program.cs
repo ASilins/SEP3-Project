@@ -1,5 +1,6 @@
-using Repositories.Interfaces;
-using Repositories.Logic;
+using Database;
+using Database.Interfaces;
+using Database.Logic;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,9 +11,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<ICreateMemberDAO, CreateMemberDAO>();
+builder.Services.AddScoped<IMemberDAO, MemberDAO>();
 builder.Services.AddScoped<IExerciseDAO, ExerciseDAO>();
 builder.Services.AddScoped<IWorkoutDAO, WorkoutDAO>();
+
+builder.Services.AddDbContext<DataContext>();
 
 var app = builder.Build();
 

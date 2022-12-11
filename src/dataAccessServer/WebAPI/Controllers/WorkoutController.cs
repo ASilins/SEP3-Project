@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Repositories.Interfaces;
-using Repositories.Logic;
+using Database.Interfaces;
+using Database.Logic;
 using Shared.DTOs;
+using Shared.Model;
 
 namespace WebAPI.Controllers;
 
@@ -16,11 +17,43 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<Workout>> GetWorkout([FromQuery] int id)
+    public async Task<ActionResult<WorkoutDTO>> GetWorkout([FromQuery] int id)
     {
         try
         {
-            return await _dao.GetWorkout(id);
+            Workout? w = await _dao.GetWorkout(id);
+
+            if (w == null)
+            {
+                return StatusCode(404);
+            }
+
+            var dto = new WorkoutDTO()
+            {
+                Id = w.Id,
+                Name = w.Name,
+                Description = w.Description,
+                DurationInMin = w.DurationInMin,
+                FollowedBy = w.FollowedBy,
+                IsPublic = w.IsPublic
+            };
+
+            var exercises = new List<ExerciseDTO>();
+
+            foreach (var item in (List<Exercise>)w.Exercises)
+            {
+                exercises.Add(new ExerciseDTO()
+                {
+                    Id = item.Id,
+                    Name = item.Name,
+                    Description = item.Description,
+                    Duration = item.DurationInMin
+                });
+            }
+
+            dto.Exercises = exercises;
+
+            return dto;
         }
         catch (Exception e)
         {
@@ -30,7 +63,7 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpGet, Route("/[controller]s")]
-    public async Task<ActionResult<IEnumerable<Workout>>> GetWorkouts()
+    public async Task<ActionResult<IEnumerable<WorkoutDTO>>> GetWorkouts()
     {
         try
         {
@@ -58,11 +91,13 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<ActionResult<Workout>> EditWorkout([FromBody] Workout workout)
+    public async Task<ActionResult<WorkoutDTO>> EditWorkout([FromBody] WorkoutDTO workout)
     {
         try
         {
-            return Ok(await _dao.EditWorkout(workout));
+            await _dao.EditWorkout(workout);
+
+            return Ok();
         }
         catch (Exception e)
         {
@@ -72,16 +107,13 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<ActionResult<Workout>> DeleteWorkout([FromQuery] int id)
+    public async Task<ActionResult<int>> DeleteWorkout([FromQuery] int id)
     {
         try
         {
-            if (await _dao.DeleteWorkout(id))
-            {
-                return NoContent();
-            }
+            await _dao.DeleteWorkout(id);
 
-            return StatusCode(400, $"Workout with id:{id} does not exist");
+            return Ok();
         }
         catch (Exception e)
         {

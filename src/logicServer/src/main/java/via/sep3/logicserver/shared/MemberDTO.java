@@ -10,6 +10,7 @@ import lombok.Data;
 public class MemberDTO {
     private int id;
     private String username;
-    private String password;
+    private byte[] password;
+    private byte[] salt;
     private String position;
 }

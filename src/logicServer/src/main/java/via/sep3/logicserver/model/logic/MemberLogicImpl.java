@@ -39,11 +39,6 @@ public class MemberLogicImpl implements MemberLogic {
             throw new Exception("User not found");
         }
 
-        if (search.getPassword().equals(obj.getPassword())) {
-            return MemberConverter.convertToMemberObj(search);
-        } else {
-            throw new Exception("Incorrect password");
-        }
+        return MemberConverter.convertToMemberObj(search);
     }
-
 }

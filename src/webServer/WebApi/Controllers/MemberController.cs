@@ -33,11 +33,11 @@ public class MemberController : ControllerBase
 
     [HttpPost]
     [Route("/[controller]/login")]
-    public async Task<ActionResult<MemberDTO>> LoginMember([FromBody] LoginCreateDTO member)
+    public async Task<ActionResult<string>> LoginMember([FromBody] LoginCreateDTO member)
     {
         try
         {
-            MemberDTO loggedIn = await _client.LoginMember(member);
+            string loggedIn = await _client.LoginMember(member);
             return Ok(loggedIn);
         }
         catch (Exception e)

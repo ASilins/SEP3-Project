@@ -29,3 +29,10 @@ C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcC
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\obj\Debug\net6.0\GrpcClient.pdb
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\obj\Debug\net6.0\GrpcClient.genruntimeconfig.cache
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\obj\Debug\net6.0\ref\GrpcClient.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

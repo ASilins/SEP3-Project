@@ -39,3 +39,14 @@ C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebAp
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\GrpcClient.exe
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\GrpcClient.dll
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\GrpcClient.pdb
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Scrutor.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

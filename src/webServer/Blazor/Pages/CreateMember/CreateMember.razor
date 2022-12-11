@@ -36,7 +36,7 @@
             var member = new MemberDTO
             {
                 Username = username,
-                Password = password
+                Password = Encoding.ASCII.GetBytes(password)
             };
             await memberService.CreateMember(member);
             username = "";

@@ -1,5 +1,6 @@
 using GrpcClient.Interfaces;
 using GrpcClient.Logic;
+using GrpcClient.Logic.Security;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IMemberClient, MemberClient>();
 builder.Services.AddScoped<IExerciseClient, ExerciseClient>();
 builder.Services.AddScoped<IWorkoutClient, WorkoutClient>();
+builder.Services.AddScoped<Tokens>();
 
 var app = builder.Build();
 

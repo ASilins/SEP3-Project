@@ -24,19 +24,19 @@ namespace GrpcClient {
     static MemberServiceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChpQcm90b3MvTWVtYmVyU2VydmljZS5wcm90byI3ChFMb2dpbkNyZWF0ZU9i",
-            "amVjdBIQCghVc2VybmFtZRgBIAEoCRIQCghQYXNzd29yZBgCIAEoCSJNCglN",
-            "ZW1iZXJPYmoSCgoCSWQYASABKAUSEAoIVXNlcm5hbWUYAiABKAkSEAoIUGFz",
-            "c3dvcmQYAyABKAkSEAoIUG9zaXRpb24YBCABKAkybgoNTWVtYmVyU2Vydmlj",
-            "ZRIuCgxjcmVhdGVNZW1iZXISEi5Mb2dpbkNyZWF0ZU9iamVjdBoKLk1lbWJl",
-            "ck9iahItCgtsb2dpbk1lbWJlchISLkxvZ2luQ3JlYXRlT2JqZWN0GgouTWVt",
-            "YmVyT2JqQi4KHXZpYS5zZXAzLmxvZ2ljc2VydmVyLnByb3RvYnVmUAGqAgpH",
-            "cnBjQ2xpZW50YgZwcm90bzM="));
+            "ChpQcm90b3MvTWVtYmVyU2VydmljZS5wcm90byJFChFMb2dpbkNyZWF0ZU9i",
+            "amVjdBIQCghVc2VybmFtZRgBIAEoCRIQCghQYXNzd29yZBgCIAEoDBIMCgRT",
+            "YWx0GAMgASgMIlsKCU1lbWJlck9iahIKCgJJZBgBIAEoBRIQCghVc2VybmFt",
+            "ZRgCIAEoCRIQCghQYXNzd29yZBgDIAEoDBIMCgRTYWx0GAQgASgMEhAKCFBv",
+            "c2l0aW9uGAUgASgJMm4KDU1lbWJlclNlcnZpY2USLgoMY3JlYXRlTWVtYmVy",
+            "EhIuTG9naW5DcmVhdGVPYmplY3QaCi5NZW1iZXJPYmoSLQoLbG9naW5NZW1i",
+            "ZXISEi5Mb2dpbkNyZWF0ZU9iamVjdBoKLk1lbWJlck9iakIuCh12aWEuc2Vw",
+            "My5sb2dpY3NlcnZlci5wcm90b2J1ZlABqgIKR3JwY0NsaWVudGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.LoginCreateObject), global::GrpcClient.LoginCreateObject.Parser, new[]{ "Username", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.MemberObj), global::GrpcClient.MemberObj.Parser, new[]{ "Id", "Username", "Password", "Position" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.LoginCreateObject), global::GrpcClient.LoginCreateObject.Parser, new[]{ "Username", "Password", "Salt" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.MemberObj), global::GrpcClient.MemberObj.Parser, new[]{ "Id", "Username", "Password", "Salt", "Position" }, null, null, null, null)
           }));
     }
     #endregion
@@ -79,6 +79,7 @@ namespace GrpcClient {
     public LoginCreateObject(LoginCreateObject other) : this() {
       username_ = other.username_;
       password_ = other.password_;
+      salt_ = other.salt_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -102,13 +103,25 @@ namespace GrpcClient {
 
     /// <summary>Field number for the "Password" field.</summary>
     public const int PasswordFieldNumber = 2;
-    private string password_ = "";
+    private pb::ByteString password_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Password {
+    public pb::ByteString Password {
       get { return password_; }
       set {
         password_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "Salt" field.</summary>
+    public const int SaltFieldNumber = 3;
+    private pb::ByteString salt_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Salt {
+      get { return salt_; }
+      set {
+        salt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -129,6 +142,7 @@ namespace GrpcClient {
       }
       if (Username != other.Username) return false;
       if (Password != other.Password) return false;
+      if (Salt != other.Salt) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -138,6 +152,7 @@ namespace GrpcClient {
       int hash = 1;
       if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (Password.Length != 0) hash ^= Password.GetHashCode();
+      if (Salt.Length != 0) hash ^= Salt.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -162,7 +177,11 @@ namespace GrpcClient {
       }
       if (Password.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(Password);
+        output.WriteBytes(Password);
+      }
+      if (Salt.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Salt);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -180,7 +199,11 @@ namespace GrpcClient {
       }
       if (Password.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(Password);
+        output.WriteBytes(Password);
+      }
+      if (Salt.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteBytes(Salt);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -196,7 +219,10 @@ namespace GrpcClient {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
       }
       if (Password.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Password);
+      }
+      if (Salt.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Salt);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -215,6 +241,9 @@ namespace GrpcClient {
       }
       if (other.Password.Length != 0) {
         Password = other.Password;
+      }
+      if (other.Salt.Length != 0) {
+        Salt = other.Salt;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -236,7 +265,11 @@ namespace GrpcClient {
             break;
           }
           case 18: {
-            Password = input.ReadString();
+            Password = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            Salt = input.ReadBytes();
             break;
           }
         }
@@ -259,7 +292,11 @@ namespace GrpcClient {
             break;
           }
           case 18: {
-            Password = input.ReadString();
+            Password = input.ReadBytes();
+            break;
+          }
+          case 26: {
+            Salt = input.ReadBytes();
             break;
           }
         }
@@ -306,6 +343,7 @@ namespace GrpcClient {
       id_ = other.id_;
       username_ = other.username_;
       password_ = other.password_;
+      salt_ = other.salt_;
       position_ = other.position_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -342,18 +380,30 @@ namespace GrpcClient {
 
     /// <summary>Field number for the "Password" field.</summary>
     public const int PasswordFieldNumber = 3;
-    private string password_ = "";
+    private pb::ByteString password_ = pb::ByteString.Empty;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Password {
+    public pb::ByteString Password {
       get { return password_; }
       set {
         password_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
+    /// <summary>Field number for the "Salt" field.</summary>
+    public const int SaltFieldNumber = 4;
+    private pb::ByteString salt_ = pb::ByteString.Empty;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Salt {
+      get { return salt_; }
+      set {
+        salt_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "Position" field.</summary>
-    public const int PositionFieldNumber = 4;
+    public const int PositionFieldNumber = 5;
     private string position_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -382,6 +432,7 @@ namespace GrpcClient {
       if (Id != other.Id) return false;
       if (Username != other.Username) return false;
       if (Password != other.Password) return false;
+      if (Salt != other.Salt) return false;
       if (Position != other.Position) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -393,6 +444,7 @@ namespace GrpcClient {
       if (Id != 0) hash ^= Id.GetHashCode();
       if (Username.Length != 0) hash ^= Username.GetHashCode();
       if (Password.Length != 0) hash ^= Password.GetHashCode();
+      if (Salt.Length != 0) hash ^= Salt.GetHashCode();
       if (Position.Length != 0) hash ^= Position.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -422,10 +474,14 @@ namespace GrpcClient {
       }
       if (Password.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(Password);
+        output.WriteBytes(Password);
+      }
+      if (Salt.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Salt);
       }
       if (Position.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteString(Position);
       }
       if (_unknownFields != null) {
@@ -448,10 +504,14 @@ namespace GrpcClient {
       }
       if (Password.Length != 0) {
         output.WriteRawTag(26);
-        output.WriteString(Password);
+        output.WriteBytes(Password);
+      }
+      if (Salt.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteBytes(Salt);
       }
       if (Position.Length != 0) {
-        output.WriteRawTag(34);
+        output.WriteRawTag(42);
         output.WriteString(Position);
       }
       if (_unknownFields != null) {
@@ -471,7 +531,10 @@ namespace GrpcClient {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Username);
       }
       if (Password.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Password);
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Password);
+      }
+      if (Salt.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Salt);
       }
       if (Position.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Position);
@@ -496,6 +559,9 @@ namespace GrpcClient {
       }
       if (other.Password.Length != 0) {
         Password = other.Password;
+      }
+      if (other.Salt.Length != 0) {
+        Salt = other.Salt;
       }
       if (other.Position.Length != 0) {
         Position = other.Position;
@@ -524,10 +590,14 @@ namespace GrpcClient {
             break;
           }
           case 26: {
-            Password = input.ReadString();
+            Password = input.ReadBytes();
             break;
           }
           case 34: {
+            Salt = input.ReadBytes();
+            break;
+          }
+          case 42: {
             Position = input.ReadString();
             break;
           }
@@ -555,10 +625,14 @@ namespace GrpcClient {
             break;
           }
           case 26: {
-            Password = input.ReadString();
+            Password = input.ReadBytes();
             break;
           }
           case 34: {
+            Salt = input.ReadBytes();
+            break;
+          }
+          case 42: {
             Position = input.ReadString();
             break;
           }

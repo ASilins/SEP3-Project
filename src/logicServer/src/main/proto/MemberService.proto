@@ -5,14 +5,16 @@ option java_package = "via.sep3.logicserver.protobuf";
 
 message LoginCreateObject {
     string Username = 1;
-    string Password = 2;
+    bytes Password = 2;
+    bytes Salt = 3;
 }
 
 message MemberObj {
     int32 Id = 1;
     string Username = 2;
-    string Password = 3;
-    string Position = 4;
+    bytes Password = 3;
+    bytes Salt = 4;
+    string Position = 5;
 }
 
 service MemberService {

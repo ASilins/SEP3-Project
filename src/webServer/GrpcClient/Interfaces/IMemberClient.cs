@@ -5,5 +5,5 @@ namespace GrpcClient.Interfaces;
 public interface IMemberClient
 {
     Task<MemberDTO> CreateMember(LoginCreateDTO member);
-    Task<MemberDTO> LoginMember(LoginCreateDTO member);
+    Task<string> LoginMember(LoginCreateDTO member);
 }

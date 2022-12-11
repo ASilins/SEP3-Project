@@ -2,17 +2,11 @@ package via.sep3.logicserver.model.interfaces;
 
 import java.util.List;
 
-import via.sep3.logicserver.protobuf.ExerciseO;
-import via.sep3.logicserver.protobuf.ExerciseTO;
-import via.sep3.logicserver.shared.Exercise;
-import via.sep3.logicserver.shared.ExerciseDTO;
+import via.sep3.logicserver.protobuf.ExerciseObj;
+import via.sep3.logicserver.protobuf.Exercises;
 
 public interface ExerciseLogic {
-    ExerciseDTO createExercise(ExerciseDTO exercise) throws Exception;
+    ExerciseObj createExercise(ExerciseObj exercise) throws Exception;
 
-    List<ExerciseTO> getExercises() throws Exception;
-
-    List<ExerciseO> convertListFromExercisesToExerciseOs(List<Exercise> exercises);
-
-    List<Exercise> convertListFromExerciseOsToExercises(List<ExerciseO> exerciseOs);
+    Exercises getExercises() throws Exception;
 }

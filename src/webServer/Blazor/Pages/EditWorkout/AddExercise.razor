@@ -1,0 +1,55 @@
+@page "/workout/exercise"
+
+@inject ExerciseService ExerciseService
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Duration</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var exercise in allExercises)
+        {
+            <tr>
+                <td>@exercise.Id</td>
+                <td>@exercise.Name</td>
+                <td>@exercise.Description</td>
+                <td>@exercise.Duration</td>
+                <td>
+                    <input type="radio" name="selectedExercise" @onclick="@(() => SelectExercise(exercise))" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button @onclick="@AddSelectedExercise">Add</button>
+
+@code {
+    [Parameter]
+    public int selectedEx { get; set; }
+    List<ExerciseDTO> allExercises = new List<ExerciseDTO>();
+
+    [Parameter]
+    public EventCallback<int> selectedExChanged { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        allExercises = await ExerciseService.GetExercises();
+    }
+
+    Task AddSelectedExercise()
+    {
+        return selectedExChanged.InvokeAsync(selectedEx);
+    }
+
+    void SelectExercise(ExerciseDTO exercise)
+    {
+        selectedEx = exercise.Id;
+    }
+}

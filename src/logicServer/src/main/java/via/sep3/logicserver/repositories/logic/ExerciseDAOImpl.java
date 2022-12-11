@@ -6,13 +6,13 @@ import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import via.sep3.logicserver.repositories.interfaces.ExerciseDAO;
 import via.sep3.logicserver.shared.ExerciseDTO;
 
-@Repository
+@Service
 public class ExerciseDAOImpl implements ExerciseDAO {
 
     private final String URI = "https://localhost:7057/exercise";

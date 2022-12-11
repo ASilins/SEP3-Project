@@ -17,7 +17,7 @@ public class MemberController : ControllerBase
 
     [HttpPost]
     [Route("/[controller]/create")]
-    public async Task<ActionResult<MemberDTO>> CreateMember([FromBody] MemberDTO member)
+    public async Task<ActionResult<MemberDTO>> CreateMember([FromBody] LoginCreateDTO member)
     {
         try
         {
@@ -33,12 +33,12 @@ public class MemberController : ControllerBase
 
     [HttpPost]
     [Route("/[controller]/login")]
-    public async Task<ActionResult<MemberDTO>> LoginMember([FromBody] MemberDTO member)
+    public async Task<ActionResult<MemberDTO>> LoginMember([FromBody] LoginCreateDTO member)
     {
         try
         {
             MemberDTO loggedIn = await _client.LoginMember(member);
-            return Created("Member logged in", loggedIn);
+            return Ok(loggedIn);
         }
         catch (Exception e)
         {

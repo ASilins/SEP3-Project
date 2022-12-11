@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using Repositories.Interfaces;
+using Database.Interfaces;
 using Shared.DTOs;
 
 namespace WebAPI.Controllers;

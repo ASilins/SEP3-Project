@@ -1,2 +1,1 @@
-obj\Debug\net6.0\.\Protos/LogicServer.cs \
-obj\Debug\net6.0\.\Protos/LogicServerGrpc.cs: Protos/LogicServer.proto
+obj\Debug\net6.0\.\Protos/LogicServer.cs: Protos/LogicServer.proto

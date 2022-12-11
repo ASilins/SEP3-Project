@@ -16,7 +16,7 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<Workout>> GetWorkout([FromQuery] int id)
+    public async Task<ActionResult<WorkoutDTO>> GetWorkout([FromQuery] int id)
     {
         try
         {
@@ -30,7 +30,7 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpGet, Route("/[controller]s")]
-    public async Task<ActionResult<IEnumerable<Workout>>> GetWorkouts()
+    public async Task<ActionResult<IEnumerable<WorkoutDTO>>> GetWorkouts()
     {
         try
         {
@@ -58,11 +58,12 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<ActionResult<Workout>> EditWorkout([FromBody] Workout workout)
+    public async Task<ActionResult<WorkoutDTO>> EditWorkout([FromBody] WorkoutDTO workout)
     {
         try
         {
-            return Ok(await _client.EditWorkout(workout));
+            await _client.EditWorkout(workout);
+            return Ok();
         }
         catch (Exception e)
         {
@@ -72,7 +73,7 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<ActionResult<Workout>> DeleteWorkout([FromQuery] int id)
+    public async Task<ActionResult<WorkoutDTO>> DeleteWorkout([FromQuery] int id)
     {
         try
         {

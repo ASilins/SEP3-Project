@@ -17,6 +17,9 @@
 
   <ItemGroup>
     <Protobuf Include="./Protos/LogicServer.proto" GrpcServices="Client" />
+    <Protobuf Include="./Protos/MemberService.proto" GrpcServices="Client" />
+    <Protobuf Include="./Protos/ExerciseService.proto" GrpcServices="Client" />
+    <Protobuf Include="./Protos/WorkoutService.proto" GrpcServices="Client" />
   </ItemGroup>
 
   <ItemGroup>

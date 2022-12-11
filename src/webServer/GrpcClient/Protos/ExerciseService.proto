@@ -1,0 +1,26 @@
+syntax = "proto3";
+import "Protos/LogicServer.proto";
+
+option java_multiple_files = true;
+option java_package = "via.sep3.logicserver.protobuf";
+option csharp_namespace = "GrpcClient";
+
+
+
+message ExerciseObj {
+    int32 Id = 1;
+    string Name = 2;
+    string Description = 3;
+    int32 Duration = 4;
+    int32 CreatedBy = 5;
+}
+
+message Exercises {
+    repeated ExerciseObj exercises = 1;
+}
+
+service ExerciseService {
+    rpc CreateExercise(ExerciseObj) returns(ExerciseObj);
+    rpc GetExercises(StringObj) returns(Exercises);
+
+}

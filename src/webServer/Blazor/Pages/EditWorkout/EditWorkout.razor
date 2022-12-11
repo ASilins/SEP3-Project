@@ -1,0 +1,99 @@
+@page "/edit-workout/{id:int}"
+@inject WorkoutService WorkoutService
+@inject ExerciseService ExerciseService
+@inject NavigationManager navMag
+
+<h1>Edit Workout</h1>
+<div>
+    <label>Workout Name:</label>
+    <input @bind="workout.Name" />
+</div>
+<div>
+    <label>Workout Description:</label>
+    <input @bind="workout.Description" />
+</div>
+<div>
+    <label>Workout Duration:</label>
+    <input @bind="workout.DurationInMin" />
+</div>
+<div>
+    <label>Is Public:</label>
+    <input type="checkbox" @bind="workout.IsPublic" />
+</div>
+<h2>Exercises:</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Duration</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var exercise in workout.Exercises)
+        {
+            <tr>
+                <td>@exercise.Name</td>
+                <td>@exercise.Description</td>
+                <td>@exercise.Duration</td>
+                <td><button @onclick="@(() => RemoveExercise(exercise))">Remove</button></td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button @onclick="@AddExercise">Add Exercise</button>
+
+@if (showAddExerciseModal)
+{
+    <AddExercise selectedExChanged="@AddSelectedExercise" />
+    <button @onclick="@CloseAddExerciseModal">Cancel</button>
+}
+
+<button @onclick="@SaveChanges">Save Changes</button>
+<button @onclick="@Cancel">Cancel Changes</button>
+
+@functions {
+    [Parameter]
+    public int id { get; set; }
+    WorkoutDTO workout = new WorkoutDTO();
+    bool showAddExerciseModal;
+    int selectedExercise;
+    protected override async Task OnInitializedAsync()
+    {
+        workout = await WorkoutService.GetWorkout(id);
+    }
+
+    void RemoveExercise(ExerciseDTO exercise)
+    {
+        workout.Exercises.Remove(exercise);
+    }
+
+    void AddExercise()
+    {
+        showAddExerciseModal = true;
+    }
+
+    void CloseAddExerciseModal()
+    {
+        showAddExerciseModal = false;
+    }
+
+    async void AddSelectedExercise(int id)
+    {
+        var exercise = await ExerciseService.GetExercise(selectedExercise);
+        workout.Exercises.Add(exercise);
+        CloseAddExerciseModal();
+    }
+
+    async void SaveChanges()
+    {
+        await WorkoutService.EditWorkout(workout);
+        navMag.NavigateTo("/workouts");
+    }
+
+    void Cancel()
+    {
+        navMag.NavigateTo("/workouts");
+    }
+}

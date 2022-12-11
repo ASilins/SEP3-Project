@@ -1,5 +1,6 @@
 using Grpc.Net.Client;
 using GrpcClient.Interfaces;
+using GrpcClient.Logic.Converters;
 using Model.DTOs;
 using Shared.DTOs;
 
@@ -7,117 +8,65 @@ namespace GrpcClient.Logic;
 
 public class WorkoutClient : IWorkoutClient
 {
-    private readonly IExerciseClient _exerciseClient;
     public readonly string _url = "http://localhost:6565";
-    public LogicServer.LogicServerClient client;
+    public WorkoutService.WorkoutServiceClient client;
 
-    public WorkoutClient(IExerciseClient exerciseClient)
-    {
-        _exerciseClient = exerciseClient;
-    }
-
-    public async Task<Workout> GetWorkout(int id)
+    public async Task<WorkoutDTO> GetWorkout(int id)
     {
         using var channel = GrpcChannel.ForAddress(_url);
-        client = new LogicServer.LogicServerClient(channel);
+        client = new WorkoutService.WorkoutServiceClient(channel);
 
-        var reply = await client.getWorkoutAsync(new WorkoutId
+        var reply = await client.GetWorkoutAsync(new IntObj
         {
-            Id = id
+            Number = id
         });
 
-        return FromWorkoutOToWorkout(reply);
+        return WorkoutConverter.ConvertToWorkoutDTO(reply);
     }
 
-    public async Task<IEnumerable<Workout>> GetWorkouts()
+    public async Task<IEnumerable<WorkoutDTO>> GetWorkouts()
     {
         using var channel = GrpcChannel.ForAddress(_url);
-        client = new LogicServer.LogicServerClient(channel);
+        client = new WorkoutService.WorkoutServiceClient(channel);
 
-        var reply = await client.getWorkoutsAsync(new EmptyPar
+        var reply = await client.GetWorkoutsAsync(new StringObj
         {
-            Empty = ""
+            Name = ""
         });
 
-        List<Workout> workouts = new();
-
-        foreach (var item in reply.Workouts)
-        {
-            workouts.Add(FromWorkoutOToWorkout(item));
-        }
-
-        return workouts;
+        return WorkoutConverter.ConvertToWorkoutDTOList(reply.Workouts_);
     }
 
     public async Task<FollowWorkoutDTO> AssignWorkout(FollowWorkoutDTO dto)
     {
         using var channel = GrpcChannel.ForAddress(_url);
-        client = new LogicServer.LogicServerClient(channel);
+        client = new WorkoutService.WorkoutServiceClient(channel);
 
-        var reply = await client.assignWorkoutAsync(new FollowWorkoutTO
-        {
-            UserID = dto.UserID,
-            WorkoutID = dto.WorkoutID
-        });
+        var reply = await client.AssignWorkoutAsync(
+            WorkoutConverter.ConvertToAssignWorkoutObj(dto)
+        );
 
-        return new FollowWorkoutDTO()
-        {
-            UserID = reply.UserID,
-            WorkoutID = reply.WorkoutID
-        };
+        return WorkoutConverter.ConvertToFollowWorkoutDTO(reply);
     }
 
-    public async Task<Workout> EditWorkout(Workout workout)
+    public async Task EditWorkout(WorkoutDTO workout)
     {
         using var channel = GrpcChannel.ForAddress(_url);
-        client = new LogicServer.LogicServerClient(channel);
+        client = new WorkoutService.WorkoutServiceClient(channel);
 
-        var reply = await client.editWorkoutAsync(FromWorkoutToWorkoutO(workout));
-
-        return FromWorkoutOToWorkout(reply);
+        var reply = await client.EditWorkoutAsync(
+            WorkoutConverter.ConvertToWorkoutObj(workout)
+        );
     }
 
     public async Task DeleteWorkout(int id)
     {
         using var channel = GrpcChannel.ForAddress(_url);
-        client = new LogicServer.LogicServerClient(channel);
+        client = new WorkoutService.WorkoutServiceClient(channel);
 
-        await client.deleteWorkoutAsync(new WorkoutId
+        await client.DeleteWorkoutAsync(new IntObj
         {
-            Id = id
+            Number = id
         });
-    }
-
-    private Workout FromWorkoutOToWorkout(WorkoutO workout)
-    {
-        return new Workout
-        {
-            Id = workout.Id,
-            Name = workout.Name,
-            Description = workout.Description,
-            DurationInMin = workout.DurationInMin,
-            CreatedBy = workout.CreatedBy,
-            FollowedBy = workout.FollowedBy,
-            IsPublic = workout.IsPublic,
-            Exercises = _exerciseClient.ConvertListExerciseOtoExercise(workout.Exercises)
-        };
-    }
-
-    private WorkoutO FromWorkoutToWorkoutO(Workout workout)
-    {
-        var o = new WorkoutO()
-        {
-            Id = workout.Id,
-            Name = workout.Name,
-            Description = workout.Description,
-            DurationInMin = workout.DurationInMin,
-            CreatedBy = workout.CreatedBy,
-            FollowedBy = workout.FollowedBy,
-            IsPublic = workout.IsPublic
-        };
-
-        o.Exercises.AddRange(_exerciseClient.ConvertListExercisetoExerciseO(workout.Exercises));
-
-        return o;
     }
 }

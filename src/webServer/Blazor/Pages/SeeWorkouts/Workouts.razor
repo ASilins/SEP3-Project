@@ -1,0 +1,80 @@
+@page "/workouts"
+@inject WorkoutService service;
+@inject NavigationManager navManager;
+
+<h1>Workouts</h1>
+
+<button @onclick="@CreateWorkout">Create</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Duration</th>
+            <th>Exercises</th>
+            <th>Followers</th>
+            <th>Public</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var workout in workouts)
+        {
+            <tr>
+                <td>@workout.Id</td>
+                <td>@workout.Name</td>
+                <td>@workout.Description</td>
+                <td>@workout.DurationInMin</td>
+                <td>@workout.NumberOfExercises()</td>
+                <td>@workout.FollowedBy</td>
+                <td>@workout.IsPublic</td>
+                <td>
+                    <input type="radio" name="selectedWorkout" @onclick="@(() => SelectWorkout(workout))" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button @onclick="@EditSelectedWorkout" disabled="@AreButtonsDisabled">Edit</button>
+<button @onclick="@RemoveSelectedWorkout" disabled="@AreButtonsDisabled">Remove</button>
+<button @onclick="@StartSelectedWorkout" disabled="@AreButtonsDisabled">Start</button>
+
+@code {
+    List<WorkoutDTO> workouts = new List<WorkoutDTO>();
+    WorkoutDTO? selectedWorkout;
+    bool AreButtonsDisabled => selectedWorkout == null;
+
+    protected async override void OnInitialized()
+    {
+        workouts = await service.GetWorkouts();
+    }
+
+    void SelectWorkout(WorkoutDTO workout)
+    {
+        selectedWorkout = workout;
+    }
+
+    void CreateWorkout()
+    {
+        // Implement create
+    }
+
+    void EditSelectedWorkout()
+    {
+        navManager.NavigateTo($"/edit-workout/{selectedWorkout.Id}");
+    }
+
+    async void RemoveSelectedWorkout()
+    {
+        await service.DeleteWorkout(selectedWorkout.Id);
+        workouts = await service.GetWorkouts();
+    }
+
+    void StartSelectedWorkout()
+    {
+        navManager.NavigateTo($"/start-workout/{selectedWorkout.Id}");
+    }
+}

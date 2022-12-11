@@ -22,7 +22,8 @@ public class MemberDAOImpl implements MemberDAO {
 
     @Override
     public MemberDTO createMember(LoginCreateDTO obj) throws Exception {
-        ResponseEntity<MemberDTO> responseEntity = restTemplate.postForEntity(URI + "/create", obj, MemberDTO.class);
+        ResponseEntity<MemberDTO> responseEntity = restTemplate
+                .postForEntity(URI + "/create", obj, MemberDTO.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.CREATED) {
             throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
@@ -33,7 +34,8 @@ public class MemberDAOImpl implements MemberDAO {
 
     @Override
     public MemberDTO getByUsername(LoginCreateDTO obj) throws Exception {
-        ResponseEntity<MemberDTO> responseEntity = restTemplate.postForEntity(URI + "/login", obj, MemberDTO.class);
+        ResponseEntity<MemberDTO> responseEntity = restTemplate
+                .postForEntity(URI + "/login", obj, MemberDTO.class);
 
         if (responseEntity.getStatusCode() == HttpStatus.NOT_FOUND) {
             return null;

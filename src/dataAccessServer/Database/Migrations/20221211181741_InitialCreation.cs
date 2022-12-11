@@ -1,10 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace Database.Migrations
 {
-    public partial class InitialCreate2 : Migration
+    public partial class InitialCreation : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -15,7 +16,8 @@ namespace Database.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Username = table.Column<string>(type: "TEXT", nullable: false),
-                    HashedPassword = table.Column<string>(type: "TEXT", nullable: false),
+                    HashedPassword = table.Column<byte[]>(type: "BLOB", nullable: false),
+                    Salt = table.Column<byte[]>(type: "BLOB", nullable: false),
                     Position = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
@@ -29,11 +31,11 @@ namespace Database.Migrations
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: false),
-                    Descritpion = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 30, nullable: false),
+                    Description = table.Column<string>(type: "TEXT", maxLength: 500, nullable: false),
                     DurationInMin = table.Column<int>(type: "INTEGER", nullable: false),
                     UserId = table.Column<int>(type: "INTEGER", nullable: false),
-                    AddedBy = table.Column<int>(type: "INTEGER", nullable: false)
+                    AddedBy = table.Column<int>(type: "INTEGER", nullable: false, defaultValue: 0)
                 },
                 constraints: table =>
                 {
@@ -59,7 +61,7 @@ namespace Database.Migrations
                     FollowedBy = table.Column<int>(type: "INTEGER", nullable: false),
                     IsPublic = table.Column<bool>(type: "INTEGER", nullable: false),
                     UserId = table.Column<int>(type: "INTEGER", nullable: false),
-                    CreatedBy = table.Column<int>(type: "INTEGER", nullable: false)
+                    CreatedBy = table.Column<int>(type: "INTEGER", nullable: false, defaultValue: 0)
                 },
                 constraints: table =>
                 {

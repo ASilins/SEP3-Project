@@ -18,7 +18,7 @@ public class Tokens
         List<Claim> claims = new()
         {
             new Claim(ClaimTypes.Name, dto.Username),
-            new Claim(ClaimTypes.Actor, dto.Position)
+            new Claim(ClaimTypes.Role, dto.Position)
         };
 
         var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(

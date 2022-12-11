@@ -40,12 +40,12 @@ public class MemberClient : IMemberClient
         client = new MemberService.MemberServiceClient(channel);
 
         var reply = MemberConverter.ConvertToMemberDTO(
-            await client.loginMemberAsync(
-            MemberConverter.ConvertToLoginCreateObj(new LoginCreateDTO
+            await client.loginMemberAsync(new LoginCreateObject
             {
                 Username = dto.Username
-            }))
-        );
+            }
+                )
+            );
 
         if (!PasswordHashing.VerifyPasswordHash(dto.Password.ToString()!, reply.Password!, reply.Salt!))
         {

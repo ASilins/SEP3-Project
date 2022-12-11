@@ -1,4 +1,5 @@
 using GrpcClient.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model.DTOs;
 
@@ -15,8 +16,7 @@ public class MemberController : ControllerBase
         _client = client;
     }
 
-    [HttpPost]
-    [Route("/[controller]/create")]
+    [HttpPost("/[controller]/create"), AllowAnonymous]
     public async Task<ActionResult<MemberDTO>> CreateMember([FromBody] LoginCreateDTO member)
     {
         try
@@ -31,8 +31,7 @@ public class MemberController : ControllerBase
         }
     }
 
-    [HttpPost]
-    [Route("/[controller]/login")]
+    [HttpPost("/[controller]/login"), AllowAnonymous]
     public async Task<ActionResult<string>> LoginMember([FromBody] LoginCreateDTO member)
     {
         try

@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "zEddGiZvREXa8v6sutTTcWfTWlfJJ73sjc1sK0f0mb4QkP9Bf/UkH5Ag2+IhGaxLS9O8c50cipL5i2LRiDSvwg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\WebApi\\WebApi.csproj",
+=======
   "dgSpecHash": "9rgdJnXKLizzR494f7Fp5fIuymsNgJE/V0r02P39ldoqU9LmQ7BxFAfuwOuOlxr736y14+KOT2ytqFXcJlV38A==",
   "success": true,
   "projectFilePath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\WebApi\\WebApi.csproj",
+>>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
   "expectedPackageFiles": [
     "C:\\Users\\45552\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",
     "C:\\Users\\45552\\.nuget\\packages\\grpc.aspnetcore\\2.50.0\\grpc.aspnetcore.2.50.0.nupkg.sha512",

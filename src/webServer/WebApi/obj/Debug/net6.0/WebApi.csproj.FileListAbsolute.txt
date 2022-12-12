@@ -39,6 +39,19 @@ C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebAp
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\GrpcClient.exe
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\GrpcClient.dll
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\GrpcClient.pdb
+<<<<<<< HEAD
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Scrutor.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+=======
 C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\appsettings.json
 C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\WebApi\bin\Debug\net6.0\GrpcClient.deps.json
@@ -91,3 +104,4 @@ C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\WebApi\obj\De
 C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\WebApi\obj\Debug\net6.0\WebApi.pdb
 C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
 C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\WebApi\obj\Debug\net6.0\ref\WebApi.dll
+>>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f

@@ -21,6 +21,7 @@ public class MemberController : ControllerBase
     {
         try
         {
+            Console.WriteLine("Helloooooooooooooooo");
             MemberDTO created = await dao.CreateMember(member);
             return Created("Member created", created);
         }

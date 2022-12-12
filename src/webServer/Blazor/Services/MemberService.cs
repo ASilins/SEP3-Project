@@ -1,5 +1,6 @@
 using System.Net.Http.Json;
 using System.Text.Json;
+using Blazored.LocalStorage;
 using Model.DTOs;
 
 namespace Blazor.Services;
@@ -7,10 +8,12 @@ namespace Blazor.Services;
 public class MemberService
 {
     private readonly HttpClient _client;
+    private readonly ILocalStorageService _localStorage;
 
-    public MemberService(HttpClient client)
+    public MemberService(HttpClient client, ILocalStorageService localStorage)
     {
         _client = client;
+        _localStorage = localStorage;
     }
 
     public async Task CreateMember(MemberDTO member)
@@ -25,12 +28,18 @@ public class MemberService
 
     public async Task LoginMember(MemberDTO member)
     {
+        // HttpResponseMessage response = await _client.PostAsJsonAsync("/member/login", member);
+        // string result = await response.Content.ReadAsStringAsync();
+        // if (!response.IsSuccessStatusCode)
+        // {
+        //     throw new Exception(result + ">>>" + response.StatusCode);
+        // }
+
+        HttpResponseMessage response = await _client.GetAsync("/member/token");
+
         HttpResponseMessage response = await _client.PostAsJsonAsync("/member/login", member);
         string result = await response.Content.ReadAsStringAsync();
-        if (!response.IsSuccessStatusCode)
-        {
-            throw new Exception(result + ">>>" + response.StatusCode);
-        }
+        await _localStorage.SetItemAsync("token", result);
     }
 
     public async Task EditPrivilege(MemberDTO member)

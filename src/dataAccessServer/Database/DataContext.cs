@@ -13,7 +13,7 @@ public class DataContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlite("Data source = Fitness.db");
+        optionsBuilder.UseSqlite("Data source = ../Database/Fitness.db");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

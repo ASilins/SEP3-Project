@@ -86,7 +86,7 @@ public class WorkoutDAO : IWorkoutDAO
             });
         }
 
-        w.Exercises = (ICollection<ExercisesInWorkouts>)exercises;
+        w.Exercises = exercises;
 
         _db.Workouts.Update(w);
         await _db.SaveChangesAsync();

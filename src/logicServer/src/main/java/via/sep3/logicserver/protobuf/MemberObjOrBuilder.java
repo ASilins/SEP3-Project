@@ -26,24 +26,24 @@ public interface MemberObjOrBuilder extends
       getUsernameBytes();
 
   /**
-   * <code>string Password = 3;</code>
+   * <code>bytes Password = 3;</code>
    * @return The password.
    */
-  java.lang.String getPassword();
-  /**
-   * <code>string Password = 3;</code>
-   * @return The bytes for password.
-   */
-  com.google.protobuf.ByteString
-      getPasswordBytes();
+  com.google.protobuf.ByteString getPassword();
 
   /**
-   * <code>string Position = 4;</code>
+   * <code>bytes Salt = 4;</code>
+   * @return The salt.
+   */
+  com.google.protobuf.ByteString getSalt();
+
+  /**
+   * <code>string Position = 5;</code>
    * @return The position.
    */
   java.lang.String getPosition();
   /**
-   * <code>string Position = 4;</code>
+   * <code>string Position = 5;</code>
    * @return The bytes for position.
    */
   com.google.protobuf.ByteString

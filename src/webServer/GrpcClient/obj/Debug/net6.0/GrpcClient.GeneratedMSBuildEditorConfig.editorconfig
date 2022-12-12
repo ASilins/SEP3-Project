@@ -8,9 +8,17 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GrpcClient
 build_property.RootNamespace = GrpcClient
+<<<<<<< HEAD
+build_property.ProjectDir = C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient
+=======
 build_property.ProjectDir = C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\GrpcClient\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\GrpcClient
+>>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
 build_property._RazorSourceGeneratorDebug = 

@@ -1,0 +1,46 @@
+@inject MemberService memberService
+@inject NavigationManager navMag
+
+<div>
+    <h3>Login</h3>
+    <div class="form-group field">
+        <label>User Name:</label>
+        <input type="text" @bind="username" @bind:event="oninput" />
+
+        <label>Password:</label>
+        <input type="password" @bind="password" @bind:event="oninput" />
+    </div>
+    <div class="button-row">
+        <button @onclick="LoginMemberAsync"
+            disabled="@(string.IsNullOrEmpty(username) && string.IsNullOrEmpty(password))"
+            class="acceptbtn">Login</button>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string url { get; set; }
+
+    string username = "";
+    string password = "";
+
+    async Task LoginMemberAsync()
+    {
+        try
+        {
+            var member = new MemberDTO
+            {
+                Username = username,
+                Password = Encoding.ASCII.GetBytes(password)
+            };
+            await memberService.LoginMember(member);
+            username = "";
+            password = "";
+            navMag.NavigateTo(url, true);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+        }
+    }
+}

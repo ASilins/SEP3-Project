@@ -39,12 +39,10 @@ public class MemberLogicImpl implements MemberLogic {
             throw new Exception("User not found");
         }
 
-        if (search.getPassword().equals(obj.getPassword())) {
-            return MemberConverter.convertToMemberObj(search);
-        } else {
-            throw new Exception("Incorrect password");
-        }
+        return MemberConverter.convertToMemberObj(search);
     }
+<<<<<<< HEAD
+=======
 
     @Override
     public MemberObj editPrivilege(MemberObj member) throws Exception {
@@ -60,4 +58,5 @@ public class MemberLogicImpl implements MemberLogic {
         );
     }
 
+>>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
 }

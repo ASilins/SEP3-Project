@@ -1,3 +1,4 @@
+using Google.Protobuf;
 using Model.DTOs;
 
 namespace GrpcClient.Logic.Converters;
@@ -9,7 +10,8 @@ public static class MemberConverter
         return new LoginCreateObject()
         {
             Username = dto.Username,
-            Password = dto.Password
+            Password = ByteString.CopyFrom(dto.Password),
+            Salt = ByteString.CopyFrom(dto.Salt)
         };
     }
 
@@ -18,7 +20,19 @@ public static class MemberConverter
         return new MemberDTO()
         {
             Username = obj.Username,
-            Password = obj.Password
+            Password = obj.Password.ToByteArray(),
+            Salt = obj.Salt.ToByteArray()
+        };
+    }
+
+    public static MemberObj ConvertToMemberObj(MemberDTO dto)
+    {
+        return new MemberObj()
+        {
+            Username = dto.Username,
+            Password = ByteString.CopyFrom(dto.Password),
+            Salt = ByteString.CopyFrom(dto.Salt),
+            Position = dto.Position
         };
     }
 }

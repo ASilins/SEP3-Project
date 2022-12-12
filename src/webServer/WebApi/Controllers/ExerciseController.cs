@@ -1,4 +1,5 @@
 using GrpcClient.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model.DTOs;
 
@@ -15,7 +16,7 @@ public class ExerciseController : ControllerBase
         _client = client;
     }
 
-    [HttpPost, Route("/[controller]/create")]
+    [HttpPost("/[controller]/create"), Authorize(Roles = "Trainer")]
     public async Task<ActionResult<ExerciseDTO>> CreateExercise([FromBody] ExerciseDTO exercise)
     {
         try
@@ -30,7 +31,7 @@ public class ExerciseController : ControllerBase
         }
     }
 
-    [HttpGet, Route("/[controller]s")]
+    [HttpGet("/[controller]s"), Authorize(Roles = "Trainer")]
     public async Task<ActionResult<IEnumerable<ExerciseDTO>>> GetExercises()
     {
         try

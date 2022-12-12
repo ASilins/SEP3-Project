@@ -9,5 +9,4 @@ public class LogicserverApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LogicserverApplication.class, args);
 	}
-
 }

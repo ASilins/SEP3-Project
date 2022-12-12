@@ -15,7 +15,7 @@ public class Workout
     public int FollowedBy { get; set; }
     //[Required]
     public bool IsPublic { get; set; }
-    public ICollection<ExercisesInWorkouts> Exercises { get; set; }
+    public List<ExercisesInWorkouts> Exercises { get; set; }
 
     public Member User { get; set; }
 }

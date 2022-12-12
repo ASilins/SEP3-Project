@@ -20,6 +20,7 @@ public class MemberDAO : IMemberDAO
         {
             Username = member.Username,
             HashedPassword = member.Password,
+            Salt = member.Salt,
             Position = "Member"
         };
 
@@ -50,6 +51,7 @@ public class MemberDAO : IMemberDAO
             Id = exists.Id,
             Username = exists.Username,
             Password = exists.HashedPassword,
+            Salt = exists.Salt,
             Position = exists.Position
         };
     }

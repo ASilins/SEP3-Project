@@ -20,14 +20,14 @@ public interface LoginCreateObjectOrBuilder extends
       getUsernameBytes();
 
   /**
-   * <code>string Password = 2;</code>
+   * <code>bytes Password = 2;</code>
    * @return The password.
    */
-  java.lang.String getPassword();
+  com.google.protobuf.ByteString getPassword();
+
   /**
-   * <code>string Password = 2;</code>
-   * @return The bytes for password.
+   * <code>bytes Salt = 3;</code>
+   * @return The salt.
    */
-  com.google.protobuf.ByteString
-      getPasswordBytes();
+  com.google.protobuf.ByteString getSalt();
 }

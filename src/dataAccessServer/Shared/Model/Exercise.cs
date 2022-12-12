@@ -12,7 +12,7 @@ public class Exercise
     public string Description { get; set; }
     //[Range(0, 600)]
     public int DurationInMin { get; set; }
-    public ICollection<ExercisesInWorkouts> InWorkouts { get; set; }
+    public List<ExercisesInWorkouts> InWorkouts { get; set; }
 
     public Member User { get; set; }
 }

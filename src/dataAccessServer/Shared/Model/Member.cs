@@ -9,7 +9,9 @@ public class Member
     [Required]
     public string Username { get; set; }
     [Required]
-    public string HashedPassword { get; set; }
+    public byte[] HashedPassword { get; set; }
+    [Required]
+    public byte[] Salt { get; set; }
     [Required]
     public string? Position { get; set; }
     public ICollection<Exercise>? AddedExercises { get; set; }

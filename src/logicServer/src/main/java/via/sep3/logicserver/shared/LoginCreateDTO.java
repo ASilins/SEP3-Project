@@ -6,8 +6,8 @@ import lombok.Data;
 
 @Data
 @Component
-// In new build
 public class LoginCreateDTO {
     private String Username;
-    private String Password;
+    private byte[] Password;
+    private byte[] Salt;
 }

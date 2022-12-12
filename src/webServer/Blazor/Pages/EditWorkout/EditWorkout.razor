@@ -16,10 +16,15 @@
     <label>Workout Duration:</label>
     <input @bind="workout.DurationInMin" />
 </div>
-<div>
-    <label>Is Public:</label>
-    <input type="checkbox" @bind="workout.IsPublic" />
-</div>
+<AuthorizeView Roles="Trainer,Admin">
+    <Authorized>
+        <div>
+            <label>Is Public:</label>
+            <input type="checkbox" @bind="workout.IsPublic" />
+        </div>
+    </Authorized>
+</AuthorizeView>
+
 <h2>Exercises:</h2>
 <table>
     <thead>

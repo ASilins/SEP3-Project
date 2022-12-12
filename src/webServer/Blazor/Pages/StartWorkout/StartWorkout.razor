@@ -1,33 +1,39 @@
 @page "/start-workout/{id:int}"
 @inject WorkoutService service
 
-<h1>Start Workout</h1>
-<div>
-    <h2>@Workout.Name</h2>
-    <p>@Workout.Description</p>
-    <p>Duration: @Workout.DurationInMin minutes</p>
-</div>
-<table>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Duration (minutes)</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var exercise in Workout.Exercises)
-        {
-            <tr>
-                <td>@exercise.Id</td>
-                <td>@exercise.Name</td>
-                <td>@exercise.Description</td>
-                <td>@exercise.Duration</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<AuthorizeView Roles="Member,Trainer,Admin">
+    <Authorized>
+        <h1>Start Workout</h1>
+        <div>
+            <h2>@Workout.Name</h2>
+            <p>@Workout.Description</p>
+            <p>Duration: @Workout.DurationInMin minutes</p>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Duration (minutes)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var exercise in Workout.Exercises)
+                {
+                    <tr>
+                        <td>@exercise.Name</td>
+                        <td>@exercise.Description</td>
+                        <td>@exercise.Duration</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </Authorized>
+    <NotAuthorized>
+        <Login url="/start-workout/{id}" />
+    </NotAuthorized>
+</AuthorizeView>
+
 @code {
     [Parameter]
     public int id { get; set; }

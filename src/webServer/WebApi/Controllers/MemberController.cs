@@ -45,4 +45,12 @@ public class MemberController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+
+    // Only for development
+
+    [HttpGet("token"), AllowAnonymous]
+    public OkObjectResult GetToken()
+    {
+        return Ok(_client.GetToken());
+    }
 }

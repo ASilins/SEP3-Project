@@ -1,5 +1,5 @@
-@page "/login"
-@inject MemberService memberService;
+@inject MemberService memberService
+@inject NavigationManager navMag
 
 <div>
     <h3>Login</h3>
@@ -8,11 +8,7 @@
         <input type="text" @bind="username" @bind:event="oninput" />
 
         <label>Password:</label>
-        <input type="password" @bind="password" @bind:event="oninput">
-        @if (!string.IsNullOrEmpty(resultmsg))
-        {
-            <label style="color: @colour">@resultmsg</label>
-        }
+        <input type="password" @bind="password" @bind:event="oninput" />
     </div>
     <div class="button-row">
         <button @onclick="LoginMemberAsync"
@@ -22,15 +18,14 @@
 </div>
 
 @code {
-    private string username = "";
-    private string password = "";
-    private string resultmsg = "";
-    private string colour = "";
+    [Parameter]
+    public string url { get; set; }
 
-    private async Task LoginMemberAsync()
+    string username = "";
+    string password = "";
+
+    async Task LoginMemberAsync()
     {
-        resultmsg = "";
-
         try
         {
             var member = new MemberDTO
@@ -41,12 +36,11 @@
             await memberService.LoginMember(member);
             username = "";
             password = "";
+            navMag.NavigateTo(url, true);
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
-            resultmsg = e.Message;
-            colour = "red";
         }
     }
 }

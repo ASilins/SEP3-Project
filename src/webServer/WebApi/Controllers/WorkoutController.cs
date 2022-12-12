@@ -1,4 +1,5 @@
 using GrpcClient.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model.DTOs;
 using Shared.DTOs;
@@ -15,7 +16,7 @@ public class WorkoutController : ControllerBase
         _client = client;
     }
 
-    [HttpGet]
+    [HttpGet, Authorize(Roles = "Member,Trainer,Admin")]
     public async Task<ActionResult<WorkoutDTO>> GetWorkout([FromQuery] int id)
     {
         try
@@ -29,7 +30,7 @@ public class WorkoutController : ControllerBase
         }
     }
 
-    [HttpGet, Route("/[controller]s")]
+    [HttpGet("/[controller]s"), Authorize(Roles = "Member,Trainer,Admin")]
     public async Task<ActionResult<IEnumerable<WorkoutDTO>>> GetWorkouts()
     {
         try
@@ -43,7 +44,7 @@ public class WorkoutController : ControllerBase
         }
     }
 
-    [HttpPost, Route("/[controller]/assign")]
+    [HttpPost("/[controller]/assign"), Authorize(Roles = "Trainer,Admin")]
     public async Task<ActionResult<FollowWorkoutDTO>> AssignWorkout([FromBody] FollowWorkoutDTO dto)
     {
         try
@@ -57,7 +58,7 @@ public class WorkoutController : ControllerBase
         }
     }
 
-    [HttpPut]
+    [HttpPut, Authorize(Roles = "Member,Trainer,Admin")]
     public async Task<ActionResult<WorkoutDTO>> EditWorkout([FromBody] WorkoutDTO workout)
     {
         try
@@ -72,7 +73,7 @@ public class WorkoutController : ControllerBase
         }
     }
 
-    [HttpDelete]
+    [HttpDelete, Authorize(Roles = "Member,Trainer,Admin")]
     public async Task<ActionResult<WorkoutDTO>> DeleteWorkout([FromQuery] int id)
     {
         try

@@ -1,41 +1,60 @@
 @page "/exercises"
 @inject ExerciseService service;
 
-<h1>Exercises</h1>
 
-<button @onclick="@CreateExercise">Create</button>
+<AuthorizeView Roles="Trainer,Admin">
+    <Authorized>
+        <button @onclick="@CreateExercise">Create</button>
+    </Authorized>
+</AuthorizeView>
 
-<table>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Duration</th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var exercise in exercises)
-        {
-            <tr>
-                <td>@exercise.Id</td>
-                <td>@exercise.Name</td>
-                <td>@exercise.Description</td>
-                <td>@exercise.Duration</td>
-                <td>
-                    <input type="radio" name="selectedExercise" @onclick="@(() => SelectExercise(exercise))" />
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-<button @onclick="@EditSelectedExercise">Edit</button>
-<button @onclick="@RemoveSelectedExercise">Remove</button>
+
+<AuthorizeView Roles="Member,Trainer,Admin">
+    <Authorized>
+        <h1>Exercises</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Duration</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var exercise in exercises)
+                {
+                    <tr>
+                        <td>@exercise.Id</td>
+                        <td>@exercise.Name</td>
+                        <td>@exercise.Description</td>
+                        <td>@exercise.Duration</td>
+                        <td>
+                            <input type="radio" name="selectedExercise" @onclick="@(() => SelectExercise(exercise))" />
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </Authorized>
+
+    <NotAuthorized>
+        <Login url="/exercises" />
+    </NotAuthorized>
+</AuthorizeView>
+
+<AuthorizeView Roles="Trainer,Admin">
+    <Authorized>
+        <button @onclick="@EditSelectedExercise">Edit</button>
+        <button @onclick="@RemoveSelectedExercise">Remove</button>
+    </Authorized>
+</AuthorizeView>
+
 
 @code {
     List<ExerciseDTO> exercises = new List<ExerciseDTO>();
-    ExerciseDTO selectedExercise;
+    ExerciseDTO selectedExercise = new ExerciseDTO();
 
     protected async override void OnInitialized()
     {

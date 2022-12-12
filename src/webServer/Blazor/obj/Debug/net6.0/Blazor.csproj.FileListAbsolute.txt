@@ -608,12 +608,9 @@ C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazo
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\Blazor.AssemblyInfo.cs
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\Blazor.csproj.CoreCompileInputs.cache
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\Blazor.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\baMRa75O.gz
-C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\q46khIJZ.gz
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\hts+OXjU.gz
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\tNtmOAcm.gz
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\xlB4kuD2.gz
-C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\6Bkec30J.gz
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\H3r6oNjX.gz
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\suMeyJ1J.gz
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\R6YQTFKS.gz
@@ -625,7 +622,6 @@ C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazo
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\4S5Mp3QI.gz
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\0n17YPKW.gz
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\xG1Qh1Js.gz
-C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\gtsW1OV5.gz
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\18pUnAhJ.gz
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\0ZRWjDnP.gz
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\oBRL32op.gz
@@ -821,3 +817,15 @@ C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazo
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\refint\Blazor.dll
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\Blazor.pdb
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\ref\Blazor.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\bin\Debug\net6.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\bin\Debug\net6.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\bin\Debug\net6.0\Blazored.LocalStorage.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\nvXdYUuf.gz
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\slJG5Y7E.gz
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\Ih+jldOd.gz
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\esfaBeZJ.gz
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\jo7Pxgig.gz
+C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Blazor\obj\Debug\net6.0\build-gz\TmrT7qxy.gz

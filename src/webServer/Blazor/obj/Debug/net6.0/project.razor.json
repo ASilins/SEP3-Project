@@ -213,130 +213,6 @@
         }
       },
       {
-        "HashCode": -771675589,
-        "Kind": "Components.Component",
-        "Name": "Blazor.Pages.EditWorkout.AddExercise",
-        "AssemblyName": "Blazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "AddExercise"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "selectedEx",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "selectedEx"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "selectedExChanged",
-            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Int32>",
-            "Metadata": {
-              "Common.PropertyName": "selectedExChanged",
-              "Components.EventCallback": "True"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.EditWorkout.AddExercise"
-        }
-      },
-      {
-        "HashCode": 677183514,
-        "Kind": "Components.Component",
-        "Name": "Blazor.Pages.EditWorkout.AddExercise",
-        "AssemblyName": "Blazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Blazor.Pages.EditWorkout.AddExercise"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "selectedEx",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "selectedEx"
-            }
-          },
-          {
-            "Kind": "Components.Component",
-            "Name": "selectedExChanged",
-            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Int32>",
-            "Metadata": {
-              "Common.PropertyName": "selectedExChanged",
-              "Components.EventCallback": "True"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.EditWorkout.AddExercise",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
-        "HashCode": -845053667,
-        "Kind": "Components.Component",
-        "Name": "Blazor.Pages.EditWorkout.EditWorkout",
-        "AssemblyName": "Blazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "EditWorkout"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "id",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "id"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.EditWorkout.EditWorkout"
-        }
-      },
-      {
-        "HashCode": -1073681467,
-        "Kind": "Components.Component",
-        "Name": "Blazor.Pages.EditWorkout.EditWorkout",
-        "AssemblyName": "Blazor",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Blazor.Pages.EditWorkout.EditWorkout"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "id",
-            "TypeName": "System.Int32",
-            "Metadata": {
-              "Common.PropertyName": "id"
-            }
-          }
-        ],
-        "Metadata": {
-          "Runtime.Name": "Components.IComponent",
-          "Common.TypeName": "Blazor.Pages.EditWorkout.EditWorkout",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
-        }
-      },
-      {
         "HashCode": -1361746365,
         "Kind": "Components.Component",
         "Name": "Blazor.Pages.Index",
@@ -584,6 +460,130 @@
         "Metadata": {
           "Runtime.Name": "Components.IComponent",
           "Common.TypeName": "Blazor.Pages.EditPrivilege.EditPrivilege",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -771675589,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.EditWorkout.AddExercise",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "AddExercise"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "selectedEx",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "selectedEx"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "selectedExChanged",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Int32>",
+            "Metadata": {
+              "Common.PropertyName": "selectedExChanged",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.EditWorkout.AddExercise"
+        }
+      },
+      {
+        "HashCode": 677183514,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.EditWorkout.AddExercise",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor.Pages.EditWorkout.AddExercise"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "selectedEx",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "selectedEx"
+            }
+          },
+          {
+            "Kind": "Components.Component",
+            "Name": "selectedExChanged",
+            "TypeName": "Microsoft.AspNetCore.Components.EventCallback<System.Int32>",
+            "Metadata": {
+              "Common.PropertyName": "selectedExChanged",
+              "Components.EventCallback": "True"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.EditWorkout.AddExercise",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
+        "HashCode": -845053667,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.EditWorkout.EditWorkout",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "EditWorkout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "id",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "id"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.EditWorkout.EditWorkout"
+        }
+      },
+      {
+        "HashCode": -1073681467,
+        "Kind": "Components.Component",
+        "Name": "Blazor.Pages.EditWorkout.EditWorkout",
+        "AssemblyName": "Blazor",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Blazor.Pages.EditWorkout.EditWorkout"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "id",
+            "TypeName": "System.Int32",
+            "Metadata": {
+              "Common.PropertyName": "id"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "Blazor.Pages.EditWorkout.EditWorkout",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch"
         }
       },

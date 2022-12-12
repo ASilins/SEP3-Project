@@ -76,6 +76,68 @@ public final class MemberServiceGrpc {
     return getLoginMemberMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberObj,
+      via.sep3.logicserver.protobuf.StringObj> getEditPrivilegeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "editPrivilege",
+      requestType = via.sep3.logicserver.protobuf.MemberObj.class,
+      responseType = via.sep3.logicserver.protobuf.StringObj.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberObj,
+      via.sep3.logicserver.protobuf.StringObj> getEditPrivilegeMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberObj, via.sep3.logicserver.protobuf.StringObj> getEditPrivilegeMethod;
+    if ((getEditPrivilegeMethod = MemberServiceGrpc.getEditPrivilegeMethod) == null) {
+      synchronized (MemberServiceGrpc.class) {
+        if ((getEditPrivilegeMethod = MemberServiceGrpc.getEditPrivilegeMethod) == null) {
+          MemberServiceGrpc.getEditPrivilegeMethod = getEditPrivilegeMethod =
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.MemberObj, via.sep3.logicserver.protobuf.StringObj>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "editPrivilege"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.MemberObj.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.StringObj.getDefaultInstance()))
+              .setSchemaDescriptor(new MemberServiceMethodDescriptorSupplier("editPrivilege"))
+              .build();
+        }
+      }
+    }
+    return getEditPrivilegeMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.StringObj,
+      via.sep3.logicserver.protobuf.Members> getGetMembersMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "getMembers",
+      requestType = via.sep3.logicserver.protobuf.StringObj.class,
+      responseType = via.sep3.logicserver.protobuf.Members.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.StringObj,
+      via.sep3.logicserver.protobuf.Members> getGetMembersMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.StringObj, via.sep3.logicserver.protobuf.Members> getGetMembersMethod;
+    if ((getGetMembersMethod = MemberServiceGrpc.getGetMembersMethod) == null) {
+      synchronized (MemberServiceGrpc.class) {
+        if ((getGetMembersMethod = MemberServiceGrpc.getGetMembersMethod) == null) {
+          MemberServiceGrpc.getGetMembersMethod = getGetMembersMethod =
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.StringObj, via.sep3.logicserver.protobuf.Members>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "getMembers"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.StringObj.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.Members.getDefaultInstance()))
+              .setSchemaDescriptor(new MemberServiceMethodDescriptorSupplier("getMembers"))
+              .build();
+        }
+      }
+    }
+    return getGetMembersMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -138,6 +200,20 @@ public final class MemberServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getLoginMemberMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void editPrivilege(via.sep3.logicserver.protobuf.MemberObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditPrivilegeMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void getMembers(via.sep3.logicserver.protobuf.StringObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.Members> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMembersMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -154,6 +230,20 @@ public final class MemberServiceGrpc {
                 via.sep3.logicserver.protobuf.LoginCreateObject,
                 via.sep3.logicserver.protobuf.MemberObj>(
                   this, METHODID_LOGIN_MEMBER)))
+          .addMethod(
+            getEditPrivilegeMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.sep3.logicserver.protobuf.MemberObj,
+                via.sep3.logicserver.protobuf.StringObj>(
+                  this, METHODID_EDIT_PRIVILEGE)))
+          .addMethod(
+            getGetMembersMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.sep3.logicserver.protobuf.StringObj,
+                via.sep3.logicserver.protobuf.Members>(
+                  this, METHODID_GET_MEMBERS)))
           .build();
     }
   }
@@ -187,6 +277,22 @@ public final class MemberServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getLoginMemberMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void editPrivilege(via.sep3.logicserver.protobuf.MemberObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEditPrivilegeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void getMembers(via.sep3.logicserver.protobuf.StringObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.Members> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetMembersMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -215,6 +321,20 @@ public final class MemberServiceGrpc {
     public via.sep3.logicserver.protobuf.MemberObj loginMember(via.sep3.logicserver.protobuf.LoginCreateObject request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getLoginMemberMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.sep3.logicserver.protobuf.StringObj editPrivilege(via.sep3.logicserver.protobuf.MemberObj request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEditPrivilegeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.sep3.logicserver.protobuf.Members getMembers(via.sep3.logicserver.protobuf.StringObj request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetMembersMethod(), getCallOptions(), request);
     }
   }
 
@@ -247,10 +367,28 @@ public final class MemberServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getLoginMemberMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.StringObj> editPrivilege(
+        via.sep3.logicserver.protobuf.MemberObj request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEditPrivilegeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.Members> getMembers(
+        via.sep3.logicserver.protobuf.StringObj request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetMembersMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_MEMBER = 0;
   private static final int METHODID_LOGIN_MEMBER = 1;
+  private static final int METHODID_EDIT_PRIVILEGE = 2;
+  private static final int METHODID_GET_MEMBERS = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -276,6 +414,14 @@ public final class MemberServiceGrpc {
         case METHODID_LOGIN_MEMBER:
           serviceImpl.loginMember((via.sep3.logicserver.protobuf.LoginCreateObject) request,
               (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.MemberObj>) responseObserver);
+          break;
+        case METHODID_EDIT_PRIVILEGE:
+          serviceImpl.editPrivilege((via.sep3.logicserver.protobuf.MemberObj) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj>) responseObserver);
+          break;
+        case METHODID_GET_MEMBERS:
+          serviceImpl.getMembers((via.sep3.logicserver.protobuf.StringObj) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.Members>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -340,6 +486,8 @@ public final class MemberServiceGrpc {
               .setSchemaDescriptor(new MemberServiceFileDescriptorSupplier())
               .addMethod(getCreateMemberMethod())
               .addMethod(getLoginMemberMethod())
+              .addMethod(getEditPrivilegeMethod())
+              .addMethod(getGetMembersMethod())
               .build();
         }
       }

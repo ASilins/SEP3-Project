@@ -10,3 +10,15 @@ C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Model
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Model\obj\Debug\net6.0\refint\Model.dll
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Model\obj\Debug\net6.0\Model.pdb
 C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\Model\obj\Debug\net6.0\ref\Model.dll
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\Model\bin\Debug\net6.0\Model.deps.json
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\Model\bin\Debug\net6.0\Model.dll
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\Model\bin\Debug\net6.0\Model.pdb
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\Model\obj\Debug\net6.0\Model.csproj.AssemblyReference.cache
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\Model\obj\Debug\net6.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\Model\obj\Debug\net6.0\Model.AssemblyInfoInputs.cache
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\Model\obj\Debug\net6.0\Model.AssemblyInfo.cs
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\Model\obj\Debug\net6.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\Model\obj\Debug\net6.0\Model.dll
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\Model\obj\Debug\net6.0\refint\Model.dll
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\Model\obj\Debug\net6.0\Model.pdb
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\Model\obj\Debug\net6.0\ref\Model.dll

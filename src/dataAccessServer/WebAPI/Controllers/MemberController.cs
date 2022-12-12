@@ -52,4 +52,34 @@ public class MemberController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+
+    [HttpPut]
+    public async Task<ActionResult<MemberDTO>> EditPrivilege([FromBody] MemberDTO memberDto)
+    {
+        try
+        {
+            await dao.EditPrivilege(memberDto);
+
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpGet, Route("/[controller]s")]
+    public async Task<ActionResult<IEnumerable<MemberDTO>>> GetMembers()
+    {
+        try
+        {
+            return Ok(await dao.GetMembers());
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
 }

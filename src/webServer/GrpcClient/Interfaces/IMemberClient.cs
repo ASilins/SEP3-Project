@@ -6,4 +6,6 @@ public interface IMemberClient
 {
     Task<MemberDTO> CreateMember(LoginCreateDTO member);
     Task<MemberDTO> LoginMember(LoginCreateDTO member);
+    Task EditPrivilege(MemberDTO member);
+    Task<IEnumerable<MemberDTO>> GetMembers();
 }

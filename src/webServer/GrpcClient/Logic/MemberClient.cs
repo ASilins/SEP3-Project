@@ -33,4 +33,27 @@ public class MemberClient : IMemberClient
 
         return MemberConverter.ConvertToMemberDTO(reply);
     }
+
+    public async Task EditPrivilege(MemberDTO member)
+    {
+        using var channel = GrpcChannel.ForAddress(_url);
+        client = new MemberService.MemberServiceClient(channel);
+
+        var reply = await client.editPrivilegeAsync(
+            MemberConverter.ConvertToMemberObj(member)
+        );
+    }
+
+    public async Task<IEnumerable<MemberDTO>> GetMembers()
+    {
+        using var channel = GrpcChannel.ForAddress(_url);
+        client = new MemberService.MemberServiceClient(channel);
+
+        var reply = await client.getMembersAsync(new StringObj
+        {
+            Name = ""
+        });
+
+        return MemberConverter.ConvertToMemberDTOList(reply.Members_);
+    }
 }

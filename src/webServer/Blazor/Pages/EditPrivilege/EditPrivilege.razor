@@ -1,35 +1,43 @@
-﻿@page "/EditPrivilege"
+﻿@page "/edit-privilege"
 @inject MemberService MemberService
 @inject NavigationManager NavigationManager
 @inject IJSRuntime JS
 
-<h1>Edit User's Privilege</h1>
+<AuthorizeView Roles="Admin">
+    <Authorized>
 
-<form>
-    <div>
-        <label>User:</label>
-        <select @bind="SelectedUser">
-            @foreach (var item in MemberService.GetMembers().Result)
-            {
-                <option>@item.Id , @item.Username , @item.Position</option>
-            }
-        </select>
-        <label>New Position:</label>
-        <select @bind="@NewPosition">
-            <option value="Member">Member</option>
-            <option value="Trainer">Trainer</option>
-            <option value="Admin">*Admin*</option>
-        </select>
-        @if (NewPosition == "Admin")
-        {
-            ShowPopup();
-        }
-    </div>
-    <button type="submit" onclick="@SaveChanges()">Save changes</button>
-</form>
+        <h1>Edit User's Privilege</h1>
 
-@functions
-{
+        <form>
+            <div>
+                <label>User:</label>
+                <select @bind="SelectedUser">
+                    @foreach (var item in MemberService.GetMembers().Result)
+                    {
+                        <option>@item.Id , @item.Username , @item.Position</option>
+                    }
+                </select>
+                <label>New Position:</label>
+                <select @bind="@NewPosition">
+                    <option value="Member">Member</option>
+                    <option value="Trainer">Trainer</option>
+                    <option value="Admin">*Admin*</option>
+                </select>
+                @if (NewPosition == "Admin")
+                {
+                    ShowPopup();
+                }
+            </div>
+            <button type="submit" onclick="@SaveChanges()">Save changes</button>
+        </form>
+    </Authorized>
+    <NotAuthorized>
+        <Login url="/" />
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@code {
     private MemberDTO SelectedUser = new MemberDTO();
     private string NewPosition = "";
     async Task SaveChanges()

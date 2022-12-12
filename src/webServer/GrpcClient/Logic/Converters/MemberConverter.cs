@@ -35,4 +35,16 @@ public static class MemberConverter
             Position = dto.Position
         };
     }
+
+    public static List<MemberDTO> ConvertToMemberDTOList(ICollection<MemberObj> objList)
+    {
+        List<MemberDTO> dtoList = new();
+
+        foreach (var item in objList)
+        {
+            dtoList.Add(ConvertToMemberDTO(item));
+        }
+
+        return dtoList;
+    }
 }

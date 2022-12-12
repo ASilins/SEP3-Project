@@ -38,30 +38,18 @@ public final class MemberServiceOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-<<<<<<< HEAD
-      "\n\023MemberService.proto\"E\n\021LoginCreateObje" +
-      "ct\022\020\n\010Username\030\001 \001(\t\022\020\n\010Password\030\002 \001(\014\022\014" +
-      "\n\004Salt\030\003 \001(\014\"[\n\tMemberObj\022\n\n\002Id\030\001 \001(\005\022\020\n" +
-      "\010Username\030\002 \001(\t\022\020\n\010Password\030\003 \001(\014\022\014\n\004Sal" +
-      "t\030\004 \001(\014\022\020\n\010Position\030\005 \001(\t2n\n\rMemberServi" +
-      "ce\022.\n\014createMember\022\022.LoginCreateObject\032\n" +
-      ".MemberObj\022-\n\013loginMember\022\022.LoginCreateO" +
-      "bject\032\n.MemberObjB!\n\035via.sep3.logicserve" +
-      "r.protobufP\001b\006proto3"
-=======
       "\n\023MemberService.proto\032\021LogicServer.proto" +
-      "\"7\n\021LoginCreateObject\022\020\n\010Username\030\001 \001(\t\022" +
-      "\020\n\010Password\030\002 \001(\t\"M\n\tMemberObj\022\n\n\002Id\030\001 \001" +
-      "(\005\022\020\n\010Username\030\002 \001(\t\022\020\n\010Password\030\003 \001(\t\022\020" +
-      "\n\010Position\030\004 \001(\t\"&\n\007Members\022\033\n\007members\030\001" +
-      " \003(\0132\n.MemberObj2\273\001\n\rMemberService\022.\n\014cr" +
-      "eateMember\022\022.LoginCreateObject\032\n.MemberO" +
-      "bj\022-\n\013loginMember\022\022.LoginCreateObject\032\n." +
-      "MemberObj\022\'\n\reditPrivilege\022\n.MemberObj\032\n" +
-      ".StringObj\022\"\n\ngetMembers\022\n.StringObj\032\010.M" +
-      "embersB!\n\035via.sep3.logicserver.protobufP" +
-      "\001b\006proto3"
->>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
+      "\"E\n\021LoginCreateObject\022\020\n\010Username\030\001 \001(\t\022" +
+      "\020\n\010Password\030\002 \001(\014\022\014\n\004Salt\030\003 \001(\014\"[\n\tMembe" +
+      "rObj\022\n\n\002Id\030\001 \001(\005\022\020\n\010Username\030\002 \001(\t\022\020\n\010Pa" +
+      "ssword\030\003 \001(\014\022\014\n\004Salt\030\004 \001(\014\022\020\n\010Position\030\005" +
+      " \001(\t\"&\n\007Members\022\033\n\007members\030\001 \003(\0132\n.Membe" +
+      "rObj2\273\001\n\rMemberService\022.\n\014createMember\022\022" +
+      ".LoginCreateObject\032\n.MemberObj\022-\n\013loginM" +
+      "ember\022\022.LoginCreateObject\032\n.MemberObj\022\'\n" +
+      "\reditPrivilege\022\n.MemberObj\032\n.StringObj\022\"" +
+      "\n\ngetMembers\022\n.StringObj\032\010.MembersB!\n\035vi" +
+      "a.sep3.logicserver.protobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -79,10 +67,7 @@ public final class MemberServiceOuterClass {
     internal_static_MemberObj_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_MemberObj_descriptor,
-<<<<<<< HEAD
         new java.lang.String[] { "Id", "Username", "Password", "Salt", "Position", });
-=======
-        new java.lang.String[] { "Id", "Username", "Password", "Position", });
     internal_static_Members_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_Members_fieldAccessorTable = new
@@ -90,7 +75,6 @@ public final class MemberServiceOuterClass {
         internal_static_Members_descriptor,
         new java.lang.String[] { "Members", });
     via.sep3.logicserver.protobuf.LogicServer.getDescriptor();
->>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
   }
 
   // @@protoc_insertion_point(outer_class_scope)

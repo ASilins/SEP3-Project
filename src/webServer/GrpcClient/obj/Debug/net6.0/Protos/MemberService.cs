@@ -24,6 +24,7 @@ namespace GrpcClient {
     static MemberServiceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
+<<<<<<< HEAD
             "ChpQcm90b3MvTWVtYmVyU2VydmljZS5wcm90byJFChFMb2dpbkNyZWF0ZU9i",
             "amVjdBIQCghVc2VybmFtZRgBIAEoCRIQCghQYXNzd29yZBgCIAEoDBIMCgRT",
             "YWx0GAMgASgMIlsKCU1lbWJlck9iahIKCgJJZBgBIAEoBRIQCghVc2VybmFt",
@@ -32,11 +33,30 @@ namespace GrpcClient {
             "EhIuTG9naW5DcmVhdGVPYmplY3QaCi5NZW1iZXJPYmoSLQoLbG9naW5NZW1i",
             "ZXISEi5Mb2dpbkNyZWF0ZU9iamVjdBoKLk1lbWJlck9iakIuCh12aWEuc2Vw",
             "My5sb2dpY3NlcnZlci5wcm90b2J1ZlABqgIKR3JwY0NsaWVudGIGcHJvdG8z"));
+=======
+            "ChpQcm90b3MvTWVtYmVyU2VydmljZS5wcm90bxoYUHJvdG9zL0xvZ2ljU2Vy",
+            "dmVyLnByb3RvIjcKEUxvZ2luQ3JlYXRlT2JqZWN0EhAKCFVzZXJuYW1lGAEg",
+            "ASgJEhAKCFBhc3N3b3JkGAIgASgJIk0KCU1lbWJlck9iahIKCgJJZBgBIAEo",
+            "BRIQCghVc2VybmFtZRgCIAEoCRIQCghQYXNzd29yZBgDIAEoCRIQCghQb3Np",
+            "dGlvbhgEIAEoCSImCgdNZW1iZXJzEhsKB21lbWJlcnMYASADKAsyCi5NZW1i",
+            "ZXJPYmoyuwEKDU1lbWJlclNlcnZpY2USLgoMY3JlYXRlTWVtYmVyEhIuTG9n",
+            "aW5DcmVhdGVPYmplY3QaCi5NZW1iZXJPYmoSLQoLbG9naW5NZW1iZXISEi5M",
+            "b2dpbkNyZWF0ZU9iamVjdBoKLk1lbWJlck9iahInCg1lZGl0UHJpdmlsZWdl",
+            "EgouTWVtYmVyT2JqGgouU3RyaW5nT2JqEiIKCmdldE1lbWJlcnMSCi5TdHJp",
+            "bmdPYmoaCC5NZW1iZXJzQi4KHXZpYS5zZXAzLmxvZ2ljc2VydmVyLnByb3Rv",
+            "YnVmUAGqAgpHcnBjQ2xpZW50YgZwcm90bzM="));
+>>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::GrpcClient.LogicServerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+<<<<<<< HEAD
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.LoginCreateObject), global::GrpcClient.LoginCreateObject.Parser, new[]{ "Username", "Password", "Salt" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.MemberObj), global::GrpcClient.MemberObj.Parser, new[]{ "Id", "Username", "Password", "Salt", "Position" }, null, null, null, null)
+=======
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.LoginCreateObject), global::GrpcClient.LoginCreateObject.Parser, new[]{ "Username", "Password" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.MemberObj), global::GrpcClient.MemberObj.Parser, new[]{ "Id", "Username", "Password", "Position" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.Members), global::GrpcClient.Members.Parser, new[]{ "Members_" }, null, null, null, null)
+>>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
           }));
     }
     #endregion
@@ -634,6 +654,184 @@ namespace GrpcClient {
           }
           case 42: {
             Position = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class Members : pb::IMessage<Members>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Members> _parser = new pb::MessageParser<Members>(() => new Members());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Members> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::GrpcClient.MemberServiceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Members() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Members(Members other) : this() {
+      members_ = other.members_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Members Clone() {
+      return new Members(this);
+    }
+
+    /// <summary>Field number for the "members" field.</summary>
+    public const int Members_FieldNumber = 1;
+    private static readonly pb::FieldCodec<global::GrpcClient.MemberObj> _repeated_members_codec
+        = pb::FieldCodec.ForMessage(10, global::GrpcClient.MemberObj.Parser);
+    private readonly pbc::RepeatedField<global::GrpcClient.MemberObj> members_ = new pbc::RepeatedField<global::GrpcClient.MemberObj>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::GrpcClient.MemberObj> Members_ {
+      get { return members_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Members);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Members other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!members_.Equals(other.members_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= members_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      members_.WriteTo(output, _repeated_members_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      members_.WriteTo(ref output, _repeated_members_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += members_.CalculateSize(_repeated_members_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Members other) {
+      if (other == null) {
+        return;
+      }
+      members_.Add(other.members_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            members_.AddEntriesFrom(input, _repeated_members_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            members_.AddEntriesFrom(ref input, _repeated_members_codec);
             break;
           }
         }

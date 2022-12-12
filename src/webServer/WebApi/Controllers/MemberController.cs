@@ -46,6 +46,35 @@ public class MemberController : ControllerBase
         }
     }
 
+    [HttpPut]
+    public async Task<ActionResult<MemberDTO>> EditPrivilege([FromBody] MemberDTO member)
+    {
+        try
+        {
+            await _client.EditPrivilege(member);
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpGet, Route("/[controller]s")]
+    public async Task<ActionResult<IEnumerable<MemberDTO>>> GetMembers()
+    {
+        try
+        {
+            return Ok(await _client.GetMembers());
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
     // Only for development
 
     [HttpGet("token"), AllowAnonymous]

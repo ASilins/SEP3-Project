@@ -3,6 +3,8 @@ syntax = "proto3";
 option java_multiple_files = true;
 option java_package = "via.sep3.logicserver.protobuf";
 
+import "LogicServer.proto";
+
 message LoginCreateObject {
     string Username = 1;
     bytes Password = 2;
@@ -17,7 +19,13 @@ message MemberObj {
     string Position = 5;
 }
 
+message Members {
+    repeated MemberObj members = 1;
+}
+
 service MemberService {
     rpc createMember(LoginCreateObject) returns(MemberObj);
     rpc loginMember(LoginCreateObject) returns(MemberObj);
+    rpc editPrivilege(MemberObj) returns(StringObj);
+    rpc getMembers(StringObj) returns(Members);
 }

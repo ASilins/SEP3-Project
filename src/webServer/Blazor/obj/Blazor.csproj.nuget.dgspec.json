@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Blazor.csproj": {}
+    "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Blazor\\Blazor.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Blazor.csproj": {
+    "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Blazor\\Blazor.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Blazor.csproj",
+        "projectUniqueName": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Blazor\\Blazor.csproj",
         "projectName": "Blazor",
-        "projectPath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\Blazor.csproj",
-        "packagesPath": "C:\\Users\\Silin\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Blazor\\obj\\",
+        "projectPath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Blazor\\Blazor.csproj",
+        "packagesPath": "C:\\Users\\45552\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Blazor\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Silin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\45552\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -26,8 +26,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj": {
-                "projectPath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj"
+              "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj"
               }
             }
           }
@@ -83,17 +83,17 @@
         }
       }
     },
-    "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj": {
+    "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\Silin\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\obj\\",
+        "projectPath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\45552\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Silin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\45552\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"

@@ -1,11 +1,11 @@
 package via.sep3.logicserver.model.logic;
 
 import org.springframework.stereotype.Service;
-
 import via.sep3.logicserver.model.interfaces.MemberLogic;
 import via.sep3.logicserver.model.logic.converters.MemberConverter;
 import via.sep3.logicserver.protobuf.LoginCreateObject;
 import via.sep3.logicserver.protobuf.MemberObj;
+import via.sep3.logicserver.protobuf.Members;
 import via.sep3.logicserver.repositories.interfaces.MemberDAO;
 import via.sep3.logicserver.repositories.logic.MemberDAOImpl;
 import via.sep3.logicserver.shared.LoginCreateDTO;
@@ -44,6 +44,20 @@ public class MemberLogicImpl implements MemberLogic {
         } else {
             throw new Exception("Incorrect password");
         }
+    }
+
+    @Override
+    public MemberObj editPrivilege(MemberObj member) throws Exception {
+        return MemberConverter.convertToMemberObj(
+                dao.editPrivilege(MemberConverter.convertToMemberDTO(member))
+        );
+    }
+
+    @Override
+    public Members getMembers() throws Exception {
+        return MemberConverter.convertToMembers(
+                MemberConverter.convertToMemberObjList(dao.getMembers())
+        );
     }
 
 }

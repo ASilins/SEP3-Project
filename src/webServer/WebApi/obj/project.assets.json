@@ -1566,19 +1566,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Silin\\.nuget\\packages\\": {}
+    "C:\\Users\\45552\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\WebApi\\WebApi.csproj",
-      "packagesPath": "C:\\Users\\Silin\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\WebApi\\obj\\",
+      "projectPath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\WebApi\\WebApi.csproj",
+      "packagesPath": "C:\\Users\\45552\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Silin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\45552\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -1590,11 +1590,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\GrpcClient\\GrpcClient.csproj": {
-              "projectPath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\GrpcClient\\GrpcClient.csproj"
+            "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\GrpcClient\\GrpcClient.csproj": {
+              "projectPath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\GrpcClient\\GrpcClient.csproj"
             },
-            "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj": {
-              "projectPath": "c:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj"
+            "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj": {
+              "projectPath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj"
             }
           }
         }

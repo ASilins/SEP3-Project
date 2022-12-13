@@ -2,6 +2,7 @@ using GrpcClient.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model.DTOs;
+using Model.Tools;
 using Shared.DTOs;
 
 namespace WebApi.Controllers;
@@ -22,11 +23,14 @@ public class WorkoutController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received GetWorkout request>", "info");
+
             return Ok(await _client.GetWorkout(id));
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -36,11 +40,14 @@ public class WorkoutController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received GetWorkouts request>", "info");
+
             return Ok(await _client.GetWorkouts());
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -50,11 +57,14 @@ public class WorkoutController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received AssignWorkout request>", "info");
+
             return Ok(await _client.AssignWorkout(dto));
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -64,12 +74,15 @@ public class WorkoutController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received EditWorkout request>", "info");
+
             await _client.EditWorkout(workout);
             return Ok();
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -79,12 +92,15 @@ public class WorkoutController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received DeleteWorkout request>", "info");
+
             await _client.DeleteWorkout(id);
             return NoContent();
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }

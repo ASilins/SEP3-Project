@@ -8,6 +8,7 @@ import via.sep3.logicserver.model.logic.MemberLogicImpl;
 import via.sep3.logicserver.protobuf.LoginCreateObject;
 import via.sep3.logicserver.protobuf.MemberObj;
 import via.sep3.logicserver.protobuf.MemberServiceGrpc.MemberServiceImplBase;
+import via.sep3.logicserver.shared.Logger.Logger;
 import via.sep3.logicserver.protobuf.StringObj;
 
 @GRpcService
@@ -22,12 +23,17 @@ public class MemberController extends MemberServiceImplBase {
     @Override
     public void createMember(LoginCreateObject obj, StreamObserver<MemberObj> responseObserver) {
         try {
+            Logger.writeLog("<Received createMember request>", "info");
+
             MemberObj response = logic.createMember(obj);
 
             responseObserver.onNext(response);
             responseObserver.onCompleted();
+
+            Logger.writeLog("--CreateMember request successful--", "info");
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.writeLog("Exception " + e.toString(), "error");
+            System.out.println("<<Exception in MemberController>>");
             responseObserver.onError(e);
         }
     }
@@ -35,12 +41,17 @@ public class MemberController extends MemberServiceImplBase {
     @Override
     public void loginMember(LoginCreateObject obj, StreamObserver<MemberObj> responseObserver) {
         try {
+            Logger.writeLog("<Received loginMember request>", "info");
+
             MemberObj response = logic.loginMember(obj);
 
             responseObserver.onNext(response);
             responseObserver.onCompleted();
+
+            Logger.writeLog("--LoginMember request successful--", "info");
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.writeLog("Exception " + e.toString(), "error");
+            System.out.println("<<Exception in MemberController>>");
             responseObserver.onError(e);
         }
     }
@@ -48,13 +59,17 @@ public class MemberController extends MemberServiceImplBase {
     @Override
     public void editPrivilege(MemberObj obj, StreamObserver<StringObj> responseObserver) {
         try {
-            MemberObj response = logic.editPrivilege(obj);
+            Logger.writeLog("<Received editPrivilege request>", "info");
+
+            logic.editPrivilege(obj);
 
             responseObserver.onNext(StringObj.newBuilder().setName("").build());
             responseObserver.onCompleted();
-        }
-        catch (Exception e) {
-            e.printStackTrace();
+
+            Logger.writeLog("--EditPrivilege request successful--", "info");
+        } catch (Exception e) {
+            Logger.writeLog("Exception " + e.toString(), "error");
+            System.out.println("<<Exception in MemberController>>");
             throw new RuntimeException(e);
         }
     }

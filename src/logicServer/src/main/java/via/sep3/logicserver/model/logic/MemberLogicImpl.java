@@ -41,22 +41,17 @@ public class MemberLogicImpl implements MemberLogic {
 
         return MemberConverter.convertToMemberObj(search);
     }
-<<<<<<< HEAD
-=======
 
     @Override
     public MemberObj editPrivilege(MemberObj member) throws Exception {
         return MemberConverter.convertToMemberObj(
-                dao.editPrivilege(MemberConverter.convertToMemberDTO(member))
-        );
+                dao.editPrivilege(MemberConverter.convertToMemberDTO(member)));
     }
 
     @Override
     public Members getMembers() throws Exception {
         return MemberConverter.convertToMembers(
-                MemberConverter.convertToMemberObjList(dao.getMembers())
-        );
+                MemberConverter.convertToMemberObjList(dao.getMembers()));
     }
 
->>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
 }

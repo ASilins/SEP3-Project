@@ -2,6 +2,7 @@ using GrpcClient.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model.DTOs;
+using Model.Tools;
 
 namespace WebApi.Controllers;
 
@@ -21,12 +22,15 @@ public class ExerciseController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received CreateExercise request>", "info");
+
             ExerciseDTO created = await _client.CreateExercise(exercise);
+
             return Created("Exercise created", created);
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
             return StatusCode(500, e.Message);
         }
     }
@@ -36,11 +40,14 @@ public class ExerciseController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received GetExercises request>", "info");
+
             return Ok(await _client.GetExercises());
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }

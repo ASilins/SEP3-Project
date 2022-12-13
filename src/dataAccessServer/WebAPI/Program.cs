@@ -1,6 +1,7 @@
 using Database;
 using Database.Interfaces;
 using Database.Logic;
+using Shared.Tools;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -39,3 +40,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+Logger.WriteLog("-----", "info");

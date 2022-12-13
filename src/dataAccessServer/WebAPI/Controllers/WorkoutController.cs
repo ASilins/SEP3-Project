@@ -3,6 +3,7 @@ using Database.Interfaces;
 using Database.Logic;
 using Shared.DTOs;
 using Shared.Model;
+using Shared.Tools;
 
 namespace WebAPI.Controllers;
 
@@ -21,6 +22,8 @@ public class WorkoutController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received GetWorkout request>", "info");
+
             Workout? w = await _dao.GetWorkout(id);
 
             if (w == null)
@@ -57,7 +60,8 @@ public class WorkoutController : ControllerBase
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -67,11 +71,14 @@ public class WorkoutController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received GetWorkouts request>", "info");
+
             return Ok(await _dao.GetWorkouts());
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -81,11 +88,14 @@ public class WorkoutController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received AssignWorkout request>", "info");
+
             return Created("Workout assigned", await _dao.AssignWorkout(dto));
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -95,13 +105,16 @@ public class WorkoutController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received EditWorkout request>", "info");
+
             await _dao.EditWorkout(workout);
 
             return Ok();
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -111,13 +124,16 @@ public class WorkoutController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received DeleteWorkout request>", "info");
+
             await _dao.DeleteWorkout(id);
 
             return NoContent();
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }

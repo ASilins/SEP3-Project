@@ -1,11 +1,15 @@
 package via.sep3.logicserver.model.logic.converters;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.google.protobuf.ByteString;
 
 import via.sep3.logicserver.protobuf.LoginCreateObject;
 import via.sep3.logicserver.protobuf.MemberObj;
+import via.sep3.logicserver.protobuf.Members;
 import via.sep3.logicserver.shared.LoginCreateDTO;
 import via.sep3.logicserver.shared.MemberDTO;
 
@@ -42,5 +46,21 @@ public class MemberConverter {
         dto.setPosition(obj.getPosition());
 
         return dto;
+    }
+
+    public static List<MemberObj> convertToMemberObjList(List<MemberDTO> dtoList) {
+        List<MemberObj> objList = new ArrayList<MemberObj>();
+
+        for (MemberDTO dto : dtoList) {
+            objList.add(convertToMemberObj(dto));
+        }
+
+        return objList;
+    }
+
+    public static Members convertToMembers(List<MemberObj> objList) {
+        return Members.newBuilder()
+                .addAllMembers(objList)
+                .build();
     }
 }

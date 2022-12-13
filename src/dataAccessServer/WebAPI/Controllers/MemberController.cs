@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Database.Interfaces;
 using Shared.DTOs;
+using Shared.Tools;
 
 namespace WebAPI.Controllers;
 
@@ -21,12 +22,15 @@ public class MemberController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received CreateMember request>", "info");
+
             MemberDTO created = await dao.CreateMember(member);
             return Created("Member created", created);
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -37,6 +41,8 @@ public class MemberController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received GetByUsername request>", "info");
+
             MemberDTO? loggedIn = await dao.GetByUsername(member);
 
             if (loggedIn == null)
@@ -48,7 +54,8 @@ public class MemberController : ControllerBase
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -58,13 +65,16 @@ public class MemberController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received EditPrivilege request>", "info");
+
             await dao.EditPrivilege(memberDto);
 
             return Ok();
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -74,11 +84,14 @@ public class MemberController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received GetMembers request>", "info");
+
             return Ok(await dao.GetMembers());
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }

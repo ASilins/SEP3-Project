@@ -10,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import via.sep3.logicserver.repositories.interfaces.MemberDAO;
 import via.sep3.logicserver.shared.LoginCreateDTO;
 import via.sep3.logicserver.shared.MemberDTO;
+import via.sep3.logicserver.shared.Exceptions.DAOException;
 
 import java.util.List;
 
@@ -29,7 +30,7 @@ public class MemberDAOImpl implements MemberDAO {
                 .postForEntity(URI + "/create", obj, MemberDTO.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.CREATED) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
+            throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();
@@ -45,7 +46,7 @@ public class MemberDAOImpl implements MemberDAO {
         }
 
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
+            throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();
@@ -58,8 +59,8 @@ public class MemberDAOImpl implements MemberDAO {
                 .exchange(URI, HttpMethod.PUT, requestEntity, new ParameterizedTypeReference<MemberDTO>() {
                 });
 
-        if (responseEntity.getStatusCode() != HttpStatus.OK){
-            throw new Exception("DAO error code:" + responseEntity.getStatusCodeValue());
+        if (responseEntity.getStatusCode() != HttpStatus.OK) {
+            throw new DAOException("DAO error code:" + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();
@@ -70,9 +71,9 @@ public class MemberDAOImpl implements MemberDAO {
         ResponseEntity<List<MemberDTO>> responseEntity = restTemplate
                 .exchange(URI + "s", HttpMethod.GET, null,
                         new ParameterizedTypeReference<List<MemberDTO>>() {
-                            });
-        if (responseEntity.getStatusCode() != HttpStatus.OK){
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
+                        });
+        if (responseEntity.getStatusCode() != HttpStatus.OK) {
+            throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();

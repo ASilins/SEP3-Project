@@ -10,11 +10,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
-import com.google.rpc.context.AttributeContext.Response;
 
 import via.sep3.logicserver.repositories.interfaces.WorkoutDAO;
 import via.sep3.logicserver.shared.FollowWorkoutDTO;
 import via.sep3.logicserver.shared.WorkoutDTO;
+import via.sep3.logicserver.shared.Exceptions.DAOException;
 
 @Repository
 public class WorkoutDAOImpl implements WorkoutDAO {
@@ -32,7 +32,7 @@ public class WorkoutDAOImpl implements WorkoutDAO {
         ResponseEntity<WorkoutDTO> responseEntity = restTemplate.getForEntity(uri, WorkoutDTO.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
+            throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();
@@ -45,7 +45,7 @@ public class WorkoutDAOImpl implements WorkoutDAO {
                         new ParameterizedTypeReference<List<WorkoutDTO>>() {
                         });
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
+            throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();
@@ -57,7 +57,7 @@ public class WorkoutDAOImpl implements WorkoutDAO {
                 .postForEntity(URI + "/assign", dto, FollowWorkoutDTO.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
+            throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();
@@ -75,7 +75,7 @@ public class WorkoutDAOImpl implements WorkoutDAO {
                 });
 
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
-            throw new Exception("DAO error code: " + responseEntity.getStatusCodeValue());
+            throw new DAOException("DAO error code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();

@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 
 import via.sep3.logicserver.repositories.interfaces.ExerciseDAO;
 import via.sep3.logicserver.shared.ExerciseDTO;
+import via.sep3.logicserver.shared.Exceptions.DAOException;
 
 @Service
 public class ExerciseDAOImpl implements ExerciseDAO {
@@ -28,7 +29,7 @@ public class ExerciseDAOImpl implements ExerciseDAO {
                 ExerciseDTO.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.CREATED) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
+            throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();
@@ -41,7 +42,7 @@ public class ExerciseDAOImpl implements ExerciseDAO {
                         new ParameterizedTypeReference<List<ExerciseDTO>>() {
                         });
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
-            throw new Exception("Data access server error with code: " + responseEntity.getStatusCodeValue());
+            throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 
         return responseEntity.getBody();

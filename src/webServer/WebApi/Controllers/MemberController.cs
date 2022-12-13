@@ -37,7 +37,7 @@ public class MemberController : ControllerBase
         try
         {
             string loggedIn = await _client.LoginMember(member);
-            return Ok(loggedIn);
+            return Created("User logged in", loggedIn);
         }
         catch (Exception e)
         {

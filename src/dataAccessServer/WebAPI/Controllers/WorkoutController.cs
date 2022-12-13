@@ -53,7 +53,7 @@ public class WorkoutController : ControllerBase
 
             dto.Exercises = exercises;
 
-            return dto;
+            return Ok(dto);
         }
         catch (Exception e)
         {
@@ -81,7 +81,7 @@ public class WorkoutController : ControllerBase
     {
         try
         {
-            return Ok(await _dao.AssignWorkout(dto));
+            return Created("Workout assigned", await _dao.AssignWorkout(dto));
         }
         catch (Exception e)
         {
@@ -113,7 +113,7 @@ public class WorkoutController : ControllerBase
         {
             await _dao.DeleteWorkout(id);
 
-            return Ok();
+            return NoContent();
         }
         catch (Exception e)
         {

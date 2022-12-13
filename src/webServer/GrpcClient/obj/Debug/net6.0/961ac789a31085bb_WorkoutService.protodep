@@ -1,4 +1,0 @@
-obj\Debug\net6.0\.\Protos/WorkoutService.cs \
-obj\Debug\net6.0\.\Protos/WorkoutServiceGrpc.cs: Protos/LogicServer.proto\
- Protos/ExerciseService.proto\
- Protos/WorkoutService.proto

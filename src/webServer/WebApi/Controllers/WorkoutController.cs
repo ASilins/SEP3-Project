@@ -6,7 +6,8 @@ using Shared.DTOs;
 
 namespace WebApi.Controllers;
 
-[ApiController, Route("/[controller]")]
+[ApiController]
+[Route("/[controller]")]
 public class WorkoutController : ControllerBase
 {
     private readonly IWorkoutClient _client;

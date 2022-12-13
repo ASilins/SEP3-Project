@@ -1,3 +1,0 @@
-obj\Debug\net6.0\.\Protos/MemberService.cs \
-obj\Debug\net6.0\.\Protos/MemberServiceGrpc.cs: Protos/LogicServer.proto\
- Protos/MemberService.proto

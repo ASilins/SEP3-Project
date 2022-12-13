@@ -59,4 +59,20 @@ public class ExerciseService
         //         PropertyNameCaseInsensitive = true
         //     })!;
     }
+
+    public async Task EditExercise(ExerciseDTO dto)
+    {
+        HttpResponseMessage response = await client.PutAsJsonAsync("/exercise", dto);
+        string result = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(result);
+        }
+    }
+
+    public async Task DeleteExercise(int id)
+    {
+        await client.DeleteAsync("/exercise?e=" + id);
+    }
 }

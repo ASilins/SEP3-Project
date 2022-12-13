@@ -8,6 +8,7 @@ import via.sep3.logicserver.model.interfaces.ExerciseLogic;
 import via.sep3.logicserver.model.logic.ExerciseLogicImpl;
 import via.sep3.logicserver.protobuf.ExerciseObj;
 import via.sep3.logicserver.protobuf.Exercises;
+import via.sep3.logicserver.protobuf.IntObj;
 import via.sep3.logicserver.protobuf.StringObj;
 import via.sep3.logicserver.protobuf.ExerciseServiceGrpc.ExerciseServiceImplBase;
 import via.sep3.logicserver.shared.Logger.Logger;
@@ -51,6 +52,38 @@ public class ExerciseController extends ExerciseServiceImplBase {
             responseObserver.onCompleted();
 
             Logger.writeLog("--GetExercises request successful--", "info");
+        } catch (Exception e) {
+            Logger.writeLog("Exception " + e.toString(), "error");
+            System.out.println("<<Exception in ExerciseController>>");
+            responseObserver.onError(e);
+        }
+    }
+
+    @Override
+    public void editExercise(ExerciseObj obj, StreamObserver<StringObj> responseObserver) {
+        try {
+            Logger.writeLog("<Received editExercise request>", "info");
+
+            logic.editExercise(obj);
+
+            responseObserver.onNext(StringObj.newBuilder().setName("").build());
+            responseObserver.onCompleted();
+        } catch (Exception e) {
+            Logger.writeLog("Exception " + e.toString(), "error");
+            System.out.println("<<Exception in ExerciseController>>");
+            responseObserver.onError(e);
+        }
+    }
+
+    @Override
+    public void deleteExercise(IntObj obj, StreamObserver<StringObj> responseObserver) {
+        try {
+            Logger.writeLog("<Received deleteExercise request>", "info");
+
+            logic.deleteExercise(obj.getNumber());
+
+            responseObserver.onNext(StringObj.newBuilder().setName("").build());
+            responseObserver.onCompleted();
         } catch (Exception e) {
             Logger.writeLog("Exception " + e.toString(), "error");
             System.out.println("<<Exception in ExerciseController>>");

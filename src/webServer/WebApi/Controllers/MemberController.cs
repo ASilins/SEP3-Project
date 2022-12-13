@@ -52,7 +52,7 @@ public class MemberController : ControllerBase
         try
         {
             await _client.EditPrivilege(member);
-            return Ok();
+            return NoContent();
         }
         catch (Exception e)
         {

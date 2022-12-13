@@ -27,6 +27,6 @@ message Members {
 service MemberService {
     rpc createMember(LoginCreateObject) returns(MemberObj);
     rpc loginMember(LoginCreateObject) returns(MemberObj);
-    rpc editPrivilege(MemberObj) returns(StringObj);
+    rpc editMember(MemberObj) returns(StringObj);
     rpc getMembers(StringObj) returns(Members);
 }

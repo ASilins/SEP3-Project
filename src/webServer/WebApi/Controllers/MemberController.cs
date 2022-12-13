@@ -54,13 +54,13 @@ public class MemberController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<ActionResult<MemberDTO>> EditPrivilege([FromBody] MemberDTO member)
+    public async Task<ActionResult<MemberDTO>> EditMember([FromBody] MemberDTO member)
     {
         try
         {
-            Logger.WriteLog("<Received EditPrivilege request>", "info");
+            Logger.WriteLog("<Received EditMember request>", "info");
 
-            await _client.EditPrivilege(member);
+            await _client.EditMember(member);
             return NoContent();
         }
         catch (Exception e)

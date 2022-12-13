@@ -24,39 +24,24 @@ namespace GrpcClient {
     static MemberServiceReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-<<<<<<< HEAD
-            "ChpQcm90b3MvTWVtYmVyU2VydmljZS5wcm90byJFChFMb2dpbkNyZWF0ZU9i",
-            "amVjdBIQCghVc2VybmFtZRgBIAEoCRIQCghQYXNzd29yZBgCIAEoDBIMCgRT",
-            "YWx0GAMgASgMIlsKCU1lbWJlck9iahIKCgJJZBgBIAEoBRIQCghVc2VybmFt",
-            "ZRgCIAEoCRIQCghQYXNzd29yZBgDIAEoDBIMCgRTYWx0GAQgASgMEhAKCFBv",
-            "c2l0aW9uGAUgASgJMm4KDU1lbWJlclNlcnZpY2USLgoMY3JlYXRlTWVtYmVy",
-            "EhIuTG9naW5DcmVhdGVPYmplY3QaCi5NZW1iZXJPYmoSLQoLbG9naW5NZW1i",
-            "ZXISEi5Mb2dpbkNyZWF0ZU9iamVjdBoKLk1lbWJlck9iakIuCh12aWEuc2Vw",
-            "My5sb2dpY3NlcnZlci5wcm90b2J1ZlABqgIKR3JwY0NsaWVudGIGcHJvdG8z"));
-=======
             "ChpQcm90b3MvTWVtYmVyU2VydmljZS5wcm90bxoYUHJvdG9zL0xvZ2ljU2Vy",
-            "dmVyLnByb3RvIjcKEUxvZ2luQ3JlYXRlT2JqZWN0EhAKCFVzZXJuYW1lGAEg",
-            "ASgJEhAKCFBhc3N3b3JkGAIgASgJIk0KCU1lbWJlck9iahIKCgJJZBgBIAEo",
-            "BRIQCghVc2VybmFtZRgCIAEoCRIQCghQYXNzd29yZBgDIAEoCRIQCghQb3Np",
-            "dGlvbhgEIAEoCSImCgdNZW1iZXJzEhsKB21lbWJlcnMYASADKAsyCi5NZW1i",
-            "ZXJPYmoyuwEKDU1lbWJlclNlcnZpY2USLgoMY3JlYXRlTWVtYmVyEhIuTG9n",
-            "aW5DcmVhdGVPYmplY3QaCi5NZW1iZXJPYmoSLQoLbG9naW5NZW1iZXISEi5M",
-            "b2dpbkNyZWF0ZU9iamVjdBoKLk1lbWJlck9iahInCg1lZGl0UHJpdmlsZWdl",
-            "EgouTWVtYmVyT2JqGgouU3RyaW5nT2JqEiIKCmdldE1lbWJlcnMSCi5TdHJp",
-            "bmdPYmoaCC5NZW1iZXJzQi4KHXZpYS5zZXAzLmxvZ2ljc2VydmVyLnByb3Rv",
-            "YnVmUAGqAgpHcnBjQ2xpZW50YgZwcm90bzM="));
->>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
+            "dmVyLnByb3RvIkUKEUxvZ2luQ3JlYXRlT2JqZWN0EhAKCFVzZXJuYW1lGAEg",
+            "ASgJEhAKCFBhc3N3b3JkGAIgASgMEgwKBFNhbHQYAyABKAwiWwoJTWVtYmVy",
+            "T2JqEgoKAklkGAEgASgFEhAKCFVzZXJuYW1lGAIgASgJEhAKCFBhc3N3b3Jk",
+            "GAMgASgMEgwKBFNhbHQYBCABKAwSEAoIUG9zaXRpb24YBSABKAkiJgoHTWVt",
+            "YmVycxIbCgdtZW1iZXJzGAEgAygLMgouTWVtYmVyT2JqMrsBCg1NZW1iZXJT",
+            "ZXJ2aWNlEi4KDGNyZWF0ZU1lbWJlchISLkxvZ2luQ3JlYXRlT2JqZWN0Ggou",
+            "TWVtYmVyT2JqEi0KC2xvZ2luTWVtYmVyEhIuTG9naW5DcmVhdGVPYmplY3Qa",
+            "Ci5NZW1iZXJPYmoSJwoNZWRpdFByaXZpbGVnZRIKLk1lbWJlck9iahoKLlN0",
+            "cmluZ09iahIiCgpnZXRNZW1iZXJzEgouU3RyaW5nT2JqGgguTWVtYmVyc0Iu",
+            "Ch12aWEuc2VwMy5sb2dpY3NlcnZlci5wcm90b2J1ZlABqgIKR3JwY0NsaWVu",
+            "dGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GrpcClient.LogicServerReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-<<<<<<< HEAD
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.LoginCreateObject), global::GrpcClient.LoginCreateObject.Parser, new[]{ "Username", "Password", "Salt" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.MemberObj), global::GrpcClient.MemberObj.Parser, new[]{ "Id", "Username", "Password", "Salt", "Position" }, null, null, null, null)
-=======
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.LoginCreateObject), global::GrpcClient.LoginCreateObject.Parser, new[]{ "Username", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.MemberObj), global::GrpcClient.MemberObj.Parser, new[]{ "Id", "Username", "Password", "Position" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.MemberObj), global::GrpcClient.MemberObj.Parser, new[]{ "Id", "Username", "Password", "Salt", "Position" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::GrpcClient.Members), global::GrpcClient.Members.Parser, new[]{ "Members_" }, null, null, null, null)
->>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
           }));
     }
     #endregion

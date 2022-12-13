@@ -21,7 +21,6 @@ public class MemberController : ControllerBase
     {
         try
         {
-            Console.WriteLine("Helloooooooooooooooo");
             MemberDTO created = await dao.CreateMember(member);
             return Created("Member created", created);
         }
@@ -32,7 +31,7 @@ public class MemberController : ControllerBase
         }
     }
 
-    [HttpPost]
+    [HttpGet]
     [Route("/[controller]/login")]
     public async Task<ActionResult<MemberDTO>> GetByUsername([FromBody] LoginCreateDTO member)
     {

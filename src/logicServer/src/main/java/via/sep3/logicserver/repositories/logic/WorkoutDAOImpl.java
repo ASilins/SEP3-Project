@@ -15,6 +15,7 @@ import via.sep3.logicserver.repositories.interfaces.WorkoutDAO;
 import via.sep3.logicserver.shared.FollowWorkoutDTO;
 import via.sep3.logicserver.shared.WorkoutDTO;
 import via.sep3.logicserver.shared.Exceptions.DAOException;
+import via.sep3.logicserver.shared.Logger.Logger;
 
 @Repository
 public class WorkoutDAOImpl implements WorkoutDAO {
@@ -28,6 +29,7 @@ public class WorkoutDAOImpl implements WorkoutDAO {
 
     @Override
     public WorkoutDTO getWorkout(int id) throws Exception {
+        Logger.writeLog("Sending request to DAO Server", "info");
         String uri = UriComponentsBuilder.fromHttpUrl(URI).queryParam("w", id).encode().toUriString();
         ResponseEntity<WorkoutDTO> responseEntity = restTemplate.getForEntity(uri, WorkoutDTO.class);
 
@@ -40,6 +42,7 @@ public class WorkoutDAOImpl implements WorkoutDAO {
 
     @Override
     public List<WorkoutDTO> GetWorkouts() throws Exception {
+        Logger.writeLog("Sending request to DAO Server", "info");
         ResponseEntity<List<WorkoutDTO>> responseEntity = restTemplate
                 .exchange(URI + "s", HttpMethod.GET, null,
                         new ParameterizedTypeReference<List<WorkoutDTO>>() {
@@ -53,6 +56,7 @@ public class WorkoutDAOImpl implements WorkoutDAO {
 
     @Override
     public FollowWorkoutDTO assignWorkout(FollowWorkoutDTO dto) throws Exception {
+        Logger.writeLog("Sending request to DAO Server", "info");
         ResponseEntity<FollowWorkoutDTO> responseEntity = restTemplate
                 .postForEntity(URI + "/assign", dto, FollowWorkoutDTO.class);
 
@@ -65,6 +69,7 @@ public class WorkoutDAOImpl implements WorkoutDAO {
 
     @Override
     public WorkoutDTO editWorkout(WorkoutDTO workout) throws Exception {
+        Logger.writeLog("Sending request to DAO Server", "info");
         // return restTemplate
         // .patchForObject(URI, workout, Workout.class);
 
@@ -83,6 +88,7 @@ public class WorkoutDAOImpl implements WorkoutDAO {
 
     @Override
     public void deleteWorkout(int id) throws Exception {
+        Logger.writeLog("Sending request to DAO Server", "info");
         String uri = UriComponentsBuilder.fromHttpUrl(URI).queryParam("id", id).encode().toUriString();
         restTemplate.delete(uri);
     }

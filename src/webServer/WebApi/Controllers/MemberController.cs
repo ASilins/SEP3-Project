@@ -2,6 +2,7 @@ using GrpcClient.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Model.DTOs;
+using Model.Tools;
 
 namespace WebApi.Controllers;
 
@@ -21,12 +22,15 @@ public class MemberController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received CreateMember request>", "info");
+
             MemberDTO created = await _client.CreateMember(member);
             return Created("Member created", created);
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -36,12 +40,15 @@ public class MemberController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received LoginMember request>", "info");
+
             string loggedIn = await _client.LoginMember(member);
             return Created("User logged in", loggedIn);
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -51,12 +58,15 @@ public class MemberController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received EditPrivilege request>", "info");
+
             await _client.EditPrivilege(member);
             return NoContent();
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -66,11 +76,14 @@ public class MemberController : ControllerBase
     {
         try
         {
+            Logger.WriteLog("<Received GetMembers request>", "info");
+
             return Ok(await _client.GetMembers());
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
             return StatusCode(500, e.Message);
         }
     }
@@ -80,6 +93,8 @@ public class MemberController : ControllerBase
     [HttpGet("token"), AllowAnonymous]
     public OkObjectResult GetToken()
     {
+        Logger.WriteLog("<Received GetToken request>", "info");
+
         return Ok(_client.GetToken());
     }
 }

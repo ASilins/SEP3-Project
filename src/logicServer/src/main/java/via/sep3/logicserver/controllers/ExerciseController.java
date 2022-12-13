@@ -10,6 +10,7 @@ import via.sep3.logicserver.protobuf.ExerciseObj;
 import via.sep3.logicserver.protobuf.Exercises;
 import via.sep3.logicserver.protobuf.StringObj;
 import via.sep3.logicserver.protobuf.ExerciseServiceGrpc.ExerciseServiceImplBase;
+import via.sep3.logicserver.shared.Logger.Logger;
 
 @GRpcService
 public class ExerciseController extends ExerciseServiceImplBase {
@@ -24,12 +25,17 @@ public class ExerciseController extends ExerciseServiceImplBase {
     @Override
     public void createExercise(ExerciseObj obj, StreamObserver<ExerciseObj> responseObserver) {
         try {
+            Logger.writeLog("<Received createExercise request>", "info");
+
             ExerciseObj response = logic.createExercise(obj);
 
             responseObserver.onNext(response);
             responseObserver.onCompleted();
+
+            Logger.writeLog("--CreateExercise request successful--", "info");
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.writeLog("Exception " + e.toString(), "error");
+            System.out.println("<<Exception in ExerciseController>>");
             responseObserver.onError(e);
         }
     }
@@ -37,12 +43,17 @@ public class ExerciseController extends ExerciseServiceImplBase {
     @Override
     public void getExercises(StringObj obj, StreamObserver<Exercises> responseObserver) {
         try {
+            Logger.writeLog("<Received getExercises request>", "info");
+
             Exercises response = logic.getExercises();
 
             responseObserver.onNext(response);
             responseObserver.onCompleted();
+
+            Logger.writeLog("--GetExercises request successful--", "info");
         } catch (Exception e) {
-            e.printStackTrace();
+            Logger.writeLog("Exception " + e.toString(), "error");
+            System.out.println("<<Exception in ExerciseController>>");
             responseObserver.onError(e);
         }
     }

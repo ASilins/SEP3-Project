@@ -12,6 +12,7 @@ import org.springframework.web.client.RestTemplate;
 import via.sep3.logicserver.repositories.interfaces.ExerciseDAO;
 import via.sep3.logicserver.shared.ExerciseDTO;
 import via.sep3.logicserver.shared.Exceptions.DAOException;
+import via.sep3.logicserver.shared.Logger.Logger;
 
 @Service
 public class ExerciseDAOImpl implements ExerciseDAO {
@@ -25,6 +26,7 @@ public class ExerciseDAOImpl implements ExerciseDAO {
 
     @Override
     public ExerciseDTO createExercise(ExerciseDTO exercise) throws Exception {
+        Logger.writeLog("Sending request to DAO Server", "info");
         ResponseEntity<ExerciseDTO> responseEntity = restTemplate.postForEntity(URI + "/create", exercise,
                 ExerciseDTO.class);
 
@@ -37,6 +39,7 @@ public class ExerciseDAOImpl implements ExerciseDAO {
 
     @Override
     public List<ExerciseDTO> getExercises() throws Exception {
+        Logger.writeLog("Sending request to DAO Server", "info");
         ResponseEntity<List<ExerciseDTO>> responseEntity = restTemplate
                 .exchange(URI + "s", HttpMethod.GET, null,
                         new ParameterizedTypeReference<List<ExerciseDTO>>() {

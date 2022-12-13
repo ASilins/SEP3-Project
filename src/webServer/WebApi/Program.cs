@@ -4,6 +4,7 @@ using GrpcClient.Logic;
 using GrpcClient.Logic.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Model.Tools;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -55,3 +56,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+Logger.WriteLog("-----", "info");

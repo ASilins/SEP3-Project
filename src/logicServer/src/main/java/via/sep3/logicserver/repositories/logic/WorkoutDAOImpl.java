@@ -56,7 +56,7 @@ public class WorkoutDAOImpl implements WorkoutDAO {
         ResponseEntity<FollowWorkoutDTO> responseEntity = restTemplate
                 .postForEntity(URI + "/assign", dto, FollowWorkoutDTO.class);
 
-        if (responseEntity.getStatusCode() != HttpStatus.OK) {
+        if (responseEntity.getStatusCode() != HttpStatus.CREATED) {
             throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
         }
 

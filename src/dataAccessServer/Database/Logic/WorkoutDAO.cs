@@ -3,7 +3,6 @@ using Shared.DTOs;
 using Shared.Model;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace Database.Logic;
 
 public class WorkoutDAO : IWorkoutDAO

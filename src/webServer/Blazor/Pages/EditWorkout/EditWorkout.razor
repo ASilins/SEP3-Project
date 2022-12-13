@@ -47,12 +47,12 @@
         }
     </tbody>
 </table>
-<button @onclick="@AddExercise">Add Exercise</button>
+<button @onclick="() => showAddExerciseModal = true">Add Exercise</button>
 
 @if (showAddExerciseModal)
 {
     <AddExercise selectedExChanged="@AddSelectedExercise" />
-    <button @onclick="@CloseAddExerciseModal">Cancel</button>
+    <button @onclick="() => showAddExerciseModal = false">Cancel</button>
 }
 
 <button @onclick="@SaveChanges">Save Changes</button>
@@ -74,21 +74,11 @@
         workout.Exercises.Remove(exercise);
     }
 
-    void AddExercise()
-    {
-        showAddExerciseModal = true;
-    }
-
-    void CloseAddExerciseModal()
-    {
-        showAddExerciseModal = false;
-    }
-
     async void AddSelectedExercise(int id)
     {
         var exercise = await ExerciseService.GetExercise(selectedExercise);
         workout.Exercises.Add(exercise);
-        CloseAddExerciseModal();
+        showAddExerciseModal = false;
     }
 
     async void SaveChanges()

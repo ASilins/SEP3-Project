@@ -1,0 +1,33 @@
+﻿@page "/createWorkout"
+@inject WorkoutService Service;
+@inject NavigationManager NavigationManager;
+
+
+<AuthorizeView Roles="MemberDTO,Trainer,Admin">
+    <Authorized>
+        <h1>Create workout</h1>
+        <div>
+            <label>Name:</label>
+            <InputText @bind="@_workoutDto.Name"></InputText>
+            <label>Description:</label>
+            <InputTextArea @bind="@_workoutDto.Description"></InputTextArea>
+            <IsPublicOption @bind="IsPublic"/>
+            <button @onclick="@CreateWorkoutAsync">Create</button>
+        </div>
+    </Authorized>
+<!------------------->    
+    <NotAuthorized>
+        <Login url="/createWorkout"/>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    bool IsPublic;
+    WorkoutDTO _workoutDto = new WorkoutDTO();
+
+    async Task CreateWorkoutAsync()
+    {
+        await Service.CreateWorkout(_workoutDto);
+        NavigationManager.NavigateTo("/workouts");
+    }
+}

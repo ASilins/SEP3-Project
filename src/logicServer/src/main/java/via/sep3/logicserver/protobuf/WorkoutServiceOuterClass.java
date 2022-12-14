@@ -20,6 +20,11 @@ public final class WorkoutServiceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_WorkoutObj_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_Workout_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_Workout_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_Workouts_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -39,27 +44,34 @@ public final class WorkoutServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\024WorkoutService.proto\032\021LogicServer.prot" +
-      "o\032\025ExerciseService.proto\"\254\001\n\nWorkoutObj\022" +
-      "\n\n\002id\030\001 \001(\005\022\014\n\004name\030\002 \001(\t\022\023\n\013description" +
-      "\030\003 \001(\t\022\025\n\rdurationInMin\030\004 \001(\005\022\021\n\tcreated" +
-      "By\030\005 \001(\005\022\022\n\nfollowedBy\030\006 \001(\005\022\020\n\010isPublic" +
-      "\030\007 \001(\010\022\037\n\texercises\030\010 \003(\0132\014.ExerciseObj\"" +
-      ")\n\010Workouts\022\035\n\010workouts\030\001 \003(\0132\013.WorkoutO" +
-      "bj\"5\n\020AssignWorkoutObj\022\016\n\006userID\030\001 \001(\005\022\021" +
-      "\n\tworkoutID\030\002 \001(\0052\337\001\n\016WorkoutService\022$\n\013" +
-      "GetWorkouts\022\n.StringObj\032\t.Workouts\022\"\n\nGe" +
-      "tWorkout\022\007.IntObj\032\013.WorkoutObj\0225\n\rAssign" +
-      "Workout\022\021.AssignWorkoutObj\032\021.AssignWorko" +
-      "utObj\022&\n\013EditWorkout\022\013.WorkoutObj\032\n.Stri" +
-      "ngObj\022$\n\rDeleteWorkout\022\007.IntObj\032\n.String" +
-      "ObjB!\n\035via.sep3.logicserver.protobufP\001b\006" +
-      "proto3"
+      "o\032\025ExerciseService.proto\032\023MemberService." +
+      "proto\"\254\001\n\nWorkoutObj\022\n\n\002id\030\001 \001(\005\022\014\n\004name" +
+      "\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022\025\n\rdurationI" +
+      "nMin\030\004 \001(\005\022\021\n\tcreatedBy\030\005 \001(\005\022\022\n\nfollowe" +
+      "dBy\030\006 \001(\005\022\020\n\010isPublic\030\007 \001(\010\022\037\n\texercises" +
+      "\030\010 \003(\0132\014.ExerciseObj\"\265\001\n\007Workout\022\n\n\002id\030\001" +
+      " \001(\005\022\014\n\004name\030\002 \001(\t\022\023\n\013description\030\003 \001(\t\022" +
+      "\025\n\rdurationInMin\030\004 \001(\005\022\035\n\tcreatedBy\030\005 \001(" +
+      "\0132\n.MemberObj\022\022\n\nfollowedBy\030\006 \001(\005\022\020\n\010isP" +
+      "ublic\030\007 \001(\010\022\037\n\texercises\030\010 \003(\0132\014.Exercis" +
+      "eObj\")\n\010Workouts\022\035\n\010workouts\030\001 \003(\0132\013.Wor" +
+      "koutObj\"5\n\020AssignWorkoutObj\022\016\n\006userID\030\001 " +
+      "\001(\005\022\021\n\tworkoutID\030\002 \001(\0052\212\002\n\016WorkoutServic" +
+      "e\022$\n\013GetWorkouts\022\n.StringObj\032\t.Workouts\022" +
+      "\"\n\nGetWorkout\022\007.IntObj\032\013.WorkoutObj\0225\n\rA" +
+      "ssignWorkout\022\021.AssignWorkoutObj\032\021.Assign" +
+      "WorkoutObj\022&\n\013EditWorkout\022\013.WorkoutObj\032\n" +
+      ".StringObj\022$\n\rDeleteWorkout\022\007.IntObj\032\n.S" +
+      "tringObj\022)\n\rCreateWorkout\022\013.WorkoutObj\032\013" +
+      ".WorkoutObjB!\n\035via.sep3.logicserver.prot" +
+      "obufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           via.sep3.logicserver.protobuf.LogicServer.getDescriptor(),
           via.sep3.logicserver.protobuf.ExerciseServiceOuterClass.getDescriptor(),
+          via.sep3.logicserver.protobuf.MemberServiceOuterClass.getDescriptor(),
         });
     internal_static_WorkoutObj_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -67,20 +79,27 @@ public final class WorkoutServiceOuterClass {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_WorkoutObj_descriptor,
         new java.lang.String[] { "Id", "Name", "Description", "DurationInMin", "CreatedBy", "FollowedBy", "IsPublic", "Exercises", });
-    internal_static_Workouts_descriptor =
+    internal_static_Workout_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_Workout_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_Workout_descriptor,
+        new java.lang.String[] { "Id", "Name", "Description", "DurationInMin", "CreatedBy", "FollowedBy", "IsPublic", "Exercises", });
+    internal_static_Workouts_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_Workouts_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_Workouts_descriptor,
         new java.lang.String[] { "Workouts", });
     internal_static_AssignWorkoutObj_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_AssignWorkoutObj_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_AssignWorkoutObj_descriptor,
         new java.lang.String[] { "UserID", "WorkoutID", });
     via.sep3.logicserver.protobuf.LogicServer.getDescriptor();
     via.sep3.logicserver.protobuf.ExerciseServiceOuterClass.getDescriptor();
+    via.sep3.logicserver.protobuf.MemberServiceOuterClass.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

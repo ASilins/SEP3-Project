@@ -10,4 +10,5 @@ public interface IWorkoutClient
     Task<FollowWorkoutDTO> AssignWorkout(FollowWorkoutDTO dto);
     Task EditWorkout(WorkoutDTO workout);
     Task DeleteWorkout(int id);
+    Task<WorkoutDTO> CreateWorkout(WorkoutDTO workoutDto);
 }

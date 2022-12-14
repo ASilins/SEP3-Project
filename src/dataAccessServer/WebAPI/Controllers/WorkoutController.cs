@@ -137,4 +137,19 @@ public class WorkoutController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+
+    [HttpPost, Route("/[controller]/create")]
+    public async Task<ActionResult<IEnumerable<Workout>>> CreateWorkout([FromBody] Workout workout)
+    {
+        try
+        {
+            Workout created = await _dao.CreateWorkout(workout);
+            return Created("Workout created", created);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
 }

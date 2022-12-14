@@ -15,4 +15,6 @@ public interface WorkoutLogic {
     WorkoutObj editWorkout(WorkoutObj workout) throws Exception;
 
     void deleteWorkout(int id) throws Exception;
+
+    WorkoutObj createWorkout(WorkoutObj workoutObj) throws Exception;
 }

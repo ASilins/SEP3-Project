@@ -112,4 +112,22 @@ public class WorkoutController extends WorkoutServiceImplBase {
             responseObserver.onError(e);
         }
     }
+
+    @Override
+    public void createWorkout(WorkoutObj workoutObj, StreamObserver<WorkoutObj> responseObserver){
+        try {
+            Logger.writeLog("<Received createWorkout request>", "info");
+
+            WorkoutObj response = logic.createWorkout(workoutObj);
+
+            responseObserver.onNext(response);
+            responseObserver.onCompleted();
+
+            Logger.writeLog("--createWorkout request SUCCESSFUL--", "info");
+        } catch (Exception e) {
+            Logger.writeLog("Exception " + e.toString(), "error");
+            System.out.println("<<Exception in WorkoutController>>");
+            responseObserver.onError(e);
+        }
+    }
 }

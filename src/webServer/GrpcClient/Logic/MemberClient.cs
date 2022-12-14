@@ -75,12 +75,12 @@ public class MemberClient : IMemberClient
     {
         using var channel = GrpcChannel.ForAddress(_url);
         client = new MemberService.MemberServiceClient(channel);
-
+    
         var reply = await client.getMembersAsync(new StringObj
         {
             Name = ""
         });
-
+    
         return MemberConverter.ConvertToMemberDTOList(reply.Members_);
     }
 }

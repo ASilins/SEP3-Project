@@ -1,9 +1,9 @@
 package via.sep3.logicserver.repositories.interfaces;
 
-import java.util.List;
-
 import via.sep3.logicserver.shared.FollowWorkoutDTO;
 import via.sep3.logicserver.shared.WorkoutDTO;
+
+import java.util.List;
 
 public interface WorkoutDAO {
 
@@ -16,4 +16,6 @@ public interface WorkoutDAO {
     WorkoutDTO editWorkout(WorkoutDTO workout) throws Exception;
 
     void deleteWorkout(int id) throws Exception;
+
+    WorkoutDTO createWorkout(WorkoutDTO workoutDTO) throws Exception;
 }

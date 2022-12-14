@@ -1,0 +1,26 @@
+﻿
+
+
+<AuthorizeView Roles="Trainer,Admin">
+    <Authorized>
+
+        <label>This workout should be:</label>
+        <InputRadioGroup @bind="@_selectedValue">
+            <InputRadio @onclick="@SelectedOption" Value=true>Public</InputRadio>
+            <InputRadio @*@bind="@_selectedValue"*@ Value=false>Private</InputRadio>
+        </InputRadioGroup>
+        
+    </Authorized>
+</AuthorizeView>
+
+@code {
+    [Parameter]
+    public bool _selectedValue { get; set; }
+    [Parameter]
+    public EventCallback<bool> _selectedValueChanged { get; set; }
+
+    Task SelectedOption()
+    {
+        return _selectedValueChanged.InvokeAsync(_selectedValue);
+    }
+}

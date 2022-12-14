@@ -34,4 +34,5 @@ service WorkoutService {
     rpc AssignWorkout(AssignWorkoutObj) returns(AssignWorkoutObj);
     rpc EditWorkout(WorkoutObj) returns(StringObj);
     rpc DeleteWorkout(IntObj) returns(StringObj);
+    rpc CreateWorkout(WorkoutObj) returns(WorkoutObj);
 }

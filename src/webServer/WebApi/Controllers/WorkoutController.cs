@@ -104,4 +104,22 @@ public class WorkoutController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+
+    [HttpPost("/[controller]/create")]
+    public async Task<ActionResult<WorkoutDTO>> CreateWorkout([FromBody] WorkoutDTO workoutDto)
+    {
+        try
+        {
+            Logger.WriteLog("<<Received CreateWorkout request>>", "info");
+
+            WorkoutDTO created = await _client.CreateWorkout(workoutDto);
+            return Created("Workout created", created);
+        }
+        catch (Exception e)
+        {
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
+            return StatusCode(500, e.Message);
+        }
+    }
 }

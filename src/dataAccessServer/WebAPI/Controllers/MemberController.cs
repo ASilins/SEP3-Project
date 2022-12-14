@@ -60,6 +60,29 @@ public class MemberController : ControllerBase
         }
     }
 
+    
+    [HttpPost]
+    [Route("/[controller]/getById")]
+    public async Task<ActionResult<MemberDTO>> GetById([FromBody] int id)
+    {
+        try
+        {
+            MemberDTO? dto = await dao.GetById(id);
+
+            if (dto == null)
+            {
+                return StatusCode(404);
+            }
+
+            return Ok(dto);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+
     [HttpPut]
     public async Task<ActionResult<MemberDTO>> EditMember([FromBody] MemberDTO memberDto)
     {

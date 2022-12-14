@@ -1,15 +1,12 @@
 package via.sep3.logicserver.model.logic.converters;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.stereotype.Service;
-
-import via.sep3.logicserver.protobuf.AssignWorkoutObj;
-import via.sep3.logicserver.protobuf.WorkoutObj;
-import via.sep3.logicserver.protobuf.Workouts;
+import via.sep3.logicserver.protobuf.*;
 import via.sep3.logicserver.shared.FollowWorkoutDTO;
 import via.sep3.logicserver.shared.WorkoutDTO;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class WorkoutConverter {
@@ -39,6 +36,20 @@ public class WorkoutConverter {
                 .setFollowedBy(dto.getFollowedBy())
                 .setIsPublic(dto.isPublic())
                 .addAllExercises(ExerciseConverter.convertToExerciseObjList(dto.getExercises()))
+                .build();
+    }
+
+    public static Workout convertToWorkout(WorkoutDTO workoutDTO, MemberObj memberObj){
+
+        return Workout.newBuilder()
+                .setId(workoutDTO.getId())
+                .setName(workoutDTO.getName())
+                .setDescription(workoutDTO.getDescription())
+                .setDurationInMin(workoutDTO.getDurationInMin())
+                .setCreatedBy(memberObj)
+                .setFollowedBy(workoutDTO.getFollowedBy())
+                .setIsPublic(workoutDTO.isPublic())
+                .addAllExercises(ExerciseConverter.convertToExerciseObjList(workoutDTO.getExercises()))
                 .build();
     }
 

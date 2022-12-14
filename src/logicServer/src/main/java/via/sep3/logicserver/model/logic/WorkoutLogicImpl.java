@@ -1,7 +1,6 @@
 package via.sep3.logicserver.model.logic;
 
 import org.springframework.stereotype.Service;
-
 import via.sep3.logicserver.model.interfaces.WorkoutLogic;
 import via.sep3.logicserver.model.logic.converters.WorkoutConverter;
 import via.sep3.logicserver.protobuf.AssignWorkoutObj;
@@ -46,5 +45,12 @@ public class WorkoutLogicImpl implements WorkoutLogic {
     @Override
     public void deleteWorkout(int id) throws Exception {
         dao.deleteWorkout(id);
+    }
+
+    @Override
+    public WorkoutObj createWorkout(WorkoutObj workoutObj) throws Exception {
+        return WorkoutConverter.convertToWorkoutObj(
+                dao.createWorkout(WorkoutConverter.convertToWorkoutDTO(workoutObj))
+        );
     }
 }

@@ -53,5 +53,4 @@ public class MemberLogicImpl implements MemberLogic {
         return MemberConverter.convertToMembers(
                 MemberConverter.convertToMemberObjList(dao.getMembers()));
     }
-
 }

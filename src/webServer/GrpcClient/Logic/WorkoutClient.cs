@@ -69,4 +69,16 @@ public class WorkoutClient : IWorkoutClient
             Number = id
         });
     }
+
+    public async Task<WorkoutDTO> CreateWorkout(WorkoutDTO workoutDto)
+    {
+        using var channel = GrpcChannel.ForAddress(_url);
+        client = new WorkoutService.WorkoutServiceClient(channel);
+
+        var reply = await client.CreateWorkoutAsync(
+            WorkoutConverter.ConvertToWorkoutObj(workoutDto)
+            );
+
+        return WorkoutConverter.ConvertToWorkoutDTO(reply);
+    }
 }

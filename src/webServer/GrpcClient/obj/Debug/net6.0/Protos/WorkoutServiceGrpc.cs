@@ -96,6 +96,14 @@ namespace GrpcClient {
         __Marshaller_IntObj,
         __Marshaller_StringObj);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcClient.WorkoutObj, global::GrpcClient.WorkoutObj> __Method_CreateWorkout = new grpc::Method<global::GrpcClient.WorkoutObj, global::GrpcClient.WorkoutObj>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateWorkout",
+        __Marshaller_WorkoutObj,
+        __Marshaller_WorkoutObj);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -228,6 +236,26 @@ namespace GrpcClient {
       public virtual grpc::AsyncUnaryCall<global::GrpcClient.StringObj> DeleteWorkoutAsync(global::GrpcClient.IntObj request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteWorkout, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.WorkoutObj CreateWorkout(global::GrpcClient.WorkoutObj request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateWorkout(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.WorkoutObj CreateWorkout(global::GrpcClient.WorkoutObj request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateWorkout, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.WorkoutObj> CreateWorkoutAsync(global::GrpcClient.WorkoutObj request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateWorkoutAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.WorkoutObj> CreateWorkoutAsync(global::GrpcClient.WorkoutObj request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateWorkout, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

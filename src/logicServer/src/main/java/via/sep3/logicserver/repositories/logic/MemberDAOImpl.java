@@ -52,6 +52,22 @@ public class MemberDAOImpl implements MemberDAO {
     }
 
     @Override
+    public MemberDTO getById(int id) throws Exception {
+        ResponseEntity<MemberDTO> responseEntity = restTemplate
+                .postForEntity(URI + "/login", id, MemberDTO.class);
+
+        if (responseEntity.getStatusCode() == HttpStatus.NOT_FOUND){
+            return null;
+        }
+
+        if (responseEntity.getStatusCode() != HttpStatus.OK){
+            throw new Exception("Date access server error with code " + responseEntity.getStatusCodeValue());
+        }
+
+        return responseEntity.getBody();
+    }
+
+    @Override
     public MemberDTO editPrivilege(MemberDTO member) throws Exception {
         final HttpEntity<MemberDTO> requestEntity = new HttpEntity<>(member);
         ResponseEntity<MemberDTO> responseEntity = restTemplate

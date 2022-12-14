@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "0ac6lCKQ/oPIym1myJAdWZCwaVEuR0irtaBGt+lra0GK5DBJ4VCaoYNkGtt9HxGn2yehmpoq1pPveLKU7YuzLg==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj",
-=======
   "dgSpecHash": "kbAaCZmI9/evsrKbDgZ1pHZ8Mc/16t3CLehEoe972u5It74yhuDkjMEUlntYNU6MPNJ3FyhEXQ2DWhXKUUQyjA==",
   "success": true,
   "projectFilePath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj",
->>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
   "expectedPackageFiles": [],
   "logs": []
 }

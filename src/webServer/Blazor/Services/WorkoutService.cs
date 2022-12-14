@@ -123,4 +123,14 @@ public class WorkoutService
     {
         await _client.DeleteAsync("/workout?w=" + id);
     }
+
+    public async Task CreateWorkout(WorkoutDTO workoutDto)
+    {
+        HttpResponseMessage response = await _client.PostAsJsonAsync("/workout/create", workoutDto);
+        string result = await response.Content.ReadAsStringAsync();
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(result);
+        }
+    }
 }

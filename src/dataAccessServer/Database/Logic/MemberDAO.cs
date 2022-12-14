@@ -56,6 +56,27 @@ public class MemberDAO : IMemberDAO
         };
     }
 
+    public async Task<MemberDTO?> GetById(int id)
+    {
+        Member? exists = await _db.Users.FirstOrDefaultAsync(m =>
+            m.Id.Equals(id)
+        );
+
+        if (exists == null)
+        {
+            return null;
+        }
+
+        return new MemberDTO()
+        {
+            Id = exists.Id,
+            Username = exists.Username,
+            Password = exists.HashedPassword,
+            Salt = exists.Salt,
+            Position = exists.Position
+        };
+    }
+
     public async Task EditPrivilege(MemberDTO memberDto)
     {
         Member? memberOld = await _db.Users.FirstOrDefaultAsync(m =>

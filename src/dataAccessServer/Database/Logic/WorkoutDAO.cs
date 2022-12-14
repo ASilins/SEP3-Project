@@ -2,6 +2,7 @@ using Database.Interfaces;
 using Shared.DTOs;
 using Shared.Model;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 
 namespace Database.Logic;
@@ -96,5 +97,35 @@ public class WorkoutDAO : IWorkoutDAO
     {
         _db.Remove(GetWorkout(id));
         await _db.SaveChangesAsync();
+    }
+
+    public async Task<Workout> CreateWorkout(Workout workout)
+    {
+        var wo = new Workout()
+        {
+            Name = workout.Name,
+            Description = workout.Description,
+            DurationInMin = workout.DurationInMin,
+            Exercises = workout.Exercises,
+            FollowedBy = workout.FollowedBy,
+            IsPublic = workout.IsPublic,
+            NumberOfExercises = workout.NumberOfExercises,
+            User = workout.User
+        };
+
+        EntityEntry<Workout> added = await _db.Workouts.AddAsync(wo);
+        await _db.SaveChangesAsync();
+
+        return new Workout()
+        {
+            Id = added.Entity.Id,
+            Name = added.Entity.Name,
+            Description = added.Entity.Description,
+            DurationInMin = added.Entity.DurationInMin,
+            Exercises = added.Entity.Exercises,
+            FollowedBy = added.Entity.FollowedBy,
+            IsPublic = added.Entity.IsPublic,
+            User = added.Entity.User
+        };
     }
 }

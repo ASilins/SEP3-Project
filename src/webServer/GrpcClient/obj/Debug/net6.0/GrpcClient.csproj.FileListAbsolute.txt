@@ -70,3 +70,10 @@ C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\GrpcClient\ob
 C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\GrpcClient\obj\Debug\net6.0\GrpcClient.genruntimeconfig.cache
 C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\GrpcClient\obj\Debug\net6.0\ref\GrpcClient.dll
 >>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\45552\Desktop\VIA_UC\Semester3\SEP3-Project\src\webServer\GrpcClient\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll

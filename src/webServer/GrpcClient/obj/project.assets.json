@@ -1172,19 +1172,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\GrpcClient\\GrpcClient.csproj",
-      "projectName": "GrpcClient",
-      "projectPath": "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\GrpcClient\\GrpcClient.csproj",
-      "packagesPath": "C:\\Users\\Silin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\GrpcClient\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\GrpcClient\\GrpcClient.csproj",
       "projectName": "GrpcClient",
       "projectPath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\GrpcClient\\GrpcClient.csproj",
       "packagesPath": "C:\\Users\\45552\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\GrpcClient\\obj\\",
->>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\45552\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -1199,13 +1191,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj": {
-              "projectPath": "C:\\Users\\Silin\\Documents\\School\\Semester 3\\SEP3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj"
-=======
             "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj": {
               "projectPath": "C:\\Users\\45552\\Desktop\\VIA_UC\\Semester3\\SEP3-Project\\src\\webServer\\Model\\Model.csproj"
->>>>>>> 2b7c76aa0a8d22e1d3975ae113742600f844ac5f
             }
           }
         }

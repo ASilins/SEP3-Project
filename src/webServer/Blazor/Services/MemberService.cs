@@ -37,7 +37,7 @@ public class MemberService
 
         HttpResponseMessage response = await _client.GetAsync("/member/token");
 
-        HttpResponseMessage response = await _client.PostAsJsonAsync("/member/login", member);
+        // HttpResponseMessage response = await _client.PostAsJsonAsync("/member/login", member);
         string result = await response.Content.ReadAsStringAsync();
         await _localStorage.SetItemAsync("token", result);
     }

@@ -1,7 +1,5 @@
 package via.sep3.logicserver.repositories.logic;
 
-import java.util.List;
-
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -10,11 +8,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
-import com.google.rpc.context.AttributeContext.Response;
-
 import via.sep3.logicserver.repositories.interfaces.WorkoutDAO;
 import via.sep3.logicserver.shared.FollowWorkoutDTO;
 import via.sep3.logicserver.shared.WorkoutDTO;
+
+import java.util.List;
 
 @Repository
 public class WorkoutDAOImpl implements WorkoutDAO {
@@ -85,5 +83,18 @@ public class WorkoutDAOImpl implements WorkoutDAO {
     public void deleteWorkout(int id) throws Exception {
         String uri = UriComponentsBuilder.fromHttpUrl(URI).queryParam("id", id).encode().toUriString();
         restTemplate.delete(uri);
+    }
+
+    @Override
+    public WorkoutDTO createWorkout(WorkoutDTO workoutDTO) throws Exception {
+
+        ResponseEntity<WorkoutDTO> responseEntity = restTemplate.postForEntity(URI + "/create", workoutDTO,
+                WorkoutDTO.class);
+
+        if (responseEntity.getStatusCode() != HttpStatus.CREATED){
+            throw new Exception("Data access server error with code " + responseEntity.getStatusCodeValue());
+        }
+
+        return responseEntity.getBody();
     }
 }

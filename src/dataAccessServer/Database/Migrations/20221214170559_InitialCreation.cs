@@ -10,6 +10,21 @@ namespace Database.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Exercises",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>(type: "TEXT", maxLength: 30, nullable: false),
+                    Description = table.Column<string>(type: "TEXT", maxLength: 500, nullable: false),
+                    DurationInMin = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Exercises", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -26,29 +41,6 @@ namespace Database.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Exercises",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", maxLength: 30, nullable: false),
-                    Description = table.Column<string>(type: "TEXT", maxLength: 500, nullable: false),
-                    DurationInMin = table.Column<int>(type: "INTEGER", nullable: false),
-                    UserId = table.Column<int>(type: "INTEGER", nullable: false),
-                    AddedBy = table.Column<int>(type: "INTEGER", nullable: false, defaultValue: 0)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Exercises", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Exercises_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Workouts",
                 columns: table => new
                 {
@@ -60,18 +52,16 @@ namespace Database.Migrations
                     NumberOfExercises = table.Column<int>(type: "INTEGER", nullable: false),
                     FollowedBy = table.Column<int>(type: "INTEGER", nullable: false),
                     IsPublic = table.Column<bool>(type: "INTEGER", nullable: false),
-                    UserId = table.Column<int>(type: "INTEGER", nullable: false),
                     CreatedBy = table.Column<int>(type: "INTEGER", nullable: false, defaultValue: 0)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Workouts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Workouts_Users_UserId",
-                        column: x => x.UserId,
+                        name: "FK_Workouts_Users_CreatedBy",
+                        column: x => x.CreatedBy,
                         principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -79,7 +69,8 @@ namespace Database.Migrations
                 columns: table => new
                 {
                     ExerciseId = table.Column<int>(type: "INTEGER", nullable: false),
-                    WorkoutId = table.Column<int>(type: "INTEGER", nullable: false)
+                    WorkoutId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -103,7 +94,8 @@ namespace Database.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<int>(type: "INTEGER", nullable: false),
-                    WorkoutId = table.Column<int>(type: "INTEGER", nullable: false)
+                    WorkoutId = table.Column<int>(type: "INTEGER", nullable: false),
+                    Id = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -123,11 +115,6 @@ namespace Database.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Exercises_UserId",
-                table: "Exercises",
-                column: "UserId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_ExercisesInWorkouts_WorkoutId",
                 table: "ExercisesInWorkouts",
                 column: "WorkoutId");
@@ -138,9 +125,9 @@ namespace Database.Migrations
                 column: "WorkoutId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Workouts_UserId",
+                name: "IX_Workouts_CreatedBy",
                 table: "Workouts",
-                column: "UserId");
+                column: "CreatedBy");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

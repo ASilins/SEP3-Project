@@ -43,16 +43,16 @@ public class WorkoutController : ControllerBase
 
             var exercises = new List<ExerciseDTO>();
 
-            foreach (var item in (List<Exercise>)w.Exercises)
-            {
-                exercises.Add(new ExerciseDTO()
-                {
-                    Id = item.Id,
-                    Name = item.Name,
-                    Description = item.Description,
-                    Duration = item.DurationInMin
-                });
-            }
+            // foreach (var item in (List<Exercise>)w.Exercises)
+            // {
+            //     exercises.Add(new ExerciseDTO()
+            //     {
+            //         Id = item.Id,
+            //         Name = item.Name,
+            //         Description = item.Description,
+            //         Duration = item.DurationInMin
+            //     });
+            // }
 
             dto.Exercises = exercises;
 

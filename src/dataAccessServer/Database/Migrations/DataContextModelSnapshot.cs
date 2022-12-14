@@ -23,11 +23,6 @@ namespace Database.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("AddedBy")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasDefaultValue(0);
-
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -41,22 +36,20 @@ namespace Database.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Exercises");
                 });
 
             modelBuilder.Entity("Shared.Model.ExercisesInWorkouts", b =>
                 {
-                    b.Property<int>("ExerciseId")
+                    b.Property<int?>("ExerciseId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("WorkoutId")
+                    b.Property<int?>("WorkoutId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Id")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("ExerciseId", "WorkoutId");
@@ -72,6 +65,9 @@ namespace Database.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("WorkoutId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Id")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("UserId", "WorkoutId");
@@ -139,25 +135,11 @@ namespace Database.Migrations
                     b.Property<int>("NumberOfExercises")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("CreatedBy");
 
                     b.ToTable("Workouts");
-                });
-
-            modelBuilder.Entity("Shared.Model.Exercise", b =>
-                {
-                    b.HasOne("Shared.Model.Member", "User")
-                        .WithMany("AddedExercises")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Shared.Model.ExercisesInWorkouts", b =>
@@ -188,7 +170,7 @@ namespace Database.Migrations
                         .IsRequired();
 
                     b.HasOne("Shared.Model.Workout", "Workout")
-                        .WithMany()
+                        .WithMany("followedWorkouts")
                         .HasForeignKey("WorkoutId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -202,9 +184,7 @@ namespace Database.Migrations
                 {
                     b.HasOne("Shared.Model.Member", "User")
                         .WithMany("CreatedWorkouts")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CreatedBy");
 
                     b.Navigation("User");
                 });
@@ -216,8 +196,6 @@ namespace Database.Migrations
 
             modelBuilder.Entity("Shared.Model.Member", b =>
                 {
-                    b.Navigation("AddedExercises");
-
                     b.Navigation("CreatedWorkouts");
 
                     b.Navigation("FollowedWorkouts");
@@ -226,6 +204,8 @@ namespace Database.Migrations
             modelBuilder.Entity("Shared.Model.Workout", b =>
                 {
                     b.Navigation("Exercises");
+
+                    b.Navigation("followedWorkouts");
                 });
 #pragma warning restore 612, 618
         }

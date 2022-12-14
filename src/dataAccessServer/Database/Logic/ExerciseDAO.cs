@@ -29,7 +29,7 @@ public class ExerciseDAO : IExerciseDAO
         EntityEntry<Exercise> added = await _db.Exercises.AddAsync(ex);
         await _db.SaveChangesAsync();
 
-        _db.Entry(ex).Property("AddedBy").CurrentValue = exercise.CreatedBy;
+        // _db.Entry(ex).Property("AddedBy").CurrentValue = exercise.CreatedBy;
 
         return new ExerciseDTO()
         {

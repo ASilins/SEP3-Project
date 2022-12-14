@@ -1,14 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Shared.Model;
 
 public class FollowsWorkouts
 {
-    [ForeignKey(nameof(User))]
+    [Key]
+    public int Id { get; set; }
     public int UserId { get; set; }
-    [ForeignKey(nameof(Workout))]
     public int WorkoutId { get; set; }
 
+    [ForeignKey("UserId")]
     public Member User { get; set; }
+    [ForeignKey("WorkoutId")]
     public Workout Workout { get; set; }
 }

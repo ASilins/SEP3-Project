@@ -17,7 +17,10 @@ public class Workout
     //[Required]
     [DefaultValue(false)]
     public bool IsPublic { get; set; }
-    public List<ExercisesInWorkouts> Exercises { get; set; }
 
+
+    // For EF Core
+    public List<ExercisesInWorkouts> Exercises { get; set; }
+    public List<FollowsWorkouts> followedWorkouts { get; set; }
     public Member User { get; set; }
 }

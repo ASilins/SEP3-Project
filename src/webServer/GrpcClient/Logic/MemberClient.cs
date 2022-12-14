@@ -61,12 +61,12 @@ public class MemberClient : IMemberClient
         return _tokens.CreateToken(reply);
     }
 
-    public async Task EditPrivilege(MemberDTO member)
+    public async Task EditMember(MemberDTO member)
     {
         using var channel = GrpcChannel.ForAddress(_url);
         client = new MemberService.MemberServiceClient(channel);
 
-        var reply = await client.editPrivilegeAsync(
+        var reply = await client.editMemberAsync(
             MemberConverter.ConvertToMemberObj(member)
         );
     }

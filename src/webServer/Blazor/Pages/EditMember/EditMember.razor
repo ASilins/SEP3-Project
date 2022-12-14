@@ -1,0 +1,41 @@
+@page "/member/edit"
+@inject MemberService Service
+@inject NavigationManager navMag
+
+<AuthorizeView Roles="Member,Trainer,Admin">
+    <Authorized>
+        <h1>Edit information</h1>
+        <div>
+            <label>Workout Name:</label>
+            <input @bind="@member.Username" placeholder="@context.User.Identity.Name" />
+        </div>
+        <div>
+            <label>Workout Description:</label>
+            <input type="password" @bind="member.Password" />
+        </div>
+
+
+
+        <button @onclick="@SaveChanges">Save Changes</button>
+        <button @onclick="@Cancel">Cancel Changes</button>
+    </Authorized>
+    <NotAuthorized>
+        <Login url="/" />
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@code {
+    MemberDTO member = new MemberDTO();
+
+    async void SaveChanges()
+    {
+        await Service.EditMember(member);
+        navMag.NavigateTo("/");
+    }
+
+    void Cancel()
+    {
+        navMag.NavigateTo("/");
+    }
+}

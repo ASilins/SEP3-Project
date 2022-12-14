@@ -46,7 +46,7 @@
         newMember = SelectedUser;
         newMember.Position = NewPosition;
 
-        await MemberService.EditPrivilege(newMember);
+        await MemberService.EditMember(newMember);
     }
 
     [JSInvokable]

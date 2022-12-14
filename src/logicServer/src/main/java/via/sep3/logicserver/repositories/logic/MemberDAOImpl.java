@@ -56,7 +56,7 @@ public class MemberDAOImpl implements MemberDAO {
     }
 
     @Override
-    public MemberDTO editPrivilege(MemberDTO member) throws Exception {
+    public MemberDTO editMember(MemberDTO member) throws Exception {
         Logger.writeLog("Sending request to DAO Server", "info");
         final HttpEntity<MemberDTO> requestEntity = new HttpEntity<>(member);
         ResponseEntity<MemberDTO> responseEntity = restTemplate

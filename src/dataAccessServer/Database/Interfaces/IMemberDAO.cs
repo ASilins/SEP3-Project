@@ -6,6 +6,6 @@ public interface IMemberDAO
 {
     Task<MemberDTO> CreateMember(LoginCreateDTO member);
     Task<MemberDTO?> GetByUsername(LoginCreateDTO member);
-    Task EditPrivilege(MemberDTO memberDto);
+    Task EditMember(MemberDTO memberDto);
     Task<List<MemberDTO>> GetMembers();
 }

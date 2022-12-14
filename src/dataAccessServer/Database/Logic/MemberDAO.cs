@@ -56,12 +56,14 @@ public class MemberDAO : IMemberDAO
         };
     }
 
-    public async Task EditPrivilege(MemberDTO memberDto)
+    public async Task EditMember(MemberDTO memberDto)
     {
         Member? memberOld = await _db.Users.FirstOrDefaultAsync(m =>
             m.Username.ToLower().Equals(memberDto.Username.ToLower())
         );
-        
+
+        _db.ChangeTracker.Clear();
+
         Member member = new()
         {
             Id = memberOld.Id,

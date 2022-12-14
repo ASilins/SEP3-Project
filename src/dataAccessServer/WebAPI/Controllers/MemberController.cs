@@ -61,13 +61,13 @@ public class MemberController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<ActionResult<MemberDTO>> EditPrivilege([FromBody] MemberDTO memberDto)
+    public async Task<ActionResult<MemberDTO>> EditMember([FromBody] MemberDTO memberDto)
     {
         try
         {
-            Logger.WriteLog("<Received EditPrivilege request>", "info");
+            Logger.WriteLog("<Received EditMember request>", "info");
 
-            await dao.EditPrivilege(memberDto);
+            await dao.EditMember(memberDto);
 
             return Ok();
         }

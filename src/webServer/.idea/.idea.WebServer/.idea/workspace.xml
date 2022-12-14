@@ -13,90 +13,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29d7275f-bbf2-4230-ba8f-a95eb913ae70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../dataAccessServer/.idea/.idea.DataAccessServer/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dataAccessServer/.idea/.idea.DataAccessServer/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WebServer/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WebServer/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blazor/Pages/Components/IsPublicOption.razor" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Blazor/Pages/CreateWorkout/CreateWorkout.razor" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blazor/Pages/SeeMembers/Members.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/.idea/.idea.DataAccessServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/.idea/.idea.DataAccessServer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Interfaces/IMemberDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Interfaces/IMemberDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Interfaces/IWorkoutDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Interfaces/IWorkoutDAO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/MemberDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/MemberDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/WorkoutDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/WorkoutDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Shared/Model/Workout.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Shared/Model/Workout.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dataAccessServer/WebAPI/Controllers/MemberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/WebAPI/Controllers/MemberController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dataAccessServer/WebAPI/Controllers/WorkoutController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/WebAPI/Controllers/WorkoutController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/WorkoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/WorkoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/interfaces/WorkoutLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/interfaces/WorkoutLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/interfaces/MemberLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/interfaces/MemberLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/MemberLogicImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/MemberLogicImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/WorkoutLogicImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/WorkoutLogicImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/converters/WorkoutConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/converters/WorkoutConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/LoginCreateObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/LoginCreateObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/LoginCreateObjectOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/LoginCreateObjectOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MemberObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MemberObj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MemberObjOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MemberObjOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/converters/MemberConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/converters/MemberConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MemberServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MemberServiceGrpc.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MemberServiceOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MemberServiceOuterClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/Members.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/Members.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MembersOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MembersOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/WorkoutServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/WorkoutServiceGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/WorkoutServiceOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/WorkoutServiceOuterClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/interfaces/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/interfaces/MemberDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/interfaces/WorkoutDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/interfaces/WorkoutDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/logic/MemberDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/logic/MemberDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/logic/WorkoutDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/logic/WorkoutDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/proto/WorkoutService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/proto/WorkoutService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blazor/Blazor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Blazor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blazor/Pages/EditWorkout/AddExercise.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/Components/AddExercise.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/proto/MemberService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/proto/MemberService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebServer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Pages/CreateWorkout/CreateWorkout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/CreateWorkout/CreateWorkout.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blazor/Services/MemberService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Services/MemberService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blazor/Services/WorkoutService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Services/WorkoutService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrpcClient/Interfaces/IMemberClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Interfaces/IMemberClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/Interfaces/IWorkoutClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Interfaces/IWorkoutClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/Logic/Converters/MemberConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Logic/Converters/MemberConverter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrpcClient/Logic/MemberClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Logic/MemberClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/Logic/WorkoutClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Logic/WorkoutClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/Protos/WorkoutService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Protos/WorkoutService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/961ac789a31085bb_MemberService.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/961ac789a31085bb_MemberService.protodep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Protos/MemberService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Protos/MemberService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/GrpcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/Protos/MemberService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/Protos/MemberService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/Protos/MemberServiceGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/Protos/MemberServiceGrpc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/Protos/WorkoutService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/Protos/WorkoutService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/Protos/WorkoutServiceGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/Protos/WorkoutServiceGrpc.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/ref/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/ref/GrpcClient.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/refint/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/refint/GrpcClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/GrpcClient.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/GrpcClient.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/rider.project.restore.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GrpcClient/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/staticwebassets.pack.sentinel" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/net6.0/Model.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/net6.0/Model.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/net6.0/Model.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/net6.0/Model.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/net6.0/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/net6.0/Model.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/obj/Debug/net6.0/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Debug/net6.0/Model.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/obj/Model.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/Model.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Model/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Model/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/Controllers/WorkoutController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Controllers/WorkoutController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/Controllers/MemberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Controllers/MemberController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/ref/WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/ref/WebApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/refint/WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/refint/WebApi.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/WebApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/WebApi.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/staticwebassets.pack.sentinel" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +178,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670756545285</updated>
-      <workItem from="1670756553359" duration="35527000" />
+      <workItem from="1670756553359" duration="38603000" />
     </task>
     <servers />
   </component>

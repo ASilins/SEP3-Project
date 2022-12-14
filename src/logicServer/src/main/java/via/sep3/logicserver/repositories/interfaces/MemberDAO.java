@@ -15,4 +15,6 @@ public interface MemberDAO {
 
     MemberDTO editPrivilege(MemberDTO member) throws Exception;
     List<MemberDTO> getMembers() throws Exception;
+
+    void deleteMember(int id) throws Exception;
 }

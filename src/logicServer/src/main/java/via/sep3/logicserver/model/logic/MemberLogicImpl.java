@@ -55,4 +55,9 @@ public class MemberLogicImpl implements MemberLogic {
                 MemberConverter.convertToMemberObjList(dao.getMembers())
         );
     }
+
+    @Override
+    public void deleteMember(int id) throws Exception {
+        dao.deleteMember(id);
+    }
 }

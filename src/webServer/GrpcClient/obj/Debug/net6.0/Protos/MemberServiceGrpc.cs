@@ -53,6 +53,8 @@ namespace GrpcClient {
     static readonly grpc::Marshaller<global::GrpcClient.StringObj> __Marshaller_StringObj = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.StringObj.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcClient.Members> __Marshaller_Members = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.Members.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GrpcClient.IntObj> __Marshaller_IntObj = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcClient.IntObj.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GrpcClient.LoginCreateObject, global::GrpcClient.MemberObj> __Method_createMember = new grpc::Method<global::GrpcClient.LoginCreateObject, global::GrpcClient.MemberObj>(
@@ -85,6 +87,14 @@ namespace GrpcClient {
         "getMembers",
         __Marshaller_StringObj,
         __Marshaller_Members);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::GrpcClient.IntObj, global::GrpcClient.StringObj> __Method_DeleteMember = new grpc::Method<global::GrpcClient.IntObj, global::GrpcClient.StringObj>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteMember",
+        __Marshaller_IntObj,
+        __Marshaller_StringObj);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -198,6 +208,26 @@ namespace GrpcClient {
       public virtual grpc::AsyncUnaryCall<global::GrpcClient.Members> getMembersAsync(global::GrpcClient.StringObj request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_getMembers, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.StringObj DeleteMember(global::GrpcClient.IntObj request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMember(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::GrpcClient.StringObj DeleteMember(global::GrpcClient.IntObj request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteMember, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.StringObj> DeleteMemberAsync(global::GrpcClient.IntObj request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMemberAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::GrpcClient.StringObj> DeleteMemberAsync(global::GrpcClient.IntObj request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteMember, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]

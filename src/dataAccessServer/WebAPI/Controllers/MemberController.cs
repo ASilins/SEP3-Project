@@ -106,4 +106,20 @@ public class MemberController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+
+    public async Task<ActionResult<int>> DeleteMember([FromQuery] int id)
+    {
+        try
+        {
+            await dao.DeleteMember(id);
+
+            return Ok();
+        }
+        catch (Exception e)
+        {
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("Error");
+            return StatusCode(500, e.Message);
+        }
+    }
 }

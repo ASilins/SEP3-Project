@@ -1,0 +1,63 @@
+﻿@page "/deleteMember"
+@inject MemberService service;
+@inject NavigationManager NavigationManager;
+
+<AuthorizeView Roles="Admin">
+    <Authorized>
+        <h1>Members</h1>
+        
+        <table>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Username</th>
+                <th>Position</th>
+            </tr>
+            </thead>
+            <tbody>
+            <InputRadioGroup>
+                @foreach (var member in members)
+                {
+                    <tr>
+                        <td>@member.Id</td>
+                        <td>@member.Username</td>
+                        <td>@member.Position</td>
+                        <td>
+                            <input type="radio" name="selectedMember" @onclick="@(() => SelectMember(member))"/>
+                        </td>
+                    </tr>
+                }
+            </InputRadioGroup>
+            </tbody>
+        </table>
+        
+        <button @onclick="@RemoveSelectedMember" disabled="@AreButtonsDisabled">Remove</button>
+    </Authorized>
+    
+    <NotAuthorized>
+        <Login url="/deleteMember"/>
+    </NotAuthorized>
+</AuthorizeView>
+
+
+@code {
+    List<MemberDTO> members = new List<MemberDTO>();
+    MemberDTO? selectedMember;
+    bool AreButtonsDisabled => selectedMember == null;
+
+    protected async override void OnInitialized()
+    {
+        members = await service.GetMembers();
+    }
+
+    void SelectMember(MemberDTO member)
+    {
+        selectedMember = member;
+    }
+
+    async void RemoveSelectedMember()
+    {
+        await service.DeleteMember(selectedMember.Id);
+        members = await service.GetMembers();
+    }
+}

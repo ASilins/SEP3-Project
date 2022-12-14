@@ -5,6 +5,7 @@ import org.lognet.springboot.grpc.GRpcService;
 import io.grpc.stub.StreamObserver;
 import via.sep3.logicserver.model.interfaces.MemberLogic;
 import via.sep3.logicserver.model.logic.MemberLogicImpl;
+import via.sep3.logicserver.protobuf.IntObj;
 import via.sep3.logicserver.protobuf.LoginCreateObject;
 import via.sep3.logicserver.protobuf.MemberObj;
 import via.sep3.logicserver.protobuf.MemberServiceGrpc.MemberServiceImplBase;
@@ -56,6 +57,24 @@ public class MemberController extends MemberServiceImplBase {
         catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public void deleteMember(IntObj obj, StreamObserver<StringObj> responseObserver){
+        try {
+            Logger.writeLog("<Received deleteWorkout request>", "info");
+
+            logic.deleteMember(obj.getNumber());
+
+            responseObserver.onNext(StringObj.newBuilder().setName("").build());
+            responseObserver.onCompleted();
+
+            Logger.writeLog("--deleteMember request SUCCESSFUL--", "info");
+        } catch (Exception e){
+            Logger.writeLog("Exception " + e.toString(), "error");
+            System.out.println("<<Exception in MemberController>>");
+            responseObserver.onError(e);
         }
     }
 

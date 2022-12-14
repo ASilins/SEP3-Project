@@ -64,4 +64,9 @@ public class MemberService
                 IgnoreNullValues = true
             })!;
     }
+
+    public async Task DeleteMember(int id)
+    {
+        await _client.DeleteAsync("/member?w=" + id);
+    }
 }

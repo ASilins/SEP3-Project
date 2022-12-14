@@ -29,4 +29,5 @@ service MemberService {
     rpc loginMember(LoginCreateObject) returns(MemberObj);
     rpc editPrivilege(MemberObj) returns(StringObj);
     rpc getMembers(StringObj) returns(Members);
+    rpc DeleteMember(IntObj) returns(StringObj);
 }

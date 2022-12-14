@@ -138,6 +138,37 @@ public final class MemberServiceGrpc {
     return getGetMembersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.IntObj,
+      via.sep3.logicserver.protobuf.StringObj> getDeleteMemberMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "deleteMember",
+      requestType = via.sep3.logicserver.protobuf.IntObj.class,
+      responseType = via.sep3.logicserver.protobuf.StringObj.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.IntObj,
+      via.sep3.logicserver.protobuf.StringObj> getDeleteMemberMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.IntObj, via.sep3.logicserver.protobuf.StringObj> getDeleteMemberMethod;
+    if ((getDeleteMemberMethod = MemberServiceGrpc.getDeleteMemberMethod) == null) {
+      synchronized (MemberServiceGrpc.class) {
+        if ((getDeleteMemberMethod = MemberServiceGrpc.getDeleteMemberMethod) == null) {
+          MemberServiceGrpc.getDeleteMemberMethod = getDeleteMemberMethod =
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.IntObj, via.sep3.logicserver.protobuf.StringObj>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "deleteMember"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.IntObj.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.StringObj.getDefaultInstance()))
+              .setSchemaDescriptor(new MemberServiceMethodDescriptorSupplier("deleteMember"))
+              .build();
+        }
+      }
+    }
+    return getDeleteMemberMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -214,6 +245,13 @@ public final class MemberServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMembersMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void deleteMember(via.sep3.logicserver.protobuf.IntObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteMemberMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -244,6 +282,13 @@ public final class MemberServiceGrpc {
                 via.sep3.logicserver.protobuf.StringObj,
                 via.sep3.logicserver.protobuf.Members>(
                   this, METHODID_GET_MEMBERS)))
+          .addMethod(
+            getDeleteMemberMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.sep3.logicserver.protobuf.IntObj,
+                via.sep3.logicserver.protobuf.StringObj>(
+                  this, METHODID_DELETE_MEMBER)))
           .build();
     }
   }
@@ -293,6 +338,14 @@ public final class MemberServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetMembersMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void deleteMember(via.sep3.logicserver.protobuf.IntObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteMemberMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -335,6 +388,13 @@ public final class MemberServiceGrpc {
     public via.sep3.logicserver.protobuf.Members getMembers(via.sep3.logicserver.protobuf.StringObj request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMembersMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.sep3.logicserver.protobuf.StringObj deleteMember(via.sep3.logicserver.protobuf.IntObj request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteMemberMethod(), getCallOptions(), request);
     }
   }
 
@@ -383,12 +443,21 @@ public final class MemberServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetMembersMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.StringObj> deleteMember(
+        via.sep3.logicserver.protobuf.IntObj request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteMemberMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_MEMBER = 0;
   private static final int METHODID_LOGIN_MEMBER = 1;
   private static final int METHODID_EDIT_PRIVILEGE = 2;
   private static final int METHODID_GET_MEMBERS = 3;
+  private static final int METHODID_DELETE_MEMBER = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -422,6 +491,10 @@ public final class MemberServiceGrpc {
         case METHODID_GET_MEMBERS:
           serviceImpl.getMembers((via.sep3.logicserver.protobuf.StringObj) request,
               (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.Members>) responseObserver);
+          break;
+        case METHODID_DELETE_MEMBER:
+          serviceImpl.deleteMember((via.sep3.logicserver.protobuf.IntObj) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -488,6 +561,7 @@ public final class MemberServiceGrpc {
               .addMethod(getLoginMemberMethod())
               .addMethod(getEditPrivilegeMethod())
               .addMethod(getGetMembersMethod())
+              .addMethod(getDeleteMemberMethod())
               .build();
         }
       }

@@ -6,8 +6,11 @@ import com.google.protobuf.ByteString;
 
 import via.sep3.logicserver.protobuf.LoginCreateObject;
 import via.sep3.logicserver.protobuf.MemberObj;
+import via.sep3.logicserver.protobuf.Members;
 import via.sep3.logicserver.shared.LoginCreateDTO;
 import via.sep3.logicserver.shared.MemberDTO;
+
+import java.util.List;
 
 @Service
 public class MemberConverter {
@@ -43,4 +46,12 @@ public class MemberConverter {
 
         return dto;
     }
+
+    public static Members convertToMembers(List<MemberObj> memberObjs){
+        return Members.newBuilder()
+                .addAllMembers(memberObjs)
+                .build();
+    }
+
+    public static List<MemberObj> convertToMemberObjList(List<MemberDTO>)
 }

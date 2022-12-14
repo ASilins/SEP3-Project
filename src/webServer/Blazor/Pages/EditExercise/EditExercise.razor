@@ -1,0 +1,46 @@
+@page "/edit-exercise/{id:int}"
+@inject NavigationManager navMag
+@inject ExerciseService service
+
+<AuthorizeView Roles="Trainer,Admin">
+    <Authorized>
+        <h1>Edit Exercise</h1>
+        <div>
+            <label>Exercise Name:</label>
+            <input @bind="exercise.Name" />
+        </div>
+        <div>
+            <label>Exercise Description:</label>
+            <input @bind="exercise.Description" />
+        </div>
+
+        <button @onclick="@SaveChanges">Save Changes</button>
+        <button @onclick="@Cancel">Cancel Changes</button>
+
+    </Authorized>
+    <NotAuthorized>
+        <Login url="/" />
+    </NotAuthorized>
+</AuthorizeView>
+@code {
+    [Parameter]
+    public int id { get; set; }
+
+    ExerciseDTO exercise = new ExerciseDTO();
+
+    protected async override Task OnInitializedAsync()
+    {
+        exercise = await service.GetExercise(id);
+    }
+
+    async void SaveChanges()
+    {
+        await service.EditExercise(exercise);
+        navMag.NavigateTo("/exercises");
+    }
+
+    void Cancel()
+    {
+        navMag.NavigateTo("/exercises");
+    }
+}

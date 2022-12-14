@@ -22,5 +22,6 @@ message Exercises {
 service ExerciseService {
     rpc CreateExercise(ExerciseObj) returns(ExerciseObj);
     rpc GetExercises(StringObj) returns(Exercises);
-
+    rpc EditExercise(ExerciseObj) returns(StringObj);
+    rpc DeleteExercise(IntObj) returns(StringObj);
 }

@@ -10,7 +10,7 @@ public interface MemberLogic {
 
     MemberObj loginMember(LoginCreateObject member) throws Exception;
 
-    MemberObj editPrivilege(MemberObj member) throws Exception;
+    MemberObj editMember(MemberObj member) throws Exception;
 
     Members getMembers() throws Exception;
 }

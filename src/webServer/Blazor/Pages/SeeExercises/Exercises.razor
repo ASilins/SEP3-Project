@@ -1,5 +1,6 @@
 @page "/exercises"
-@inject ExerciseService service;
+@inject ExerciseService service
+@inject NavigationManager navMag
 
 
 <AuthorizeView Roles="Trainer,Admin">
@@ -68,7 +69,7 @@
 
     void CreateExercise()
     {
-        // Implement create
+        navMag.NavigateTo("/exercise/create");
     }
 
     void EditSelectedExercise()
@@ -76,8 +77,9 @@
         // Navigate to edit page for selected exercise
     }
 
-    void RemoveSelectedExercise()
+    async void RemoveSelectedExercise()
     {
-        // Remove selected exercise from list and update database
+        await service.DeleteExercise(selectedExercise.Id);
+        exercises = await service.GetExercises();
     }
 }

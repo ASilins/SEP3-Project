@@ -1,4 +1,5 @@
 using Database.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Shared.DTOs;
 using Shared.Model;
@@ -39,6 +40,22 @@ public class ExerciseDAO : IExerciseDAO
         };
     }
 
+    public async Task<ExerciseDTO> GetExercise(int id)
+    {
+        Exercise? ex = await _db.Exercises.FirstOrDefaultAsync(e =>
+        e.Id == id);
+
+        if (ex == null) throw new Exception("Exercise not found");
+
+        return new ExerciseDTO
+        {
+            Id = ex.Id,
+            Name = ex.Name,
+            Description = ex.Description,
+            Duration = ex.DurationInMin
+        };
+    }
+
     public Task<List<ExerciseDTO>> GetExercises()
     {
         List<ExerciseDTO> dtos = new();
@@ -56,5 +73,25 @@ public class ExerciseDAO : IExerciseDAO
         }
 
         return Task.FromResult(dtos);
+    }
+
+    public async Task EditExercise(ExerciseDTO exercise)
+    {
+        _db.ChangeTracker.Clear();
+        _db.Exercises.Update(new Exercise
+        {
+            Id = exercise.Id,
+            Name = exercise.Name ?? "",
+            Description = exercise.Description ?? "",
+            DurationInMin = exercise.Duration
+        });
+
+        await _db.SaveChangesAsync();
+    }
+
+    public async Task DeleteExercise(int id)
+    {
+        _db.Remove(GetExercise(id));
+        await _db.SaveChangesAsync();
     }
 }

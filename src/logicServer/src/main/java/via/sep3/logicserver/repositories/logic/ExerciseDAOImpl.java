@@ -3,11 +3,13 @@ package via.sep3.logicserver.repositories.logic;
 import java.util.List;
 
 import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import via.sep3.logicserver.repositories.interfaces.ExerciseDAO;
 import via.sep3.logicserver.shared.ExerciseDTO;
@@ -49,6 +51,28 @@ public class ExerciseDAOImpl implements ExerciseDAO {
         }
 
         return responseEntity.getBody();
+    }
+
+    @Override
+    public void editExercise(ExerciseDTO dto) throws Exception {
+        Logger.writeLog("Sending request to DAO Server", "info");
+
+        final HttpEntity<ExerciseDTO> requestEntity = new HttpEntity<>(dto);
+
+        ResponseEntity<ExerciseDTO> responseEntity = restTemplate
+                .exchange(URI, HttpMethod.PUT, requestEntity, new ParameterizedTypeReference<ExerciseDTO>() {
+                });
+
+        if (responseEntity.getStatusCode() != HttpStatus.NO_CONTENT) {
+            throw new DAOException("DAO error code: " + responseEntity.getStatusCodeValue());
+        }
+    }
+
+    @Override
+    public void deleteExercise(int id) throws Exception {
+        Logger.writeLog("Sending request to DAO Server", "info");
+        String uri = UriComponentsBuilder.fromHttpUrl(URI).queryParam("id", id).encode().toUriString();
+        restTemplate.delete(uri);
     }
 
 }

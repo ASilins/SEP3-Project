@@ -76,6 +76,68 @@ public final class ExerciseServiceGrpc {
     return getGetExercisesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.ExerciseObj,
+      via.sep3.logicserver.protobuf.StringObj> getEditExerciseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "EditExercise",
+      requestType = via.sep3.logicserver.protobuf.ExerciseObj.class,
+      responseType = via.sep3.logicserver.protobuf.StringObj.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.ExerciseObj,
+      via.sep3.logicserver.protobuf.StringObj> getEditExerciseMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.ExerciseObj, via.sep3.logicserver.protobuf.StringObj> getEditExerciseMethod;
+    if ((getEditExerciseMethod = ExerciseServiceGrpc.getEditExerciseMethod) == null) {
+      synchronized (ExerciseServiceGrpc.class) {
+        if ((getEditExerciseMethod = ExerciseServiceGrpc.getEditExerciseMethod) == null) {
+          ExerciseServiceGrpc.getEditExerciseMethod = getEditExerciseMethod =
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.ExerciseObj, via.sep3.logicserver.protobuf.StringObj>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "EditExercise"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.ExerciseObj.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.StringObj.getDefaultInstance()))
+              .setSchemaDescriptor(new ExerciseServiceMethodDescriptorSupplier("EditExercise"))
+              .build();
+        }
+      }
+    }
+    return getEditExerciseMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.IntObj,
+      via.sep3.logicserver.protobuf.StringObj> getDeleteExerciseMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteExercise",
+      requestType = via.sep3.logicserver.protobuf.IntObj.class,
+      responseType = via.sep3.logicserver.protobuf.StringObj.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.IntObj,
+      via.sep3.logicserver.protobuf.StringObj> getDeleteExerciseMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.IntObj, via.sep3.logicserver.protobuf.StringObj> getDeleteExerciseMethod;
+    if ((getDeleteExerciseMethod = ExerciseServiceGrpc.getDeleteExerciseMethod) == null) {
+      synchronized (ExerciseServiceGrpc.class) {
+        if ((getDeleteExerciseMethod = ExerciseServiceGrpc.getDeleteExerciseMethod) == null) {
+          ExerciseServiceGrpc.getDeleteExerciseMethod = getDeleteExerciseMethod =
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.IntObj, via.sep3.logicserver.protobuf.StringObj>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteExercise"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.IntObj.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  via.sep3.logicserver.protobuf.StringObj.getDefaultInstance()))
+              .setSchemaDescriptor(new ExerciseServiceMethodDescriptorSupplier("DeleteExercise"))
+              .build();
+        }
+      }
+    }
+    return getDeleteExerciseMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -138,6 +200,20 @@ public final class ExerciseServiceGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetExercisesMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void editExercise(via.sep3.logicserver.protobuf.ExerciseObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditExerciseMethod(), responseObserver);
+    }
+
+    /**
+     */
+    public void deleteExercise(via.sep3.logicserver.protobuf.IntObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteExerciseMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -154,6 +230,20 @@ public final class ExerciseServiceGrpc {
                 via.sep3.logicserver.protobuf.StringObj,
                 via.sep3.logicserver.protobuf.Exercises>(
                   this, METHODID_GET_EXERCISES)))
+          .addMethod(
+            getEditExerciseMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.sep3.logicserver.protobuf.ExerciseObj,
+                via.sep3.logicserver.protobuf.StringObj>(
+                  this, METHODID_EDIT_EXERCISE)))
+          .addMethod(
+            getDeleteExerciseMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                via.sep3.logicserver.protobuf.IntObj,
+                via.sep3.logicserver.protobuf.StringObj>(
+                  this, METHODID_DELETE_EXERCISE)))
           .build();
     }
   }
@@ -187,6 +277,22 @@ public final class ExerciseServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetExercisesMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void editExercise(via.sep3.logicserver.protobuf.ExerciseObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getEditExerciseMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteExercise(via.sep3.logicserver.protobuf.IntObj request,
+        io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteExerciseMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -215,6 +321,20 @@ public final class ExerciseServiceGrpc {
     public via.sep3.logicserver.protobuf.Exercises getExercises(via.sep3.logicserver.protobuf.StringObj request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetExercisesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.sep3.logicserver.protobuf.StringObj editExercise(via.sep3.logicserver.protobuf.ExerciseObj request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getEditExerciseMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public via.sep3.logicserver.protobuf.StringObj deleteExercise(via.sep3.logicserver.protobuf.IntObj request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteExerciseMethod(), getCallOptions(), request);
     }
   }
 
@@ -247,10 +367,28 @@ public final class ExerciseServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetExercisesMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.StringObj> editExercise(
+        via.sep3.logicserver.protobuf.ExerciseObj request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getEditExerciseMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.StringObj> deleteExercise(
+        via.sep3.logicserver.protobuf.IntObj request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteExerciseMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_EXERCISE = 0;
   private static final int METHODID_GET_EXERCISES = 1;
+  private static final int METHODID_EDIT_EXERCISE = 2;
+  private static final int METHODID_DELETE_EXERCISE = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -276,6 +414,14 @@ public final class ExerciseServiceGrpc {
         case METHODID_GET_EXERCISES:
           serviceImpl.getExercises((via.sep3.logicserver.protobuf.StringObj) request,
               (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.Exercises>) responseObserver);
+          break;
+        case METHODID_EDIT_EXERCISE:
+          serviceImpl.editExercise((via.sep3.logicserver.protobuf.ExerciseObj) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj>) responseObserver);
+          break;
+        case METHODID_DELETE_EXERCISE:
+          serviceImpl.deleteExercise((via.sep3.logicserver.protobuf.IntObj) request,
+              (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -340,6 +486,8 @@ public final class ExerciseServiceGrpc {
               .setSchemaDescriptor(new ExerciseServiceFileDescriptorSupplier())
               .addMethod(getCreateExerciseMethod())
               .addMethod(getGetExercisesMethod())
+              .addMethod(getEditExerciseMethod())
+              .addMethod(getDeleteExerciseMethod())
               .build();
         }
       }

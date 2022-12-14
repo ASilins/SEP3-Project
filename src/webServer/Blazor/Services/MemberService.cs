@@ -42,7 +42,7 @@ public class MemberService
         await _localStorage.SetItemAsync("token", result);
     }
 
-    public async Task EditPrivilege(MemberDTO member)
+    public async Task EditMember(MemberDTO member)
     {
         await _client.PutAsJsonAsync("/user/privilege", member);
     }

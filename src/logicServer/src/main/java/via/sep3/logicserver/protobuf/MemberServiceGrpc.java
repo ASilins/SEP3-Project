@@ -77,34 +77,34 @@ public final class MemberServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberObj,
-      via.sep3.logicserver.protobuf.StringObj> getEditPrivilegeMethod;
+      via.sep3.logicserver.protobuf.StringObj> getEditMemberMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "editPrivilege",
+      fullMethodName = SERVICE_NAME + '/' + "editMember",
       requestType = via.sep3.logicserver.protobuf.MemberObj.class,
       responseType = via.sep3.logicserver.protobuf.StringObj.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberObj,
-      via.sep3.logicserver.protobuf.StringObj> getEditPrivilegeMethod() {
-    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberObj, via.sep3.logicserver.protobuf.StringObj> getEditPrivilegeMethod;
-    if ((getEditPrivilegeMethod = MemberServiceGrpc.getEditPrivilegeMethod) == null) {
+      via.sep3.logicserver.protobuf.StringObj> getEditMemberMethod() {
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.MemberObj, via.sep3.logicserver.protobuf.StringObj> getEditMemberMethod;
+    if ((getEditMemberMethod = MemberServiceGrpc.getEditMemberMethod) == null) {
       synchronized (MemberServiceGrpc.class) {
-        if ((getEditPrivilegeMethod = MemberServiceGrpc.getEditPrivilegeMethod) == null) {
-          MemberServiceGrpc.getEditPrivilegeMethod = getEditPrivilegeMethod =
+        if ((getEditMemberMethod = MemberServiceGrpc.getEditMemberMethod) == null) {
+          MemberServiceGrpc.getEditMemberMethod = getEditMemberMethod =
               io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.MemberObj, via.sep3.logicserver.protobuf.StringObj>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "editPrivilege"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "editMember"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   via.sep3.logicserver.protobuf.MemberObj.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   via.sep3.logicserver.protobuf.StringObj.getDefaultInstance()))
-              .setSchemaDescriptor(new MemberServiceMethodDescriptorSupplier("editPrivilege"))
+              .setSchemaDescriptor(new MemberServiceMethodDescriptorSupplier("editMember"))
               .build();
         }
       }
     }
-    return getEditPrivilegeMethod;
+    return getEditMemberMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.StringObj,
@@ -202,9 +202,9 @@ public final class MemberServiceGrpc {
 
     /**
      */
-    public void editPrivilege(via.sep3.logicserver.protobuf.MemberObj request,
+    public void editMember(via.sep3.logicserver.protobuf.MemberObj request,
         io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditPrivilegeMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getEditMemberMethod(), responseObserver);
     }
 
     /**
@@ -231,12 +231,12 @@ public final class MemberServiceGrpc {
                 via.sep3.logicserver.protobuf.MemberObj>(
                   this, METHODID_LOGIN_MEMBER)))
           .addMethod(
-            getEditPrivilegeMethod(),
+            getEditMemberMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
                 via.sep3.logicserver.protobuf.MemberObj,
                 via.sep3.logicserver.protobuf.StringObj>(
-                  this, METHODID_EDIT_PRIVILEGE)))
+                  this, METHODID_EDIT_MEMBER)))
           .addMethod(
             getGetMembersMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -280,10 +280,10 @@ public final class MemberServiceGrpc {
 
     /**
      */
-    public void editPrivilege(via.sep3.logicserver.protobuf.MemberObj request,
+    public void editMember(via.sep3.logicserver.protobuf.MemberObj request,
         io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getEditPrivilegeMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getEditMemberMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -325,9 +325,9 @@ public final class MemberServiceGrpc {
 
     /**
      */
-    public via.sep3.logicserver.protobuf.StringObj editPrivilege(via.sep3.logicserver.protobuf.MemberObj request) {
+    public via.sep3.logicserver.protobuf.StringObj editMember(via.sep3.logicserver.protobuf.MemberObj request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getEditPrivilegeMethod(), getCallOptions(), request);
+          getChannel(), getEditMemberMethod(), getCallOptions(), request);
     }
 
     /**
@@ -370,10 +370,10 @@ public final class MemberServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.StringObj> editPrivilege(
+    public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.StringObj> editMember(
         via.sep3.logicserver.protobuf.MemberObj request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getEditPrivilegeMethod(), getCallOptions()), request);
+          getChannel().newCall(getEditMemberMethod(), getCallOptions()), request);
     }
 
     /**
@@ -387,7 +387,7 @@ public final class MemberServiceGrpc {
 
   private static final int METHODID_CREATE_MEMBER = 0;
   private static final int METHODID_LOGIN_MEMBER = 1;
-  private static final int METHODID_EDIT_PRIVILEGE = 2;
+  private static final int METHODID_EDIT_MEMBER = 2;
   private static final int METHODID_GET_MEMBERS = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
@@ -415,8 +415,8 @@ public final class MemberServiceGrpc {
           serviceImpl.loginMember((via.sep3.logicserver.protobuf.LoginCreateObject) request,
               (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.MemberObj>) responseObserver);
           break;
-        case METHODID_EDIT_PRIVILEGE:
-          serviceImpl.editPrivilege((via.sep3.logicserver.protobuf.MemberObj) request,
+        case METHODID_EDIT_MEMBER:
+          serviceImpl.editMember((via.sep3.logicserver.protobuf.MemberObj) request,
               (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.StringObj>) responseObserver);
           break;
         case METHODID_GET_MEMBERS:
@@ -486,7 +486,7 @@ public final class MemberServiceGrpc {
               .setSchemaDescriptor(new MemberServiceFileDescriptorSupplier())
               .addMethod(getCreateMemberMethod())
               .addMethod(getLoginMemberMethod())
-              .addMethod(getEditPrivilegeMethod())
+              .addMethod(getEditMemberMethod())
               .addMethod(getGetMembersMethod())
               .build();
         }

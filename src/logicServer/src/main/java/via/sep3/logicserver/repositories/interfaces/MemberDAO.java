@@ -11,6 +11,7 @@ public interface MemberDAO {
 
     MemberDTO getByUsername(LoginCreateDTO member) throws Exception;
 
-    MemberDTO editPrivilege(MemberDTO member) throws Exception;
+    MemberDTO editMember(MemberDTO member) throws Exception;
+
     List<MemberDTO> getMembers() throws Exception;
 }

@@ -10,6 +10,6 @@ public static class Logger
     {
         string filePath = FILELOCATION + fileName.ToUpper() + _FileDate + EXTENTION;
         using StreamWriter writer = new(filePath, true);
-        writer.WriteLine($"{DateTime.Now} : {msg}");
+        writer.WriteLine($"{DateTime.Now} : {msg}\n");
     }
 }

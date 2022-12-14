@@ -21,10 +21,24 @@ public class DataContext : DbContext
         modelBuilder.Entity<Workout>()
             .Property<int>("CreatedBy").HasDefaultValue(0);
 
-        modelBuilder.Entity<Exercise>()
-            .Property<int>("AddedBy").HasDefaultValue(0);
+        modelBuilder.Entity<Workout>()
+        .HasOne(w => w.User)
+        .WithMany(m => m.CreatedWorkouts)
+        .HasForeignKey("CreatedBy")
+        .IsRequired(false);
 
-        modelBuilder.Entity<ExercisesInWorkouts>().HasKey(e => new { e.ExerciseId, e.WorkoutId });
-        modelBuilder.Entity<FollowsWorkouts>().HasKey(f => new { f.UserId, f.WorkoutId });
+        // modelBuilder.Entity<Exercise>()
+        //     .Property<int>("AddedBy").HasDefaultValue(0);
+
+        // modelBuilder.Entity<Exercise>()
+        // .HasOne(e => e.User)
+        // .WithMany(m => m.AddedExercises)
+        // .HasForeignKey("AddedBy")
+        // .IsRequired(false);
+
+        modelBuilder.Entity<ExercisesInWorkouts>()
+        .HasKey(e => new { e.ExerciseId, e.WorkoutId });
+        modelBuilder.Entity<FollowsWorkouts>()
+        .HasKey(f => new { f.UserId, f.WorkoutId });
     }
 }

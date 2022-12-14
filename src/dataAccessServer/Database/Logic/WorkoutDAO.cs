@@ -27,20 +27,20 @@ public class WorkoutDAO : IWorkoutDAO
     {
         List<WorkoutDTO> dtos = new();
 
-        foreach (var item in _db.Workouts.ToList())
-        {
-            dtos.Add(new WorkoutDTO()
-            {
-                Id = item.Id,
-                Name = item.Name,
-                Description = item.Description,
-                DurationInMin = item.DurationInMin,
-                CreatedBy = (int)_db.Entry(item).Property("CreatedBy").CurrentValue,
-                FollowedBy = item.FollowedBy,
-                IsPublic = item.IsPublic,
-                Exercises = (List<ExerciseDTO>)item.Exercises
-            });
-        }
+        // foreach (var item in _db.Workouts.ToList())
+        // {
+        //     dtos.Add(new WorkoutDTO()
+        //     {
+        //         Id = item.Id,
+        //         Name = item.Name,
+        //         Description = item.Description,
+        //         DurationInMin = item.DurationInMin,
+        //         CreatedBy = (int)_db.Entry(item).Property("CreatedBy").CurrentValue,
+        //         FollowedBy = item.FollowedBy,
+        //         IsPublic = item.IsPublic,
+        //         Exercises = (List<ExerciseDTO>)item.Exercises
+        //     });
+        // }
 
         return Task.FromResult(dtos);
     }
@@ -85,7 +85,7 @@ public class WorkoutDAO : IWorkoutDAO
             });
         }
 
-        w.Exercises = exercises;
+        // w.Exercises = exercises;
 
         _db.Workouts.Update(w);
         await _db.SaveChangesAsync();

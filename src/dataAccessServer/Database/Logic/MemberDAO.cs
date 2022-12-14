@@ -61,7 +61,7 @@ public class MemberDAO : IMemberDAO
         Member? memberOld = await _db.Users.FirstOrDefaultAsync(m =>
             m.Username.ToLower().Equals(memberDto.Username.ToLower())
         );
-        
+
         Member member = new()
         {
             Id = memberOld.Id,
@@ -73,36 +73,36 @@ public class MemberDAO : IMemberDAO
         var addedExercises = new List<Exercise>();
         var createdWorkouts = new List<Workout>();
 
-        foreach (var item in memberOld.AddedExercises)
-        {
-            addedExercises.Add(new Exercise()
-            {
-                Id = item.Id,
-                Name = item.Name,
-                Description = item.Description,
-                DurationInMin = item.DurationInMin,
-                InWorkouts = item.InWorkouts,
-                User = item.User
-            });
-        }
+        // foreach (var item in memberOld.AddedExercises)
+        // {
+        //     addedExercises.Add(new Exercise()
+        //     {
+        //         Id = item.Id,
+        //         Name = item.Name,
+        //         Description = item.Description,
+        //         DurationInMin = item.DurationInMin,
+        //         InWorkouts = item.InWorkouts,
+        //         // User = item.User
+        //     });
+        // }
 
-        foreach (var item in memberOld.CreatedWorkouts)
-        {
-            createdWorkouts.Add(new Workout()
-            {
-                Id = item.Id,
-                Name = item.Name,
-                Description = item.Description,
-                DurationInMin = item.DurationInMin,
-                Exercises = item.Exercises,
-                FollowedBy = item.FollowedBy,
-                IsPublic = item.IsPublic,
-                NumberOfExercises = item.NumberOfExercises,
-                User = item.User
-            });
-        }
+        // foreach (var item in memberOld.CreatedWorkouts)
+        // {
+        //     createdWorkouts.Add(new Workout()
+        //     {
+        //         Id = item.Id,
+        //         Name = item.Name,
+        //         Description = item.Description,
+        //         DurationInMin = item.DurationInMin,
+        //         Exercises = item.Exercises,
+        //         FollowedBy = item.FollowedBy,
+        //         IsPublic = item.IsPublic,
+        //         NumberOfExercises = item.NumberOfExercises,
+        //         // User = item.User
+        //     });
+        // }
 
-        member.AddedExercises = addedExercises;
+        // member.AddedExercises = addedExercises;
         member.CreatedWorkouts = createdWorkouts;
 
         _db.Users.Update(member);

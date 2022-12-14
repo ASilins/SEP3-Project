@@ -14,7 +14,9 @@ public class Member
     public byte[] Salt { get; set; }
     [Required]
     public string? Position { get; set; }
-    public ICollection<Exercise>? AddedExercises { get; set; }
+
+
+    // For EF Core
     public ICollection<Workout>? CreatedWorkouts { get; set; }
     public ICollection<FollowsWorkouts>? FollowedWorkouts { get; set; }
 }

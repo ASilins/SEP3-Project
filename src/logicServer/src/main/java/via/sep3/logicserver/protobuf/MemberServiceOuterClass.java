@@ -44,12 +44,13 @@ public final class MemberServiceOuterClass {
       "rObj\022\n\n\002Id\030\001 \001(\005\022\020\n\010Username\030\002 \001(\t\022\020\n\010Pa" +
       "ssword\030\003 \001(\014\022\014\n\004Salt\030\004 \001(\014\022\020\n\010Position\030\005" +
       " \001(\t\"&\n\007Members\022\033\n\007members\030\001 \003(\0132\n.Membe" +
-      "rObj2\270\001\n\rMemberService\022.\n\014createMember\022\022" +
+      "rObj2\335\001\n\rMemberService\022.\n\014createMember\022\022" +
       ".LoginCreateObject\032\n.MemberObj\022-\n\013loginM" +
       "ember\022\022.LoginCreateObject\032\n.MemberObj\022$\n" +
       "\neditMember\022\n.MemberObj\032\n.StringObj\022\"\n\ng" +
-      "etMembers\022\n.StringObj\032\010.MembersB!\n\035via.s" +
-      "ep3.logicserver.protobufP\001b\006proto3"
+      "etMembers\022\n.StringObj\032\010.Members\022#\n\014delet" +
+      "eMember\022\007.IntObj\032\n.StringObjB!\n\035via.sep3" +
+      ".logicserver.protobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

@@ -88,6 +88,23 @@ public class MemberController : ControllerBase
         }
     }
 
+    public async Task<ActionResult<MemberDTO>> DeleteMember([FromQuery] int id)
+    {
+        try
+        {
+            Logger.WriteLog("<<Received DeleteMember request>>", "info");
+
+            await _client.DeleteMember(id);
+            return NoContent();
+        }
+        catch (Exception e)
+        {
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
+            return StatusCode(500, e.Message);
+        }
+    }
+
     // Only for development
 
     [HttpGet("token"), AllowAnonymous]

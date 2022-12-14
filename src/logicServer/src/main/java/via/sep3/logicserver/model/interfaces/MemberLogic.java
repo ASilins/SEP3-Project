@@ -13,4 +13,6 @@ public interface MemberLogic {
     MemberObj editMember(MemberObj member) throws Exception;
 
     Members getMembers() throws Exception;
+
+    void deleteMember(int id) throws Exception;
 }

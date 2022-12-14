@@ -9,4 +9,5 @@ public interface IMemberClient
     string GetToken();
     Task EditMember(MemberDTO member);
     Task<IEnumerable<MemberDTO>> GetMembers();
+    Task DeleteMember(int id);
 }

@@ -16,4 +16,6 @@ public interface MemberDAO {
     MemberDTO editMember(MemberDTO member) throws Exception;
 
     List<MemberDTO> getMembers() throws Exception;
+
+    void deleteMember(int id) throws Exception;
 }

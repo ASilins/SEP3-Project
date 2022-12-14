@@ -13,6 +13,8 @@ import via.sep3.logicserver.protobuf.Members;
 import via.sep3.logicserver.shared.LoginCreateDTO;
 import via.sep3.logicserver.shared.MemberDTO;
 
+import java.util.List;
+
 @Service
 public class MemberConverter {
 
@@ -48,6 +50,7 @@ public class MemberConverter {
         return dto;
     }
 
+
     public static List<MemberObj> convertToMemberObjList(List<MemberDTO> dtoList) {
         List<MemberObj> objList = new ArrayList<MemberObj>();
 
@@ -58,9 +61,11 @@ public class MemberConverter {
         return objList;
     }
 
-    public static Members convertToMembers(List<MemberObj> objList) {
+
+    public static Members convertToMembers(List<MemberObj> memberObjs){
         return Members.newBuilder()
-                .addAllMembers(objList)
+                .addAllMembers(memberObjs)
                 .build();
     }
+
 }

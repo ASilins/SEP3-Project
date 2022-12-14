@@ -83,4 +83,15 @@ public class MemberClient : IMemberClient
     
         return MemberConverter.ConvertToMemberDTOList(reply.Members_);
     }
+
+    public async Task DeleteMember(int id)
+    {
+        using var channel = GrpcChannel.ForAddress(_url);
+        client = new MemberService.MemberServiceClient(channel);
+
+        await client.DeleteMemberAsync(new IntObj
+        {
+            Number = id
+        });
+    }
 }

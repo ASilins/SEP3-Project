@@ -9,4 +9,5 @@ public interface IMemberDAO
     Task<MemberDTO?> GetById(int id);
     Task EditMember(MemberDTO memberDto);
     Task<List<MemberDTO>> GetMembers();
+    Task DeleteMember(int id);
 }

@@ -149,4 +149,10 @@ public class MemberDAO : IMemberDAO
 
         return Task.FromResult(memberDtos);
     }
+
+    public async Task DeleteMember(int id)
+    {
+        _db.Remove(GetById(id));
+        await _db.SaveChangesAsync();
+    }
 }

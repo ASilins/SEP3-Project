@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.util.UriComponentsBuilder;
 import via.sep3.logicserver.repositories.interfaces.MemberDAO;
 import via.sep3.logicserver.shared.LoginCreateDTO;
 import via.sep3.logicserver.shared.MemberDTO;
@@ -98,6 +99,12 @@ public class MemberDAOImpl implements MemberDAO {
         }
 
         return responseEntity.getBody();
+    }
+
+    @Override
+    public void deleteMember(int id) throws Exception {
+        String uri = UriComponentsBuilder.fromHttpUrl(URI).queryParam("id", id).encode().toUriString();
+        restTemplate.delete(uri);
     }
 
 }

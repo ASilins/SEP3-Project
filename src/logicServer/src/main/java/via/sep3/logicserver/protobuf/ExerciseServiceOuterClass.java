@@ -37,11 +37,13 @@ public final class ExerciseServiceOuterClass {
       "to\"a\n\013ExerciseObj\022\n\n\002Id\030\001 \001(\005\022\014\n\004Name\030\002 " +
       "\001(\t\022\023\n\013Description\030\003 \001(\t\022\020\n\010Duration\030\004 \001" +
       "(\005\022\021\n\tCreatedBy\030\005 \001(\005\",\n\tExercises\022\037\n\tex" +
-      "ercises\030\001 \003(\0132\014.ExerciseObj2g\n\017ExerciseS" +
-      "ervice\022,\n\016CreateExercise\022\014.ExerciseObj\032\014" +
-      ".ExerciseObj\022&\n\014GetExercises\022\n.StringObj" +
-      "\032\n.ExercisesB!\n\035via.sep3.logicserver.pro" +
-      "tobufP\001b\006proto3"
+      "ercises\030\001 \003(\0132\014.ExerciseObj2\270\001\n\017Exercise" +
+      "Service\022,\n\016CreateExercise\022\014.ExerciseObj\032" +
+      "\014.ExerciseObj\022&\n\014GetExercises\022\n.StringOb" +
+      "j\032\n.Exercises\022(\n\014EditExercise\022\014.Exercise" +
+      "Obj\032\n.StringObj\022%\n\016DeleteExercise\022\007.IntO" +
+      "bj\032\n.StringObjB!\n\035via.sep3.logicserver.p" +
+      "rotobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

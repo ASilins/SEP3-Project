@@ -33,4 +33,25 @@ public class ExerciseClient : IExerciseClient
 
         return ExerciseConverter.ConvertToExerciseDTOList(reply.Exercises_);
     }
+
+    public async Task EditExercise(ExerciseDTO dto)
+    {
+        using var channel = GrpcChannel.ForAddress(_url);
+        client = new ExerciseService.ExerciseServiceClient(channel);
+
+        var reply = await client.EditExerciseAsync(
+            ExerciseConverter.ConvertToExerciseObj(dto)
+        );
+    }
+
+    public async Task DeleteExercise(int id)
+    {
+        using var channel = GrpcChannel.ForAddress(_url);
+        client = new ExerciseService.ExerciseServiceClient(channel);
+
+        var reply = await client.DeleteExerciseAsync(new IntObj
+        {
+            Number = id
+        });
+    }
 }

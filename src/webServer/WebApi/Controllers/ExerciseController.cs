@@ -51,4 +51,42 @@ public class ExerciseController : ControllerBase
             return StatusCode(500, e.Message);
         }
     }
+
+    [HttpPut, Authorize(Roles = "Trainer,Admin")]
+    public async Task<ObjectResult> EditExercise([FromBody] ExerciseDTO dto)
+    {
+        try
+        {
+            Logger.WriteLog("<Received EditExercise request>", "info");
+
+            await _client.EditExercise(dto);
+
+            return StatusCode(204, "");
+        }
+        catch (Exception e)
+        {
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
+            return StatusCode(500, e.Message);
+        }
+    }
+
+    [HttpDelete, Authorize(Roles = "Admin")]
+    public async Task<ObjectResult> DeleteExercise([FromQuery] int id)
+    {
+        try
+        {
+            Logger.WriteLog("<Received DeleteExercise request>", "info");
+
+            await _client.DeleteExercise(id);
+
+            return StatusCode(204, "");
+        }
+        catch (Exception e)
+        {
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
+            return StatusCode(500, e.Message);
+        }
+    }
 }

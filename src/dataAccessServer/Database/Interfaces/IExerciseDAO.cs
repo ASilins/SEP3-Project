@@ -6,4 +6,6 @@ public interface IExerciseDAO
 {
     Task<ExerciseDTO> CreateExercise(ExerciseDTO exercise);
     Task<List<ExerciseDTO>> GetExercises();
+    Task EditExercise(ExerciseDTO exercise);
+    Task DeleteExercise(int id);
 }

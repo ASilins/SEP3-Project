@@ -14,27 +14,27 @@ public final class WorkoutServiceGrpc {
   public static final String SERVICE_NAME = "WorkoutService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.StringObj,
+  private static volatile io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.IntObj,
       via.sep3.logicserver.protobuf.Workouts> getGetWorkoutsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetWorkouts",
-      requestType = via.sep3.logicserver.protobuf.StringObj.class,
+      requestType = via.sep3.logicserver.protobuf.IntObj.class,
       responseType = via.sep3.logicserver.protobuf.Workouts.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.StringObj,
+  public static io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.IntObj,
       via.sep3.logicserver.protobuf.Workouts> getGetWorkoutsMethod() {
-    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.StringObj, via.sep3.logicserver.protobuf.Workouts> getGetWorkoutsMethod;
+    io.grpc.MethodDescriptor<via.sep3.logicserver.protobuf.IntObj, via.sep3.logicserver.protobuf.Workouts> getGetWorkoutsMethod;
     if ((getGetWorkoutsMethod = WorkoutServiceGrpc.getGetWorkoutsMethod) == null) {
       synchronized (WorkoutServiceGrpc.class) {
         if ((getGetWorkoutsMethod = WorkoutServiceGrpc.getGetWorkoutsMethod) == null) {
           WorkoutServiceGrpc.getGetWorkoutsMethod = getGetWorkoutsMethod =
-              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.StringObj, via.sep3.logicserver.protobuf.Workouts>newBuilder()
+              io.grpc.MethodDescriptor.<via.sep3.logicserver.protobuf.IntObj, via.sep3.logicserver.protobuf.Workouts>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetWorkouts"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  via.sep3.logicserver.protobuf.StringObj.getDefaultInstance()))
+                  via.sep3.logicserver.protobuf.IntObj.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   via.sep3.logicserver.protobuf.Workouts.getDefaultInstance()))
               .setSchemaDescriptor(new WorkoutServiceMethodDescriptorSupplier("GetWorkouts"))
@@ -250,7 +250,7 @@ public final class WorkoutServiceGrpc {
 
     /**
      */
-    public void getWorkouts(via.sep3.logicserver.protobuf.StringObj request,
+    public void getWorkouts(via.sep3.logicserver.protobuf.IntObj request,
         io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.Workouts> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetWorkoutsMethod(), responseObserver);
     }
@@ -296,7 +296,7 @@ public final class WorkoutServiceGrpc {
             getGetWorkoutsMethod(),
             io.grpc.stub.ServerCalls.asyncUnaryCall(
               new MethodHandlers<
-                via.sep3.logicserver.protobuf.StringObj,
+                via.sep3.logicserver.protobuf.IntObj,
                 via.sep3.logicserver.protobuf.Workouts>(
                   this, METHODID_GET_WORKOUTS)))
           .addMethod(
@@ -354,7 +354,7 @@ public final class WorkoutServiceGrpc {
 
     /**
      */
-    public void getWorkouts(via.sep3.logicserver.protobuf.StringObj request,
+    public void getWorkouts(via.sep3.logicserver.protobuf.IntObj request,
         io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.Workouts> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetWorkoutsMethod(), getCallOptions()), request, responseObserver);
@@ -417,7 +417,7 @@ public final class WorkoutServiceGrpc {
 
     /**
      */
-    public via.sep3.logicserver.protobuf.Workouts getWorkouts(via.sep3.logicserver.protobuf.StringObj request) {
+    public via.sep3.logicserver.protobuf.Workouts getWorkouts(via.sep3.logicserver.protobuf.IntObj request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetWorkoutsMethod(), getCallOptions(), request);
     }
@@ -475,7 +475,7 @@ public final class WorkoutServiceGrpc {
     /**
      */
     public com.google.common.util.concurrent.ListenableFuture<via.sep3.logicserver.protobuf.Workouts> getWorkouts(
-        via.sep3.logicserver.protobuf.StringObj request) {
+        via.sep3.logicserver.protobuf.IntObj request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetWorkoutsMethod(), getCallOptions()), request);
     }
@@ -546,7 +546,7 @@ public final class WorkoutServiceGrpc {
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
         case METHODID_GET_WORKOUTS:
-          serviceImpl.getWorkouts((via.sep3.logicserver.protobuf.StringObj) request,
+          serviceImpl.getWorkouts((via.sep3.logicserver.protobuf.IntObj) request,
               (io.grpc.stub.StreamObserver<via.sep3.logicserver.protobuf.Workouts>) responseObserver);
           break;
         case METHODID_GET_WORKOUT:

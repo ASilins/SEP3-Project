@@ -16,7 +16,7 @@ public class ExerciseDAO : IExerciseDAO
         _db = db;
     }
 
-    //Change return to exercise object
+    // Change return to exercise object
     public async Task<ExerciseDTO> CreateExercise(ExerciseDTO exercise)
     {
         var ex = new Exercise()
@@ -28,8 +28,6 @@ public class ExerciseDAO : IExerciseDAO
 
         EntityEntry<Exercise> added = await _db.Exercises.AddAsync(ex);
         await _db.SaveChangesAsync();
-
-        // _db.Entry(ex).Property("AddedBy").CurrentValue = exercise.CreatedBy;
 
         return new ExerciseDTO()
         {
@@ -67,8 +65,7 @@ public class ExerciseDAO : IExerciseDAO
                 Id = item.Id,
                 Name = item.Name,
                 Description = item.Description,
-                Duration = item.DurationInMin,
-                CreatedBy = (int?)_db.Entry(item).Property("AddedBy").CurrentValue
+                Duration = item.DurationInMin
             });
         }
 

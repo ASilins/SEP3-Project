@@ -5,10 +5,11 @@ namespace Database.Interfaces;
 
 public interface IWorkoutDAO
 {
-    Task<Workout?> GetWorkout(int id);
+    Task<WorkoutDTO> GetWorkout(int id);
     Task<List<WorkoutDTO>> GetWorkouts();
     Task<FollowWorkoutDTO> AssignWorkout(FollowWorkoutDTO dto);
-    Task EditWorkout(WorkoutDTO workout);
+    Task EditWorkout(Workout workout);
+    Task EditExercisesInWorkout(Workout workout);
     Task DeleteWorkout(int id);
-    Task<Workout> CreateWorkout(Workout workout);
+    Task<WorkoutDTO> CreateWorkout(WorkoutDTO workout);
 }

@@ -27,6 +27,8 @@ public class WorkoutController extends WorkoutServiceImplBase {
         try {
             Logger.writeLog("<Received getWorkout request>", "info");
 
+            System.out.println(obj.getNumber());
+
             WorkoutObj response = logic.getWorkout(obj.getNumber());
 
             responseObserver.onNext(response);
@@ -34,25 +36,27 @@ public class WorkoutController extends WorkoutServiceImplBase {
 
             Logger.writeLog("--GetWorkout request successful--", "info");
         } catch (Exception e) {
-            Logger.writeLog("Exception " + e.toString(), "error");
+            e.printStackTrace();
+            Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in WorkoutController>>");
             responseObserver.onError(e);
         }
     }
 
     @Override
-    public void getWorkouts(StringObj obj, StreamObserver<Workouts> responseObserver) {
+    public void getWorkouts(IntObj obj, StreamObserver<Workouts> responseObserver) {
         try {
             Logger.writeLog("<Received getWorkouts request>", "info");
 
-            Workouts response = logic.getWorkouts();
+            Workouts response = logic.getWorkouts(obj.getNumber());
 
             responseObserver.onNext(response);
             responseObserver.onCompleted();
 
             Logger.writeLog("--GetWorkouts request successful--", "info");
         } catch (Exception e) {
-            Logger.writeLog("Exception " + e.toString(), "error");
+            e.printStackTrace();
+            Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in WorkoutController>>");
             responseObserver.onError(e);
         }
@@ -63,15 +67,15 @@ public class WorkoutController extends WorkoutServiceImplBase {
         try {
             Logger.writeLog("<Received editWorkout request>", "info");
 
-            // Need to modify
-            WorkoutObj response = logic.editWorkout(obj);
+            logic.editWorkout(obj);
 
             responseObserver.onNext(StringObj.newBuilder().setName("").build());
             responseObserver.onCompleted();
 
             Logger.writeLog("--EditWorkout request successful--", "info");
         } catch (Exception e) {
-            Logger.writeLog("Exception " + e.toString(), "error");
+            e.printStackTrace();
+            Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in WorkoutController>>");
             responseObserver.onError(e);
         }
@@ -89,7 +93,8 @@ public class WorkoutController extends WorkoutServiceImplBase {
 
             Logger.writeLog("--DeleteWorkout request successful--", "info");
         } catch (Exception e) {
-            Logger.writeLog("Exception " + e.toString(), "error");
+            e.printStackTrace();
+            Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in WorkoutController>>");
             responseObserver.onError(e);
         }
@@ -107,6 +112,7 @@ public class WorkoutController extends WorkoutServiceImplBase {
 
             Logger.writeLog("--AssignWorkout request successful--", "info");
         } catch (Exception e) {
+            e.printStackTrace();
             Logger.writeLog("Exception " + e.toString(), "error");
             System.out.println("<<Exception in WorkoutController>>");
             responseObserver.onError(e);
@@ -114,7 +120,7 @@ public class WorkoutController extends WorkoutServiceImplBase {
     }
 
     @Override
-    public void createWorkout(WorkoutObj workoutObj, StreamObserver<WorkoutObj> responseObserver){
+    public void createWorkout(WorkoutObj workoutObj, StreamObserver<WorkoutObj> responseObserver) {
         try {
             Logger.writeLog("<Received createWorkout request>", "info");
 
@@ -125,8 +131,8 @@ public class WorkoutController extends WorkoutServiceImplBase {
 
             Logger.writeLog("--createWorkout request SUCCESSFUL--", "info");
         } catch (Exception e) {
+            e.printStackTrace();
             Logger.writeLog("Exception " + e.toString(), "error");
-            System.out.println("<<Exception in WorkoutController>>");
             responseObserver.onError(e);
         }
     }

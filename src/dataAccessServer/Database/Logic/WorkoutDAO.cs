@@ -15,33 +15,64 @@ public class WorkoutDAO : IWorkoutDAO
         _db = db;
     }
 
-    public Task<Workout?> GetWorkout(int id)
+    public async Task<WorkoutDTO> GetWorkout(int id)
     {
-        var query = _db.Workouts.FirstOrDefaultAsync(w =>
-        w.Id == id
+        Workout? query = await _db.Workouts.FirstOrDefaultAsync(w =>
+            w.Id == id
         );
 
-        return query;
+        if (query == null)
+        {
+            throw new Exception("Workout not found");
+        }
+
+        var dto = new WorkoutDTO()
+        {
+            Id = query.Id,
+            Name = query.Name,
+            Description = query.Description,
+            DurationInMin = query.DurationInMin,
+            IsPublic = query.IsPublic
+        };
+
+        List<ExercisesInWorkouts> temp = _db.ExercisesInWorkouts.Where(
+            e => e.WorkoutId == dto.Id
+        ).ToList();
+
+        return dto;
     }
 
     public Task<List<WorkoutDTO>> GetWorkouts()
     {
         List<WorkoutDTO> dtos = new();
+        List<ExercisesInWorkouts> temp = new();
+        List<FollowsWorkouts> followers = new();
 
-        // foreach (var item in _db.Workouts.ToList())
-        // {
-        //     dtos.Add(new WorkoutDTO()
-        //     {
-        //         Id = item.Id,
-        //         Name = item.Name,
-        //         Description = item.Description,
-        //         DurationInMin = item.DurationInMin,
-        //         CreatedBy = (int)_db.Entry(item).Property("CreatedBy").CurrentValue,
-        //         FollowedBy = item.FollowedBy,
-        //         IsPublic = item.IsPublic,
-        //         Exercises = (List<ExerciseDTO>)item.Exercises
-        //     });
-        // }
+        foreach (var item in _db.Workouts.ToList())
+        {
+            WorkoutDTO dto = new WorkoutDTO()
+            {
+                Id = item.Id,
+                Name = item.Name,
+                Description = item.Description,
+                DurationInMin = item.DurationInMin,
+                CreatedBy = item.CreatedBy,
+                IsPublic = item.IsPublic,
+            };
+
+            temp = _db.ExercisesInWorkouts.Where(
+                e => e.WorkoutId == item.Id
+            ).ToList();
+
+            followers = _db.FollowsWorkouts.Where(
+                m => m.WorkoutId == item.Id
+            ).ToList();
+
+            dto.Exercises = temp;
+            dto.Followers = followers;
+
+            dtos.Add(dto);
+        }
 
         return Task.FromResult(dtos);
     }
@@ -59,72 +90,74 @@ public class WorkoutDAO : IWorkoutDAO
         return dto;
     }
 
-    public async Task EditWorkout(WorkoutDTO workout)
+    public async Task EditWorkout(Workout workout)
     {
         _db.ChangeTracker.Clear();
 
-        Workout w = new()
-        {
-            Id = workout.Id,
-            Name = workout.Name ?? "",
-            Description = workout.Description ?? "",
-            DurationInMin = workout.DurationInMin,
-            FollowedBy = workout.FollowedBy,
-            IsPublic = workout.IsPublic
-        };
+        _db.Workouts.Update(workout);
+        await _db.SaveChangesAsync();
+    }
 
-        var exercises = new List<Exercise>();
+    public async Task EditExercisesInWorkout(Workout workout)
+    {
+        _db.ChangeTracker.Clear();
 
-        foreach (var item in workout.Exercises)
-        {
-            exercises.Add(new Exercise()
-            {
-                Id = item.Id,
-                Name = item.Name ?? "",
-                Description = item.Description ?? "",
-                DurationInMin = item.Duration
-            });
-        }
-
-        // w.Exercises = exercises;
-
-        _db.Workouts.Update(w);
+        _db.ExercisesInWorkouts.UpdateRange(workout.Exercises);
         await _db.SaveChangesAsync();
     }
 
     public async Task DeleteWorkout(int id)
     {
-        _db.Remove(GetWorkout(id));
-        await _db.SaveChangesAsync();
-    }
+        WorkoutDTO workout = await GetWorkout(id);
+        if (workout == null) throw new Exception("Workout not found");
 
-    public async Task<Workout> CreateWorkout(Workout workout)
-    {
         var wo = new Workout()
         {
+            Id = workout.Id,
             Name = workout.Name,
             Description = workout.Description,
             DurationInMin = workout.DurationInMin,
             Exercises = workout.Exercises,
-            FollowedBy = workout.FollowedBy,
-            IsPublic = workout.IsPublic,
-            NumberOfExercises = workout.NumberOfExercises,
-            User = workout.User
+            IsPublic = workout.IsPublic
+        };
+        _db.ChangeTracker.Clear();
+        _db.Remove(wo);
+        await _db.SaveChangesAsync();
+    }
+
+    public async Task DeleteExercisesInWorkout(int id)
+    {
+        WorkoutDTO w = await GetWorkout(id);
+        if (w.Exercises == null) return;
+
+        _db.RemoveRange(w.Exercises);
+        await _db.SaveChangesAsync();
+    }
+
+    public async Task<WorkoutDTO> CreateWorkout(WorkoutDTO workout)
+    {
+        Workout w = new()
+        {
+            Id = workout.Id,
+            Name = workout.Name,
+            Description = workout.Description,
+            DurationInMin = workout.DurationInMin,
+            Exercises = workout.Exercises,
+            CreatedBy = workout.CreatedBy,
+            IsPublic = workout.IsPublic
         };
 
-        EntityEntry<Workout> added = await _db.Workouts.AddAsync(wo);
+        EntityEntry<Workout> added = await _db.Workouts.AddAsync(w);
         await _db.SaveChangesAsync();
 
-        return new Workout()
+        return new WorkoutDTO()
         {
             Id = added.Entity.Id,
             Name = added.Entity.Name,
             Description = added.Entity.Description,
             DurationInMin = added.Entity.DurationInMin,
             Exercises = added.Entity.Exercises,
-            FollowedBy = added.Entity.FollowedBy,
-            IsPublic = added.Entity.IsPublic,
-            User = added.Entity.User
+            IsPublic = added.Entity.IsPublic
         };
     }
 }

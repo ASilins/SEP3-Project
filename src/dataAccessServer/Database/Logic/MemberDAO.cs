@@ -35,10 +35,10 @@ public class MemberDAO : IMemberDAO
         };
     }
 
-    public async Task<MemberDTO?> GetByUsername(LoginCreateDTO member)
+    public async Task<MemberDTO?> GetByUsername(string member)
     {
         Member? exists = await _db.Users.FirstOrDefaultAsync(m =>
-            m.Username.ToLower().Equals(member.Username.ToLower())
+            m.Username.ToLower().Equals(member.ToLower())
         );
 
         if (exists == null)
@@ -92,41 +92,6 @@ public class MemberDAO : IMemberDAO
             HashedPassword = memberOld.HashedPassword,
             Position = memberOld.Position
         };
-
-        var addedExercises = new List<Exercise>();
-        var createdWorkouts = new List<Workout>();
-
-        // foreach (var item in memberOld.AddedExercises)
-        // {
-        //     addedExercises.Add(new Exercise()
-        //     {
-        //         Id = item.Id,
-        //         Name = item.Name,
-        //         Description = item.Description,
-        //         DurationInMin = item.DurationInMin,
-        //         InWorkouts = item.InWorkouts,
-        //         // User = item.User
-        //     });
-        // }
-
-        // foreach (var item in memberOld.CreatedWorkouts)
-        // {
-        //     createdWorkouts.Add(new Workout()
-        //     {
-        //         Id = item.Id,
-        //         Name = item.Name,
-        //         Description = item.Description,
-        //         DurationInMin = item.DurationInMin,
-        //         Exercises = item.Exercises,
-        //         FollowedBy = item.FollowedBy,
-        //         IsPublic = item.IsPublic,
-        //         NumberOfExercises = item.NumberOfExercises,
-        //         // User = item.User
-        //     });
-        // }
-
-        // member.AddedExercises = addedExercises;
-        member.CreatedWorkouts = createdWorkouts;
 
         _db.Users.Update(member);
         await _db.SaveChangesAsync();

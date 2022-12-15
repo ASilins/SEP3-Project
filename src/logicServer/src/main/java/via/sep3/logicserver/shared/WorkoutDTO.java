@@ -14,9 +14,9 @@ public class WorkoutDTO {
     private String Description;
     private int DurationInMin;
     private int CreatedBy;
-    private int FollowedBy;
     private boolean isPublic;
     private List<ExerciseDTO> Exercises;
+    private List<FollowWorkoutDTO> followers;
 
     public int numberOfExercises() {
         return Exercises.size();

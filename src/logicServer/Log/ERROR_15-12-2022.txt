@@ -1,0 +1,78 @@
+15-12-2022 14:45:59 : Exception org.springframework.web.client.HttpClientErrorException$MethodNotAllowed:        Method Not Allowed: [no body]
+15-12-2022 14:51:33 : Exception org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: [no body]
+15-12-2022 14:52:29 : Exception org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: [no body]
+15-12-2022 14:53:08 : Exception org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: [no body]
+15-12-2022 14:54:28 : Exception org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: [no body]
+15-12-2022 14:56:01 : Exception org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: [no body]
+15-12-2022 15:05:25 : Exception org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: [no body]
+15-12-2022 15:08:31 : Exception org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: [no body]
+15-12-2022 15:10:54 : Exception org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: [no body]
+15-12-2022 15:11:52 : Exception org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: [no body]
+15-12-2022 15:15:36 : Exception via.sep3.logicserver.shared.Exceptions.DAOException: Data access server error with code: 307
+15-12-2022 15:17:18 : Exception via.sep3.logicserver.shared.Exceptions.DAOException: Data access server error with code: 307
+15-12-2022 15:19:41 : Exception via.sep3.logicserver.shared.Exceptions.DAOException: Data access server error with code: 307
+15-12-2022 15:20:25 : Exception via.sep3.logicserver.shared.Exceptions.DAOException: Data access server error with code: 307
+15-12-2022 15:24:25 : Exception via.sep3.logicserver.shared.Exceptions.DAOException: Data access server error with code: 307
+15-12-2022 15:25:11 : Exception java.lang.NullPointerException: Cannot read the array length because "bytes" is null
+15-12-2022 15:25:39 : Exception java.lang.NullPointerException: Cannot read the array length because "bytes" is null
+15-12-2022 15:26:42 : Exception java.lang.NullPointerException: Cannot read the array length because "bytes" is null
+15-12-2022 15:36:02 : Exception org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: [no body]
+15-12-2022 15:36:07 : Exception org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: [no body]
+15-12-2022 15:36:13 : Exception org.springframework.web.client.HttpClientErrorException$NotFound: 404 Not Found: [no body]
+15-12-2022 15:45:59 : Exception org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-316c43c7acb124ad596e926040531d4a-53c3ac7960abd787-00","errors":{"$":["The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. Path: $ | LineNumber: 0 | BytePositionInLine: 0."],"member":["The member field is required."]}}"
+15-12-2022 15:46:01 : Exception org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-9352cf8e47dd9c6ab740606c1541ed98-d22376d1ab34dc5a-00","errors":{"$":["The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. Path: $ | LineNumber: 0 | BytePositionInLine: 0."],"member":["The member field is required."]}}"
+15-12-2022 15:46:46 : Exception org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-9d3eb166f244d6dcba3e3c168a1a88ec-85dab4d759ce219a-00","errors":{"$":["The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. Path: $ | LineNumber: 0 | BytePositionInLine: 0."],"member":["The member field is required."]}}"
+15-12-2022 15:51:20 : Exception org.springframework.web.client.HttpClientErrorException$UnsupportedMediaType: 415 Unsupported Media Type: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.13","title":"Unsupported Media Type","status":415,"traceId":"00-bf0d381c4770c3783120eda2ab4d2369-0b8ebb0e4772a2eb-00"}"
+15-12-2022 15:52:49 : Exception org.springframework.web.client.HttpClientErrorException$UnsupportedMediaType: 415 Unsupported Media Type: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.13","title":"Unsupported Media Type","status":415,"traceId":"00-074f7175bc1dcccd5e550c37b10dd4cc-73304ccd47671483-00"}"
+15-12-2022 15:52:50 : Exception org.springframework.web.client.HttpClientErrorException$UnsupportedMediaType: 415 Unsupported Media Type: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.13","title":"Unsupported Media Type","status":415,"traceId":"00-f8c4f71d997991d172296310fd8926b1-e436aa75618433f4-00"}"
+15-12-2022 15:52:50 : Exception org.springframework.web.client.HttpClientErrorException$UnsupportedMediaType: 415 Unsupported Media Type: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.13","title":"Unsupported Media Type","status":415,"traceId":"00-d895edb8c0cb06f70229875d6dd93d06-a2121e7b39c11540-00"}"
+15-12-2022 15:52:50 : Exception org.springframework.web.client.HttpClientErrorException$UnsupportedMediaType: 415 Unsupported Media Type: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.13","title":"Unsupported Media Type","status":415,"traceId":"00-d6f03a8c40c2d334d0ac2862f1165301-07737793b7f4494f-00"}"
+15-12-2022 15:57:13 : Exception org.springframework.web.client.ResourceAccessException: I/O error on GET request for "https://localhost:7057/api/member/login": Connect to localhost:7057 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:7057 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+15-12-2022 15:57:48 : Exception org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-61eb4cb1c2fb62b85af819c725adf608-50802485adb70dcb-00","errors":{"$":["The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. Path: $ | LineNumber: 0 | BytePositionInLine: 0."],"member":["The member field is required."]}}"
+15-12-2022 16:00:25 : Exception org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: [no body]
+15-12-2022 16:02:54 : Exception 405 Method Not Allowed: [no body]
+15-12-2022 16:08:23 : Exception 404 Not Found: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"00-3c2710a4a13dd4becf5ebdbf4b07b3af-ceffd3c664d51735-00"}"
+15-12-2022 17:38:38 : Exception org.springframework.web.client.HttpClientErrorException$BadRequest: 400 Bad Request: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-b181f96ec014518cb02f99fbc971fd8e-ebd9aa432811cd33-00","errors":{"User":["The User field is required."],"followedWorkouts":["The followedWorkouts field is required."]}}"
+15-12-2022 17:43:04 : Exception org.springframework.web.client.HttpServerErrorException$InternalServerError: 500 Internal Server Error: ""An error occurred while saving the entity changes. See the inner exception for details.""
+15-12-2022 17:46:35 : Exception java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "dtos" is null
+15-12-2022 17:47:22 : Exception java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "dtos" is null
+15-12-2022 17:48:56 : Exception Cannot invoke "java.util.List.iterator()" because "dtos" is null
+15-12-2022 17:50:03 : Exception Cannot invoke "java.util.List.iterator()" because "dtos" is null
+15-12-2022 17:50:46 : Exception java.lang.NullPointerException: Cannot invoke "java.util.List.iterator()" because "dtos" is null
+15-12-2022 17:51:43 : Exception java.lang.NullPointerException
+15-12-2022 18:14:46 : Exception null
+15-12-2022 18:15:55 : Exception null
+15-12-2022 18:17:25 : Exception null
+15-12-2022 18:19:00 : Exception 500 Internal Server Error: "Workout not found"
+15-12-2022 18:20:53 : Exception 500 Internal Server Error: "Workout not found"
+15-12-2022 18:22:05 : Exception 500 Internal Server Error: "Workout not found"
+15-12-2022 18:22:59 : Exception 500 Internal Server Error: "Workout not found"
+15-12-2022 18:23:59 : Exception 500 Internal Server Error: "Workout not found"
+15-12-2022 18:24:37 : Exception 500 Internal Server Error: "Object reference not set to an instance of an object."
+15-12-2022 18:28:49 : Exception 500 Internal Server Error: "Object reference not set to an instance of an object."
+15-12-2022 18:32:42 : Exception 500 Internal Server Error: "The entity type 'Task<WorkoutDTO>' was not found. Ensure that the entity type has been added to the model."
+15-12-2022 18:33:43 : Exception 500 Internal Server Error: "The property 'Workout.Id' has a temporary value while attempting to change the entity's state to 'Deleted'. Either set a permanent value explicitly, or ensure that the database is configured to generate values for this property."
+15-12-2022 18:35:09 : Exception 500 Internal Server Error: "The instance of entity type 'Workout' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked. When attaching existing entities, ensure that only one entity instance with a given key value is attached. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see the conflicting key values."
+15-12-2022 18:38:46 : Exception 500 Internal Server Error: "Workout not found"
+15-12-2022 18:38:46 : Exception 500 Internal Server Error: "Workout not found"
+15-12-2022 18:38:46 : Exception 500 Internal Server Error: "Workout not found"
+15-12-2022 18:38:47 : Exception 500 Internal Server Error: "Workout not found"
+15-12-2022 18:38:47 : Exception 500 Internal Server Error: "Workout not found"
+15-12-2022 18:38:47 : Exception 500 Internal Server Error: "Workout not found"
+15-12-2022 18:38:47 : Exception 500 Internal Server Error: "Workout not found"
+15-12-2022 18:45:39 : Exception 500 Internal Server Error: ""Workout not found""
+15-12-2022 18:46:17 : Exception 500 Internal Server Error: ""Workout not found""
+15-12-2022 18:47:37 : Exception 500 Internal Server Error: ""Workout not found""
+15-12-2022 18:54:49 : Exception 500 Internal Server Error: ""Workout not found""
+15-12-2022 18:55:45 : Exception 500 Internal Server Error: ""Workout not found""
+15-12-2022 18:57:26 : Exception 500 Internal Server Error: ""Workout not found""
+15-12-2022 19:00:31 : Exception 500 Internal Server Error: ""Workout not found""
+15-12-2022 19:01:28 : Exception 500 Internal Server Error: ""Workout not found""
+15-12-2022 19:02:45 : Exception Cannot invoke "java.util.List.iterator()" because the return value of "via.sep3.logicserver.shared.WorkoutModel.getExercises()" is null
+15-12-2022 19:03:43 : Exception Cannot invoke "java.util.List.iterator()" because the return value of "via.sep3.logicserver.shared.WorkoutModel.getExercises()" is null
+15-12-2022 19:04:44 : Exception Cannot invoke "java.util.List.iterator()" because the return value of "via.sep3.logicserver.shared.WorkoutModel.getExercises()" is null
+15-12-2022 19:06:04 : Exception Cannot invoke "java.util.List.iterator()" because the return value of "via.sep3.logicserver.shared.WorkoutModel.getExercises()" is null
+15-12-2022 19:11:18 : Exception 400 Bad Request: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-8648b524b01b0afcf197cd7f3ced2b90-51fb0f59b9ecab93-00","errors":{"followedWorkouts":["The followedWorkouts field is required."],"Exercises[0].Workout":["The Workout field is required."],"Exercises[0].Exercise":["The Exercise field is required."],"Exercises[1].Workout":["The Workout field is required."],"Exercises[1].Exercise":["The Exercise field is required."]}}"
+15-12-2022 19:17:06 : Exception 400 Bad Request: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-cf603cef4c2ee9ff30db53847f4f05ce-693bf05f275f5f60-00","errors":{"Exercises[0].Workout":["The Workout field is required."],"Exercises[0].Exercise":["The Exercise field is required."],"Exercises[1].Workout":["The Workout field is required."],"Exercises[1].Exercise":["The Exercise field is required."]}}"
+15-12-2022 19:18:36 : Exception 400 Bad Request: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-82a75d3a1bf6f0ee61ba494895b24b55-bd78dc4f15d9a79a-00","errors":{"Exercises[0].Workout":["The Workout field is required."],"Exercises[0].Exercise":["The Exercise field is required."]}}"
+15-12-2022 19:20:22 : Exception 400 Bad Request: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-487033a44e66ebafdca9ea932352879d-eb9708310f896aae-00","errors":{"Exercises[0].Workout":["The Workout field is required."],"Exercises[0].Exercise":["The Exercise field is required."]}}"

@@ -10,6 +10,7 @@ import com.google.protobuf.ByteString;
 import via.sep3.logicserver.protobuf.LoginCreateObject;
 import via.sep3.logicserver.protobuf.MemberObj;
 import via.sep3.logicserver.protobuf.Members;
+import via.sep3.logicserver.shared.Login;
 import via.sep3.logicserver.shared.LoginCreateDTO;
 import via.sep3.logicserver.shared.MemberDTO;
 
@@ -26,7 +27,21 @@ public class MemberConverter {
         return dto;
     }
 
+    public static Login convertToLogin(LoginCreateObject obj) {
+        Login dto = new Login();
+
+        dto.setUsername(obj.getUsername());
+
+        return dto;
+    }
+
     public static MemberObj convertToMemberObj(MemberDTO dto) {
+        if (dto.getPassword() == null && dto.getSalt() == null) {
+            byte[] temp = {};
+            dto.setPassword(temp);
+            dto.setSalt(temp);
+            ;
+        }
         return MemberObj.newBuilder()
                 .setId(dto.getId())
                 .setUsername(dto.getUsername())

@@ -42,10 +42,4 @@ public interface ExerciseObjOrBuilder extends
    * @return The duration.
    */
   int getDuration();
-
-  /**
-   * <code>int32 CreatedBy = 5;</code>
-   * @return The createdBy.
-   */
-  int getCreatedBy();
 }

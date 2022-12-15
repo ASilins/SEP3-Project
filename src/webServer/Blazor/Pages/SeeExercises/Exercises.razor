@@ -57,7 +57,7 @@
     List<ExerciseDTO> exercises = new List<ExerciseDTO>();
     ExerciseDTO selectedExercise = new ExerciseDTO();
 
-    protected async override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         exercises = await service.GetExercises();
     }
@@ -74,7 +74,7 @@
 
     void EditSelectedExercise()
     {
-        // Navigate to edit page for selected exercise
+        navMag.NavigateTo($"/edit-exercise/{selectedExercise.Id}");
     }
 
     async void RemoveSelectedExercise()

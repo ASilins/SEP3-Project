@@ -17,12 +17,6 @@ public class MemberClient : IMemberClient
         _tokens = tokens;
     }
 
-    //Remove
-    public string GetToken()
-    {
-        return _tokens.CreateToken();
-    }
-
     public async Task<MemberDTO> CreateMember(LoginCreateDTO dto)
     {
         using var channel = GrpcChannel.ForAddress(_url);
@@ -75,12 +69,12 @@ public class MemberClient : IMemberClient
     {
         using var channel = GrpcChannel.ForAddress(_url);
         client = new MemberService.MemberServiceClient(channel);
-    
+
         var reply = await client.getMembersAsync(new StringObj
         {
             Name = ""
         });
-    
+
         return MemberConverter.ConvertToMemberDTOList(reply.Members_);
     }
 }

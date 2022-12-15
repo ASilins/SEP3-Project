@@ -12,7 +12,6 @@ message ExerciseObj {
     string Name = 2;
     string Description = 3;
     int32 Duration = 4;
-    int32 CreatedBy = 5;
 }
 
 message Exercises {

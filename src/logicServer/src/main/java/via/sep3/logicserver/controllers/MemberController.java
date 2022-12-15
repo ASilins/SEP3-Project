@@ -33,7 +33,7 @@ public class MemberController extends MemberServiceImplBase {
 
             Logger.writeLog("--CreateMember request successful--", "info");
         } catch (Exception e) {
-            Logger.writeLog("Exception " + e.toString(), "error");
+            Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in MemberController>>");
             responseObserver.onError(e);
         }
@@ -51,7 +51,7 @@ public class MemberController extends MemberServiceImplBase {
 
             Logger.writeLog("--LoginMember request successful--", "info");
         } catch (Exception e) {
-            Logger.writeLog("Exception " + e.toString(), "error");
+            Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in MemberController>>");
             responseObserver.onError(e);
         }
@@ -69,7 +69,7 @@ public class MemberController extends MemberServiceImplBase {
 
             Logger.writeLog("--EditPrivilege request successful--", "info");
         } catch (Exception e) {
-            Logger.writeLog("Exception " + e.toString(), "error");
+            Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in MemberController>>");
             responseObserver.onError(e);
         }
@@ -87,7 +87,7 @@ public class MemberController extends MemberServiceImplBase {
 
             Logger.writeLog("--GetMembers request successful--", "info");
         } catch (Exception e) {
-            Logger.writeLog("Exception " + e.toString(), "error");
+            Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in MemberController>>");
             responseObserver.onError(e);
         }

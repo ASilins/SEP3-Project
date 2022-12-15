@@ -11,8 +11,7 @@ public static class ExerciseConverter
             Id = dto.Id,
             Name = dto.Name,
             Description = dto.Description,
-            Duration = dto.Duration,
-            CreatedBy = dto.CreatedBy
+            Duration = dto.Duration
         };
     }
 
@@ -23,8 +22,7 @@ public static class ExerciseConverter
             Id = obj.Id,
             Name = obj.Name,
             Description = obj.Description,
-            Duration = obj.Duration,
-            CreatedBy = obj.CreatedBy
+            Duration = obj.Duration
         };
     }
 
@@ -40,9 +38,11 @@ public static class ExerciseConverter
         return dtoList;
     }
 
-    public static List<ExerciseObj> ConvertToExerciseObjList(List<ExerciseDTO> dtoList)
+    public static List<ExerciseObj>? ConvertToExerciseObjList(List<ExerciseDTO> dtoList)
     {
         var objList = new List<ExerciseObj>();
+
+        if (dtoList == null) return null;
 
         foreach (var item in dtoList)
         {

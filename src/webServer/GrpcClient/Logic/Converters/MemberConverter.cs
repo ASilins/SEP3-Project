@@ -21,6 +21,7 @@ public static class MemberConverter
         {
             Username = obj.Username,
             Password = obj.Password.ToByteArray(),
+            Position = obj.Position,
             Salt = obj.Salt.ToByteArray()
         };
     }

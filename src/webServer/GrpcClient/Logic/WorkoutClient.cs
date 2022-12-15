@@ -24,14 +24,14 @@ public class WorkoutClient : IWorkoutClient
         return WorkoutConverter.ConvertToWorkoutDTO(reply);
     }
 
-    public async Task<IEnumerable<WorkoutDTO>> GetWorkouts()
+    public async Task<IEnumerable<WorkoutDTO>> GetWorkouts(int id)
     {
         using var channel = GrpcChannel.ForAddress(_url);
         client = new WorkoutService.WorkoutServiceClient(channel);
 
-        var reply = await client.GetWorkoutsAsync(new StringObj
+        var reply = await client.GetWorkoutsAsync(new IntObj
         {
-            Name = ""
+            Number = id
         });
 
         return WorkoutConverter.ConvertToWorkoutDTOList(reply.Workouts_);
@@ -54,13 +54,14 @@ public class WorkoutClient : IWorkoutClient
         using var channel = GrpcChannel.ForAddress(_url);
         client = new WorkoutService.WorkoutServiceClient(channel);
 
-        var reply = await client.EditWorkoutAsync(
+        await client.EditWorkoutAsync(
             WorkoutConverter.ConvertToWorkoutObj(workout)
         );
     }
 
     public async Task DeleteWorkout(int id)
     {
+        Console.WriteLine(id);
         using var channel = GrpcChannel.ForAddress(_url);
         client = new WorkoutService.WorkoutServiceClient(channel);
 

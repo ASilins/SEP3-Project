@@ -14,87 +14,37 @@ public class WorkoutService
         _client = client;
     }
 
-    public Task<WorkoutDTO> GetWorkout(int id)
+    public async Task<WorkoutDTO> GetWorkout(int id)
     {
-        // Temp for UI testing
-        return Task.FromResult(new WorkoutDTO()
+        HttpResponseMessage response = await _client.GetAsync($"/workout?w={id}");
+        string content = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
         {
-            Id = id,
-            Name = "workout",
-            Description = "sgshsfh",
-            DurationInMin = 100,
-            IsPublic = false,
-            Exercises = new List<ExerciseDTO>()
-            {
-                new ExerciseDTO() { Id = 4, Name = "sfs", Description = "sdfsee", Duration = 10},
-                new ExerciseDTO() { Id = 3, Name = "sfsfs", Description = "sdfseengmfdsg", Duration = 20},
-                new ExerciseDTO() { Id = 6, Name = "sfaas", Description = "sdfntrsgmysee", Duration = 10}
-            }
-        });
+            throw new Exception("Web server error with code: " + response.StatusCode);
+        }
 
-        // Real implementation
-
-        // HttpResponseMessage response = await _client.GetAsync($"/workout?w={id}");
-        // string content = await response.Content.ReadAsStringAsync();
-
-        // if (!response.IsSuccessStatusCode)
-        // {
-        //     throw new Exception("Web server error with code: " + response.StatusCode);
-        // }
-
-        // return JsonSerializer.Deserialize<WorkoutDTO>(content, new JsonSerializerOptions
-        // {
-        //     PropertyNameCaseInsensitive = true
-        // })!;
+        return JsonSerializer.Deserialize<WorkoutDTO>(content, new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        })!;
     }
 
-    public Task<List<WorkoutDTO>> GetWorkouts()
+    public async Task<List<WorkoutDTO>> GetWorkouts(int id)
     {
-        return Task.FromResult(new List<WorkoutDTO>()
+        HttpResponseMessage response = await _client.GetAsync($"/workouts?w={id}");
+        string content = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
         {
-            new WorkoutDTO()
-        {
-            Id = 1,
-            Name = "workout",
-            Description = "sgshsfh",
-            DurationInMin = 100,
-            IsPublic = false,
-            Exercises = new List<ExerciseDTO>()
-            {
-                new ExerciseDTO() { Id = 4, Name = "sfs", Description = "sdfsee", Duration = 10},
-                new ExerciseDTO() { Id = 3, Name = "sfsfs", Description = "sdfseengmfdsg", Duration = 20},
-                new ExerciseDTO() { Id = 6, Name = "sfaas", Description = "sdfntrsgmysee", Duration = 10}
-            }
-        },
-        new WorkoutDTO()
-        {
-            Id = 2,
-            Name = "workout",
-            Description = "sgshsfh",
-            DurationInMin = 100,
-            IsPublic = false,
-            Exercises = new List<ExerciseDTO>()
-            {
-                new ExerciseDTO() { Id = 4, Name = "sfs", Description = "sdfsee", Duration = 10},
-                new ExerciseDTO() { Id = 3, Name = "sfsfs", Description = "sdfseengmfdsg", Duration = 20},
-                new ExerciseDTO() { Id = 6, Name = "sfaas", Description = "sdfntrsgmysee", Duration = 10}
-            }
+            throw new Exception("Web server error with code: " + response.StatusCode);
         }
-        });
 
-        // HttpResponseMessage response = await _client.GetAsync("/workouts");
-        // string content = await response.Content.ReadAsStringAsync();
-
-        // if (!response.IsSuccessStatusCode)
-        // {
-        //     throw new Exception("Web server error with code: " + response.StatusCode);
-        // }
-
-        // return JsonSerializer.Deserialize<List<WorkoutDTO>>(
-        //     content, new JsonSerializerOptions
-        //     {
-        //         PropertyNameCaseInsensitive = true
-        //     })!;
+        return JsonSerializer.Deserialize<List<WorkoutDTO>>(
+            content, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            })!;
     }
 
     public async Task<FollowWorkoutDTO> AssignWorkout(FollowWorkoutDTO dto)

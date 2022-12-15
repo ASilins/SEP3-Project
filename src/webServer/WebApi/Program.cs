@@ -3,6 +3,8 @@ using GrpcClient.Interfaces;
 using GrpcClient.Logic;
 using GrpcClient.Logic.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Model.Tools;
 

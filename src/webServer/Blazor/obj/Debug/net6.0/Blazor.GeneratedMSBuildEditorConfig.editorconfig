@@ -50,6 +50,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlV29ya291dFxDcmVhdGVXb3Jrb3V0LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/45552/Desktop/VIA_UC/Semester3/SEP3-Project/src/webServer/Blazor/Pages/EditExercise/EditExercise.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEV4ZXJjaXNlXEVkaXRFeGVyY2lzZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45552/Desktop/VIA_UC/Semester3/SEP3-Project/src/webServer/Blazor/Pages/EditMember/EditMember.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdE1lbWJlclxFZGl0TWVtYmVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/45552/Desktop/VIA_UC/Semester3/SEP3-Project/src/webServer/Blazor/Pages/EditPrivilege/EditPrivilege.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFByaXZpbGVnZVxFZGl0UHJpdmlsZWdlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
@@ -72,6 +80,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/45552/Desktop/VIA_UC/Semester3/SEP3-Project/src/webServer/Blazor/Pages/SeeExercises/Exercises.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VlRXhlcmNpc2VzXEV4ZXJjaXNlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/45552/Desktop/VIA_UC/Semester3/SEP3-Project/src/webServer/Blazor/Pages/SeeMembers/Members.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VlTWVtYmVyc1xNZW1iZXJzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/45552/Desktop/VIA_UC/Semester3/SEP3-Project/src/webServer/Blazor/Pages/SeeWorkouts/Workouts.razor]

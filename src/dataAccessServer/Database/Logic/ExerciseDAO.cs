@@ -68,7 +68,7 @@ public class ExerciseDAO : IExerciseDAO
                 Name = item.Name,
                 Description = item.Description,
                 Duration = item.DurationInMin,
-                CreatedBy = (int?)_db.Entry(item).Property("AddedBy").CurrentValue
+                //CreatedBy = (int?)_db.Entry(item).Property("AddedBy").CurrentValue
             });
         }
 

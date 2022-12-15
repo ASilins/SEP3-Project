@@ -11,7 +11,11 @@
                 <input type="text" @bind="username" @bind:event="oninput" />
 
                 <label>Password:</label>
-                <input type="password" @bind="password" @bind:event="oninput">
+                <input type="password" @bind="password" @bind:event="oninput" />
+                @if (password.Length <= 7)
+                {
+                    <label style="color: #f00; font-style: oblique;">Password must contain no less than 8 characters!</label>
+                }
                 @if (!string.IsNullOrEmpty(resultmsg))
                 {
                     <label style="color: @colour">@resultmsg</label>
@@ -19,7 +23,7 @@
             </div>
             <div class="button-row">
                 <button @onclick="CreateMemberAsync"
-                    disabled="@(string.IsNullOrEmpty(username) && string.IsNullOrEmpty(password))"
+                    disabled="@(string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || password.Length <= 7)"
                     class="acceptbtn">Register</button>
             </div>
         </div>

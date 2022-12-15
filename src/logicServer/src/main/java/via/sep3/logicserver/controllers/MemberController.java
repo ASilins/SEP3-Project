@@ -89,7 +89,10 @@ public class MemberController extends MemberServiceImplBase {
 
             Logger.writeLog("--GetMembers request successful--", "info");
         } catch (Exception e) {
-
+            Logger.writeLog("Exception " + e.toString(), "error");
+        }
+    }
+    @Override
     public void deleteMember(IntObj obj, StreamObserver<StringObj> responseObserver){
         try {
             Logger.writeLog("<Received deleteWorkout request>", "info");

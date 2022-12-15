@@ -27,5 +27,6 @@
 
   <ItemGroup>
     <ProjectReference Include="../Model/Model.csproj" />
+    <ProjectReference Include="..\Blazor\Blazor.csproj" />
   </ItemGroup>
 </Project>

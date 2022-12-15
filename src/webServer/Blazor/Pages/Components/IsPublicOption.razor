@@ -5,9 +5,9 @@
     <Authorized>
 
         <label>This workout should be:</label>
-        <InputRadioGroup @bind="@_selectedValue">
-            <InputRadio @onclick="@SelectedOption" Value=true>Public</InputRadio>
-            <InputRadio @*@bind="@_selectedValue"*@ Value=false>Private</InputRadio>
+        <InputRadioGroup TValue="bool">
+            <InputRadio @bind="@_selectedValue" @onclick="@SelectedOption" Value=true>Public</InputRadio>
+            <InputRadio @bind="@_selectedValue" @onclick="@SelectedOption" Value=false>Private</InputRadio>
         </InputRadioGroup>
         
     </Authorized>

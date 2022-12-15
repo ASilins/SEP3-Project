@@ -13,38 +13,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29d7275f-bbf2-4230-ba8f-a95eb913ae70" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Blazor/Pages/SeeMembers/Members.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dataAccessServer/.idea/.idea.DataAccessServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/.idea/.idea.DataAccessServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Interfaces/IMemberDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Interfaces/IMemberDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/MemberDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/MemberDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dataAccessServer/WebAPI/Controllers/MemberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/WebAPI/Controllers/MemberController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/ExerciseDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/ExerciseDAO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/interfaces/MemberLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/interfaces/MemberLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/MemberLogicImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/MemberLogicImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/converters/MemberConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/converters/MemberConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MemberServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MemberServiceGrpc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MemberServiceOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/MemberServiceOuterClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/interfaces/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/interfaces/MemberDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/logic/MemberDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/logic/MemberDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/proto/MemberService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/proto/MemberService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WebServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blazor/Pages/CreateWorkout/CreateWorkout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/CreateWorkout/CreateWorkout.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blazor/Services/MemberService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Services/MemberService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Pages/Components/IsPublicOption.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/Components/IsPublicOption.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Pages/CreateMember/CreateMember.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/CreateMember/CreateMember.razor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/Interfaces/IMemberClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Interfaces/IMemberClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/Logic/MemberClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Logic/MemberClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/Protos/MemberService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Protos/MemberService.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/GrpcClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/Protos/MemberService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/Protos/MemberService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/Protos/MemberServiceGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/Protos/MemberServiceGrpc.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/ref/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/ref/GrpcClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/refint/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/Debug/net6.0/refint/GrpcClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GrpcClient/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/GrpcClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/GrpcClient.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Logic/WorkoutClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Logic/WorkoutClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/DTOs/WorkoutDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/DTOs/WorkoutDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/Tools/Logger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/Tools/Logger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/bin/Debug/net6.0/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/net6.0/Model.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/bin/Debug/net6.0/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/net6.0/Model.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/Controllers/ExerciseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Controllers/ExerciseController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApi/Controllers/MemberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Controllers/MemberController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/obj/Debug/net6.0/WebApi.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/Controllers/WorkoutController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Controllers/WorkoutController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,20 +54,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Blazor">
     <configuration name="Blazor" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/Blazor/Blazor.csproj" />
@@ -178,7 +168,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670756545285</updated>
-      <workItem from="1670756553359" duration="38603000" />
+      <workItem from="1670756553359" duration="45937000" />
     </task>
     <servers />
   </component>

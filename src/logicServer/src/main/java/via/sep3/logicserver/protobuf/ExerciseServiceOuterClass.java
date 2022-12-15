@@ -34,16 +34,15 @@ public final class ExerciseServiceOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\025ExerciseService.proto\032\021LogicServer.pro" +
-      "to\"a\n\013ExerciseObj\022\n\n\002Id\030\001 \001(\005\022\014\n\004Name\030\002 " +
+      "to\"N\n\013ExerciseObj\022\n\n\002Id\030\001 \001(\005\022\014\n\004Name\030\002 " +
       "\001(\t\022\023\n\013Description\030\003 \001(\t\022\020\n\010Duration\030\004 \001" +
-      "(\005\022\021\n\tCreatedBy\030\005 \001(\005\",\n\tExercises\022\037\n\tex" +
-      "ercises\030\001 \003(\0132\014.ExerciseObj2\270\001\n\017Exercise" +
-      "Service\022,\n\016CreateExercise\022\014.ExerciseObj\032" +
-      "\014.ExerciseObj\022&\n\014GetExercises\022\n.StringOb" +
-      "j\032\n.Exercises\022(\n\014EditExercise\022\014.Exercise" +
-      "Obj\032\n.StringObj\022%\n\016DeleteExercise\022\007.IntO" +
-      "bj\032\n.StringObjB!\n\035via.sep3.logicserver.p" +
-      "rotobufP\001b\006proto3"
+      "(\005\",\n\tExercises\022\037\n\texercises\030\001 \003(\0132\014.Exe" +
+      "rciseObj2\270\001\n\017ExerciseService\022,\n\016CreateEx" +
+      "ercise\022\014.ExerciseObj\032\014.ExerciseObj\022&\n\014Ge" +
+      "tExercises\022\n.StringObj\032\n.Exercises\022(\n\014Ed" +
+      "itExercise\022\014.ExerciseObj\032\n.StringObj\022%\n\016" +
+      "DeleteExercise\022\007.IntObj\032\n.StringObjB!\n\035v" +
+      "ia.sep3.logicserver.protobufP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -55,7 +54,7 @@ public final class ExerciseServiceOuterClass {
     internal_static_ExerciseObj_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ExerciseObj_descriptor,
-        new java.lang.String[] { "Id", "Name", "Description", "Duration", "CreatedBy", });
+        new java.lang.String[] { "Id", "Name", "Description", "Duration", });
     internal_static_Exercises_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Exercises_fieldAccessorTable = new

@@ -17,6 +17,7 @@ message WorkoutObj {
     int32 followedBy = 6;
     bool isPublic = 7;
     repeated ExerciseObj exercises = 8;
+    repeated AssignWorkoutObj followers = 9;
 }
 
 message Workouts {
@@ -29,7 +30,7 @@ message AssignWorkoutObj {
 }
 
 service WorkoutService {
-    rpc GetWorkouts(StringObj) returns(Workouts);
+    rpc GetWorkouts(IntObj) returns(Workouts);
     rpc GetWorkout(IntObj) returns(WorkoutObj);
     rpc AssignWorkout(AssignWorkoutObj) returns(AssignWorkoutObj);
     rpc EditWorkout(WorkoutObj) returns(StringObj);

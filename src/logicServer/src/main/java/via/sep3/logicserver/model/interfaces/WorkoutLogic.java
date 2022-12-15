@@ -8,11 +8,11 @@ public interface WorkoutLogic {
 
     WorkoutObj getWorkout(int id) throws Exception;
 
-    Workouts getWorkouts() throws Exception;
+    Workouts getWorkouts(int id) throws Exception;
 
     AssignWorkoutObj assignWorkout(AssignWorkoutObj dto) throws Exception;
 
-    WorkoutObj editWorkout(WorkoutObj workout) throws Exception;
+    void editWorkout(WorkoutObj workout) throws Exception;
 
     void deleteWorkout(int id) throws Exception;
 

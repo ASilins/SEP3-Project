@@ -3,7 +3,6 @@
 
 <AuthorizeView Roles="Member,Trainer,Admin">
     <Authorized>
-        <h1>Start Workout</h1>
         <div>
             <h2>@Workout.Name</h2>
             <p>@Workout.Description</p>
@@ -18,14 +17,18 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var exercise in Workout.Exercises)
+                @if (Workout.Exercises != null)
                 {
-                    <tr>
-                        <td>@exercise.Name</td>
-                        <td>@exercise.Description</td>
-                        <td>@exercise.Duration</td>
-                    </tr>
+                    foreach (var exercise in Workout.Exercises)
+                    {
+                        <tr>
+                            <td>@exercise.Name</td>
+                            <td>@exercise.Description</td>
+                            <td>@exercise.Duration</td>
+                        </tr>
+                    }
                 }
+
             </tbody>
         </table>
     </Authorized>
@@ -38,10 +41,14 @@
     [Parameter]
     public int id { get; set; }
 
-    private WorkoutDTO Workout { get; set; }
+    WorkoutDTO Workout = new WorkoutDTO()
+    {
+        Name = "",
+        Description = ""
+    };
 
 
-    protected async override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
         Workout = await service.GetWorkout(id);
     }

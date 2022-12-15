@@ -45,15 +45,19 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var exercise in workout.Exercises)
+                @if (workout.Exercises != null)
                 {
-                    <tr>
-                        <td>@exercise.Name</td>
-                        <td>@exercise.Description</td>
-                        <td>@exercise.Duration</td>
-                        <td><button @onclick="@(() => RemoveExercise(exercise))">Remove</button></td>
-                    </tr>
+                    foreach (var exercise in workout.Exercises)
+                    {
+                        <tr>
+                            <td>@exercise.Name</td>
+                            <td>@exercise.Description</td>
+                            <td>@exercise.Duration</td>
+                            <td><button @onclick="@(() => RemoveExercise(exercise))">Remove</button></td>
+                        </tr>
+                    }
                 }
+
             </tbody>
         </table>
         <button @onclick="() => showAddExerciseModal = true">Add Exercise</button>
@@ -88,7 +92,13 @@
 
     async void AddSelectedExercise(int id)
     {
-        var exercise = await ExerciseService.GetExercise(selectedExercise);
+        var exercise = new ExerciseDTO();
+        List<ExerciseDTO> dtos = await ExerciseService.GetExercises();
+        foreach (var item in dtos)
+        {
+            if (item.Id == id)
+                exercise = item;
+        }
         workout.Exercises.Add(exercise);
         showAddExerciseModal = false;
     }

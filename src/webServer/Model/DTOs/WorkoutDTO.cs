@@ -1,3 +1,5 @@
+using Shared.DTOs;
+
 namespace Model.DTOs;
 
 public class WorkoutDTO
@@ -13,5 +15,6 @@ public class WorkoutDTO
     public int CreatedBy { get; set; }
     public int FollowedBy { get; set; }
     public bool IsPublic { get; set; }
-    public List<ExerciseDTO> Exercises { get; set; }
+    public List<ExerciseDTO>? Exercises { get; set; }
+    public List<FollowWorkoutDTO>? Followers;
 }

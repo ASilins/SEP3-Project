@@ -3,21 +3,21 @@
 @inject NavigationManager NavigationManager;
 
 
-<AuthorizeView Roles="MemberDTO,Trainer,Admin">
+<AuthorizeView Roles="Member,Trainer,Admin">
     <Authorized>
         <h1>Create workout</h1>
         <div>
             <label>Name:</label>
-            <InputText @bind="@_workoutDto.Name"></InputText>
+            <input type="text" @bind="@_workoutDto.Name"></input>
             <label>Description:</label>
-            <InputTextArea @bind="@_workoutDto.Description"></InputTextArea>
-            <IsPublicOption @bind="IsPublic"/>
+            <input type="text" @bind="@_workoutDto.Description"></input>
+            <IsPublicOption _selectedValue="IsPublic" />
             <button @onclick="@CreateWorkoutAsync">Create</button>
         </div>
     </Authorized>
-<!------------------->    
+    <!------------------->
     <NotAuthorized>
-        <Login url="/createWorkout"/>
+        <Login url="/createWorkout" />
     </NotAuthorized>
 </AuthorizeView>
 
@@ -27,6 +27,7 @@
 
     async Task CreateWorkoutAsync()
     {
+        _workoutDto.IsPublic = IsPublic;
         await Service.CreateWorkout(_workoutDto);
         NavigationManager.NavigateTo("/workouts");
     }

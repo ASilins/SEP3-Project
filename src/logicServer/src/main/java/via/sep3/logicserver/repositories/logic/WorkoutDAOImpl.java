@@ -10,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 import via.sep3.logicserver.repositories.interfaces.WorkoutDAO;
 import via.sep3.logicserver.shared.FollowWorkoutDTO;
+import via.sep3.logicserver.shared.WorkoutModel;
 import via.sep3.logicserver.shared.WorkoutDTO;
 import via.sep3.logicserver.shared.Exceptions.DAOException;
 import via.sep3.logicserver.shared.Logger.Logger;
@@ -27,10 +28,10 @@ public class WorkoutDAOImpl implements WorkoutDAO {
     }
 
     @Override
-    public WorkoutDTO getWorkout(int id) throws Exception {
+    public WorkoutModel getWorkout(int id) throws Exception {
         Logger.writeLog("Sending request to DAO Server", "info");
         String uri = UriComponentsBuilder.fromHttpUrl(URI).queryParam("w", id).encode().toUriString();
-        ResponseEntity<WorkoutDTO> responseEntity = restTemplate.getForEntity(uri, WorkoutDTO.class);
+        ResponseEntity<WorkoutModel> responseEntity = restTemplate.getForEntity(uri, WorkoutModel.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
             throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
@@ -40,11 +41,11 @@ public class WorkoutDAOImpl implements WorkoutDAO {
     }
 
     @Override
-    public List<WorkoutDTO> GetWorkouts() throws Exception {
+    public List<WorkoutModel> GetWorkouts() throws Exception {
         Logger.writeLog("Sending request to DAO Server", "info");
-        ResponseEntity<List<WorkoutDTO>> responseEntity = restTemplate
+        ResponseEntity<List<WorkoutModel>> responseEntity = restTemplate
                 .exchange(URI + "s", HttpMethod.GET, null,
-                        new ParameterizedTypeReference<List<WorkoutDTO>>() {
+                        new ParameterizedTypeReference<List<WorkoutModel>>() {
                         });
         if (responseEntity.getStatusCode() != HttpStatus.OK) {
             throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
@@ -67,22 +68,18 @@ public class WorkoutDAOImpl implements WorkoutDAO {
     }
 
     @Override
-    public WorkoutDTO editWorkout(WorkoutDTO workout) throws Exception {
+    public void editWorkout(WorkoutModel workout) throws Exception {
         Logger.writeLog("Sending request to DAO Server", "info");
-        // return restTemplate
-        // .patchForObject(URI, workout, Workout.class);
 
-        final HttpEntity<WorkoutDTO> requestEntity = new HttpEntity<>(workout);
+        final HttpEntity<WorkoutModel> requestEntity = new HttpEntity<>(workout);
 
         ResponseEntity<WorkoutDTO> responseEntity = restTemplate
                 .exchange(URI, HttpMethod.PUT, requestEntity, new ParameterizedTypeReference<WorkoutDTO>() {
                 });
 
-        if (responseEntity.getStatusCode() != HttpStatus.OK) {
+        if (responseEntity.getStatusCode() != HttpStatus.NO_CONTENT) {
             throw new DAOException("DAO error code: " + responseEntity.getStatusCodeValue());
         }
-
-        return responseEntity.getBody();
     }
 
     @Override

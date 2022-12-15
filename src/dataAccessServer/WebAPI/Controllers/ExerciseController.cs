@@ -34,6 +34,24 @@ public class ExerciseController : ControllerBase
         }
     }
 
+    [HttpGet]
+    public async Task<ActionResult<ExerciseDTO>> GetExercise([FromQuery] int id)
+    {
+        try
+        {
+            Logger.WriteLog("<Received GetExercise request>", "info");
+
+            return Ok(await _dao.GetExercise(id));
+
+        }
+        catch (Exception e)
+        {
+            Logger.WriteLog("Exception " + e.ToString(), "error");
+            Console.WriteLine("ERROR");
+            return StatusCode(500, e.Message);
+        }
+    }
+
     [HttpGet, Route("/[controller]s")]
     public async Task<ActionResult<IEnumerable<ExerciseDTO>>> GetExercises()
     {
@@ -52,7 +70,7 @@ public class ExerciseController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<ObjectResult> EditExercise([FromBody] ExerciseDTO dto)
+    public async Task<ActionResult> EditExercise([FromBody] ExerciseDTO dto)
     {
         try
         {
@@ -60,7 +78,7 @@ public class ExerciseController : ControllerBase
 
             await _dao.EditExercise(dto);
 
-            return StatusCode(204, "");
+            return NoContent();
         }
         catch (Exception e)
         {
@@ -71,7 +89,7 @@ public class ExerciseController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<ObjectResult> DeleteExercise([FromQuery] int id)
+    public async Task<ActionResult> DeleteExercise([FromQuery] int id)
     {
         try
         {
@@ -79,7 +97,7 @@ public class ExerciseController : ControllerBase
 
             await _dao.DeleteExercise(id);
 
-            return StatusCode(204, "");
+            return NoContent();
         }
         catch (Exception e)
         {

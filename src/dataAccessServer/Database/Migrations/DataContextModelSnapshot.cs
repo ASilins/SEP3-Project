@@ -49,9 +49,6 @@ namespace Database.Migrations
                     b.Property<int?>("WorkoutId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Id")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("ExerciseId", "WorkoutId");
 
                     b.HasIndex("WorkoutId");
@@ -65,9 +62,6 @@ namespace Database.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("WorkoutId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Id")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("UserId", "WorkoutId");
@@ -111,9 +105,7 @@ namespace Database.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("CreatedBy")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasDefaultValue(0);
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -122,22 +114,19 @@ namespace Database.Migrations
                     b.Property<int>("DurationInMin")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("FollowedBy")
+                    b.Property<bool>("IsPublic")
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("IsPublic")
+                    b.Property<int?>("MemberId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("NumberOfExercises")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("CreatedBy");
+                    b.HasIndex("MemberId");
 
                     b.ToTable("Workouts");
                 });
@@ -182,11 +171,9 @@ namespace Database.Migrations
 
             modelBuilder.Entity("Shared.Model.Workout", b =>
                 {
-                    b.HasOne("Shared.Model.Member", "User")
+                    b.HasOne("Shared.Model.Member", null)
                         .WithMany("CreatedWorkouts")
-                        .HasForeignKey("CreatedBy");
-
-                    b.Navigation("User");
+                        .HasForeignKey("MemberId");
                 });
 
             modelBuilder.Entity("Shared.Model.Exercise", b =>

@@ -1,15 +1,12 @@
 package via.sep3.logicserver.model.logic;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import via.sep3.logicserver.model.interfaces.ExerciseLogic;
 import via.sep3.logicserver.model.logic.converters.ExerciseConverter;
 import via.sep3.logicserver.protobuf.ExerciseObj;
 import via.sep3.logicserver.protobuf.Exercises;
 import via.sep3.logicserver.repositories.interfaces.ExerciseDAO;
 import via.sep3.logicserver.repositories.logic.ExerciseDAOImpl;
-import via.sep3.logicserver.shared.ExerciseDTO;
 
 @Service
 public class ExerciseLogicImpl implements ExerciseLogic {

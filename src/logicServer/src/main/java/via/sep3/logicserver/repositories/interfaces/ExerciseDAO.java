@@ -7,6 +7,8 @@ import via.sep3.logicserver.shared.ExerciseDTO;
 public interface ExerciseDAO {
     ExerciseDTO createExercise(ExerciseDTO exercise) throws Exception;
 
+    ExerciseDTO getExercise(int id) throws Exception;
+
     List<ExerciseDTO> getExercises() throws Exception;
 
     void editExercise(ExerciseDTO dto) throws Exception;

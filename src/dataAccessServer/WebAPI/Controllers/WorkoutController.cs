@@ -18,43 +18,13 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<ActionResult<WorkoutDTO>> GetWorkout([FromQuery] int id)
+    public async Task<ActionResult<WorkoutDTO>> GetWorkout([FromQuery] int w)
     {
         try
         {
             Logger.WriteLog("<Received GetWorkout request>", "info");
 
-            Workout? w = await _dao.GetWorkout(id);
-
-            if (w == null)
-            {
-                return StatusCode(404);
-            }
-
-            var dto = new WorkoutDTO()
-            {
-                Id = w.Id,
-                Name = w.Name,
-                Description = w.Description,
-                DurationInMin = w.DurationInMin,
-                FollowedBy = w.FollowedBy,
-                IsPublic = w.IsPublic
-            };
-
-            var exercises = new List<ExerciseDTO>();
-
-            // foreach (var item in (List<Exercise>)w.Exercises)
-            // {
-            //     exercises.Add(new ExerciseDTO()
-            //     {
-            //         Id = item.Id,
-            //         Name = item.Name,
-            //         Description = item.Description,
-            //         Duration = item.DurationInMin
-            //     });
-            // }
-
-            dto.Exercises = exercises;
+            WorkoutDTO dto = await _dao.GetWorkout(w);
 
             return Ok(dto);
         }
@@ -101,15 +71,16 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<ActionResult<WorkoutDTO>> EditWorkout([FromBody] WorkoutDTO workout)
+    public async Task<ActionResult<WorkoutDTO>> EditWorkout([FromBody] Workout workout)
     {
         try
         {
             Logger.WriteLog("<Received EditWorkout request>", "info");
 
+            await _dao.EditExercisesInWorkout(workout);
             await _dao.EditWorkout(workout);
 
-            return Ok();
+            return NoContent();
         }
         catch (Exception e)
         {
@@ -139,11 +110,11 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpPost, Route("/[controller]/create")]
-    public async Task<ActionResult<IEnumerable<Workout>>> CreateWorkout([FromBody] Workout workout)
+    public async Task<ActionResult<IEnumerable<Workout>>> CreateWorkout([FromBody] WorkoutDTO workout)
     {
         try
         {
-            Workout created = await _dao.CreateWorkout(workout);
+            WorkoutDTO created = await _dao.CreateWorkout(workout);
             return Created("Workout created", created);
         }
         catch (Exception e)

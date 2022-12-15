@@ -1,6 +1,7 @@
 @page "/workouts"
 @inject WorkoutService service;
 @inject NavigationManager navManager;
+@inject AuthenticationStateProvider AuthenticationStateProvider
 
 <AuthorizeView>
     <Authorized>
@@ -54,10 +55,14 @@
     List<WorkoutDTO> workouts = new List<WorkoutDTO>();
     WorkoutDTO? selectedWorkout;
     bool AreButtonsDisabled => selectedWorkout == null;
-
-    protected async override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        workouts = await service.GetWorkouts();
+        await GetWorkoutsAsync();
+    }
+
+    async Task GetWorkoutsAsync()
+    {
+        workouts = await service.GetWorkouts(0);
     }
 
     void SelectWorkout(WorkoutDTO workout)
@@ -67,7 +72,7 @@
 
     void CreateWorkout()
     {
-        // Implement create
+        navManager.NavigateTo("/createWorkout");
     }
 
     void EditSelectedWorkout()
@@ -75,10 +80,11 @@
         navManager.NavigateTo($"/edit-workout/{selectedWorkout.Id}");
     }
 
-    async void RemoveSelectedWorkout()
+    async Task RemoveSelectedWorkout()
     {
         await service.DeleteWorkout(selectedWorkout.Id);
-        workouts = await service.GetWorkouts();
+        await GetWorkoutsAsync();
+        selectedWorkout = new WorkoutDTO();
     }
 
     void StartSelectedWorkout()

@@ -84,4 +84,28 @@ public interface WorkoutObjOrBuilder extends
    */
   via.sep3.logicserver.protobuf.ExerciseObjOrBuilder getExercisesOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .AssignWorkoutObj followers = 9;</code>
+   */
+  java.util.List<via.sep3.logicserver.protobuf.AssignWorkoutObj> 
+      getFollowersList();
+  /**
+   * <code>repeated .AssignWorkoutObj followers = 9;</code>
+   */
+  via.sep3.logicserver.protobuf.AssignWorkoutObj getFollowers(int index);
+  /**
+   * <code>repeated .AssignWorkoutObj followers = 9;</code>
+   */
+  int getFollowersCount();
+  /**
+   * <code>repeated .AssignWorkoutObj followers = 9;</code>
+   */
+  java.util.List<? extends via.sep3.logicserver.protobuf.AssignWorkoutObjOrBuilder> 
+      getFollowersOrBuilderList();
+  /**
+   * <code>repeated .AssignWorkoutObj followers = 9;</code>
+   */
+  via.sep3.logicserver.protobuf.AssignWorkoutObjOrBuilder getFollowersOrBuilder(
+      int index);
 }

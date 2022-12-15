@@ -75,4 +75,16 @@ public class ExerciseDAOImpl implements ExerciseDAO {
         restTemplate.delete(uri);
     }
 
+    @Override
+    public ExerciseDTO getExercise(int id) throws Exception {
+        String uri = UriComponentsBuilder.fromHttpUrl(URI).queryParam("w", id).encode().toUriString();
+        ResponseEntity<ExerciseDTO> responseEntity = restTemplate.getForEntity(uri, ExerciseDTO.class);
+
+        if (responseEntity.getStatusCode() != HttpStatus.OK) {
+            throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
+        }
+
+        return responseEntity.getBody();
+    }
+
 }

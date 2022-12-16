@@ -36,6 +36,7 @@
       <change beforePath="$PROJECT_DIR$/WebApi/Controllers/WorkoutController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Controllers/WorkoutController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Program.cs" afterDir="false" />
     </list>
+    <list default="true" id="29d7275f-bbf2-4230-ba8f-a95eb913ae70" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,7 +169,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670756545285</updated>
-      <workItem from="1670756553359" duration="45937000" />
+      <workItem from="1670756553359" duration="46405000" />
     </task>
     <servers />
   </component>

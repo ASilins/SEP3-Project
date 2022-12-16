@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Database.Migrations
 {
-    public partial class InitialCreation : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -49,17 +49,16 @@ namespace Database.Migrations
                     Name = table.Column<string>(type: "TEXT", nullable: false),
                     Description = table.Column<string>(type: "TEXT", nullable: false),
                     DurationInMin = table.Column<int>(type: "INTEGER", nullable: false),
-                    NumberOfExercises = table.Column<int>(type: "INTEGER", nullable: false),
-                    FollowedBy = table.Column<int>(type: "INTEGER", nullable: false),
                     IsPublic = table.Column<bool>(type: "INTEGER", nullable: false),
-                    CreatedBy = table.Column<int>(type: "INTEGER", nullable: false, defaultValue: 0)
+                    CreatedBy = table.Column<int>(type: "INTEGER", nullable: false),
+                    MemberId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Workouts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Workouts_Users_CreatedBy",
-                        column: x => x.CreatedBy,
+                        name: "FK_Workouts_Users_MemberId",
+                        column: x => x.MemberId,
                         principalTable: "Users",
                         principalColumn: "Id");
                 });
@@ -69,8 +68,7 @@ namespace Database.Migrations
                 columns: table => new
                 {
                     ExerciseId = table.Column<int>(type: "INTEGER", nullable: false),
-                    WorkoutId = table.Column<int>(type: "INTEGER", nullable: false),
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    WorkoutId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -94,8 +92,7 @@ namespace Database.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<int>(type: "INTEGER", nullable: false),
-                    WorkoutId = table.Column<int>(type: "INTEGER", nullable: false),
-                    Id = table.Column<int>(type: "INTEGER", nullable: false)
+                    WorkoutId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -125,9 +122,9 @@ namespace Database.Migrations
                 column: "WorkoutId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Workouts_CreatedBy",
+                name: "IX_Workouts_MemberId",
                 table: "Workouts",
-                column: "CreatedBy");
+                column: "MemberId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

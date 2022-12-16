@@ -91,7 +91,7 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpDelete]
-    public async Task<ActionResult<int>> DeleteWorkout([FromQuery] int id)
+    public async Task<ActionResult> DeleteWorkout([FromQuery] int id)
     {
         try
         {
@@ -110,7 +110,7 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpPost, Route("create")]
-    public async Task<ActionResult<IEnumerable<Workout>>> CreateWorkout([FromBody] WorkoutDTO workout)
+    public async Task<ActionResult<Workout>> CreateWorkout([FromBody] WorkoutDTO workout)
     {
         try
         {

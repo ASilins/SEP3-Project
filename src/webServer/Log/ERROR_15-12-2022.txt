@@ -1,9 +1,0 @@
-15/12/2022 19:17:06 : Exception Grpc.Core.RpcException: Status(StatusCode="Unknown", Detail="")
-   at GrpcClient.Logic.WorkoutClient.EditWorkout(WorkoutDTO workout) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\Logic\WorkoutClient.cs:line 57
-   at WebApi.Controllers.WorkoutController.EditWorkout(WorkoutDTO workout) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\Controllers\WorkoutController.cs:line 79
-15/12/2022 19:18:36 : Exception Grpc.Core.RpcException: Status(StatusCode="Unknown", Detail="")
-   at GrpcClient.Logic.WorkoutClient.EditWorkout(WorkoutDTO workout) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\Logic\WorkoutClient.cs:line 57
-   at WebApi.Controllers.WorkoutController.EditWorkout(WorkoutDTO workout) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\Controllers\WorkoutController.cs:line 79
-15/12/2022 19:20:22 : Exception Grpc.Core.RpcException: Status(StatusCode="Unknown", Detail="")
-   at GrpcClient.Logic.WorkoutClient.EditWorkout(WorkoutDTO workout) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\GrpcClient\Logic\WorkoutClient.cs:line 57
-   at WebApi.Controllers.WorkoutController.EditWorkout(WorkoutDTO workout) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\webServer\WebApi\Controllers\WorkoutController.cs:line 79

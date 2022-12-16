@@ -8,30 +8,6 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="584c35d5-69bf-496e-9bc9-ba8d37304368" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DataAccessServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DataAccessServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Database/Logic/ExerciseDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Database/Logic/ExerciseDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/MemberController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/.idea/.idea.WebServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/.idea/.idea.WebServer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/Pages/Components/IsPublicOption.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/Pages/Components/IsPublicOption.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/Pages/CreateMember/CreateMember.razor" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/Pages/CreateMember/CreateMember.razor" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/obj/Debug/net6.0/Blazor.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/obj/Debug/net6.0/Blazor.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/obj/Debug/net6.0/Blazor.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/obj/Debug/net6.0/Blazor.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/obj/Debug/net6.0/Blazor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/obj/Debug/net6.0/Blazor.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/GrpcClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/GrpcClient.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/Logic/WorkoutClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/Logic/WorkoutClient.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/Model/DTOs/WorkoutDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Model/DTOs/WorkoutDTO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/Model/Tools/Logger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Model/Tools/Logger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/Model/bin/Debug/net6.0/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Model/bin/Debug/net6.0/Model.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/Model/bin/Debug/net6.0/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Model/bin/Debug/net6.0/Model.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/WebApi/Controllers/ExerciseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/WebApi/Controllers/ExerciseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/WebApi/Controllers/MemberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/WebApi/Controllers/MemberController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/WebApi/Controllers/WorkoutController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/WebApi/Controllers/WorkoutController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../webServer/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/WebApi/Program.cs" afterDir="false" />
-    </list>
     <list default="true" id="584c35d5-69bf-496e-9bc9-ba8d37304368" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

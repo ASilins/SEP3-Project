@@ -50,7 +50,7 @@ public class WorkoutDAO : IWorkoutDAO
 
         foreach (var item in _db.Workouts.ToList())
         {
-            WorkoutDTO dto = new WorkoutDTO()
+            WorkoutDTO dto = new()
             {
                 Id = item.Id,
                 Name = item.Name,

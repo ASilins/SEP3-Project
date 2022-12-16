@@ -56,7 +56,7 @@ public class ExerciseController : ControllerBase
     }
 
     [HttpPut, Authorize(Roles = "Trainer,Admin")]
-    public async Task<ObjectResult> EditExercise([FromBody] ExerciseDTO dto)
+    public async Task<ActionResult> EditExercise([FromBody] ExerciseDTO dto)
     {
         try
         {
@@ -64,7 +64,7 @@ public class ExerciseController : ControllerBase
 
             await _client.EditExercise(dto);
 
-            return StatusCode(204, "");
+            return NoContent();
         }
         catch (Exception e)
         {
@@ -75,7 +75,7 @@ public class ExerciseController : ControllerBase
     }
 
     [HttpDelete, Authorize(Roles = "Admin")]
-    public async Task<ObjectResult> DeleteExercise([FromQuery] int id)
+    public async Task<ActionResult> DeleteExercise([FromQuery] int id)
     {
         try
         {
@@ -83,7 +83,7 @@ public class ExerciseController : ControllerBase
 
             await _client.DeleteExercise(id);
 
-            return StatusCode(204, "");
+            return NoContent();
         }
         catch (Exception e)
         {

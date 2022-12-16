@@ -10,7 +10,7 @@ using Model.Tools;
 namespace WebApi.Controllers;
 
 [ApiController]
-[Route("/[controller]")]
+[Route("/api/[controller]")]
 public class MemberController : ControllerBase
 {
     private readonly IMemberClient _client;
@@ -20,7 +20,7 @@ public class MemberController : ControllerBase
         _client = client;
     }
 
-    [HttpPost("/[controller]/create"), AllowAnonymous]
+    [HttpPost("create"), AllowAnonymous]
     public async Task<ActionResult<MemberDTO>> CreateMember([FromBody] LoginCreateDTO member)
     {
         try
@@ -38,15 +38,20 @@ public class MemberController : ControllerBase
         }
     }
 
-    [HttpPost("/[controller]/login"), AllowAnonymous]
-    public async Task<ActionResult<string>> LoginMember([FromBody] LoginCreateDTO member)
+    [HttpPost("login"), AllowAnonymous]
+    public async Task<ActionResult<LoginDTO>> LoginMember([FromBody] LoginCreateDTO member)
     {
         try
         {
             Logger.WriteLog("<Received LoginMember request>", "info");
 
             string loggedIn = await _client.LoginMember(member);
-            return Created("User logged in", loggedIn);
+            LoginDTO dto = new()
+            {
+                Token = loggedIn
+            };
+
+            return Created("User logged in", dto);
         }
         catch (Exception e)
         {

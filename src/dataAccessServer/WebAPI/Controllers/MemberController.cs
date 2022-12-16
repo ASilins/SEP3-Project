@@ -62,7 +62,7 @@ public class MemberController : ControllerBase
 
 
     [HttpPost]
-    [Route("/[controller]/getById")]
+    [Route("/api/[controller]/getById")]
     public async Task<ActionResult<MemberDTO>> GetById([FromBody] int id)
     {
         try
@@ -92,7 +92,7 @@ public class MemberController : ControllerBase
 
             await dao.EditMember(memberDto);
 
-            return Ok();
+            return NoContent();
         }
         catch (Exception e)
         {
@@ -102,7 +102,7 @@ public class MemberController : ControllerBase
         }
     }
 
-    [HttpGet, Route("/[controller]s")]
+    [HttpGet, Route("/api/[controller]s")]
     public async Task<ActionResult<IEnumerable<MemberDTO>>> GetMembers()
     {
         try

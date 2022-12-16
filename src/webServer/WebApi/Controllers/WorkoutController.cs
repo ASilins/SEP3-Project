@@ -11,7 +11,7 @@ using Shared.DTOs;
 namespace WebApi.Controllers;
 
 [ApiController]
-[Route("/[controller]")]
+[Route("/api/[controller]")]
 public class WorkoutController : ControllerBase
 {
     private readonly IWorkoutClient _client;
@@ -38,7 +38,7 @@ public class WorkoutController : ControllerBase
         }
     }
 
-    [HttpGet("/[controller]s"), Authorize(Roles = "Member,Trainer,Admin")]
+    [HttpGet("/api/[controller]s"), Authorize(Roles = "Member,Trainer,Admin")]
     public async Task<ActionResult<IEnumerable<WorkoutDTO>>> GetWorkouts([FromQuery] int id)
     {
         try
@@ -55,7 +55,7 @@ public class WorkoutController : ControllerBase
         }
     }
 
-    [HttpPost("/[controller]/assign"), Authorize(Roles = "Member,Trainer,Admin")]
+    [HttpPost("assign"), Authorize(Roles = "Member,Trainer,Admin")]
     public async Task<ActionResult<FollowWorkoutDTO>> AssignWorkout([FromBody] FollowWorkoutDTO dto)
     {
         try
@@ -93,7 +93,6 @@ public class WorkoutController : ControllerBase
     [HttpDelete, Authorize(Roles = "Member,Trainer,Admin")]
     public async Task<ActionResult<WorkoutDTO>> DeleteWorkout([FromQuery] int w)
     {
-        Console.WriteLine(w);
         try
         {
             Logger.WriteLog("<Received DeleteWorkout request>", "info");
@@ -109,7 +108,7 @@ public class WorkoutController : ControllerBase
         }
     }
 
-    [HttpPost("/[controller]/create")]
+    [HttpPost("create")]
     public async Task<ActionResult<WorkoutDTO>> CreateWorkout([FromBody] WorkoutDTO workoutDto)
     {
         try

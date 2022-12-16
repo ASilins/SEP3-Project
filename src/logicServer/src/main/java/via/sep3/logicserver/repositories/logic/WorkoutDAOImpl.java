@@ -20,7 +20,7 @@ import java.util.List;
 @Repository
 public class WorkoutDAOImpl implements WorkoutDAO {
 
-    private final String URI = "https://localhost:7057/workout";
+    private final String URI = "https://localhost:7057/api/workout";
     private RestTemplate restTemplate;
 
     public WorkoutDAOImpl(RestTemplate restTemplate) {

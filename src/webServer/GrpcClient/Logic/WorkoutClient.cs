@@ -64,7 +64,6 @@ public class WorkoutClient : IWorkoutClient
 
     public async Task DeleteWorkout(int id)
     {
-        Console.WriteLine(id);
         using var channel = GrpcChannel.ForAddress(_url);
         client = new WorkoutService.WorkoutServiceClient(channel);
 

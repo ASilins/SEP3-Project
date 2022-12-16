@@ -90,7 +90,8 @@ public class MemberDAO : IMemberDAO
             Id = memberOld.Id,
             Username = memberOld.Username,
             HashedPassword = memberOld.HashedPassword,
-            Position = memberOld.Position
+            Salt = memberOld.Salt,
+            Position = memberDto.Position
         };
 
         _db.Users.Update(member);

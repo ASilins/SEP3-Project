@@ -18,7 +18,7 @@ public class MemberService
 
     public async Task CreateMember(MemberDTO member)
     {
-        HttpResponseMessage response = await _client.PostAsJsonAsync("/member/create", member);
+        HttpResponseMessage response = await _client.PostAsJsonAsync("/api/member/create", member);
         string result = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
@@ -28,7 +28,7 @@ public class MemberService
 
     public async Task LoginMember(MemberDTO member)
     {
-        HttpResponseMessage response = await _client.PostAsJsonAsync("/member/login", member);
+        HttpResponseMessage response = await _client.PostAsJsonAsync("/api/member/login", member);
         string result = await response.Content.ReadAsStringAsync();
 
         if (!response.IsSuccessStatusCode)
@@ -36,7 +36,13 @@ public class MemberService
             throw new Exception(result + ">>>" + response.StatusCode);
         }
 
-        await _localStorage.SetItemAsync("token", result);
+        LoginDTO dto = JsonSerializer.Deserialize<LoginDTO>(
+            result, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            })!;
+
+        await _localStorage.SetItemAsync("token", dto.Token);
     }
 
     public async Task EditMember(MemberDTO member)
@@ -46,7 +52,7 @@ public class MemberService
 
     public async Task<List<MemberDTO>> GetMembers()
     {
-        HttpResponseMessage response = await _client.GetAsync("/Members");
+        HttpResponseMessage response = await _client.GetAsync("/api/Members");
         string content = await response.Content.ReadAsStringAsync();
 
         if (!response.IsSuccessStatusCode)
@@ -64,6 +70,6 @@ public class MemberService
 
     public async Task DeleteMember(int id)
     {
-        await _client.DeleteAsync("/member?w=" + id);
+        await _client.DeleteAsync("/api/member?w=" + id);
     }
 }

@@ -19,7 +19,7 @@ import via.sep3.logicserver.shared.Logger.Logger;
 @Service
 public class ExerciseDAOImpl implements ExerciseDAO {
 
-    private final String URI = "https://localhost:7057/exercise";
+    private final String URI = "https://localhost:7057/api/exercise";
     private RestTemplate restTemplate;
 
     public ExerciseDAOImpl(RestTemplate restTemplate) {

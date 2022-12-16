@@ -1,5 +1,6 @@
 @page "/start-workout/{id:int}"
 @inject WorkoutService service
+@inject NavigationManager navMag
 
 <AuthorizeView Roles="Member,Trainer,Admin">
     <Authorized>
@@ -31,6 +32,7 @@
 
             </tbody>
         </table>
+        <button @onclick="EndWorkout">End Workout</button>
     </Authorized>
     <NotAuthorized>
         <Login url="/start-workout/{id}" />
@@ -51,5 +53,10 @@
     protected override async Task OnInitializedAsync()
     {
         Workout = await service.GetWorkout(id);
+    }
+
+    void EndWorkout()
+    {
+        navMag.NavigateTo("/workouts", true);
     }
 }

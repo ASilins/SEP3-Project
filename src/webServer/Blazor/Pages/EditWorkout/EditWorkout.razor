@@ -90,7 +90,7 @@
         workout.Exercises.Remove(exercise);
     }
 
-    async void AddSelectedExercise(int id)
+    async Task AddSelectedExercise(int id)
     {
         var exercise = new ExerciseDTO();
         List<ExerciseDTO> dtos = await ExerciseService.GetExercises();

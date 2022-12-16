@@ -34,6 +34,7 @@ public class MemberController extends MemberServiceImplBase {
 
             Logger.writeLog("--CreateMember request successful--", "info");
         } catch (Exception e) {
+            e.printStackTrace();
             Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in MemberController>>");
             responseObserver.onError(e);
@@ -52,6 +53,7 @@ public class MemberController extends MemberServiceImplBase {
 
             Logger.writeLog("--LoginMember request successful--", "info");
         } catch (Exception e) {
+            e.printStackTrace();
             Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in MemberController>>");
             responseObserver.onError(e);
@@ -70,6 +72,7 @@ public class MemberController extends MemberServiceImplBase {
 
             Logger.writeLog("--EditPrivilege request successful--", "info");
         } catch (Exception e) {
+            e.printStackTrace();
             Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in MemberController>>");
             responseObserver.onError(e);
@@ -89,13 +92,15 @@ public class MemberController extends MemberServiceImplBase {
 
             Logger.writeLog("--GetMembers request successful--", "info");
         } catch (Exception e) {
+            e.printStackTrace();
             Logger.writeLog("Exception " + e.toString(), "error");
             System.out.println("<<Exception in MemberController>>");
             responseObserver.onError(e);
         }
     }
+
     @Override
-    public void deleteMember(IntObj obj, StreamObserver<StringObj> responseObserver){
+    public void deleteMember(IntObj obj, StreamObserver<StringObj> responseObserver) {
         try {
             Logger.writeLog("<Received deleteWorkout request>", "info");
 
@@ -105,7 +110,8 @@ public class MemberController extends MemberServiceImplBase {
             responseObserver.onCompleted();
 
             Logger.writeLog("--deleteMember request SUCCESSFUL--", "info");
-        } catch (Exception e){
+        } catch (Exception e) {
+            e.printStackTrace();
             Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in MemberController>>");
             responseObserver.onError(e);

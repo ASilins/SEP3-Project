@@ -6,7 +6,7 @@ using Shared.Tools;
 namespace WebAPI.Controllers;
 
 [ApiController]
-[Route("/[controller]")]
+[Route("/api/[controller]")]
 public class ExerciseController : ControllerBase
 {
     private readonly IExerciseDAO _dao;
@@ -52,7 +52,7 @@ public class ExerciseController : ControllerBase
         }
     }
 
-    [HttpGet, Route("/[controller]s")]
+    [HttpGet, Route("/api/[controller]s")]
     public async Task<ActionResult<IEnumerable<ExerciseDTO>>> GetExercises()
     {
         try

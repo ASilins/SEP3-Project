@@ -1,0 +1,18 @@
+16-12-2022 02:00:31 : Exception I/O error on GET request for "https://localhost:7057/workout": Read timed out; nested exception is java.net.SocketTimeoutException: Read timed out
+16-12-2022 02:04:42 : Exception 404 Not Found: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"00-b043f5f2d6c2c2d6e0291e01efea72b2-ea86d7db8497ad9d-00"}"
+16-12-2022 02:06:28 : Exception 404 Not Found: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"00-ada869f15b3a46dd160b3f80fc1d49ee-260d34ddfc3c228a-00"}"
+16-12-2022 02:08:11 : Exception 404 Not Found: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"00-f5e4e9d5b33583c264bc8aa313a47b2c-56cb9c11e5742f19-00"}"
+16-12-2022 02:09:21 : Exception 404 Not Found: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.4","title":"Not Found","status":404,"traceId":"00-f5f6ecd3c692f73215ca2f8cc43305b1-d5328650cad3c6d8-00"}"
+16-12-2022 03:49:02 : Exception 500 Internal Server Error: ""An error occurred while saving the entity changes. See the inner exception for details.""
+16-12-2022 03:50:29 : Exception 500 Internal Server Error: ""An error occurred while saving the entity changes. See the inner exception for details.""
+16-12-2022 03:57:11 : Exception 500 Internal Server Error: ""An error occurred while saving the entity changes. See the inner exception for details.""
+16-12-2022 03:58:05 : Exception Cannot invoke "via.sep3.logicserver.shared.MemberDTO.getPassword()" because "dto" is null
+16-12-2022 04:04:35 : Exception DAO error code:200
+16-12-2022 04:47:19 : Exception org.springframework.web.client.ResourceAccessException: I/O error on POST request for "https://localhost:7057/workout/create": Connect to localhost:7057 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information; nested exception is org.apache.http.conn.HttpHostConnectException: Connect to localhost:7057 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information
+16-12-2022 04:50:57 : Exception null
+16-12-2022 05:19:01 : Exception 500 Internal Server Error: "Workout not found"
+16-12-2022 05:19:51 : Exception 400 Bad Request: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-0075c770d7b1f738d2372a159bd2d23e-8feeadebddea6a60-00","errors":{"Exercises[0].Workout":["The Workout field is required."],"Exercises[0].Exercise":["The Exercise field is required."]}}"
+16-12-2022 05:23:55 : Exception 400 Bad Request: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-867af20de68a5f86f4eefe4a54788115-8b72b83192aedc0f-00","errors":{"Exercises[0].Workout":["The Workout field is required."],"Exercises[0].Exercise":["The Exercise field is required."]}}"
+16-12-2022 05:24:06 : Exception 400 Bad Request: "{"type":"https://tools.ietf.org/html/rfc7231#section-6.5.1","title":"One or more validation errors occurred.","status":400,"traceId":"00-d78686662382d1ebc8c7c257bb609392-04082323a0f3ab18-00","errors":{"Exercises[0].Workout":["The Workout field is required."],"Exercises[0].Exercise":["The Exercise field is required."]}}"
+16-12-2022 05:26:01 : Exception 500 Internal Server Error: ""Workout not found""
+16-12-2022 05:37:52 : Exception 500 Internal Server Error: "Workout not found"

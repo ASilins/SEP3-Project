@@ -5,17 +5,16 @@
 <AuthorizeView Roles="Admin">
     <Authorized>
         <h1>Members</h1>
-        
+
         <table>
             <thead>
-            <tr>
-                <th>Id</th>
-                <th>Username</th>
-                <th>Position</th>
-            </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Username</th>
+                    <th>Position</th>
+                </tr>
             </thead>
             <tbody>
-            <InputRadioGroup>
                 @foreach (var member in members)
                 {
                     <tr>
@@ -23,19 +22,18 @@
                         <td>@member.Username</td>
                         <td>@member.Position</td>
                         <td>
-                            <input type="radio" name="selectedMember" @onclick="@(() => SelectMember(member))"/>
+                            <input type="radio" name="selectedMember" @onclick="@(() => SelectMember(member))" />
                         </td>
                     </tr>
                 }
-            </InputRadioGroup>
             </tbody>
         </table>
-        
+
         <button @onclick="@RemoveSelectedMember" disabled="@AreButtonsDisabled">Remove</button>
     </Authorized>
-    
+
     <NotAuthorized>
-        <Login url="/deleteMember"/>
+        <Login url="/deleteMember" />
     </NotAuthorized>
 </AuthorizeView>
 

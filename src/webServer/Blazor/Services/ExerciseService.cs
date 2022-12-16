@@ -15,7 +15,7 @@ public class ExerciseService
 
     public async Task CreateExercise(ExerciseDTO member)
     {
-        HttpResponseMessage response = await client.PostAsJsonAsync("/exercise/create", member);
+        HttpResponseMessage response = await client.PostAsJsonAsync("/api/exercise/create", member);
         string result = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
@@ -25,7 +25,7 @@ public class ExerciseService
 
     public async Task<List<ExerciseDTO>> GetExercises()
     {
-        HttpResponseMessage response = await client.GetAsync("/exercises");
+        HttpResponseMessage response = await client.GetAsync("/api/exercises");
         string result = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {
@@ -41,7 +41,7 @@ public class ExerciseService
 
     public async Task EditExercise(ExerciseDTO dto)
     {
-        HttpResponseMessage response = await client.PutAsJsonAsync("/exercise", dto);
+        HttpResponseMessage response = await client.PutAsJsonAsync("/api/exercise", dto);
         string result = await response.Content.ReadAsStringAsync();
 
         if (!response.IsSuccessStatusCode)
@@ -52,6 +52,6 @@ public class ExerciseService
 
     public async Task DeleteExercise(int id)
     {
-        await client.DeleteAsync("/exercise?e=" + id);
+        await client.DeleteAsync("/api/exercise?e=" + id);
     }
 }

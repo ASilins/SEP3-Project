@@ -16,7 +16,7 @@ public class WorkoutService
 
     public async Task<WorkoutDTO> GetWorkout(int id)
     {
-        HttpResponseMessage response = await _client.GetAsync($"/workout?w={id}");
+        HttpResponseMessage response = await _client.GetAsync($"/api/workout?w={id}");
         string content = await response.Content.ReadAsStringAsync();
 
         if (!response.IsSuccessStatusCode)
@@ -32,7 +32,7 @@ public class WorkoutService
 
     public async Task<List<WorkoutDTO>> GetWorkouts(int id)
     {
-        HttpResponseMessage response = await _client.GetAsync($"/workouts?w={id}");
+        HttpResponseMessage response = await _client.GetAsync($"/api/workouts?w={id}");
         string content = await response.Content.ReadAsStringAsync();
 
         if (!response.IsSuccessStatusCode)
@@ -49,7 +49,7 @@ public class WorkoutService
 
     public async Task<FollowWorkoutDTO> AssignWorkout(FollowWorkoutDTO dto)
     {
-        HttpResponseMessage response = await _client.PostAsJsonAsync("/workout/assign", dto);
+        HttpResponseMessage response = await _client.PostAsJsonAsync("/api/workout/assign", dto);
         string content = await response.Content.ReadAsStringAsync();
 
         if (!response.IsSuccessStatusCode)
@@ -66,17 +66,17 @@ public class WorkoutService
 
     public async Task EditWorkout(WorkoutDTO dto)
     {
-        await _client.PutAsJsonAsync("/workout", dto);
+        await _client.PutAsJsonAsync("/api/workout", dto);
     }
 
     public async Task DeleteWorkout(int id)
     {
-        await _client.DeleteAsync("/workout?w=" + id);
+        await _client.DeleteAsync("/api/workout?w=" + id);
     }
 
     public async Task CreateWorkout(WorkoutDTO workoutDto)
     {
-        HttpResponseMessage response = await _client.PostAsJsonAsync("/workout/create", workoutDto);
+        HttpResponseMessage response = await _client.PostAsJsonAsync("/api/workout/create", workoutDto);
         string result = await response.Content.ReadAsStringAsync();
         if (!response.IsSuccessStatusCode)
         {

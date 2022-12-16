@@ -74,18 +74,16 @@ public class MemberDAOImpl implements MemberDAO {
     }
 
     @Override
-    public MemberDTO editMember(MemberDTO member) throws Exception {
+    public void editMember(MemberDTO member) throws Exception {
         Logger.writeLog("Sending request to DAO Server", "info");
         final HttpEntity<MemberDTO> requestEntity = new HttpEntity<>(member);
         ResponseEntity<MemberDTO> responseEntity = restTemplate
                 .exchange(URI, HttpMethod.PUT, requestEntity, new ParameterizedTypeReference<MemberDTO>() {
                 });
 
-        if (responseEntity.getStatusCode() != HttpStatus.OK) {
+        if (responseEntity.getStatusCode() != HttpStatus.NO_CONTENT) {
             throw new DAOException("DAO error code:" + responseEntity.getStatusCodeValue());
         }
-
-        return responseEntity.getBody();
     }
 
     @Override

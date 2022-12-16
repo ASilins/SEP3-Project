@@ -1,0 +1,80 @@
+16/12/2022 03:49:02 : Exception Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Users.Salt'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Database.Logic.MemberDAO.EditMember(MemberDTO memberDto) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\Database\Logic\MemberDAO.cs:line 97
+   at WebAPI.Controllers.MemberController.EditMember(MemberDTO memberDto) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\WebAPI\Controllers\MemberController.cs:line 93
+
+16/12/2022 03:50:29 : Exception Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Users.Salt'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Database.Logic.MemberDAO.EditMember(MemberDTO memberDto) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\Database\Logic\MemberDAO.cs:line 97
+   at WebAPI.Controllers.MemberController.EditMember(MemberDTO memberDto) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\WebAPI\Controllers\MemberController.cs:line 93
+
+16/12/2022 03:57:11 : Exception Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'NOT NULL constraint failed: Users.Salt'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Database.Logic.MemberDAO.EditMember(MemberDTO memberDto) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\Database\Logic\MemberDAO.cs:line 97
+   at WebAPI.Controllers.MemberController.EditMember(MemberDTO memberDto) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\WebAPI\Controllers\MemberController.cs:line 93
+
+16/12/2022 05:19:01 : Exception System.Exception: Workout not found
+   at Database.Logic.WorkoutDAO.GetWorkout(Int32 id) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\Database\Logic\WorkoutDAO.cs:line 26
+   at Database.Logic.WorkoutDAO.DeleteWorkout(Int32 id) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\Database\Logic\WorkoutDAO.cs:line 111
+   at WebAPI.Controllers.WorkoutController.DeleteWorkout(Int32 id) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\WebAPI\Controllers\WorkoutController.cs:line 100
+
+16/12/2022 05:26:01 : Exception System.Exception: Workout not found
+   at Database.Logic.WorkoutDAO.GetWorkout(Int32 id) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\Database\Logic\WorkoutDAO.cs:line 26
+   at WebAPI.Controllers.WorkoutController.GetWorkout(Int32 w) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\WebAPI\Controllers\WorkoutController.cs:line 27
+
+16/12/2022 05:37:52 : Exception System.Exception: Workout not found
+   at Database.Logic.WorkoutDAO.GetWorkout(Int32 id) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\Database\Logic\WorkoutDAO.cs:line 26
+   at Database.Logic.WorkoutDAO.DeleteWorkout(Int32 id) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\Database\Logic\WorkoutDAO.cs:line 111
+   at WebAPI.Controllers.WorkoutController.DeleteWorkout(Int32 id) in C:\Users\Silin\Documents\School\Semester 3\SEP3\SEP3-Project\src\dataAccessServer\WebAPI\Controllers\WorkoutController.cs:line 100
+

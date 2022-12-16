@@ -39,9 +39,8 @@ public class MemberLogicImpl implements MemberLogic {
     }
 
     @Override
-    public MemberObj editMember(MemberObj member) throws Exception {
-        return MemberConverter.convertToMemberObj(
-                dao.editMember(MemberConverter.convertToMemberDTO(member)));
+    public void editMember(MemberObj member) throws Exception {
+        dao.editMember(MemberConverter.convertToMemberDTO(member));
     }
 
     @Override

@@ -11,7 +11,7 @@
             <input type="text" @bind="@_workoutDto.Name"></input>
             <label>Description:</label>
             <input type="text" @bind="@_workoutDto.Description"></input>
-            <IsPublicOption _selectedValue="IsPublic" />
+            <IsPublicOption _selectedValue="@_workoutDto.IsPublic" />
             <button @onclick="@CreateWorkoutAsync">Create</button>
         </div>
     </Authorized>
@@ -27,7 +27,7 @@
 
     async Task CreateWorkoutAsync()
     {
-        _workoutDto.IsPublic = IsPublic;
+        @* _workoutDto.IsPublic = IsPublic; *@
         await Service.CreateWorkout(_workoutDto);
         NavigationManager.NavigateTo("/workouts");
     }

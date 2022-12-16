@@ -7,7 +7,7 @@ using Shared.Tools;
 
 namespace WebAPI.Controllers;
 
-[ApiController, Route("/[controller]")]
+[ApiController, Route("/api/[controller]")]
 public class WorkoutController : ControllerBase
 {
     private readonly IWorkoutDAO _dao;
@@ -36,7 +36,7 @@ public class WorkoutController : ControllerBase
         }
     }
 
-    [HttpGet, Route("/[controller]s")]
+    [HttpGet, Route("/api/[controller]s")]
     public async Task<ActionResult<IEnumerable<WorkoutDTO>>> GetWorkouts()
     {
         try
@@ -53,7 +53,7 @@ public class WorkoutController : ControllerBase
         }
     }
 
-    [HttpPost, Route("/[controller]/assign")]
+    [HttpPost, Route("assign")]
     public async Task<ActionResult<FollowWorkoutDTO>> AssignWorkout([FromBody] FollowWorkoutDTO dto)
     {
         try
@@ -109,7 +109,7 @@ public class WorkoutController : ControllerBase
         }
     }
 
-    [HttpPost, Route("/[controller]/create")]
+    [HttpPost, Route("create")]
     public async Task<ActionResult<IEnumerable<Workout>>> CreateWorkout([FromBody] WorkoutDTO workout)
     {
         try

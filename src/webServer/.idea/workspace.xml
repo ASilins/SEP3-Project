@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b10db01a-e741-48b0-a16d-19092b997eaa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Migrations/20221214181807_RemovedFollowedBy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Migrations/20221214184509_RemovedKeyInJoinTable.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Migrations/20221214184509_RemovedKeyInJoinTable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Migrations/20221214190340_JsonIgnore.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Migrations/20221214190340_JsonIgnore.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Migrations/20221215164526_NoShadowProps.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Migrations/20221215173133_Eddit.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Migrations/20221215173133_Eddit.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dataAccessServer/Log/ERROR_15-12-2022.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dataAccessServer/Log/INFO_15-12-2022.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../dataAccessServer/Shared/DTOs/Login.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../logicServer/Log/ERROR_15-12-2022.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../logicServer/Log/INFO_15-12-2022.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/shared/ExercisesInWorkouts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/shared/WorkoutModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Log/ERROR_15-12-2022.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Log/INFO_15-12-2022.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.src.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.src.dir/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.src.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.src.dir/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/.idea/.idea.EfcDataAccess.dir/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/.idea/.idea.EfcDataAccess.dir/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/.idea/.idea.EfcDataAccess.dir/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/.idea/.idea.EfcDataAccess.dir/.idea/indexLayout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/.idea/.idea.EfcDataAccess.dir/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/DataContext.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/EfcDataAccess.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/Exercise.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/ExercisesInWorkouts.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/Fitness.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/FollowsWorkouts.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/Migrations/20221206224227_InitialCreate.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Migrations/20221214181807_RemovedFollowedBy.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/Migrations/20221206224227_InitialCreate.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Migrations/20221215164526_NoShadowProps.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/UserTable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/Workout.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/bin/Debug/net6.0/EfcDataAccess.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/bin/Debug/net6.0/EfcDataAccess.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/bin/Debug/net6.0/EfcDataAccess.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/bin/Debug/net6.0/EfcDataAccess.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/EfcDataAccess.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/EfcDataAccess.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/EfcDataAccess.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/EfcDataAccess.GlobalUsings.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/EfcDataAccess.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/EfcDataAccess.csproj.AssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/EfcDataAccess.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/EfcDataAccess.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/EfcDataAccess.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/EfcDataAccess.genruntimeconfig.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/EfcDataAccess.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/ref/EfcDataAccess.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/Debug/net6.0/refint/EfcDataAccess.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/EfcDataAccess.csproj.EntityFrameworkCore.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/EfcDataAccess.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/EfcDataAccess.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/EfcDataAccess.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/project.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/project.packagespec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../EfcDataAccess/obj/rider.project.restore.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/DataContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/DataContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Fitness.db" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Fitness.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Interfaces/IExerciseDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Interfaces/IExerciseDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Interfaces/IMemberDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Interfaces/IMemberDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Interfaces/IWorkoutDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Interfaces/IWorkoutDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/ExerciseDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/ExerciseDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/MemberDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/MemberDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/WorkoutDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Logic/WorkoutDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Database/Migrations/DataContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Database/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Log/INFO_14-12-2022.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Log/INFO_14-12-2022.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Shared/DTOs/WorkoutDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Shared/DTOs/WorkoutDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Shared/Model/ExercisesInWorkouts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Shared/Model/ExercisesInWorkouts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Shared/Model/FollowsWorkouts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Shared/Model/FollowsWorkouts.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/Shared/Model/Workout.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/Shared/Model/Workout.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/WebAPI/Controllers/ExerciseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/WebAPI/Controllers/ExerciseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/WebAPI/Controllers/MemberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/WebAPI/Controllers/MemberController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dataAccessServer/WebAPI/Controllers/WorkoutController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../dataAccessServer/WebAPI/Controllers/WorkoutController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/src/main/java/via/sep3/databaseserver/DatabaseServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/src/main/java/via/sep3/databaseserver/controllers/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/src/main/java/via/sep3/databaseserver/model/CreateMemberLogic.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/src/main/java/via/sep3/databaseserver/model/CreateMemberLogicImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/src/main/java/via/sep3/databaseserver/repositories/CreateMemberDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/src/main/java/via/sep3/databaseserver/repositories/CreateMemberDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/src/main/java/via/sep3/databaseserver/shared/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/shared/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/src/main/java/via/sep3/databaseserver/shared/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../databaseServer/src/test/java/via/sep3/databaseserver/DatabaseServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/Log/INFO_14-12-2022.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/Log/INFO_14-12-2022.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/ExerciseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/ExerciseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/MemberController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/MemberController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/WorkoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/controllers/WorkoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/interfaces/WorkoutLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/interfaces/WorkoutLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/ExerciseLogicImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/ExerciseLogicImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/MemberLogicImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/MemberLogicImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/WorkoutLogicImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/WorkoutLogicImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/converters/ExerciseConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/converters/ExerciseConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/converters/MemberConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/converters/MemberConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/converters/WorkoutConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/model/logic/converters/WorkoutConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/ExerciseObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/ExerciseObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/ExerciseObjOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/ExerciseObjOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/ExerciseServiceOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/ExerciseServiceOuterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/WorkoutObj.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/WorkoutObj.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/WorkoutObjOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/WorkoutObjOrBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/WorkoutServiceGrpc.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/WorkoutServiceGrpc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/WorkoutServiceOuterClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/protobuf/WorkoutServiceOuterClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/interfaces/ExerciseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/interfaces/ExerciseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/interfaces/MemberDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/interfaces/MemberDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/interfaces/WorkoutDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/interfaces/WorkoutDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/logic/ExerciseDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/logic/ExerciseDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/logic/MemberDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/logic/MemberDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/logic/WorkoutDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/repositories/logic/WorkoutDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/shared/WorkoutDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/java/via/sep3/logicserver/shared/WorkoutDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/proto/ExerciseService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/proto/ExerciseService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../logicServer/src/main/proto/WorkoutService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/../logicServer/src/main/proto/WorkoutService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Pages/Components/IsPublicOption.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/Components/IsPublicOption.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Pages/CreateExercise/CreateExercise.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/CreateExercise/CreateExercise.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Pages/CreateMember/CreateMember.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/CreateMember/CreateMember.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Pages/CreateWorkout/CreateWorkout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/CreateWorkout/CreateWorkout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Pages/EditExercise/EditExercise.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/EditExercise/EditExercise.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Pages/EditWorkout/EditWorkout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/EditWorkout/EditWorkout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Pages/SeeExercises/Exercises.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/SeeExercises/Exercises.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Pages/SeeWorkouts/Workouts.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/SeeWorkouts/Workouts.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Pages/StartWorkout/StartWorkout.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Pages/StartWorkout/StartWorkout.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Services/ExerciseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Services/ExerciseService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Services/MemberService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Services/MemberService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Services/WorkoutService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Services/WorkoutService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/Shared/NavMenu.razor" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/Shared/NavMenu.razor" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/Blazor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/Blazor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/Blazor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/Blazor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/Blazor.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/Blazor.staticwebassets.runtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/Model.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/Model.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Blazor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Blazor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Blazor.dll.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Blazor.dll.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Blazor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Blazor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Blazor.pdb.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Blazor.pdb.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Model.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Model.dll.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Model.dll.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Model.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Model.pdb.gz" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/Model.pdb.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/bin/Debug/net6.0/wwwroot/_framework/blazor.boot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Blazor.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Blazor.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Blazor.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Blazor.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/Blazor.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/blazor.boot.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/blazor.boot.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/ref/Blazor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/ref/Blazor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/refint/Blazor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/refint/Blazor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/Debug/net6.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blazor/obj/staticwebassets.pack.sentinel" beforeDir="false" afterPath="$PROJECT_DIR$/Blazor/obj/staticwebassets.pack.sentinel" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Interfaces/IMemberClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Interfaces/IMemberClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Interfaces/IWorkoutClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Interfaces/IWorkoutClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Logic/Converters/ExerciseConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Logic/Converters/ExerciseConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Logic/Converters/MemberConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Logic/Converters/MemberConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Logic/Converters/WorkoutConverter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Logic/Converters/WorkoutConverter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Logic/MemberClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Logic/MemberClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Logic/Security/Tokens.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Logic/Security/Tokens.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Logic/WorkoutClient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Logic/WorkoutClient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Protos/ExerciseService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Protos/ExerciseService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/Protos/WorkoutService.proto" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/Protos/WorkoutService.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/GrpcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/Model.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/GrpcClient/bin/Debug/net6.0/Model.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/DTOs/ExerciseDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/DTOs/ExerciseDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/DTOs/WorkoutDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Model/DTOs/WorkoutDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/bin/Debug/net6.0/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/net6.0/Model.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Model/bin/Debug/net6.0/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Model/bin/Debug/net6.0/Model.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/Controllers/ExerciseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Controllers/ExerciseController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/Controllers/MemberController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Controllers/MemberController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/Controllers/WorkoutController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Controllers/WorkoutController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/bin/Debug/net6.0/GrpcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/bin/Debug/net6.0/GrpcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/bin/Debug/net6.0/GrpcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/bin/Debug/net6.0/GrpcClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/bin/Debug/net6.0/Model.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/bin/Debug/net6.0/Model.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/bin/Debug/net6.0/Model.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/bin/Debug/net6.0/Model.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/bin/Debug/net6.0/WebApi.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/bin/Debug/net6.0/WebApi.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/bin/Debug/net6.0/WebApi.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/bin/Debug/net6.0/WebApi.pdb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IyO7HE3ebdD7glEXfE5tfw9DXV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b10db01a-e741-48b0-a16d-19092b997eaa" name="Changes" comment="" />
+      <created>1671150190481</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1671150190481</updated>
+      <workItem from="1671150191767" duration="114000" />
+      <workItem from="1671150708024" duration="37000" />
+      <workItem from="1671150760831" duration="85000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

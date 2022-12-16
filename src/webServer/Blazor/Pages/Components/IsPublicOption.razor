@@ -1,15 +1,11 @@
-﻿
-
-
-<AuthorizeView Roles="Trainer,Admin">
+﻿<AuthorizeView Roles="Trainer,Admin">
     <Authorized>
 
-        <label>This workout should be:</label>
-        <InputRadioGroup TValue="bool">
-            <InputRadio @bind="@_selectedValue" @onclick="@SelectedOption" Value=true>Public</InputRadio>
-            <InputRadio @bind="@_selectedValue" @onclick="@SelectedOption" Value=false>Private</InputRadio>
-        </InputRadioGroup>
-        
+
+        <label>Public or Private workout:</label>
+
+        <input type="radio" id="private" @onchange="() => _selectedValue = true" @onclick="@SelectedOption">
+
     </Authorized>
 </AuthorizeView>
 

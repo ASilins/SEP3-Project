@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fc69d32c-666d-46fd-bbc8-1aa1d49b0bd2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/EfcDataAccess.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/EfcDataAccess.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/net6.0/EfcDataAccess.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/net6.0/EfcDataAccess.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/EfcDataAccess.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/obj/EfcDataAccess.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/obj/Blazor.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/obj/Blazor.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/obj/Blazor.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/obj/Blazor.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/obj/Debug/net6.0/Blazor.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/obj/Debug/net6.0/Blazor.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/obj/Debug/net6.0/Blazor.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/obj/Debug/net6.0/Blazor.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/obj/Debug/net6.0/Blazor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/obj/Debug/net6.0/Blazor.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Blazor/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Blazor/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/961ac789a31085bb_ExerciseService.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/961ac789a31085bb_ExerciseService.protodep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/961ac789a31085bb_MemberService.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/961ac789a31085bb_MemberService.protodep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/961ac789a31085bb_WorkoutService.protodep" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/961ac789a31085bb_WorkoutService.protodep" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/GrpcClient.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/GrpcClient.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/GrpcClient.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/GrpcClient.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/GrpcClient.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/ExerciseService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/ExerciseService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/ExerciseServiceGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/ExerciseServiceGrpc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/LogicServer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/LogicServer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/MemberService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/MemberService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/MemberServiceGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/MemberServiceGrpc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/WorkoutService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/WorkoutService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/WorkoutServiceGrpc.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/Debug/net6.0/Protos/WorkoutServiceGrpc.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/GrpcClient.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/GrpcClient.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/GrpcClient.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/GrpcClient.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/GrpcClient/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/GrpcClient/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Model/obj/Debug/net6.0/Model.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Model/obj/Debug/net6.0/Model.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Model/obj/Debug/net6.0/Model.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Model/obj/Debug/net6.0/Model.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Model/obj/Model.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Model/obj/Model.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Model/obj/Model.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Model/obj/Model.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Model/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Model/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/Model/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/Model/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/WebApi/obj/Debug/net6.0/WebApi.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/WebApi/obj/Debug/net6.0/WebApi.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/WebApi/obj/Debug/net6.0/WebApi.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/WebApi/obj/Debug/net6.0/WebApi.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/WebApi/obj/Debug/net6.0/WebApi.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/WebApi/obj/Debug/net6.0/WebApi.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/WebApi/obj/WebApi.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/WebApi/obj/WebApi.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/WebApi/obj/WebApi.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/WebApi/obj/WebApi.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/WebApi/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/WebApi/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../webServer/WebApi/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../webServer/WebApi/obj/project.nuget.cache" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="2IlWH1Skst1MjAXXZtf5hzXgB6l" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fc69d32c-666d-46fd-bbc8-1aa1d49b0bd2" name="Changes" comment="" />
+      <created>1670756559056</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670756559056</updated>
+      <workItem from="1670756572689" duration="606000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

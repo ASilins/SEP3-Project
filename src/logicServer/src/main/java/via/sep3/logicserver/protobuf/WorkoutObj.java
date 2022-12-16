@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     description_ = "";
     exercises_ = java.util.Collections.emptyList();
+    followers_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -98,6 +99,15 @@ private static final long serialVersionUID = 0L;
                 input.readMessage(via.sep3.logicserver.protobuf.ExerciseObj.parser(), extensionRegistry));
             break;
           }
+          case 74: {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+              followers_ = new java.util.ArrayList<via.sep3.logicserver.protobuf.AssignWorkoutObj>();
+              mutable_bitField0_ |= 0x00000002;
+            }
+            followers_.add(
+                input.readMessage(via.sep3.logicserver.protobuf.AssignWorkoutObj.parser(), extensionRegistry));
+            break;
+          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -117,6 +127,9 @@ private static final long serialVersionUID = 0L;
     } finally {
       if (((mutable_bitField0_ & 0x00000001) != 0)) {
         exercises_ = java.util.Collections.unmodifiableList(exercises_);
+      }
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
+        followers_ = java.util.Collections.unmodifiableList(followers_);
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -306,6 +319,46 @@ private static final long serialVersionUID = 0L;
     return exercises_.get(index);
   }
 
+  public static final int FOLLOWERS_FIELD_NUMBER = 9;
+  private java.util.List<via.sep3.logicserver.protobuf.AssignWorkoutObj> followers_;
+  /**
+   * <code>repeated .AssignWorkoutObj followers = 9;</code>
+   */
+  @java.lang.Override
+  public java.util.List<via.sep3.logicserver.protobuf.AssignWorkoutObj> getFollowersList() {
+    return followers_;
+  }
+  /**
+   * <code>repeated .AssignWorkoutObj followers = 9;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends via.sep3.logicserver.protobuf.AssignWorkoutObjOrBuilder> 
+      getFollowersOrBuilderList() {
+    return followers_;
+  }
+  /**
+   * <code>repeated .AssignWorkoutObj followers = 9;</code>
+   */
+  @java.lang.Override
+  public int getFollowersCount() {
+    return followers_.size();
+  }
+  /**
+   * <code>repeated .AssignWorkoutObj followers = 9;</code>
+   */
+  @java.lang.Override
+  public via.sep3.logicserver.protobuf.AssignWorkoutObj getFollowers(int index) {
+    return followers_.get(index);
+  }
+  /**
+   * <code>repeated .AssignWorkoutObj followers = 9;</code>
+   */
+  @java.lang.Override
+  public via.sep3.logicserver.protobuf.AssignWorkoutObjOrBuilder getFollowersOrBuilder(
+      int index) {
+    return followers_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -343,6 +396,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < exercises_.size(); i++) {
       output.writeMessage(8, exercises_.get(i));
+    }
+    for (int i = 0; i < followers_.size(); i++) {
+      output.writeMessage(9, followers_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -383,6 +439,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, exercises_.get(i));
     }
+    for (int i = 0; i < followers_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(9, followers_.get(i));
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -414,6 +474,8 @@ private static final long serialVersionUID = 0L;
         != other.getIsPublic()) return false;
     if (!getExercisesList()
         .equals(other.getExercisesList())) return false;
+    if (!getFollowersList()
+        .equals(other.getFollowersList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -443,6 +505,10 @@ private static final long serialVersionUID = 0L;
     if (getExercisesCount() > 0) {
       hash = (37 * hash) + EXERCISES_FIELD_NUMBER;
       hash = (53 * hash) + getExercisesList().hashCode();
+    }
+    if (getFollowersCount() > 0) {
+      hash = (37 * hash) + FOLLOWERS_FIELD_NUMBER;
+      hash = (53 * hash) + getFollowersList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -573,6 +639,7 @@ private static final long serialVersionUID = 0L;
       if (com.google.protobuf.GeneratedMessageV3
               .alwaysUseFieldBuilders) {
         getExercisesFieldBuilder();
+        getFollowersFieldBuilder();
       }
     }
     @java.lang.Override
@@ -597,6 +664,12 @@ private static final long serialVersionUID = 0L;
         bitField0_ = (bitField0_ & ~0x00000001);
       } else {
         exercisesBuilder_.clear();
+      }
+      if (followersBuilder_ == null) {
+        followers_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      } else {
+        followersBuilder_.clear();
       }
       return this;
     }
@@ -640,6 +713,15 @@ private static final long serialVersionUID = 0L;
         result.exercises_ = exercises_;
       } else {
         result.exercises_ = exercisesBuilder_.build();
+      }
+      if (followersBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          followers_ = java.util.Collections.unmodifiableList(followers_);
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.followers_ = followers_;
+      } else {
+        result.followers_ = followersBuilder_.build();
       }
       onBuilt();
       return result;
@@ -735,6 +817,32 @@ private static final long serialVersionUID = 0L;
                  getExercisesFieldBuilder() : null;
           } else {
             exercisesBuilder_.addAllMessages(other.exercises_);
+          }
+        }
+      }
+      if (followersBuilder_ == null) {
+        if (!other.followers_.isEmpty()) {
+          if (followers_.isEmpty()) {
+            followers_ = other.followers_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureFollowersIsMutable();
+            followers_.addAll(other.followers_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.followers_.isEmpty()) {
+          if (followersBuilder_.isEmpty()) {
+            followersBuilder_.dispose();
+            followersBuilder_ = null;
+            followers_ = other.followers_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            followersBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFollowersFieldBuilder() : null;
+          } else {
+            followersBuilder_.addAllMessages(other.followers_);
           }
         }
       }
@@ -1313,6 +1421,246 @@ private static final long serialVersionUID = 0L;
         exercises_ = null;
       }
       return exercisesBuilder_;
+    }
+
+    private java.util.List<via.sep3.logicserver.protobuf.AssignWorkoutObj> followers_ =
+      java.util.Collections.emptyList();
+    private void ensureFollowersIsMutable() {
+      if (!((bitField0_ & 0x00000002) != 0)) {
+        followers_ = new java.util.ArrayList<via.sep3.logicserver.protobuf.AssignWorkoutObj>(followers_);
+        bitField0_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        via.sep3.logicserver.protobuf.AssignWorkoutObj, via.sep3.logicserver.protobuf.AssignWorkoutObj.Builder, via.sep3.logicserver.protobuf.AssignWorkoutObjOrBuilder> followersBuilder_;
+
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public java.util.List<via.sep3.logicserver.protobuf.AssignWorkoutObj> getFollowersList() {
+      if (followersBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(followers_);
+      } else {
+        return followersBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public int getFollowersCount() {
+      if (followersBuilder_ == null) {
+        return followers_.size();
+      } else {
+        return followersBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public via.sep3.logicserver.protobuf.AssignWorkoutObj getFollowers(int index) {
+      if (followersBuilder_ == null) {
+        return followers_.get(index);
+      } else {
+        return followersBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public Builder setFollowers(
+        int index, via.sep3.logicserver.protobuf.AssignWorkoutObj value) {
+      if (followersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFollowersIsMutable();
+        followers_.set(index, value);
+        onChanged();
+      } else {
+        followersBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public Builder setFollowers(
+        int index, via.sep3.logicserver.protobuf.AssignWorkoutObj.Builder builderForValue) {
+      if (followersBuilder_ == null) {
+        ensureFollowersIsMutable();
+        followers_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        followersBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public Builder addFollowers(via.sep3.logicserver.protobuf.AssignWorkoutObj value) {
+      if (followersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFollowersIsMutable();
+        followers_.add(value);
+        onChanged();
+      } else {
+        followersBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public Builder addFollowers(
+        int index, via.sep3.logicserver.protobuf.AssignWorkoutObj value) {
+      if (followersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFollowersIsMutable();
+        followers_.add(index, value);
+        onChanged();
+      } else {
+        followersBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public Builder addFollowers(
+        via.sep3.logicserver.protobuf.AssignWorkoutObj.Builder builderForValue) {
+      if (followersBuilder_ == null) {
+        ensureFollowersIsMutable();
+        followers_.add(builderForValue.build());
+        onChanged();
+      } else {
+        followersBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public Builder addFollowers(
+        int index, via.sep3.logicserver.protobuf.AssignWorkoutObj.Builder builderForValue) {
+      if (followersBuilder_ == null) {
+        ensureFollowersIsMutable();
+        followers_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        followersBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public Builder addAllFollowers(
+        java.lang.Iterable<? extends via.sep3.logicserver.protobuf.AssignWorkoutObj> values) {
+      if (followersBuilder_ == null) {
+        ensureFollowersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, followers_);
+        onChanged();
+      } else {
+        followersBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public Builder clearFollowers() {
+      if (followersBuilder_ == null) {
+        followers_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+      } else {
+        followersBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public Builder removeFollowers(int index) {
+      if (followersBuilder_ == null) {
+        ensureFollowersIsMutable();
+        followers_.remove(index);
+        onChanged();
+      } else {
+        followersBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public via.sep3.logicserver.protobuf.AssignWorkoutObj.Builder getFollowersBuilder(
+        int index) {
+      return getFollowersFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public via.sep3.logicserver.protobuf.AssignWorkoutObjOrBuilder getFollowersOrBuilder(
+        int index) {
+      if (followersBuilder_ == null) {
+        return followers_.get(index);  } else {
+        return followersBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public java.util.List<? extends via.sep3.logicserver.protobuf.AssignWorkoutObjOrBuilder> 
+         getFollowersOrBuilderList() {
+      if (followersBuilder_ != null) {
+        return followersBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(followers_);
+      }
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public via.sep3.logicserver.protobuf.AssignWorkoutObj.Builder addFollowersBuilder() {
+      return getFollowersFieldBuilder().addBuilder(
+          via.sep3.logicserver.protobuf.AssignWorkoutObj.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public via.sep3.logicserver.protobuf.AssignWorkoutObj.Builder addFollowersBuilder(
+        int index) {
+      return getFollowersFieldBuilder().addBuilder(
+          index, via.sep3.logicserver.protobuf.AssignWorkoutObj.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .AssignWorkoutObj followers = 9;</code>
+     */
+    public java.util.List<via.sep3.logicserver.protobuf.AssignWorkoutObj.Builder> 
+         getFollowersBuilderList() {
+      return getFollowersFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        via.sep3.logicserver.protobuf.AssignWorkoutObj, via.sep3.logicserver.protobuf.AssignWorkoutObj.Builder, via.sep3.logicserver.protobuf.AssignWorkoutObjOrBuilder> 
+        getFollowersFieldBuilder() {
+      if (followersBuilder_ == null) {
+        followersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            via.sep3.logicserver.protobuf.AssignWorkoutObj, via.sep3.logicserver.protobuf.AssignWorkoutObj.Builder, via.sep3.logicserver.protobuf.AssignWorkoutObjOrBuilder>(
+                followers_,
+                ((bitField0_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        followers_ = null;
+      }
+      return followersBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

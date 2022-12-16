@@ -72,11 +72,6 @@ private static final long serialVersionUID = 0L;
             duration_ = input.readInt32();
             break;
           }
-          case 40: {
-
-            createdBy_ = input.readInt32();
-            break;
-          }
           default: {
             if (!parseUnknownField(
                 input, unknownFields, extensionRegistry, tag)) {
@@ -209,17 +204,6 @@ private static final long serialVersionUID = 0L;
     return duration_;
   }
 
-  public static final int CREATEDBY_FIELD_NUMBER = 5;
-  private int createdBy_;
-  /**
-   * <code>int32 CreatedBy = 5;</code>
-   * @return The createdBy.
-   */
-  @java.lang.Override
-  public int getCreatedBy() {
-    return createdBy_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -246,9 +230,6 @@ private static final long serialVersionUID = 0L;
     if (duration_ != 0) {
       output.writeInt32(4, duration_);
     }
-    if (createdBy_ != 0) {
-      output.writeInt32(5, createdBy_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -271,10 +252,6 @@ private static final long serialVersionUID = 0L;
     if (duration_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(4, duration_);
-    }
-    if (createdBy_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(5, createdBy_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -299,8 +276,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDescription())) return false;
     if (getDuration()
         != other.getDuration()) return false;
-    if (getCreatedBy()
-        != other.getCreatedBy()) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -320,8 +295,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getDescription().hashCode();
     hash = (37 * hash) + DURATION_FIELD_NUMBER;
     hash = (53 * hash) + getDuration();
-    hash = (37 * hash) + CREATEDBY_FIELD_NUMBER;
-    hash = (53 * hash) + getCreatedBy();
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -463,8 +436,6 @@ private static final long serialVersionUID = 0L;
 
       duration_ = 0;
 
-      createdBy_ = 0;
-
       return this;
     }
 
@@ -495,7 +466,6 @@ private static final long serialVersionUID = 0L;
       result.name_ = name_;
       result.description_ = description_;
       result.duration_ = duration_;
-      result.createdBy_ = createdBy_;
       onBuilt();
       return result;
     }
@@ -557,9 +527,6 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getDuration() != 0) {
         setDuration(other.getDuration());
-      }
-      if (other.getCreatedBy() != 0) {
-        setCreatedBy(other.getCreatedBy());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -800,37 +767,6 @@ private static final long serialVersionUID = 0L;
     public Builder clearDuration() {
       
       duration_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int createdBy_ ;
-    /**
-     * <code>int32 CreatedBy = 5;</code>
-     * @return The createdBy.
-     */
-    @java.lang.Override
-    public int getCreatedBy() {
-      return createdBy_;
-    }
-    /**
-     * <code>int32 CreatedBy = 5;</code>
-     * @param value The createdBy to set.
-     * @return This builder for chaining.
-     */
-    public Builder setCreatedBy(int value) {
-      
-      createdBy_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 CreatedBy = 5;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearCreatedBy() {
-      
-      createdBy_ = 0;
       onChanged();
       return this;
     }

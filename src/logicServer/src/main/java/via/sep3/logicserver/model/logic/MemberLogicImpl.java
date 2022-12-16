@@ -24,16 +24,12 @@ public class MemberLogicImpl implements MemberLogic {
     public MemberObj createMember(LoginCreateObject obj) throws Exception {
         LoginCreateDTO dto = MemberConverter.convertToLoginCreateDTO(obj);
 
-        if (dao.getByUsername(dto) == null) {
-            return MemberConverter.convertToMemberObj(dao.createMember(dto));
-        } else {
-            throw new Exception("Username exists");
-        }
+        return MemberConverter.convertToMemberObj(dao.createMember(dto));
     }
 
     @Override
     public MemberObj loginMember(LoginCreateObject obj) throws Exception {
-        MemberDTO search = dao.getByUsername(MemberConverter.convertToLoginCreateDTO(obj));
+        MemberDTO search = dao.getByUsername(MemberConverter.convertToLogin(obj));
 
         if (search == null) {
             throw new Exception("User not found");

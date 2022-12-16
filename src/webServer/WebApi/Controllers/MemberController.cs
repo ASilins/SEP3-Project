@@ -108,13 +108,4 @@ public class MemberController : ControllerBase
         }
     }
 
-    // Only for development
-
-    [HttpGet("token"), AllowAnonymous]
-    public OkObjectResult GetToken()
-    {
-        Logger.WriteLog("<Received GetToken request>", "info");
-
-        return Ok(_client.GetToken());
-    }
 }

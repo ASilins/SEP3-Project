@@ -2,9 +2,7 @@ package via.sep3.logicserver.model.logic.converters;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.stereotype.Service;
-
 import via.sep3.logicserver.protobuf.ExerciseObj;
 import via.sep3.logicserver.protobuf.Exercises;
 import via.sep3.logicserver.shared.ExerciseDTO;

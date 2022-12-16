@@ -35,7 +35,7 @@ public class ExerciseController extends ExerciseServiceImplBase {
 
             Logger.writeLog("--CreateExercise request successful--", "info");
         } catch (Exception e) {
-            Logger.writeLog("Exception " + e.toString(), "error");
+            Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in ExerciseController>>");
             responseObserver.onError(e);
         }
@@ -53,7 +53,7 @@ public class ExerciseController extends ExerciseServiceImplBase {
 
             Logger.writeLog("--GetExercises request successful--", "info");
         } catch (Exception e) {
-            Logger.writeLog("Exception " + e.toString(), "error");
+            Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in ExerciseController>>");
             responseObserver.onError(e);
         }
@@ -69,7 +69,7 @@ public class ExerciseController extends ExerciseServiceImplBase {
             responseObserver.onNext(StringObj.newBuilder().setName("").build());
             responseObserver.onCompleted();
         } catch (Exception e) {
-            Logger.writeLog("Exception " + e.toString(), "error");
+            Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in ExerciseController>>");
             responseObserver.onError(e);
         }
@@ -85,7 +85,7 @@ public class ExerciseController extends ExerciseServiceImplBase {
             responseObserver.onNext(StringObj.newBuilder().setName("").build());
             responseObserver.onCompleted();
         } catch (Exception e) {
-            Logger.writeLog("Exception " + e.toString(), "error");
+            Logger.writeLog("Exception " + e.getMessage(), "error");
             System.out.println("<<Exception in ExerciseController>>");
             responseObserver.onError(e);
         }

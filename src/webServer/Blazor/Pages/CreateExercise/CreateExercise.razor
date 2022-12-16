@@ -1,5 +1,6 @@
 @page "/exercise/create"
-@inject ExerciseService exerciseService;
+@inject ExerciseService exerciseService
+@inject NavigationManager navMag
 
 <AuthorizeView Roles="Trainer,Admin">
     <Authorized>
@@ -53,6 +54,8 @@
             name = "";
             description = "";
             duration = 0;
+
+            navMag.NavigateTo("/exercises");
         }
         catch (Exception e)
         {

@@ -30,7 +30,12 @@
 
     protected async override Task OnInitializedAsync()
     {
-        exercise = await service.GetExercise(id);
+        List<ExerciseDTO> dtos = await service.GetExercises();
+        foreach (var item in dtos)
+        {
+            if (item.Id == id)
+                exercise = item;
+        }
     }
 
     async void SaveChanges()

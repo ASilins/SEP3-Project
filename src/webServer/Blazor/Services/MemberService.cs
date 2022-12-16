@@ -28,17 +28,14 @@ public class MemberService
 
     public async Task LoginMember(MemberDTO member)
     {
-        // HttpResponseMessage response = await _client.PostAsJsonAsync("/member/login", member);
-        // string result = await response.Content.ReadAsStringAsync();
-        // if (!response.IsSuccessStatusCode)
-        // {
-        //     throw new Exception(result + ">>>" + response.StatusCode);
-        // }
-
-        HttpResponseMessage response = await _client.GetAsync("/member/token");
-
-        // HttpResponseMessage response = await _client.PostAsJsonAsync("/member/login", member);
+        HttpResponseMessage response = await _client.PostAsJsonAsync("/member/login", member);
         string result = await response.Content.ReadAsStringAsync();
+
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception(result + ">>>" + response.StatusCode);
+        }
+
         await _localStorage.SetItemAsync("token", result);
     }
 

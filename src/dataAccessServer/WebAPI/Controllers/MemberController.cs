@@ -6,7 +6,7 @@ using Shared.Tools;
 namespace WebAPI.Controllers;
 
 [ApiController]
-[Route("/[controller]")]
+[Route("/api/[controller]")]
 public class MemberController : ControllerBase
 {
     private readonly IMemberDAO dao;
@@ -17,7 +17,7 @@ public class MemberController : ControllerBase
     }
 
     [HttpPost]
-    [Route("/[controller]/create")]
+    [Route("create")]
     public async Task<ActionResult<MemberDTO>> CreateMember([FromBody] LoginCreateDTO member)
     {
         try
@@ -35,15 +35,15 @@ public class MemberController : ControllerBase
         }
     }
 
-    [HttpGet]
-    [Route("/[controller]/login")]
-    public async Task<ActionResult<MemberDTO>> GetByUsername([FromBody] LoginCreateDTO member)
+    [HttpPost]
+    [Route("login")]
+    public async Task<ActionResult<MemberDTO>> GetByUsername([FromBody] Login member)
     {
         try
         {
             Logger.WriteLog("<Received GetByUsername request>", "info");
 
-            MemberDTO? loggedIn = await dao.GetByUsername(member);
+            MemberDTO? loggedIn = await dao.GetByUsername(member.Username);
 
             if (loggedIn == null)
             {
@@ -60,7 +60,7 @@ public class MemberController : ControllerBase
         }
     }
 
-    
+
     [HttpPost]
     [Route("/[controller]/getById")]
     public async Task<ActionResult<MemberDTO>> GetById([FromBody] int id)

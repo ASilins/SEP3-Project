@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 import via.sep3.logicserver.repositories.interfaces.MemberDAO;
+import via.sep3.logicserver.shared.Login;
 import via.sep3.logicserver.shared.LoginCreateDTO;
 import via.sep3.logicserver.shared.MemberDTO;
 import via.sep3.logicserver.shared.Exceptions.DAOException;
@@ -19,7 +20,7 @@ import java.util.List;
 @Repository
 public class MemberDAOImpl implements MemberDAO {
 
-    private final String URI = "https://localhost:7057/member";
+    private final String URI = "https://localhost:7057/api/member";
     private RestTemplate restTemplate;
 
     public MemberDAOImpl(RestTemplate restTemplate) {
@@ -33,14 +34,14 @@ public class MemberDAOImpl implements MemberDAO {
                 .postForEntity(URI + "/create", obj, MemberDTO.class);
 
         if (responseEntity.getStatusCode() != HttpStatus.CREATED) {
-            throw new DAOException("Data access server error with code: " + responseEntity.getStatusCodeValue());
+            throw new DAOException("Data access server error with code: " +
+                    responseEntity.getStatusCodeValue());
         }
-
         return responseEntity.getBody();
     }
 
     @Override
-    public MemberDTO getByUsername(LoginCreateDTO obj) throws Exception {
+    public MemberDTO getByUsername(Login obj) throws Exception {
         Logger.writeLog("Sending request to DAO Server", "info");
         ResponseEntity<MemberDTO> responseEntity = restTemplate
                 .postForEntity(URI + "/login", obj, MemberDTO.class);

@@ -18,7 +18,10 @@ public static class WorkoutConverter
             IsPublic = dto.IsPublic
         };
 
-        o.Exercises.AddRange(ExerciseConverter.ConvertToExerciseObjList(dto.Exercises));
+        if (dto.Exercises != null)
+            o.Exercises.AddRange(ExerciseConverter.ConvertToExerciseObjList(dto.Exercises));
+        if (dto.Followers != null)
+            o.Followers.AddRange(ConvertToAssignWorkoutList(dto.Followers));
 
         return o;
     }
@@ -34,7 +37,8 @@ public static class WorkoutConverter
             CreatedBy = obj.CreatedBy,
             FollowedBy = obj.FollowedBy,
             IsPublic = obj.IsPublic,
-            Exercises = ExerciseConverter.ConvertToExerciseDTOList(obj.Exercises)
+            Exercises = ExerciseConverter.ConvertToExerciseDTOList(obj.Exercises),
+            Followers = ConvertToFollowWorkoutList(obj.Followers)
         };
     }
 
@@ -66,5 +70,29 @@ public static class WorkoutConverter
             UserID = obj.UserID,
             WorkoutID = obj.WorkoutID
         };
+    }
+
+    public static List<AssignWorkoutObj> ConvertToAssignWorkoutList(List<FollowWorkoutDTO> dtos)
+    {
+        List<AssignWorkoutObj> objs = new();
+
+        foreach (var item in dtos)
+        {
+            objs.Add(ConvertToAssignWorkoutObj(item));
+        }
+
+        return objs;
+    }
+
+    public static List<FollowWorkoutDTO> ConvertToFollowWorkoutList(ICollection<AssignWorkoutObj> objs)
+    {
+        List<FollowWorkoutDTO> dtos = new();
+
+        foreach (var item in objs)
+        {
+            dtos.Add(ConvertToFollowWorkoutDTO(item));
+        }
+
+        return dtos;
     }
 }

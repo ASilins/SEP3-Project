@@ -22,13 +22,13 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpGet, Authorize(Roles = "Member,Trainer,Admin")]
-    public async Task<ActionResult<WorkoutDTO>> GetWorkout([FromQuery] int id)
+    public async Task<ActionResult<WorkoutDTO>> GetWorkout([FromQuery] int w)
     {
         try
         {
             Logger.WriteLog("<Received GetWorkout request>", "info");
 
-            return Ok(await _client.GetWorkout(id));
+            return Ok(await _client.GetWorkout(w));
         }
         catch (Exception e)
         {
@@ -39,13 +39,13 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpGet("/[controller]s"), Authorize(Roles = "Member,Trainer,Admin")]
-    public async Task<ActionResult<IEnumerable<WorkoutDTO>>> GetWorkouts()
+    public async Task<ActionResult<IEnumerable<WorkoutDTO>>> GetWorkouts([FromQuery] int id)
     {
         try
         {
             Logger.WriteLog("<Received GetWorkouts request>", "info");
 
-            return Ok(await _client.GetWorkouts());
+            return Ok(await _client.GetWorkouts(id));
         }
         catch (Exception e)
         {
@@ -55,7 +55,7 @@ public class WorkoutController : ControllerBase
         }
     }
 
-    [HttpPost("/[controller]/assign"), Authorize(Roles = "Trainer,Admin")]
+    [HttpPost("/[controller]/assign"), Authorize(Roles = "Member,Trainer,Admin")]
     public async Task<ActionResult<FollowWorkoutDTO>> AssignWorkout([FromBody] FollowWorkoutDTO dto)
     {
         try
@@ -91,13 +91,14 @@ public class WorkoutController : ControllerBase
     }
 
     [HttpDelete, Authorize(Roles = "Member,Trainer,Admin")]
-    public async Task<ActionResult<WorkoutDTO>> DeleteWorkout([FromQuery] int id)
+    public async Task<ActionResult<WorkoutDTO>> DeleteWorkout([FromQuery] int w)
     {
+        Console.WriteLine(w);
         try
         {
             Logger.WriteLog("<Received DeleteWorkout request>", "info");
 
-            await _client.DeleteWorkout(id);
+            await _client.DeleteWorkout(w);
             return NoContent();
         }
         catch (Exception e)

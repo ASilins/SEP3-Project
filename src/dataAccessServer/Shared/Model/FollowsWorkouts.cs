@@ -1,17 +1,16 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace Shared.Model;
 
 public class FollowsWorkouts
 {
-    [Key]
-    public int Id { get; set; }
     public int UserId { get; set; }
     public int WorkoutId { get; set; }
 
-    [ForeignKey("UserId")]
+    [ForeignKey("UserId"), JsonIgnore]
     public Member User { get; set; }
-    [ForeignKey("WorkoutId")]
+    [ForeignKey("WorkoutId"), JsonIgnore]
     public Workout Workout { get; set; }
 }

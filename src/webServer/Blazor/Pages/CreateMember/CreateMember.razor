@@ -51,6 +51,7 @@
                 Password = Encoding.ASCII.GetBytes(password)
             };
             await memberService.CreateMember(member);
+            resultmsg = "User created";
             username = "";
             password = "";
         }

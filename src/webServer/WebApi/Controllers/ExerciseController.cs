@@ -20,7 +20,7 @@ public class ExerciseController : ControllerBase
         _client = client;
     }
 
-    [HttpPost("/[controller]/create"), Authorize(Roles = "Trainer")]
+    [HttpPost("/[controller]/create"), Authorize(Roles = "Trainer,Admin")]
     public async Task<ActionResult<ExerciseDTO>> CreateExercise([FromBody] ExerciseDTO exercise)
     {
         try
@@ -38,7 +38,7 @@ public class ExerciseController : ControllerBase
         }
     }
 
-    [HttpGet("/[controller]s"), Authorize(Roles = "Trainer")]
+    [HttpGet("/[controller]s"), Authorize(Roles = "Member,Trainer,Admin")]
     public async Task<ActionResult<IEnumerable<ExerciseDTO>>> GetExercises()
     {
         try

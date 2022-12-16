@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-
 namespace Shared.Model;
 
 public class Workout
@@ -12,15 +11,13 @@ public class Workout
     //[Required]
     public string Description { get; set; }
     public int DurationInMin { get; set; }
-    public int NumberOfExercises { get; set; }
-    public int FollowedBy { get; set; }
     //[Required]
     [DefaultValue(false)]
     public bool IsPublic { get; set; }
+    public int CreatedBy { get; set; }
 
 
     // For EF Core
-    public List<ExercisesInWorkouts> Exercises { get; set; }
-    public List<FollowsWorkouts> followedWorkouts { get; set; }
-    public Member User { get; set; }
+    public List<ExercisesInWorkouts>? Exercises { get; set; }
+    public List<FollowsWorkouts>? followedWorkouts { get; set; }
 }
